@@ -1,0 +1,400 @@
+[
+  {
+    "id": "805613b8-a221-4b05-8c53-bbb37d121013",
+    "translations": {
+      "en": {
+        "name": "Грудь"
+      }
+    },
+    "children": [
+      {
+        "id": "690262ac-da38-48fa-828a-7ccd8fcb9958",
+        "translations": {
+          "en": {
+            "name": "Верхняя грудь"
+          }
+        },
+        "variants": [
+          {
+            "id": "cd2ca6ff-2cc8-4afa-aae4-ab5f436b2ea4",
+            "translations": {
+              "en": {
+                "name": "Жим штанги нормальным хватом в наклоне 30*"
+              }
+            }
+          },
+          {
+            "id": "e40d1267-8bac-4326-bd54-6a434c2fa27c",
+            "translations": {
+              "en": {
+                "name": "Жим штанги широким хватом в наклоне 30*"
+              }
+            }
+          },
+          {
+            "id": "2a7cbe1a-76a1-40cf-b8c3-d92dcdde3348",
+            "translations": {
+              "en": {
+                "name": "Жим штанги узким хватом в наклоне 30*"
+              }
+            }
+          },
+          {
+            "id": "dc541911-e9f0-4373-8824-c73403e5b5a2",
+            "translations": {
+              "en": {
+                "name": "Жим гантелей нормальным хватом в наклоне 30*"
+              }
+            }
+          },
+          {
+            "id": "0b0549d2-b4ad-416f-b625-c13ce6eeb798",
+            "translations": {
+              "en": {
+                "name": "Жим гантелей широким хватом в наклоне 30*"
+              }
+            }
+          },
+          {
+            "id": "3a9bcfd9-bd00-4b57-b279-6511054f63c2",
+            "translations": {
+              "en": {
+                "name": "Жим гантелей узким хватом в наклоне 30*"
+              }
+            }
+          },
+          {
+            "id": "cbd56a1b-9f7b-4329-a0b4-31a5745fe703",
+            "translations": {
+              "en": {
+                "name": "Жим штанги нормальным хватом в наклоне 45*"
+              }
+            }
+          },
+          {
+            "id": "8427b584-ee57-4515-b49f-ba234a194b4f",
+            "translations": {
+              "en": {
+                "name": "Жим штанги широким хватом в наклоне 45*"
+              }
+            }
+          },
+          {
+            "id": "6e2d4699-c519-4cdb-abaf-5b18c419717c",
+            "translations": {
+              "en": {
+                "name": "Жим штанги узким хватом в наклоне 45*"
+              }
+            }
+          },
+          {
+            "id": "0d1dfe62-af0b-4ea5-9cd2-98e6df607c13",
+            "translations": {
+              "en": {
+                "name": "Жим гантелей нормальным хватом в наклоне 45*"
+              }
+            }
+          },
+          {
+            "id": "5e53bdbc-47c2-4b6b-9cfc-245b298352f8",
+            "translations": {
+              "en": {
+                "name": "Жим гантелей широким хватом в наклоне 45*"
+              }
+            }
+          },
+          {
+            "id": "535f0b34-c5f1-47d0-9cd8-c770ba8bddc3",
+            "translations": {
+              "en": {
+                "name": "Жим гантелей узким хватом в наклоне 45*"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "d7cff969-008a-4542-850a-7dcb28a3ed4e",
+        "translations": {
+          "en": {
+            "name": "Средняя грудь"
+          }
+        },
+        "variants": [
+          {
+            "id": "37785332-3b68-4e53-ba4b-2a69c84520f2",
+            "translations": {
+              "en": {
+                "name": "Жим штанги нормальным хватом"
+              }
+            }
+          },
+          {
+            "id": "6c250262-10c3-42d8-969e-7eebb139d4b6",
+            "translations": {
+              "en": {
+                "name": "Жим штанги широким хватом"
+              }
+            }
+          },
+          {
+            "id": "2380e7ff-b479-4569-ad2e-e396248b6b5e",
+            "translations": {
+              "en": {
+                "name": "Жим штанги узким хватом"
+              }
+            }
+          },
+          {
+            "id": "7a9636a7-8e44-4fc6-8bf5-c284ed8a44b2",
+            "translations": {
+              "en": {
+                "name": "Жим гантелей нормальным хватом"
+              }
+            }
+          },
+          {
+            "id": "293b35e4-9c4f-4f74-8710-a1bc8a7adb0f",
+            "translations": {
+              "en": {
+                "name": "Жим гантелей широким хватом"
+              }
+            }
+          },
+          {
+            "id": "46eb9f62-1eb5-4fa6-9228-117183efbe78",
+            "translations": {
+              "en": {
+                "name": "Жим гантелей узким хватом"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "1c4f4249-b60f-426f-9e03-22b0d0aa8108",
+        "translations": {
+          "en": {
+            "name": "Нижняя грудь"
+          }
+        },
+        "variants": [
+          {
+            "id": "cbb322c9-7eac-4da2-9d2c-bfea5596c7a6",
+            "translations": {
+              "en": {
+                "name": "Жим штанги нормальным хватом в наклоне -30*"
+              }
+            }
+          },
+          {
+            "id": "d4642ebc-a2cf-4f6f-a026-e79eb2ae8474",
+            "translations": {
+              "en": {
+                "name": "Жим штанги широким хватом в наклоне -30*"
+              }
+            }
+          },
+          {
+            "id": "0f06ab6a-a510-415f-9c12-8882f45a05d2",
+            "translations": {
+              "en": {
+                "name": "Жим штанги узким хватом в наклоне -30*"
+              }
+            }
+          },
+          {
+            "id": "9f963d1a-4e91-47c7-90c8-0b5d25b6a6b6",
+            "translations": {
+              "en": {
+                "name": "Жим гантелей нормальным хватом в наклоне -30*"
+              }
+            }
+          },
+          {
+            "id": "832bbcb1-15b4-4fb3-9856-0bbb8bba0623",
+            "translations": {
+              "en": {
+                "name": "Жим гантелей широким хватом в наклоне -30*"
+              }
+            }
+          },
+          {
+            "id": "46fbfc91-81fe-41ff-b87c-3d04b98ecbfe",
+            "translations": {
+              "en": {
+                "name": "Жим гантелей узким хватом в наклоне -30*"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "95b6b793-43c6-4d6d-9580-2d5f89b1e5e5",
+    "translations": {
+      "en": {
+        "name": "Пресс"
+      }
+    },
+    "children": [
+      {
+        "id": "ecc518d9-7f56-4c0f-844b-ace3b83f011a",
+        "translations": {
+          "en": {
+            "name": "Верхний"
+          }
+        },
+        "children": []
+      },
+      {
+        "id": "b7644712-425a-45de-9c65-dfce40e45384",
+        "translations": {
+          "en": {
+            "name": "Средний"
+          }
+        },
+        "children": []
+      },
+      {
+        "id": "c6626da7-885b-4013-bb59-b5d22a6c6710",
+        "translations": {
+          "en": {
+            "name": "Нижний"
+          }
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "2845004a-ae38-4857-9f8f-eaca90125191",
+    "translations": {
+      "en": {
+        "name": "Плечи"
+      }
+    },
+    "children": [
+      {
+        "id": "3de10db4-ddc5-461f-a35f-203e36af6a09",
+        "translations": {
+          "en": {
+            "name": "Задняя дельта"
+          }
+        },
+        "children": []
+      },
+      {
+        "id": "3f9faabf-cb45-4f8e-b5be-acfb0ccc88e1",
+        "translations": {
+          "en": {
+            "name": "Средняя дельта"
+          }
+        },
+        "children": []
+      },
+      {
+        "id": "539c05aa-809c-47ba-a537-8fc081e7899c",
+        "translations": {
+          "en": {
+            "name": "Передняя дельта"
+          }
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "b9789644-4751-42ad-b7c5-3099ad439935",
+    "translations": {
+      "en": {
+        "name": "Руки"
+      }
+    },
+    "children": [
+      {
+        "id": "b358d86c-a2cb-4f95-9e2b-801077f8feb0",
+        "translations": {
+          "en": {
+            "name": "Бицепс"
+          }
+        },
+        "children": []
+      },
+      {
+        "id": "f2ccd614-0e60-4ccf-9f97-5a20276c318e",
+        "translations": {
+          "en": {
+            "name": "Трицепс"
+          }
+        },
+        "children": []
+      },
+      {
+        "id": "c6fbf536-8370-4e5b-a342-87eeb298bada",
+        "translations": {
+          "en": {
+            "name": "Передплечие"
+          }
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "d808bd94-adb9-4b98-9637-4e62edb162e6",
+    "translations": {
+      "en": {
+        "name": "Ноги"
+      }
+    },
+    "children": [
+      {
+        "id": "4cd8bac8-0277-4bb2-a2ca-e91daf51a61e",
+        "translations": {
+          "en": {
+            "name": "Передние икры"
+          }
+        },
+        "children": []
+      },
+      {
+        "id": "8e26a8d6-bab7-43c1-b5d5-c896f5acddc1",
+        "translations": {
+          "en": {
+            "name": "Задние икры"
+          }
+        },
+        "children": []
+      },
+      {
+        "id": "f6a15f42-87e8-45a9-b9bb-b2490d657307",
+        "translations": {
+          "en": {
+            "name": "Бицепс бедра"
+          }
+        },
+        "children": []
+      },
+      {
+        "id": "ce2b077c-3fa9-42f2-8235-9177daf2ccc0",
+        "translations": {
+          "en": {
+            "name": "Трицепс бедра"
+          }
+        },
+        "children": []
+      },
+      {
+        "id": "a064eaa9-5c99-4460-9231-2abd6192f4c9",
+        "translations": {
+          "en": {
+            "name": "Ягодицы"
+          }
+        },
+        "children": []
+      }
+    ]
+  }
+]

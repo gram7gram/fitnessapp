@@ -1,0 +1,18 @@
+{
+  "landing": {
+    "title": "Welcome",
+    "start_session": "Start training"
+  },
+  "training": {
+    "title": "Training",
+    "add_exercise": "Add exercise"
+  },
+  "exercise": {
+    "title": "Exercises",
+    "add_workout": "Add workout"
+  },
+  "workout": {
+    "title": "Workout",
+    "save": "Save"
+  }
+}
