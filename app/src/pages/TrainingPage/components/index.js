@@ -6,7 +6,7 @@ import moment from 'moment';
 import i18n from '../../../i18n';
 import DatePicker from '../../../components/Datepicker';
 import {ScrollView} from 'react-native';
-import {Button, Card, ListItem, Text, TextField, View, Colors, Typography} from 'react-native-ui-lib';
+import {Button, Card, Text, TextField, View, Colors, Typography} from 'react-native-ui-lib';
 import {findTranslation, objectValues} from "../../../utils";
 import {withLocalization} from "../../../context/LocaleProvider";
 import FetchTraining from "../actions/FetchTraining";
@@ -41,7 +41,8 @@ class Training extends Component<Props> {
                     {
                         id: 'training-save',
                         systemItem: 'done',
-                        text: i18n.t('training.save')
+                        text: i18n.t('training.save'),
+                        color: Colors.dark80
                     }
                 ]
             }

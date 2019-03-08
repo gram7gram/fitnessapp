@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import selectors from './selectors';
 import {ScrollView, StyleSheet} from 'react-native';
-import {Button, ListItem, Text, View, TextField, Card} from 'react-native-ui-lib';
+import {Button, ListItem, Text, View, TextField, Card, Colors} from 'react-native-ui-lib';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {Navigation} from 'react-native-navigation'
 import {withLocalization} from "../../../context/LocaleProvider";
@@ -36,7 +36,8 @@ class Exercise extends Component<Props> {
                     {
                         id: 'exercise-search',
                         systemItem: 'search',
-                        text: i18n.t('exercise.search')
+                        text: i18n.t('exercise.search'),
+                        color: Colors.dark80
                     }
                 ]
             }
@@ -132,7 +133,6 @@ class Exercise extends Component<Props> {
 
             {item.image
                 ? <Card.Image
-                    position="right"
                     width={50}
                     height={50}
                     imageSource={imageMap[item.image]()}/>

@@ -55,7 +55,8 @@ class Workout extends Component<Props> {
                     {
                         id: 'workout-save',
                         systemItem: 'done',
-                        text: i18n.t('workout.save')
+                        text: i18n.t('workout.save'),
+                        color: Colors.dark80
                     }
                 ]
             }
