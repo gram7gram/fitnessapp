@@ -87,6 +87,10 @@ const repeats = (prev = {}, action) => {
             return {}
         case Actions.CHANGED:
 
+            if (action.payload.repeats !== undefined) {
+                return action.payload.repeats
+            }
+
             let id = action.payload.id
 
             return {

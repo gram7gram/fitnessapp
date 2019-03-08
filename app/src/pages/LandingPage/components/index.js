@@ -3,24 +3,57 @@ import {connect} from 'react-redux';
 import selectors from './selectors';
 import i18n from '../../../i18n';
 import {Button, Text, View} from 'react-native-ui-lib';
-import {Actions} from "react-native-router-flux";
-import {ScrollView} from "react-native";
+import {Image, StyleSheet} from "react-native";
 import FetchTrainings from "../actions/FetchTrainings";
+import * as Pages from "../../../router/Pages";
+import Logo from "../../../../assets/images/landing-logo-inverted.png";
+import {Navigation} from "react-native-navigation";
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 type Props = {};
 
 class Landing extends Component<Props> {
 
-    componentDidMount() {
+    constructor(props) {
+        super(props)
+
+        Navigation.events().bindComponent(this);
+    }
+
+    componentDidAppear() {
+
+        Navigation.mergeOptions(this.props.componentId, {
+            topBar: {
+                visible: false,
+                title: {
+                    text: i18n.t('landing.title')
+                }
+            }
+        })
+
         this.props.dispatch(FetchTrainings())
     }
 
     openTraining = training => () => {
-        Actions.training({training})
+        Navigation.push(this.props.componentId, {
+            component: {
+                name: Pages.TRAINING,
+                passProps: {
+                    training
+                }
+            }
+        })
     }
 
     addTraining = () => {
-        Actions.training({training: null})
+        Navigation.push(this.props.componentId, {
+            component: {
+                name: Pages.TRAINING,
+                passProps: {
+                    training: null
+                }
+            }
+        })
     }
 
     getPreviousTraining = () => {
@@ -60,9 +93,15 @@ class Landing extends Component<Props> {
         const nextId = this.getNextTraining()
         const prevId = this.getPreviousTraining()
 
+        return <View flex padding-10>
 
-        return <ScrollView keyboardShouldPersistTaps="always">
-            <View flex padding-10>
+            <View centerH>
+                <Image source={Logo}
+                       resizeMethod="scale"
+                       style={styles.image}/>
+            </View>
+
+            <View style={styles.container}>
 
                 <Button marginB-10
                         onPress={this.addTraining}>
@@ -75,22 +114,51 @@ class Landing extends Component<Props> {
                     <Text>{i18n.t('landing.show_session')}</Text>
                 </Button>
 
-                <Button marginB-10
-                        onPress={this.openTraining(prevId)}
-                        disabled={!prevId}>
-                    <Text>{i18n.t('landing.prev_session')}</Text>
-                </Button>
+                <View row>
 
-                <Button marginB-10
-                        onPress={this.openTraining(nextId)}
-                        disabled={!nextId}>
-                    <Text>{i18n.t('landing.next_session')}</Text>
-                </Button>
+                    <View flex-1 marginR-5>
 
+                        <Button marginB-10
+                                onPress={this.openTraining(prevId)}
+                                disabled={!prevId}>
+                            <Text>
+                                <Icon name="arrow-left"/>
+                                &nbsp;
+                                {i18n.t('landing.prev_session')}
+                            </Text>
+                        </Button>
+                    </View>
+
+                    <View flex-1 marginL-5>
+
+                        <Button marginB-10
+                                onPress={this.openTraining(nextId)}
+                                disabled={!nextId}>
+                            <Text>
+                                {i18n.t('landing.next_session')}
+                                &nbsp;
+                                <Icon name="arrow-right"/>
+                            </Text>
+                        </Button>
+                    </View>
+                </View>
             </View>
-        </ScrollView>
+
+        </View>
     }
 
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'flex-end',
+    },
+    image: {
+        position: 'absolute',
+        width: 775 / 3.5,
+        height: 1000 / 3.5
+    }
+})
 
 export default connect(selectors)(Landing);

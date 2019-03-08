@@ -1,6 +1,7 @@
 [
   {
     "id": "805613b8-a221-4b05-8c53-bbb37d121013",
+    "image": "/images/exercises/chest-1.jpg",
     "translations": {
       "en": {
         "name": "Грудь"
@@ -9,6 +10,7 @@
     "children": [
       {
         "id": "690262ac-da38-48fa-828a-7ccd8fcb9958",
+        "image": "/images/exercises/chest-2.jpg",
         "translations": {
           "en": {
             "name": "Верхняя грудь"
@@ -17,6 +19,7 @@
         "variants": [
           {
             "id": "cd2ca6ff-2cc8-4afa-aae4-ab5f436b2ea4",
+            "image": "/images/exercises/chest-3.jpg",
             "translations": {
               "en": {
                 "name": "Жим штанги нормальным хватом в наклоне 30*"
@@ -33,6 +36,7 @@
           },
           {
             "id": "2a7cbe1a-76a1-40cf-b8c3-d92dcdde3348",
+            "image": "/images/exercises/chest-4.jpg",
             "translations": {
               "en": {
                 "name": "Жим штанги узким хватом в наклоне 30*"
@@ -49,6 +53,7 @@
           },
           {
             "id": "0b0549d2-b4ad-416f-b625-c13ce6eeb798",
+            "image": "/images/exercises/chest-5.jpg",
             "translations": {
               "en": {
                 "name": "Жим гантелей широким хватом в наклоне 30*"
@@ -57,6 +62,7 @@
           },
           {
             "id": "3a9bcfd9-bd00-4b57-b279-6511054f63c2",
+            "image": "/images/exercises/chest-6.jpg",
             "translations": {
               "en": {
                 "name": "Жим гантелей узким хватом в наклоне 30*"
@@ -81,6 +87,7 @@
           },
           {
             "id": "6e2d4699-c519-4cdb-abaf-5b18c419717c",
+            "image": "/images/exercises/chest-7.jpg",
             "translations": {
               "en": {
                 "name": "Жим штанги узким хватом в наклоне 45*"
@@ -89,6 +96,7 @@
           },
           {
             "id": "0d1dfe62-af0b-4ea5-9cd2-98e6df607c13",
+            "image": "/images/exercises/chest-9.jpg",
             "translations": {
               "en": {
                 "name": "Жим гантелей нормальным хватом в наклоне 45*"
@@ -97,6 +105,7 @@
           },
           {
             "id": "5e53bdbc-47c2-4b6b-9cfc-245b298352f8",
+            "image": "/images/exercises/chest-8.jpg",
             "translations": {
               "en": {
                 "name": "Жим гантелей широким хватом в наклоне 45*"
@@ -115,6 +124,7 @@
       },
       {
         "id": "d7cff969-008a-4542-850a-7dcb28a3ed4e",
+        "image": "/images/exercises/chest-11.jpg",
         "translations": {
           "en": {
             "name": "Средняя грудь"
@@ -123,6 +133,7 @@
         "variants": [
           {
             "id": "37785332-3b68-4e53-ba4b-2a69c84520f2",
+            "image": "/images/exercises/chest-6.jpg",
             "translations": {
               "en": {
                 "name": "Жим штанги нормальным хватом"
@@ -131,6 +142,7 @@
           },
           {
             "id": "6c250262-10c3-42d8-969e-7eebb139d4b6",
+            "image": "/images/exercises/chest-1.jpg",
             "translations": {
               "en": {
                 "name": "Жим штанги широким хватом"
@@ -147,6 +159,7 @@
           },
           {
             "id": "7a9636a7-8e44-4fc6-8bf5-c284ed8a44b2",
+            "image": "/images/exercises/chest-3.jpg",
             "translations": {
               "en": {
                 "name": "Жим гантелей нормальным хватом"
@@ -173,6 +186,7 @@
       },
       {
         "id": "1c4f4249-b60f-426f-9e03-22b0d0aa8108",
+        "image": "/images/exercises/chest-10.jpg",
         "translations": {
           "en": {
             "name": "Нижняя грудь"
@@ -181,6 +195,7 @@
         "variants": [
           {
             "id": "cbb322c9-7eac-4da2-9d2c-bfea5596c7a6",
+            "image": "/images/exercises/chest-8.jpg",
             "translations": {
               "en": {
                 "name": "Жим штанги нормальным хватом в наклоне -30*"
@@ -189,6 +204,7 @@
           },
           {
             "id": "d4642ebc-a2cf-4f6f-a026-e79eb2ae8474",
+            "image": "/images/exercises/chest-11.jpg",
             "translations": {
               "en": {
                 "name": "Жим штанги широким хватом в наклоне -30*"
@@ -205,6 +221,7 @@
           },
           {
             "id": "9f963d1a-4e91-47c7-90c8-0b5d25b6a6b6",
+            "image": "/images/exercises/chest-1.jpg",
             "translations": {
               "en": {
                 "name": "Жим гантелей нормальным хватом в наклоне -30*"

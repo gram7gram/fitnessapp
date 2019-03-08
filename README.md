@@ -1,4 +1,8 @@
 
+### Storage
+
+Android `/data/user/0/com.fitnessapp/files`
+
 ### Schema
 
 ```

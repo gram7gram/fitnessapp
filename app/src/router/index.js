@@ -1,30 +1,92 @@
+// @flow
+
 import React from 'react';
-import {Router, Scene, Stack} from 'react-native-router-flux';
+import {Navigation} from 'react-native-navigation';
+import {Provider} from 'react-redux';
+import {Colors} from 'react-native-ui-lib';
 
-import LandingPage from '../pages/LandingPage/components';
-import ExercisePage from '../pages/ExercisePage/components';
-import TrainingPage from '../pages/TrainingPage/components';
-import WorkoutPage from '../pages/WorkoutPage/components';
+import i18n from '../i18n';
+import store from '../store';
 
-export default () => <Router>
-    <Stack key='root' hideNavBar>
+import LocaleProvider from '../context/LocaleProvider';
+import ThemeProvider from '../context/ThemeProvider';
 
-        <Scene key='landing'
-               initial={true}
-               path="/trainings"
-               component={LandingPage}/>
+import Landing from '../pages/LandingPage/components';
+import Training from '../pages/TrainingPage/components';
+import Exercise from '../pages/ExercisePage/components';
+import Workout from '../pages/WorkoutPage/components';
 
-        <Scene key='training'
-               path="/trainings/:training"
-               component={TrainingPage}/>
+import * as Pages from './Pages';
+import {defaultLocale, defaultTheme} from "../../../app.json";
 
-        <Scene key='exercise'
-               path="/trainings/:training/exercises"
-               component={ExercisePage}/>
+function withStore(Component) {
 
-        <Scene key='workout'
-               path="/trainings/:training/exercises/:exercise/workouts"
-               component={WorkoutPage}/>
+    return function inject(props) {
 
-    </Stack>
-</Router>
+        return <Provider store={store}>
+            <LocaleProvider locale={defaultLocale}>
+                <ThemeProvider theme={defaultTheme}>
+                    <Component{...props}/>
+                </ThemeProvider>
+            </LocaleProvider>
+        </Provider>
+    };
+}
+
+export function createRouter() {
+
+    Navigation.registerComponent(Pages.LANDING, () => withStore(Landing));
+
+    Navigation.registerComponent(Pages.TRAINING, () => withStore(Training));
+
+    Navigation.registerComponent(Pages.EXERCISE, () => withStore(Exercise));
+
+    Navigation.registerComponent(Pages.WORKOUT, () => withStore(Workout));
+
+    Navigation.setDefaultOptions({
+        topBar: {
+            drawBehind: false,
+            visible: true,
+            background: {
+                color: Colors.dark20
+            },
+            title: {
+                color: Colors.dark80,
+            },
+            backButton: {
+                title: '', // Remove previous screen name from back button
+                color: Colors.dark80
+            },
+            buttonColor: Colors.dark80,
+            rightButtons: {
+                color: Colors.dark80
+            }
+        },
+        statusBar: {
+            style: 'dark'
+        },
+        layout: {
+            orientation: ['portrait'],
+            backgroundColor: Colors.dark10,
+            color: Colors.dark80,
+        }
+    });
+
+    Navigation.setRoot({
+        root: {
+            stack: {
+                children: [
+                    {
+                        component: {
+                            name: Pages.LANDING,
+                            options: {
+                                drawBehind: true,
+                                visible: false,
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    });
+}

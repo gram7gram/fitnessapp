@@ -2,27 +2,32 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import selectors from './selectors';
 import i18n from '../../../i18n';
-import {Button, ListItem, Text, View} from 'react-native-ui-lib';
-import {Actions} from "react-native-router-flux";
-import {Picker} from 'react-native-wheel-pick';
-import {FlatList, ScrollView, StyleSheet} from "react-native";
+import {Button, Card, Colors, ListItem, Text, View, WheelPicker} from 'react-native-ui-lib';
+import {ScrollView, StyleSheet} from "react-native";
 import {ADD_REPEAT, CHANGED, REMOVE_REPEAT, RESET, SET_CURRENT_REPEAT} from "../actions";
 import {findTranslation, objectValues} from "../../../utils";
 import uuid from "uuid";
-import Icon from "react-native-vector-icons/FontAwesome5";
 import {ADD_WORKOUT} from "../../TrainingPage/actions";
 import FetchExercise from "../actions/FetchExercise";
 import {withLocalization} from "../../../context/LocaleProvider";
+import {Navigation} from "react-native-navigation";
+import * as Pages from "../../../router/Pages";
 
 const weightsArr = []
 const repeatsArr = []
 
 for (let i = 0.5; i < 100; i += 0.5) {
-    weightsArr.push(i)
+    weightsArr.push({
+        value: i,
+        label: i.toFixed(1) + "",
+    })
 }
 
 for (let i = 1; i < 100; i++) {
-    repeatsArr.push(i)
+    repeatsArr.push({
+        value: i,
+        label: i + "",
+    })
 }
 
 type Props = {
@@ -33,8 +38,30 @@ type Props = {
 
 class Workout extends Component<Props> {
 
-    componentDidMount() {
-        const {exercise, workout} = this.props
+    constructor(props) {
+        super(props)
+
+        Navigation.events().bindComponent(this);
+    }
+
+    componentDidAppear() {
+
+        Navigation.mergeOptions(this.props.componentId, {
+            topBar: {
+                title: {
+                    text: i18n.t('workout.title')
+                },
+                rightButtons: [
+                    {
+                        id: 'workout-save',
+                        systemItem: 'done',
+                        text: i18n.t('workout.save')
+                    }
+                ]
+            }
+        });
+
+        const {exercise, workout, training} = this.props
 
         const {model} = this.props.Training
 
@@ -51,22 +78,28 @@ class Workout extends Component<Props> {
                 payload: {
                     id: uuid(),
                     createdAt: new Date().getTime(),
+                    training,
                     exercise: {
                         id: exercise
                     }
                 }
             })
-        }
 
-        if (exercise) {
             this.props.dispatch(FetchExercise(exercise))
         }
     }
 
-    componentWillUnmount() {
+    componentDidDisappear() {
         this.props.dispatch({
             type: RESET,
         })
+    }
+
+    navigationButtonPressed({buttonId}) {
+        switch (buttonId) {
+            case 'workout-save':
+                this.save()
+        }
     }
 
     save = () => {
@@ -78,8 +111,13 @@ class Workout extends Component<Props> {
             payload: model
         })
 
-        Actions.training({
-            training: model.training
+        Navigation.push(this.props.componentId, {
+            component: {
+                name: Pages.TRAINING,
+                passProps: {
+                    training: model.training
+                }
+            }
         })
     }
 
@@ -144,34 +182,34 @@ class Workout extends Component<Props> {
         return repeats.find(item => item.id === currentRepeat)
     }
 
-    renderRepeat = ({item}) => {
+    renderRepeat = (item, key) => {
 
         const {currentRepeat} = this.props.Workout
 
-        return <ListItem
+        const isCurrent = currentRepeat === item.id
+
+        return <Card
+            key={key}
             onPress={this.setRepeatActive(item)}
-            paddingL-10
-            paddingR-10
+            style={isCurrent ? styles.currentRepeatCard : null}
             marginB-10>
 
-            <ListItem.Part left column padding-15>
+            <View padding-10>
 
-                <Icon name="times"
-                      onPress={this.removeRepeat(item.id)}/>
-
-            </ListItem.Part>
-
-            <ListItem.Part column center>
-
-                <Text h2 numberOfLines={1} center>
-
-                    {currentRepeat === item.id && <Icon name="check"/>}
-
-                    {item.weight} / {item.repeatCount}
+                <Text text50 dark20 center>
+                    <Text red10> {item.weight || 0}</Text>
+                    {i18n.t('workout.weight_short')}
+                    <Text red10>{item.repeatCount || 0}</Text>
+                    {i18n.t('workout.repeats_short')}
                 </Text>
 
-            </ListItem.Part>
-        </ListItem>
+                <View right>
+                    <Button link onPress={this.removeRepeat(item.id)}>
+                        <Text red10>{i18n.t('workout.remove_repeat')}</Text>
+                    </Button>
+                </View>
+            </View>
+        </Card>
     }
 
     render() {
@@ -189,53 +227,61 @@ class Workout extends Component<Props> {
 
         const exerciseTranslation = model.exercise ? findTranslation(model.exercise.translations, locale) : null
 
-        return <View flex padding-10>
+        if (exerciseTranslation) {
+            Navigation.mergeOptions(this.props.componentId, {
+                topBar: {
+                    title: {
+                        text: exerciseTranslation.name
+                    }
+                }
+            });
+        }
 
-            <Text h2 numberOfLines={1}>{model.id}</Text>
-            <Text h4 numberOfLines={1}>{model.createdAt}</Text>
-            <Text h4 numberOfLines={1}>{exerciseTranslation ? exerciseTranslation.name : '...'}</Text>
+        return <View flex>
+            <View flex row padding-10 style={styles.scrollContainer}>
 
-            <Button marginB-10 onPress={this.save}>
-                <Text>{i18n.t('workout.save')}</Text>
-            </Button>
-
-            <ScrollView keyboardShouldPersistTaps="always">
-
-                <View marginB-10>
-
-                    <FlatList
+                <ScrollView vertical>
+                    <Button
                         marginB-10
-                        data={repeats}
-                        renderItem={this.renderRepeat}
-                        keyExtractor={item => item.id}/>
-
-                    <Button onPress={this.addRepeat}>
+                        onPress={this.addRepeat}>
                         <Text>{i18n.t('workout.add_repeat')}</Text>
                     </Button>
 
-                </View>
-            </ScrollView>
+                    <View marginB-10>
+                        {repeats.map(this.renderRepeat)}
+                    </View>
 
-            <View flex row>
+                </ScrollView>
+            </View>
 
-                <View flex-1 column center style={styles.pickerContainer}>
+            <View row style={styles.pickerContainer} marginB-20>
 
-                    <Picker
+                <View flex-1 column>
+
+                    <Text text70 dark80 numberOfLines={1} center>{i18n.t('workout.set_weight')}</Text>
+
+                    <WheelPicker
                         style={styles.picker}
-                        selectedValue={repeatModel ? repeatModel.weight : null}
-                        pickerData={weightsArr}
-                        onValueChange={this.changeFloat('weight')}
-                        itemSpace={30}/>
+                        selectedValue={repeatModel ? repeatModel.weight : weightsArr[0].value}
+                        onValueChange={this.changeFloat('weight')}>
+                        {weightsArr.map((item, key) =>
+                            <WheelPicker.Item key={key} value={item.value} label={item.label}/>
+                        )}
+                    </WheelPicker>
                 </View>
 
-                <View flex-1 column center style={styles.pickerContainer}>
+                <View flex-1 column>
 
-                    <Picker
+                    <Text text70 dark80 numberOfLines={1} center>{i18n.t('workout.set_repeats')}</Text>
+
+                    <WheelPicker
                         style={styles.picker}
-                        selectedValue={repeatModel ? repeatModel.repeatCount : null}
-                        pickerData={repeatsArr}
-                        onValueChange={this.changeInt('repeatCount')}
-                        itemSpace={30}/>
+                        selectedValue={repeatModel ? repeatModel.repeatCount : repeatsArr[0].value}
+                        onValueChange={this.changeInt('repeatCount')}>
+                        {repeatsArr.map((item, key) =>
+                            <WheelPicker.Item key={key} value={item.value} label={item.label}/>
+                        )}
+                    </WheelPicker>
 
                 </View>
             </View>
@@ -245,15 +291,24 @@ class Workout extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+    currentRepeatCard: {
+        color: Colors.dark80,
+        backgroundColor: Colors.green40
+    },
+    scrollContainer: {
+        height: '70%'
+    },
     pickerContainer: {
+        height: '30%',
         alignItems: 'stretch'
     },
     picker: {
-        backgroundColor: 'white',
-        height: 215
+        backgroundColor: Colors.dark20,
+        height: '100%'
     }
 })
 
 export default withLocalization(
     connect(selectors)(Workout)
 )
+

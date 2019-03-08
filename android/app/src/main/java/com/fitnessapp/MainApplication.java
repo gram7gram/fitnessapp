@@ -3,49 +3,59 @@ package com.fitnessapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.tron.ReactNativeWheelPickerPackage;
-import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
-import com.rnfs.RNFSPackage;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class MainApplication extends Application implements ReactApplication {
+import com.reactnativenavigation.NavigationApplication;
+import com.reactnativenavigation.react.NavigationReactNativeHost;
+import com.reactnativenavigation.react.ReactGateway;
 
-  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+import com.oblador.vectoricons.VectorIconsPackage;
+
+import com.rnfs.RNFSPackage;
+
+import com.wix.reactnativeuilib.highlighterview.HighlighterViewPackage;
+import com.wix.reactnativeuilib.textinput.TextInputDelKeyHandlerPackage;
+import com.wix.reactnativeuilib.wheelpicker.WheelPickerPackage;
+
+
+public class MainApplication extends NavigationApplication {
+
     @Override
-    public boolean getUseDeveloperSupport() {
-      return BuildConfig.DEBUG;
+    protected ReactGateway createReactGateway() {
+        ReactNativeHost host = new NavigationReactNativeHost(this, isDebug(), createAdditionalReactPackages()) {
+            @Override
+            protected String getJSMainModuleName() {
+                return "index";
+            }
+        };
+        return new ReactGateway(this, isDebug(), host);
     }
 
     @Override
+    public boolean isDebug() {
+        return BuildConfig.DEBUG;
+    }
+
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-            new ReactNativeWheelPickerPackage(),
-            new VectorIconsPackage(),
-          new RNFSPackage()
-      );
+        // Add additional packages you require here
+        // No need to add RnnPackage and MainReactPackage
+        return Arrays.<ReactPackage>asList(
+            new HighlighterViewPackage(),
+            new TextInputDelKeyHandlerPackage(),
+            new WheelPickerPackage(),
+            new RNFSPackage(),
+            new VectorIconsPackage()
+        );
     }
 
     @Override
-    protected String getJSMainModuleName() {
-      return "index";
+    public List<ReactPackage> createAdditionalReactPackages() {
+        return getPackages();
     }
-  };
-
-  @Override
-  public ReactNativeHost getReactNativeHost() {
-    return mReactNativeHost;
-  }
-
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    SoLoader.init(this, /* native exopackage */ false);
-  }
 }

@@ -1,13 +1,20 @@
-import {all, put, select, takeEvery, throttle} from 'redux-saga/effects'
+import {all, put, select, takeEvery, throttle, takeLatest, delay} from 'redux-saga/effects'
 import {filePutContents} from "../../../storage/fs";
-import {Actions} from "react-native-router-flux";
 
-import {
-    DELETE_TRAINING_FAILURE,
-    DELETE_TRAINING_SUCCESS,
-    FETCH_TRAINING_FAILURE,
-    SAVE_TRAINING_SUCCESS
-} from '../actions'
+import SaveTraining from '../actions/SaveTraining'
+import * as TrainingActions from '../actions'
+import * as WorkoutActions from '../../WorkoutPage/actions'
+import {Navigation} from "react-native-navigation";
+import * as Pages from "../../../router/Pages";
+
+function* saveAfterChange() {
+
+    yield delay(500)
+
+    const model = yield select(store => store.Training.model)
+
+    yield put(SaveTraining(model))
+}
 
 function* save({payload}) {
     const trainings = yield select(store => store.Landing.trainings)
@@ -34,17 +41,34 @@ function* redirect({payload}) {
         filePutContents('/trainingRegistry.json', JSON.stringify(items))
     }
 
-    Actions.landing()
+    Navigation.push(null, {
+        component: {
+            name: Pages.LANDING,
+            options: {
+                drawBehind: true,
+                visible: false,
+            }
+        }
+    })
 }
 
 export default function* sagas() {
     yield all([
-        takeEvery(SAVE_TRAINING_SUCCESS, save),
+        takeLatest([
+            TrainingActions.CHANGED,
+            TrainingActions.ADD_WORKOUT,
+            TrainingActions.REMOVE_WORKOUT,
+            WorkoutActions.CHANGED,
+            WorkoutActions.ADD_REPEAT,
+            WorkoutActions.REMOVE_REPEAT,
+        ], saveAfterChange),
+
+        takeEvery(TrainingActions.SAVE_TRAINING_SUCCESS, save),
 
         takeEvery([
-            FETCH_TRAINING_FAILURE,
-            DELETE_TRAINING_SUCCESS,
-            DELETE_TRAINING_FAILURE
+            TrainingActions.FETCH_TRAINING_FAILURE,
+            TrainingActions.DELETE_TRAINING_SUCCESS,
+            TrainingActions.DELETE_TRAINING_FAILURE
         ], redirect)
     ])
 }

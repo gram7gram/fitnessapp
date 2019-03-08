@@ -1,18 +1,44 @@
 {
   "landing": {
     "title": "Welcome",
-    "start_session": "Start training"
+    "start_session": "Start training",
+    "show_session": "Open current",
+    "prev_session": "Open previous",
+    "next_session": "Open next"
   },
   "training": {
     "title": "Training",
-    "add_exercise": "Add exercise"
+    "add_workout": "Add workout",
+    "human_weight": "Your weight",
+    "started_at": "Started at",
+    "completed_at": "Completed at",
+    "weight": "Weight, kg",
+    "repeatCount": "Repeats",
+    "remove_workout": "Remove",
+    "remove": "Remove training",
+    "save": "Save"
   },
   "exercise": {
     "title": "Exercises",
+    "no_items_title": "No exercises found",
+    "search": "Search",
     "add_workout": "Add workout"
   },
   "workout": {
     "title": "Workout",
+    "set_weight": "Weight, kg",
+    "set_repeats": "Repeats",
+    "add_repeat": "Add repeat",
+    "remove_repeat": "Remove",
+    "weight_short": "kg",
+    "repeats_short": "times",
     "save": "Save"
+  },
+  "placeholders": {
+    "search": "Search...",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "date": "Enter date...",
+    "number": "Enter value..."
   }
 }
