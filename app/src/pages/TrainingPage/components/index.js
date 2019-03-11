@@ -51,21 +51,26 @@ class Training extends Component<Props> {
             }
         });
 
-        const {model} = this.props.Training
-
         const {training, componentId} = this.props
 
         if (training) {
 
             this.props.dispatch(FetchTraining(training, componentId))
 
-        } else if (!model.id) {
+        } else {
             this.props.dispatch({
                 type: CHANGED,
                 payload: {
                     id: uuid(),
-                    createdAt: parseInt(moment().format('X')),
-                    startedAt: moment().format('YYYY-MM-DD HH:mm')
+                    createdAt: new Date().getTime(),
+                    startedAt: moment().format('YYYY-MM-DD HH:mm'),
+                    completedAt: null,
+                    humanWeight: 0,
+                    duration: 0,
+                    totalWeight: 0,
+                    totalWeightPerHour: 0,
+                    muscleGroups: [],
+                    workouts: {}
                 }
             })
         }
@@ -180,11 +185,19 @@ class Training extends Component<Props> {
             ? findTranslation(item.exercise.translations, locale)
             : null
 
-        const repeats = objectValues(item.repeats).sort((a, b) => {
+        let repeats = objectValues(item.repeats).sort((a, b) => {
             if (a.createdAt < b.createdAt) return 1
             if (a.createdAt > b.createdAt) return -1
             return 0
         })
+
+        const isOverflowing = repeats.length > 4
+
+        let diff = 0
+        if (isOverflowing) {
+            diff = repeats.length - 4
+            repeats = repeats.splice(0, 4)
+        }
 
         return <Card
             key={key}
@@ -201,29 +214,46 @@ class Training extends Component<Props> {
 
                     <View column paddingR-5>
                         <View row left>
-                            <Text text80 numberOfLines={1}>{i18n.t('training.weight')}</Text>
+                            <Text text80 dark30 numberOfLines={1}>{i18n.t('training.weight')}</Text>
                         </View>
                         <View row left>
-                            <Text text80 numberOfLines={1}>{i18n.t('training.repeatCount')}</Text>
+                            <Text text80 dark30 numberOfLines={1}>{i18n.t('training.repeatCount')}</Text>
                         </View>
                     </View>
 
                     {repeats.map((workout, key) =>
                         <View key={key} column paddingH-5>
                             <View row right>
-                                <Text text80 grey50 numberOfLines={1}>{workout.weight}</Text>
+                                <Text text80 dark30 numberOfLines={1}>{workout.weight.toFixed(1)}</Text>
                             </View>
                             <View row right>
-                                <Text text80 grey50 numberOfLines={1}>x{workout.repeatCount}</Text>
+                                <Text text80 dark30 numberOfLines={1}>x{workout.repeatCount}</Text>
                             </View>
                         </View>
                     )}
+
+                    {isOverflowing
+                        ? <View column padding-5>
+                            <View row center>
+                                <Text text100 blue20 numberOfLines={1}>+{diff}</Text>
+                            </View>
+                            <View row center>
+                                <Text text100 blue20 numberOfLines={1}>more</Text>
+                            </View>
+                        </View>
+                        : null}
                 </View>
 
-                <View right>
-                    <Button link onPress={this.removeWorkout(item)}>
-                        <Text red10>{i18n.t('training.remove_workout')}</Text>
-                    </Button>
+                <View row>
+                    <View left flex>
+                        <Text blue20>{item.exercise.muscleGroup}</Text>
+                    </View>
+
+                    <View right flex>
+                        <Button link onPress={this.removeWorkout(item)}>
+                            <Text red10>{i18n.t('training.remove_workout')}</Text>
+                        </Button>
+                    </View>
                 </View>
 
 
@@ -280,12 +310,6 @@ class Training extends Component<Props> {
                     placeholder={i18n.t('placeholders.number')}
                     onChangeText={this.changeFloat('humanWeight')}
                     value={(model.humanWeight > 0 ? model.humanWeight : '') + ''}/>
-
-                <View marginB-10>
-                    <Text text80 grey50 numberOfLines={1}>totalWeight: {model.totalWeight}</Text>
-                    <Text text80 grey50 numberOfLines={1}>duration: {model.duration}</Text>
-                    <Text text80 grey50 numberOfLines={1}>totalWeightPerHour: {model.totalWeightPerHour}</Text>
-                </View>
 
                 <Button
                     marginB-10

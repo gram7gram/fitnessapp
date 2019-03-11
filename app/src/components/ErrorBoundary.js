@@ -11,8 +11,8 @@ class ErrorBoundary extends Component {
 
     render() {
         if (this.state.hasError) {
-            return <View marginB-10 padding-20>
-                <Text red10>--Unable to display component--</Text>
+            return <View marginB-10>
+                <Text red10 center>[Unable to display component]</Text>
             </View>
         }
 

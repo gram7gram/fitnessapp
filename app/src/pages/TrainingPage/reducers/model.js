@@ -147,6 +147,13 @@ const muscleGroups = (prev = [], action) => {
         case Actions.RESET:
             return []
 
+        case Actions.CHANGED:
+            if (action.payload.muscleGroups !== undefined) {
+                return action.payload.muscleGroups
+            }
+
+            return prev
+
         case Actions.FETCH_TRAINING_SUCCESS:
             return action.payload.muscleGroups
 
@@ -206,6 +213,13 @@ const workouts = (prev = {}, action) => {
     switch (action.type) {
         case Actions.RESET:
             return {}
+
+        case Actions.CHANGED:
+            if (action.payload.workouts !== undefined) {
+                return action.payload.workouts
+            }
+
+            return prev
 
         case Actions.FETCH_TRAINING_SUCCESS:
             return action.payload.workouts

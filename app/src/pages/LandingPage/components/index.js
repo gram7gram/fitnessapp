@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import moment from 'moment';
 import selectors from './selectors';
 import i18n from '../../../i18n';
-import {Button, Text, View, Card} from 'react-native-ui-lib';
+import {Button, Card, Text, View} from 'react-native-ui-lib';
 import {Image, ScrollView, StyleSheet} from "react-native";
 import FetchTrainings from "../actions/FetchTrainings";
 import * as Pages from "../../../router/Pages";
@@ -11,6 +11,7 @@ import Logo from "../../../../assets/images/landing-logo-inverted.png";
 import {Navigation} from "react-native-navigation";
 import {objectValues} from "../../../utils";
 import {rm} from "../../../storage/fs";
+import FadeInView from "../../../components/FadeIn";
 
 type Props = {};
 
@@ -63,22 +64,19 @@ class Landing extends Component<Props> {
 
         return <Card
             key={key}
-            marginB-10
-            onPress={this.openTraining(item.id)}>
+            row
+            height={50}
+            onPress={this.openTraining(item.id)}
+            marginB-10>
 
-            <View padding-10>
-
-                <Text text70 dark10 marginB-10>
-                    {item.startedAt}
+            <View padding-10 flex>
+                <Text text80 dark10>
+                    {moment(item.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')}
                 </Text>
 
-                <Text text80 dark50 marginB-10>
-                    {item.totalWeightPerHour}
-                </Text>
                 {item.muscleGroups
-                    ? <Text text80 grey50 numberOfLines={1}>{item.muscleGroups.join('; ')}</Text>
+                    ? <Text text90 blue20 numberOfLines={1}>{item.muscleGroups.join('; ')}</Text>
                     : null}
-
             </View>
         </Card>
     }
@@ -104,7 +102,8 @@ class Landing extends Component<Props> {
                        style={styles.image}/>
             </View>
 
-            <View style={styles.container}>
+            <FadeInView style={styles.container}>
+
                 <ScrollView style={styles.scroll}>
 
                     <Button marginB-10
@@ -112,13 +111,7 @@ class Landing extends Component<Props> {
                         <Text>{i18n.t('landing.start_session')}</Text>
                     </Button>
 
-                    <View marginB-10>
-                        {items.map(this.renderTraining)}
-                    </View>
-
-                    <Button marginB-10>
-                        <Text>Show more</Text>
-                    </Button>
+                    {items.map(this.renderTraining)}
 
                     <Button link marginB-10
                             onPress={() => {
@@ -135,7 +128,7 @@ class Landing extends Component<Props> {
 
                 </ScrollView>
 
-            </View>
+            </FadeInView>
         </View>
     }
 
@@ -151,6 +144,7 @@ const styles = StyleSheet.create({
     },
     image: {
         position: 'absolute',
+        bottom: -475,
         width: 775 / 3.5,
         height: 1000 / 3.5
     }
