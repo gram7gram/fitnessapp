@@ -3,6 +3,6 @@ import Training from './Training'
 
 export default function* sagas() {
     yield all([
-        fork(Training)
+        fork(Training),
     ])
 }

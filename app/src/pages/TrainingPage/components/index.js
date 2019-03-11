@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {CHANGED, REMOVE_WORKOUT, RESET} from '../actions';
+import {ADD_WORKOUT, CHANGED, REMOVE_WORKOUT, RESET} from '../actions';
 import selectors from './selectors';
 import moment from 'moment';
 import i18n from '../../../i18n';
 import DatePicker from '../../../components/Datepicker';
 import {ScrollView} from 'react-native';
-import {Button, Card, Text, TextField, View, Colors, Typography} from 'react-native-ui-lib';
+import {Button, Card, Colors, Text, TextField, Typography, View} from 'react-native-ui-lib';
 import {findTranslation, objectValues} from "../../../utils";
 import {withLocalization} from "../../../context/LocaleProvider";
 import FetchTraining from "../actions/FetchTraining";
@@ -15,8 +15,11 @@ import DeleteTraining from "../actions/DeleteTraining";
 import {Navigation} from "react-native-navigation";
 import * as Pages from "../../../router/Pages";
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import Chart from './Chart';
+import ErrorBoundary from "../../../components/ErrorBoundary";
 
 type Props = {
+    componentId: string,
     training: ?string
 };
 
@@ -50,28 +53,22 @@ class Training extends Component<Props> {
 
         const {model} = this.props.Training
 
-        const {training} = this.props
+        const {training, componentId} = this.props
 
         if (training) {
 
-            this.props.dispatch(FetchTraining(training))
+            this.props.dispatch(FetchTraining(training, componentId))
 
         } else if (!model.id) {
             this.props.dispatch({
                 type: CHANGED,
                 payload: {
                     id: uuid(),
-                    createdAt: moment().format('T'),
+                    createdAt: parseInt(moment().format('X')),
                     startedAt: moment().format('YYYY-MM-DD HH:mm')
                 }
             })
         }
-    }
-
-    componentDidDisappear() {
-        this.props.dispatch({
-            type: RESET
-        })
     }
 
     navigationButtonPressed({buttonId}) {
@@ -82,6 +79,11 @@ class Training extends Component<Props> {
     }
 
     openLanding = () => {
+
+        this.props.dispatch({
+            type: RESET
+        })
+
         Navigation.push(this.props.componentId, {
             component: {
                 name: Pages.LANDING,
@@ -94,9 +96,11 @@ class Training extends Component<Props> {
     }
 
     remove = () => {
+
+        const {componentId} = this.props
         const {model} = this.props.Training
 
-        this.props.dispatch(DeleteTraining(model.id))
+        this.props.dispatch(DeleteTraining(model.id, componentId))
     }
 
     change = (key, value) => {
@@ -126,30 +130,43 @@ class Training extends Component<Props> {
                 name: Pages.WORKOUT,
                 passProps: {
                     training: model.training,
-                    exercise: model.exercise,
                     workout
                 }
             }
         })
     }
 
-    removeWorkout = (id) => () => {
+    removeWorkout = payload => () => {
+
         this.props.dispatch({
             type: REMOVE_WORKOUT,
-            payload: {
-                id
-            }
+            payload
         })
     }
 
     addWorkout = () => {
+
         const {model} = this.props.Training
+
+        const newWorkout = {
+            id: uuid(),
+            createdAt: new Date().getTime(),
+            training: model.id,
+            repeats: {},
+            totalWeight: 0
+        }
+
+        this.props.dispatch({
+            type: ADD_WORKOUT,
+            payload: newWorkout
+        })
 
         Navigation.push(this.props.componentId, {
             component: {
                 name: Pages.EXERCISE,
                 passProps: {
-                    training: model.training
+                    training: newWorkout.training,
+                    workout: newWorkout.id
                 }
             }
         })
@@ -159,11 +176,13 @@ class Training extends Component<Props> {
 
         const {locale} = this.props
 
-        const exerciseTranslation = findTranslation(item.exercise.translations, locale)
+        const exerciseTranslation = item.exercise
+            ? findTranslation(item.exercise.translations, locale)
+            : null
 
         const repeats = objectValues(item.repeats).sort((a, b) => {
-            if (a.createdAt < b.createdAt) return -1
-            if (a.createdAt > b.createdAt) return 1
+            if (a.createdAt < b.createdAt) return 1
+            if (a.createdAt > b.createdAt) return -1
             return 0
         })
 
@@ -202,7 +221,7 @@ class Training extends Component<Props> {
                 </View>
 
                 <View right>
-                    <Button link onPress={this.removeWorkout(item.id)}>
+                    <Button link onPress={this.removeWorkout(item)}>
                         <Text red10>{i18n.t('training.remove_workout')}</Text>
                     </Button>
                 </View>
@@ -224,6 +243,10 @@ class Training extends Component<Props> {
 
         return <ScrollView keyboardShouldPersistTaps="always">
             <View flex padding-10>
+
+                <ErrorBoundary>
+                    <Chart/>
+                </ErrorBoundary>
 
                 <View row marginB-10>
                     <View flex-1 marginR-5>
@@ -257,6 +280,12 @@ class Training extends Component<Props> {
                     placeholder={i18n.t('placeholders.number')}
                     onChangeText={this.changeFloat('humanWeight')}
                     value={(model.humanWeight > 0 ? model.humanWeight : '') + ''}/>
+
+                <View marginB-10>
+                    <Text text80 grey50 numberOfLines={1}>totalWeight: {model.totalWeight}</Text>
+                    <Text text80 grey50 numberOfLines={1}>duration: {model.duration}</Text>
+                    <Text text80 grey50 numberOfLines={1}>totalWeightPerHour: {model.totalWeightPerHour}</Text>
+                </View>
 
                 <Button
                     marginB-10

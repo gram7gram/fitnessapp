@@ -1,74 +1,71 @@
-import {all, put, select, takeEvery, throttle, takeLatest, delay} from 'redux-saga/effects'
-import {filePutContents} from "../../../storage/fs";
+import {all, delay, put, select, takeEvery, takeLatest, throttle} from 'redux-saga/effects'
 
-import SaveTraining from '../actions/SaveTraining'
-import * as TrainingActions from '../actions'
-import * as WorkoutActions from '../../WorkoutPage/actions'
-import {Navigation} from "react-native-navigation";
-import * as Pages from "../../../router/Pages";
+import moment from 'moment'
+import * as TrainingActions from '../../TrainingPage/actions'
+import {objectValues} from "../../../utils";
 
-function* saveAfterChange() {
-
-    yield delay(500)
-
-    const model = yield select(store => store.Training.model)
-
-    yield put(SaveTraining(model))
+function* debounceUpdateIfDateChanged({payload}) {
+    if (payload.startedAt !== undefined || payload.completedAt !== undefined) {
+        yield debounceUpdate({payload})
+    }
 }
 
-function* save({payload}) {
-    const trainings = yield select(store => store.Landing.trainings)
+function* debounceUpdate(action) {
 
-    const items = {...trainings}
+    yield delay(200)
 
-    items[payload.id] = {
-        id: payload.id,
-        createdAt: payload.createdAt,
-    }
-
-    filePutContents('/trainingRegistry.json', JSON.stringify(items))
+    yield updateMetrics(action)
 }
 
-function* redirect({payload}) {
+function* updateMetrics({payload = {}}) {
 
-    if (payload && payload.id) {
-        const trainings = yield select(store => store.Landing.trainings)
+    const training = yield select(store => store.Training.model)
 
-        const items = {...trainings}
+    const startedAt = payload.startedAt || training.startedAt
+    const completedAt = payload.completedAt || training.completedAt
 
-        delete items[payload.id]
+    let totalWeight = 0, duration = 0, totalWeightPerHour = 0;
 
-        filePutContents('/trainingRegistry.json', JSON.stringify(items))
+    objectValues(training.workouts).forEach(workout => {
+        objectValues(workout.repeats).forEach(repeat => {
+            totalWeight += repeat.weight * repeat.repeatCount
+        })
+    })
+
+    if (completedAt && startedAt) {
+
+        const date1 = moment(startedAt, 'YYYY-MM-DD HH:mm')
+        const date2 = moment(completedAt, 'YYYY-MM-DD HH:mm')
+
+        duration = date2.diff(date1, 'minutes') / 60
     }
 
-    Navigation.push(null, {
-        component: {
-            name: Pages.LANDING,
-            options: {
-                drawBehind: true,
-                visible: false,
-            }
+    if (duration > 0) {
+        totalWeightPerHour = totalWeight / duration / 1000
+    }
+
+    yield put({
+        type: TrainingActions.CHANGED,
+        payload: {
+            duration: Number(duration.toFixed(2)),
+            totalWeight: Number(totalWeight.toFixed(2)),
+            totalWeightPerHour: Number(totalWeightPerHour.toFixed(2)),
         }
     })
 }
+
 
 export default function* sagas() {
     yield all([
         takeLatest([
             TrainingActions.CHANGED,
-            TrainingActions.ADD_WORKOUT,
+        ], debounceUpdateIfDateChanged),
+
+        takeLatest([
+            TrainingActions.REMOVE_REPEAT,
             TrainingActions.REMOVE_WORKOUT,
-            WorkoutActions.CHANGED,
-            WorkoutActions.ADD_REPEAT,
-            WorkoutActions.REMOVE_REPEAT,
-        ], saveAfterChange),
+        ], debounceUpdate),
 
-        takeEvery(TrainingActions.SAVE_TRAINING_SUCCESS, save),
-
-        takeEvery([
-            TrainingActions.FETCH_TRAINING_FAILURE,
-            TrainingActions.DELETE_TRAINING_SUCCESS,
-            TrainingActions.DELETE_TRAINING_FAILURE
-        ], redirect)
+        takeLatest(TrainingActions.UPDATE_WORKOUT_METRICS_REQUEST, updateMetrics),
     ])
 }

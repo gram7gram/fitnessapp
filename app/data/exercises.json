@@ -2,6 +2,7 @@
   {
     "id": "805613b8-a221-4b05-8c53-bbb37d121013",
     "image": "/images/exercises/chest-1.jpg",
+    "muscleGroup": "chest",
     "translations": {
       "en": {
         "name": "Грудь"
@@ -11,6 +12,7 @@
       {
         "id": "690262ac-da38-48fa-828a-7ccd8fcb9958",
         "image": "/images/exercises/chest-2.jpg",
+        "muscleGroup": "chest",
         "translations": {
           "en": {
             "name": "Верхняя грудь"
@@ -20,6 +22,7 @@
           {
             "id": "cd2ca6ff-2cc8-4afa-aae4-ab5f436b2ea4",
             "image": "/images/exercises/chest-3.jpg",
+            "muscleGroup": "chest",
             "translations": {
               "en": {
                 "name": "Жим штанги нормальным хватом в наклоне 30*"
@@ -28,6 +31,7 @@
           },
           {
             "id": "e40d1267-8bac-4326-bd54-6a434c2fa27c",
+            "muscleGroup": "chest",
             "translations": {
               "en": {
                 "name": "Жим штанги широким хватом в наклоне 30*"
@@ -36,6 +40,7 @@
           },
           {
             "id": "2a7cbe1a-76a1-40cf-b8c3-d92dcdde3348",
+            "muscleGroup": "chest",
             "image": "/images/exercises/chest-4.jpg",
             "translations": {
               "en": {
@@ -45,6 +50,7 @@
           },
           {
             "id": "dc541911-e9f0-4373-8824-c73403e5b5a2",
+            "muscleGroup": "chest",
             "translations": {
               "en": {
                 "name": "Жим гантелей нормальным хватом в наклоне 30*"
@@ -53,6 +59,7 @@
           },
           {
             "id": "0b0549d2-b4ad-416f-b625-c13ce6eeb798",
+            "muscleGroup": "chest",
             "image": "/images/exercises/chest-5.jpg",
             "translations": {
               "en": {
@@ -62,6 +69,7 @@
           },
           {
             "id": "3a9bcfd9-bd00-4b57-b279-6511054f63c2",
+            "muscleGroup": "chest",
             "image": "/images/exercises/chest-6.jpg",
             "translations": {
               "en": {
@@ -71,6 +79,7 @@
           },
           {
             "id": "cbd56a1b-9f7b-4329-a0b4-31a5745fe703",
+            "muscleGroup": "chest",
             "translations": {
               "en": {
                 "name": "Жим штанги нормальным хватом в наклоне 45*"
@@ -79,6 +88,7 @@
           },
           {
             "id": "8427b584-ee57-4515-b49f-ba234a194b4f",
+            "muscleGroup": "chest",
             "translations": {
               "en": {
                 "name": "Жим штанги широким хватом в наклоне 45*"
@@ -87,6 +97,7 @@
           },
           {
             "id": "6e2d4699-c519-4cdb-abaf-5b18c419717c",
+            "muscleGroup": "chest",
             "image": "/images/exercises/chest-7.jpg",
             "translations": {
               "en": {
@@ -96,6 +107,7 @@
           },
           {
             "id": "0d1dfe62-af0b-4ea5-9cd2-98e6df607c13",
+            "muscleGroup": "chest",
             "image": "/images/exercises/chest-9.jpg",
             "translations": {
               "en": {
@@ -105,6 +117,7 @@
           },
           {
             "id": "5e53bdbc-47c2-4b6b-9cfc-245b298352f8",
+            "muscleGroup": "chest",
             "image": "/images/exercises/chest-8.jpg",
             "translations": {
               "en": {
@@ -114,6 +127,7 @@
           },
           {
             "id": "535f0b34-c5f1-47d0-9cd8-c770ba8bddc3",
+            "muscleGroup": "chest",
             "translations": {
               "en": {
                 "name": "Жим гантелей узким хватом в наклоне 45*"
@@ -124,6 +138,7 @@
       },
       {
         "id": "d7cff969-008a-4542-850a-7dcb28a3ed4e",
+        "muscleGroup": "chest",
         "image": "/images/exercises/chest-11.jpg",
         "translations": {
           "en": {
@@ -133,6 +148,7 @@
         "variants": [
           {
             "id": "37785332-3b68-4e53-ba4b-2a69c84520f2",
+            "muscleGroup": "chest",
             "image": "/images/exercises/chest-6.jpg",
             "translations": {
               "en": {
@@ -142,6 +158,7 @@
           },
           {
             "id": "6c250262-10c3-42d8-969e-7eebb139d4b6",
+            "muscleGroup": "chest",
             "image": "/images/exercises/chest-1.jpg",
             "translations": {
               "en": {
@@ -151,6 +168,7 @@
           },
           {
             "id": "2380e7ff-b479-4569-ad2e-e396248b6b5e",
+            "muscleGroup": "chest",
             "translations": {
               "en": {
                 "name": "Жим штанги узким хватом"
@@ -159,6 +177,7 @@
           },
           {
             "id": "7a9636a7-8e44-4fc6-8bf5-c284ed8a44b2",
+            "muscleGroup": "chest",
             "image": "/images/exercises/chest-3.jpg",
             "translations": {
               "en": {
@@ -168,6 +187,7 @@
           },
           {
             "id": "293b35e4-9c4f-4f74-8710-a1bc8a7adb0f",
+            "muscleGroup": "chest",
             "translations": {
               "en": {
                 "name": "Жим гантелей широким хватом"
@@ -176,6 +196,7 @@
           },
           {
             "id": "46eb9f62-1eb5-4fa6-9228-117183efbe78",
+            "muscleGroup": "chest",
             "translations": {
               "en": {
                 "name": "Жим гантелей узким хватом"
@@ -186,6 +207,7 @@
       },
       {
         "id": "1c4f4249-b60f-426f-9e03-22b0d0aa8108",
+        "muscleGroup": "chest",
         "image": "/images/exercises/chest-10.jpg",
         "translations": {
           "en": {
@@ -195,6 +217,7 @@
         "variants": [
           {
             "id": "cbb322c9-7eac-4da2-9d2c-bfea5596c7a6",
+            "muscleGroup": "chest",
             "image": "/images/exercises/chest-8.jpg",
             "translations": {
               "en": {
@@ -204,6 +227,7 @@
           },
           {
             "id": "d4642ebc-a2cf-4f6f-a026-e79eb2ae8474",
+            "muscleGroup": "chest",
             "image": "/images/exercises/chest-11.jpg",
             "translations": {
               "en": {
@@ -213,6 +237,7 @@
           },
           {
             "id": "0f06ab6a-a510-415f-9c12-8882f45a05d2",
+            "muscleGroup": "chest",
             "translations": {
               "en": {
                 "name": "Жим штанги узким хватом в наклоне -30*"
@@ -221,6 +246,7 @@
           },
           {
             "id": "9f963d1a-4e91-47c7-90c8-0b5d25b6a6b6",
+            "muscleGroup": "chest",
             "image": "/images/exercises/chest-1.jpg",
             "translations": {
               "en": {
@@ -230,6 +256,7 @@
           },
           {
             "id": "832bbcb1-15b4-4fb3-9856-0bbb8bba0623",
+            "muscleGroup": "chest",
             "translations": {
               "en": {
                 "name": "Жим гантелей широким хватом в наклоне -30*"
@@ -238,6 +265,7 @@
           },
           {
             "id": "46fbfc91-81fe-41ff-b87c-3d04b98ecbfe",
+            "muscleGroup": "chest",
             "translations": {
               "en": {
                 "name": "Жим гантелей узким хватом в наклоне -30*"
@@ -250,6 +278,7 @@
   },
   {
     "id": "95b6b793-43c6-4d6d-9580-2d5f89b1e5e5",
+    "muscleGroup": "abs",
     "translations": {
       "en": {
         "name": "Пресс"
@@ -258,6 +287,7 @@
     "children": [
       {
         "id": "ecc518d9-7f56-4c0f-844b-ace3b83f011a",
+        "muscleGroup": "abs",
         "translations": {
           "en": {
             "name": "Верхний"
@@ -267,6 +297,7 @@
       },
       {
         "id": "b7644712-425a-45de-9c65-dfce40e45384",
+        "muscleGroup": "abs",
         "translations": {
           "en": {
             "name": "Средний"
@@ -276,6 +307,7 @@
       },
       {
         "id": "c6626da7-885b-4013-bb59-b5d22a6c6710",
+        "muscleGroup": "abs",
         "translations": {
           "en": {
             "name": "Нижний"
@@ -287,6 +319,7 @@
   },
   {
     "id": "2845004a-ae38-4857-9f8f-eaca90125191",
+    "muscleGroup": "shoulders",
     "translations": {
       "en": {
         "name": "Плечи"
@@ -295,6 +328,7 @@
     "children": [
       {
         "id": "3de10db4-ddc5-461f-a35f-203e36af6a09",
+        "muscleGroup": "shoulders",
         "translations": {
           "en": {
             "name": "Задняя дельта"
@@ -304,6 +338,7 @@
       },
       {
         "id": "3f9faabf-cb45-4f8e-b5be-acfb0ccc88e1",
+        "muscleGroup": "shoulders",
         "translations": {
           "en": {
             "name": "Средняя дельта"
@@ -313,6 +348,7 @@
       },
       {
         "id": "539c05aa-809c-47ba-a537-8fc081e7899c",
+        "muscleGroup": "shoulders",
         "translations": {
           "en": {
             "name": "Передняя дельта"
@@ -324,6 +360,7 @@
   },
   {
     "id": "b9789644-4751-42ad-b7c5-3099ad439935",
+    "muscleGroup": "hands",
     "translations": {
       "en": {
         "name": "Руки"
@@ -332,6 +369,7 @@
     "children": [
       {
         "id": "b358d86c-a2cb-4f95-9e2b-801077f8feb0",
+        "muscleGroup": "biceps",
         "translations": {
           "en": {
             "name": "Бицепс"
@@ -341,6 +379,7 @@
       },
       {
         "id": "f2ccd614-0e60-4ccf-9f97-5a20276c318e",
+        "muscleGroup": "triceps",
         "translations": {
           "en": {
             "name": "Трицепс"
@@ -350,6 +389,7 @@
       },
       {
         "id": "c6fbf536-8370-4e5b-a342-87eeb298bada",
+        "muscleGroup": "forearm",
         "translations": {
           "en": {
             "name": "Передплечие"
@@ -361,6 +401,7 @@
   },
   {
     "id": "d808bd94-adb9-4b98-9637-4e62edb162e6",
+    "muscleGroup": "legs",
     "translations": {
       "en": {
         "name": "Ноги"
@@ -369,6 +410,7 @@
     "children": [
       {
         "id": "4cd8bac8-0277-4bb2-a2ca-e91daf51a61e",
+        "muscleGroup": "legs",
         "translations": {
           "en": {
             "name": "Передние икры"
@@ -378,6 +420,7 @@
       },
       {
         "id": "8e26a8d6-bab7-43c1-b5d5-c896f5acddc1",
+        "muscleGroup": "legs",
         "translations": {
           "en": {
             "name": "Задние икры"
@@ -387,6 +430,7 @@
       },
       {
         "id": "f6a15f42-87e8-45a9-b9bb-b2490d657307",
+        "muscleGroup": "legs",
         "translations": {
           "en": {
             "name": "Бицепс бедра"
@@ -396,6 +440,7 @@
       },
       {
         "id": "ce2b077c-3fa9-42f2-8235-9177daf2ccc0",
+        "muscleGroup": "legs",
         "translations": {
           "en": {
             "name": "Трицепс бедра"
@@ -405,6 +450,7 @@
       },
       {
         "id": "a064eaa9-5c99-4460-9231-2abd6192f4c9",
+        "muscleGroup": "legs",
         "translations": {
           "en": {
             "name": "Ягодицы"

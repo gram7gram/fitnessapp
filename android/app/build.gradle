@@ -151,6 +151,7 @@ configurations.all {
 }
 
 dependencies {
+    implementation project(':react-native-svg')
     implementation project(':react-native-fs')
     implementation project(':react-native-ui-lib')
     implementation project(':react-native-vector-icons')

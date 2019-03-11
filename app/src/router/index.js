@@ -5,7 +5,6 @@ import {Navigation} from 'react-native-navigation';
 import {Provider} from 'react-redux';
 import {Colors} from 'react-native-ui-lib';
 
-import i18n from '../i18n';
 import store from '../store';
 
 import LocaleProvider from '../context/LocaleProvider';

@@ -2,12 +2,13 @@
 import {fileGetContents} from '../../../storage/fs'
 import {FETCH_TRAINING_BEFORE, FETCH_TRAINING_FAILURE, FETCH_TRAINING_SUCCESS} from "../actions";
 
-export default id => dispatch => {
+export default (id, componentId) => dispatch => {
 
     dispatch({
         type: FETCH_TRAINING_BEFORE,
+        componentId,
         payload: {
-            id
+            id,
         }
     })
 
@@ -21,9 +22,10 @@ export default id => dispatch => {
         .catch(({message}) => {
             dispatch({
                 type: FETCH_TRAINING_FAILURE,
+                componentId,
                 payload: {
                     id,
-                    message
+                    message,
                 }
             })
         })

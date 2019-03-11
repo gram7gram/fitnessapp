@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import selectors from './selectors';
 import {ScrollView, StyleSheet} from 'react-native';
-import {Button, ListItem, Text, View, TextField, Card, Colors} from 'react-native-ui-lib';
+import {Button, Card, Colors, ListItem, Text, TextField, View} from 'react-native-ui-lib';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {Navigation} from 'react-native-navigation'
 import {withLocalization} from "../../../context/LocaleProvider";
 import {RESET, SEARCH_CHANGED, TOGGLE_SEARCH} from "../actions";
+import {WORKOUT_CHANGED} from "../../TrainingPage/actions";
 import FetchExercises from "../actions/FetchExercises";
 import {findTranslation} from "../../../utils";
 import * as Pages from "../../../router/Pages";
@@ -90,16 +91,29 @@ class Exercise extends Component<Props> {
         })
     }
 
-    openWorkout = exercise => () => {
+    openWorkout = exerciseId => () => {
 
-        const {training} = this.props
+        const {items} = this.props.Exercise
+
+        const exercise = items.find(item => item.id === exerciseId)
+        if (!exercise) return;
+
+        const {training, workout} = this.props
+
+        this.props.dispatch({
+            type: WORKOUT_CHANGED,
+            payload: {
+                id: workout,
+                exercise
+            }
+        })
 
         Navigation.push(this.props.componentId, {
             component: {
                 name: Pages.WORKOUT,
                 passProps: {
                     training,
-                    exercise
+                    workout
                 }
             }
         })

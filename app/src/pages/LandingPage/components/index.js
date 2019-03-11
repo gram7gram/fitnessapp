@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import moment from 'moment';
 import selectors from './selectors';
 import i18n from '../../../i18n';
-import {Button, Text, View} from 'react-native-ui-lib';
-import {Image, StyleSheet} from "react-native";
+import {Button, Text, View, Card} from 'react-native-ui-lib';
+import {Image, ScrollView, StyleSheet} from "react-native";
 import FetchTrainings from "../actions/FetchTrainings";
 import * as Pages from "../../../router/Pages";
 import Logo from "../../../../assets/images/landing-logo-inverted.png";
 import {Navigation} from "react-native-navigation";
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import {objectValues} from "../../../utils";
+import {rm} from "../../../storage/fs";
 
 type Props = {};
 
@@ -24,6 +26,7 @@ class Landing extends Component<Props> {
 
         Navigation.mergeOptions(this.props.componentId, {
             topBar: {
+                drawBehind: true,
                 visible: false,
                 title: {
                     text: i18n.t('landing.title')
@@ -56,42 +59,42 @@ class Landing extends Component<Props> {
         })
     }
 
-    getPreviousTraining = () => {
-        const {trainings, currentTraining} = this.props.Landing
+    renderTraining = (item, key) => {
 
-        const keys = Object.keys(trainings)
+        return <Card
+            key={key}
+            marginB-10
+            onPress={this.openTraining(item.id)}>
 
-        const index = keys.indexOf(currentTraining)
+            <View padding-10>
 
-        let next
-        if (index !== -1) {
-            next = keys[index - 1]
-        }
+                <Text text70 dark10 marginB-10>
+                    {item.startedAt}
+                </Text>
 
-        return next || null
-    }
+                <Text text80 dark50 marginB-10>
+                    {item.totalWeightPerHour}
+                </Text>
+                {item.muscleGroups
+                    ? <Text text80 grey50 numberOfLines={1}>{item.muscleGroups.join('; ')}</Text>
+                    : null}
 
-    getNextTraining = () => {
-        const {trainings, currentTraining} = this.props.Landing
-
-        const keys = Object.keys(trainings)
-
-        const index = keys.indexOf(currentTraining)
-
-        let next
-        if (index !== -1) {
-            next = keys[index + 1]
-        }
-
-        return next || null
+            </View>
+        </Card>
     }
 
     render() {
 
-        const {currentTraining} = this.props.Landing
+        const {trainings} = this.props.Landing
 
-        const nextId = this.getNextTraining()
-        const prevId = this.getPreviousTraining()
+        const items = objectValues(trainings).sort((a, b) => {
+            const date1 = moment(a.startedAt)
+            const date2 = moment(b.startedAt)
+
+            if (date1.isBefore(date2)) return 1
+            if (date2.isBefore(date1)) return -1
+            return 0
+        })
 
         return <View flex padding-10>
 
@@ -102,48 +105,37 @@ class Landing extends Component<Props> {
             </View>
 
             <View style={styles.container}>
+                <ScrollView style={styles.scroll}>
 
-                <Button marginB-10
-                        onPress={this.addTraining}>
-                    <Text>{i18n.t('landing.start_session')}</Text>
-                </Button>
+                    <Button marginB-10
+                            onPress={this.addTraining}>
+                        <Text>{i18n.t('landing.start_session')}</Text>
+                    </Button>
 
-                <Button marginB-10
-                        onPress={this.openTraining(currentTraining)}
-                        disabled={!currentTraining}>
-                    <Text>{i18n.t('landing.show_session')}</Text>
-                </Button>
-
-                <View row>
-
-                    <View flex-1 marginR-5>
-
-                        <Button marginB-10
-                                onPress={this.openTraining(prevId)}
-                                disabled={!prevId}>
-                            <Text>
-                                <Icon name="arrow-left"/>
-                                &nbsp;
-                                {i18n.t('landing.prev_session')}
-                            </Text>
-                        </Button>
+                    <View marginB-10>
+                        {items.map(this.renderTraining)}
                     </View>
 
-                    <View flex-1 marginL-5>
+                    <Button marginB-10>
+                        <Text>Show more</Text>
+                    </Button>
 
-                        <Button marginB-10
-                                onPress={this.openTraining(nextId)}
-                                disabled={!nextId}>
-                            <Text>
-                                {i18n.t('landing.next_session')}
-                                &nbsp;
-                                <Icon name="arrow-right"/>
-                            </Text>
-                        </Button>
-                    </View>
-                </View>
+                    <Button link marginB-10
+                            onPress={() => {
+                                rm('/trainingRegistry.json').catch(() => {
+                                })
+
+                                items.forEach(item => {
+                                    rm('/trainings/' + item.id + ".json").catch(() => {
+                                    })
+                                })
+                            }}>
+                        <Text red10>remove all</Text>
+                    </Button>
+
+                </ScrollView>
+
             </View>
-
         </View>
     }
 
@@ -153,6 +145,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'flex-end',
+    },
+    scroll: {
+        height: '100%'
     },
     image: {
         position: 'absolute',

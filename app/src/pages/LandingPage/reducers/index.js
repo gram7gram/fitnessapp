@@ -1,19 +1,10 @@
 import {combineReducers} from 'redux';
-import {FETCH_TRAININGS_SUCCESS} from "../actions";
-
-const currentTraining = (prev = null, action) => {
-    switch (action.type) {
-        case FETCH_TRAININGS_SUCCESS:
-            const keys = Object.keys(action.payload)
-
-            return keys[keys.length - 1]
-        default:
-            return prev
-    }
-}
+import {FETCH_TRAININGS_FAILURE, FETCH_TRAININGS_SUCCESS} from "../actions";
 
 const trainings = (prev = {}, action) => {
     switch (action.type) {
+        case FETCH_TRAININGS_FAILURE:
+            return {}
         case FETCH_TRAININGS_SUCCESS:
             return action.payload
         default:
@@ -22,6 +13,5 @@ const trainings = (prev = {}, action) => {
 }
 
 export default combineReducers({
-    currentTraining,
     trainings
 });

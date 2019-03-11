@@ -1,7 +1,6 @@
-
 import uuid from 'uuid'
 import {filePutContents} from '../../../storage/fs'
-import {SAVE_TRAINING_BEFORE, SAVE_TRAINING_FAILURE, SAVE_TRAINING_SUCCESS} from "../actions";
+import {SAVE_TRAINING_FAILURE, SAVE_TRAINING_SUCCESS} from "../actions";
 
 const parseBeforeSubmit = model => {
     const data = {...model}
@@ -20,10 +19,6 @@ const parseBeforeSubmit = model => {
 export default model => dispatch => {
 
     const data = parseBeforeSubmit(model)
-
-    dispatch({
-        type: SAVE_TRAINING_BEFORE,
-    })
 
     filePutContents('/trainings/' + data.id + '.json', JSON.stringify(data))
         .then(() => {

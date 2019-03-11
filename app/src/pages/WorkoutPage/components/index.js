@@ -4,11 +4,11 @@ import selectors from './selectors';
 import i18n from '../../../i18n';
 import {Button, Card, Colors, ListItem, Text, View, WheelPicker} from 'react-native-ui-lib';
 import {ScrollView, StyleSheet} from "react-native";
-import {ADD_REPEAT, CHANGED, REMOVE_REPEAT, RESET, SET_CURRENT_REPEAT} from "../actions";
+import {ADD_REPEAT, REMOVE_REPEAT, REPEAT_CHANGED, UPDATE_WORKOUT_METRICS_REQUEST} from "../../TrainingPage/actions";
+import {RESET, SET_CURRENT_REPEAT} from "../actions";
 import {findTranslation, objectValues} from "../../../utils";
 import uuid from "uuid";
-import {ADD_WORKOUT} from "../../TrainingPage/actions";
-import FetchExercise from "../actions/FetchExercise";
+import debounce from "lodash/debounce";
 import {withLocalization} from "../../../context/LocaleProvider";
 import {Navigation} from "react-native-navigation";
 import * as Pages from "../../../router/Pages";
@@ -16,14 +16,14 @@ import * as Pages from "../../../router/Pages";
 const weightsArr = []
 const repeatsArr = []
 
-for (let i = 0.5; i < 100; i += 0.5) {
+for (let i = 0.5; i < 1500; i += 0.5) {
     weightsArr.push({
         value: i,
         label: i.toFixed(1) + "",
     })
 }
 
-for (let i = 1; i < 100; i++) {
+for (let i = 1; i < 250; i++) {
     repeatsArr.push({
         value: i,
         label: i + "",
@@ -31,9 +31,9 @@ for (let i = 1; i < 100; i++) {
 }
 
 type Props = {
-    training: ?string,
-    exercise: ?string,
-    workout: ?string,
+    locale: string,
+    training: string,
+    workout: string,
 };
 
 class Workout extends Component<Props> {
@@ -46,10 +46,23 @@ class Workout extends Component<Props> {
 
     componentDidAppear() {
 
+        const {locale} = this.props
+        const {currentRepeat} = this.props.Workout
+
+        const workout = this.getWorkout()
+
+        let title = i18n.t('workout.title')
+        if (workout && workout.exercise) {
+            const translation = findTranslation(workout.exercise.translations, locale)
+            if (translation) {
+                title = translation.name
+            }
+        }
+
         Navigation.mergeOptions(this.props.componentId, {
             topBar: {
                 title: {
-                    text: i18n.t('workout.title')
+                    text: title
                 },
                 rightButtons: [
                     {
@@ -62,31 +75,20 @@ class Workout extends Component<Props> {
             }
         });
 
-        const {exercise, workout, training} = this.props
+        const repeats = objectValues(this.getRepeats())
 
-        const {model} = this.props.Training
+        if (repeats.length === 0) {
 
-        const currentWorkout = model.workouts[workout]
+            this.addRepeat()
 
-        if (currentWorkout) {
+        } else if (!currentRepeat) {
+
+            const last = repeats[repeats.length - 1]
+
             this.props.dispatch({
-                type: CHANGED,
-                payload: currentWorkout
+                type: SET_CURRENT_REPEAT,
+                payload: last
             })
-        } else {
-            this.props.dispatch({
-                type: CHANGED,
-                payload: {
-                    id: uuid(),
-                    createdAt: new Date().getTime(),
-                    training,
-                    exercise: {
-                        id: exercise
-                    }
-                }
-            })
-
-            this.props.dispatch(FetchExercise(exercise))
         }
     }
 
@@ -105,37 +107,45 @@ class Workout extends Component<Props> {
 
     save = () => {
 
-        const {model} = this.props.Workout
+        const {training} = this.props
 
         this.props.dispatch({
-            type: ADD_WORKOUT,
-            payload: model
+            type: UPDATE_WORKOUT_METRICS_REQUEST
         })
 
         Navigation.push(this.props.componentId, {
             component: {
                 name: Pages.TRAINING,
                 passProps: {
-                    training: model.training
+                    training
                 }
             }
         })
     }
 
     addRepeat = () => {
+        const {workout} = this.props
+
         this.props.dispatch({
             type: ADD_REPEAT,
             payload: {
                 id: uuid(),
-                createdAt: new Date().getTime()
+                createdAt: new Date().getTime(),
+                workout,
+                isHumanWeight: false,
+                weight: 0,
+                repeatCount: 0,
             }
         })
     }
 
     removeRepeat = (id) => () => {
+        const {workout} = this.props
+
         this.props.dispatch({
             type: REMOVE_REPEAT,
             payload: {
+                workout,
                 id
             }
         })
@@ -150,13 +160,15 @@ class Workout extends Component<Props> {
 
     change = (key, value) => {
 
+        const {workout} = this.props
         const {currentRepeat} = this.props.Workout
 
         if (!currentRepeat) return
 
         this.props.dispatch({
-            type: CHANGED,
+            type: REPEAT_CHANGED,
             payload: {
+                workout,
                 id: currentRepeat,
                 [key]: value
             }
@@ -176,11 +188,20 @@ class Workout extends Component<Props> {
     }
 
     getCurrentRepeatModel = () => {
-        const {model, currentRepeat} = this.props.Workout
+        const {currentRepeat} = this.props.Workout
 
-        const repeats = objectValues(model.repeats)
+        return this.getRepeats()[currentRepeat] || null
+    }
 
-        return repeats.find(item => item.id === currentRepeat)
+    getRepeats = () => {
+        return this.getWorkout().repeats || {}
+    }
+
+    getWorkout = () => {
+        const {workout} = this.props
+        const {model} = this.props.Training
+
+        return model.workouts[workout] || {}
     }
 
     renderRepeat = (item, key) => {
@@ -197,7 +218,7 @@ class Workout extends Component<Props> {
 
             <View padding-10>
 
-                <Text text50 dark20 center>
+                <Text text50 dark20 center numberOfLines={1}>
                     <Text red10> {item.weight || 0}</Text>
                     {i18n.t('workout.weight_short')}
                     <Text red10>{item.repeatCount || 0}</Text>
@@ -215,33 +236,19 @@ class Workout extends Component<Props> {
 
     render() {
 
-        const {locale} = this.props
-        const {model} = this.props.Workout
-
-        const repeats = objectValues(model.repeats).sort((a, b) => {
-            if (a.createdAt < b.createdAt) return -1
-            if (a.createdAt > b.createdAt) return 1
+        const repeats = objectValues(this.getRepeats()).sort((a, b) => {
+            if (a.createdAt < b.createdAt) return 1
+            if (a.createdAt > b.createdAt) return -1
             return 0
         })
 
         const repeatModel = this.getCurrentRepeatModel()
 
-        const exerciseTranslation = model.exercise ? findTranslation(model.exercise.translations, locale) : null
-
-        if (exerciseTranslation) {
-            Navigation.mergeOptions(this.props.componentId, {
-                topBar: {
-                    title: {
-                        text: exerciseTranslation.name
-                    }
-                }
-            });
-        }
-
         return <View flex>
             <View flex row padding-10 style={styles.scrollContainer}>
 
                 <ScrollView vertical>
+
                     <Button
                         marginB-10
                         onPress={this.addRepeat}>
@@ -264,7 +271,7 @@ class Workout extends Component<Props> {
                     <WheelPicker
                         style={styles.picker}
                         selectedValue={repeatModel ? repeatModel.weight : weightsArr[0].value}
-                        onValueChange={this.changeFloat('weight')}>
+                        onValueChange={debounce(this.changeFloat('weight'), 200)}>
                         {weightsArr.map((item, key) =>
                             <WheelPicker.Item key={key} value={item.value} label={item.label}/>
                         )}
@@ -278,7 +285,7 @@ class Workout extends Component<Props> {
                     <WheelPicker
                         style={styles.picker}
                         selectedValue={repeatModel ? repeatModel.repeatCount : repeatsArr[0].value}
-                        onValueChange={this.changeInt('repeatCount')}>
+                        onValueChange={debounce(this.changeInt('repeatCount'), 200)}>
                         {repeatsArr.map((item, key) =>
                             <WheelPicker.Item key={key} value={item.value} label={item.label}/>
                         )}
