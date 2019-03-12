@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import moment from 'moment';
 import intersectionBy from 'lodash/intersectionBy';
 import selectors from './selectors';
-import {ScrollView, Dimensions} from 'react-native'
+import {Dimensions, ScrollView} from 'react-native'
 import {Colors, Text, Typography, View} from 'react-native-ui-lib'
 import {LineChart} from 'react-native-chart-kit'
 
@@ -56,7 +56,7 @@ class Chart extends PureComponent<Props> {
             <LineChart
                 bezier
                 data={data}
-                width={Math.max(100 * items.length, screenWidth)}
+                width={Math.max(50 * items.length, screenWidth)}
                 height={200}
                 chartConfig={chartConfig}/>
 

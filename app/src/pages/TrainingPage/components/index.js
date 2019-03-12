@@ -16,6 +16,7 @@ import {Navigation} from "react-native-navigation";
 import * as Pages from "../../../router/Pages";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Chart from './Chart';
+import Legend from './Chart/Legend';
 import ErrorBoundary from "../../../components/ErrorBoundary";
 
 type Props = {
@@ -245,9 +246,11 @@ class Training extends Component<Props> {
                 </View>
 
                 <View row>
-                    <View left flex>
-                        <Text blue20>{item.exercise.muscleGroup}</Text>
-                    </View>
+                    {item.exercise && item.exercise.muscleGroup
+                        ? <View left flex>
+                            <Text blue20>{i18n.t('muscle_groups.' + item.exercise.muscleGroup)}</Text>
+                        </View>
+                        : null}
 
                     <View right flex>
                         <Button link onPress={this.removeWorkout(item)}>
@@ -273,6 +276,8 @@ class Training extends Component<Props> {
 
         return <ScrollView keyboardShouldPersistTaps="always">
             <View flex padding-10>
+
+                <Legend/>
 
                 <ErrorBoundary>
                     <Chart/>

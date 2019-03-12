@@ -9,9 +9,11 @@ import FetchTrainings from "../actions/FetchTrainings";
 import * as Pages from "../../../router/Pages";
 import Logo from "../../../../assets/images/landing-logo-inverted.png";
 import {Navigation} from "react-native-navigation";
-import {objectValues} from "../../../utils";
+import {objectValues, sortByDate} from "../../../utils";
 import {rm} from "../../../storage/fs";
 import FadeInView from "../../../components/FadeIn";
+import {ADD_DISPLAYED_MONTH} from "../actions";
+import {imageMap} from "../../../assets";
 
 type Props = {};
 
@@ -60,6 +62,21 @@ class Landing extends Component<Props> {
         })
     }
 
+    getPrevMonth = () => {
+        const {months} = this.props.Landing
+
+        const lastMonth = months[months.length - 1]
+
+        return moment(lastMonth, 'YYYY-MM-01').subtract(1, 'month').format('YYYY-MM')
+    }
+
+    addMonth = () => {
+        this.props.dispatch({
+            type: ADD_DISPLAYED_MONTH,
+            payload: this.getPrevMonth()
+        })
+    }
+
     renderTraining = (item, key) => {
 
         return <Card
@@ -70,29 +87,50 @@ class Landing extends Component<Props> {
             marginB-10>
 
             <View padding-10 flex>
-                <Text text80 dark10>
-                    {moment(item.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')}
+                <Text text80 dark10 numberOfLines={1}>
+                    {moment(item.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')}, {item.totalWeightPerHour}
                 </Text>
 
                 {item.muscleGroups
-                    ? <Text text90 blue20 numberOfLines={1}>{item.muscleGroups.join('; ')}</Text>
+                    ? <View left flex>
+                        <Text text90 blue20 numberOfLines={1}>
+                            {item.muscleGroups.map(name => i18n.t('muscle_groups.' + name)).join('; ')}
+                        </Text>
+                    </View>
                     : null}
             </View>
+
+            {item.image
+                ? <Card.Image
+                    width={50}
+                    height={50}
+                    imageSource={imageMap[item.image]()}/>
+                : null}
         </Card>
     }
 
     render() {
 
-        const {trainings} = this.props.Landing
+        const {trainings, months} = this.props.Landing
 
-        const items = objectValues(trainings).sort((a, b) => {
-            const date1 = moment(a.startedAt)
-            const date2 = moment(b.startedAt)
+        const prevMonth = this.getPrevMonth()
 
-            if (date1.isBefore(date2)) return 1
-            if (date2.isBefore(date1)) return -1
-            return 0
+        const hasMore = trainings[prevMonth] !== undefined
+
+        let displayedItems = {}
+
+        months.forEach(month => {
+            if (trainings[month] !== undefined) {
+                displayedItems = {
+                    ...displayedItems,
+                    ...trainings[month]
+                }
+            }
         })
+
+        const items = objectValues(displayedItems)
+
+        sortByDate(items, 'startedAt', 'DESC')
 
         return <View flex padding-10>
 
@@ -112,6 +150,12 @@ class Landing extends Component<Props> {
                     </Button>
 
                     {items.map(this.renderTraining)}
+
+                    <Button marginB-10
+                            disabled={!hasMore}
+                            onPress={this.addMonth}>
+                        <Text>{i18n.t('landing.show_more')}</Text>
+                    </Button>
 
                     <Button link marginB-10
                             onPress={() => {

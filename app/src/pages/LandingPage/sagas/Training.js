@@ -1,10 +1,12 @@
 import {all, delay, put, select, takeEvery, takeLatest, throttle} from 'redux-saga/effects'
 
+import moment from 'moment'
 import SaveTrainings from '../actions/SaveTrainings'
 import SaveTraining from '../../TrainingPage/actions/SaveTraining'
 import * as TrainingActions from '../../TrainingPage/actions'
 import {Navigation} from "react-native-navigation";
 import * as Pages from "../../../router/Pages";
+import {objectValues} from "../../../utils";
 
 function* saveAfterChange() {
 
@@ -20,12 +22,24 @@ function* updateRegistry({payload}) {
 
     const items = {...trainings}
 
-    items[payload.id] = {
+    let image = null;
+    const workout = objectValues(payload.workouts)[0]
+    if (workout && workout.exercise) {
+        image = workout.exercise.image
+    }
+
+    const month = moment(payload.startedAt, 'YYYY-MM-DD HH:mm').format('YYYY-MM')
+
+    if (items[month] === undefined) {
+        items[month] = {}
+    }
+
+    items[month][payload.id] = {
         id: payload.id,
-        createdAt: payload.createdAt,
         startedAt: payload.startedAt,
         totalWeightPerHour: payload.totalWeightPerHour,
         muscleGroups: payload.muscleGroups,
+        image
     }
 
     yield put(SaveTrainings(items))
@@ -33,12 +47,18 @@ function* updateRegistry({payload}) {
 
 function* redirect({payload, componentId}) {
 
-    if (payload && payload.id) {
+    if (payload && payload.id && payload.startedAt) {
         const trainings = yield select(store => store.Landing.trainings)
 
         const items = {...trainings}
 
-        delete items[payload.id]
+        const month = moment(payload.startedAt, 'YYYY-MM-DD HH:mm').format('YYYY-MM')
+
+        if (items[month] !== undefined) {
+            if (items[month][payload.id] !== undefined) {
+                delete items[month][payload.id]
+            }
+        }
 
         yield put(SaveTrainings(items))
     }

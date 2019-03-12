@@ -2,12 +2,14 @@
   "landing": {
     "title": "Welcome",
     "start_session": "Start training",
-    "show_session": "Open current",
+    "show_more": "Show more",
     "prev_session": "Open previous",
     "next_session": "Open next"
   },
   "training": {
     "title": "Training",
+    "chart_title": "Your progress",
+    "chart_legend": "ton per hour",
     "add_workout": "Add workout",
     "human_weight": "Your weight",
     "started_at": "Started at",
@@ -40,5 +42,16 @@
     "cancel": "Cancel",
     "date": "Enter date...",
     "number": "Enter value..."
+  },
+  "muscle_groups": {
+    "abs": "Abs",
+    "chest": "Chest",
+    "biceps": "Biceps",
+    "triceps": "Triceps",
+    "shoulders": "Shoulders",
+    "forearm": "Forearm",
+    "back": "Back",
+    "legs": "Legs",
+    "arms": "Arms"
   }
 }
