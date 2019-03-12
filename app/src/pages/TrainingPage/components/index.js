@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {ADD_WORKOUT, CHANGED, REMOVE_WORKOUT, RESET} from '../actions';
+import {ADD_WORKOUT, CHANGED, REMOVE_WORKOUT, UPDATE_WORKOUT_METRICS_REQUEST} from '../actions';
 import selectors from './selectors';
 import moment from 'moment';
 import i18n from '../../../i18n';
@@ -13,11 +13,12 @@ import FetchTraining from "../actions/FetchTraining";
 import uuid from "uuid";
 import DeleteTraining from "../actions/DeleteTraining";
 import {Navigation} from "react-native-navigation";
-import * as Pages from "../../../router/Pages";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Chart from './Chart';
 import Legend from './Chart/Legend';
 import ErrorBoundary from "../../../components/ErrorBoundary";
+import {navigateToExercise, navigateToLanding, navigateToWorkout} from "../../../router";
+import SaveTraining from "../actions/SaveTraining";
 
 type Props = {
     componentId: string,
@@ -32,26 +33,7 @@ class Training extends Component<Props> {
         Navigation.events().bindComponent(this);
     }
 
-    componentDidAppear() {
-
-        Navigation.mergeOptions(this.props.componentId, {
-            topBar: {
-                visible: true,
-                drawBehind: false,
-                title: {
-                    text: i18n.t('training.title')
-                },
-                rightButtons: [
-                    {
-                        id: 'training-save',
-                        systemItem: 'done',
-                        text: i18n.t('training.save'),
-                        color: Colors.dark80
-                    }
-                ]
-            }
-        });
-
+    componentDidMount() {
         const {training, componentId} = this.props
 
         if (training) {
@@ -77,28 +59,26 @@ class Training extends Component<Props> {
         }
     }
 
+    componentDidAppear() {
+        this.props.dispatch({
+            type: UPDATE_WORKOUT_METRICS_REQUEST
+        })
+    }
+
     navigationButtonPressed({buttonId}) {
         switch (buttonId) {
             case 'training-save':
-                this.openLanding()
+                this.save()
         }
     }
 
-    openLanding = () => {
+    save = () => {
 
-        this.props.dispatch({
-            type: RESET
-        })
+        const {model} = this.props.Training
 
-        Navigation.push(this.props.componentId, {
-            component: {
-                name: Pages.LANDING,
-                options: {
-                    drawBehind: true,
-                    visible: false,
-                }
-            }
-        })
+        this.props.dispatch(SaveTraining(model))
+
+        navigateToLanding(this.props.componentId)
     }
 
     remove = () => {
@@ -106,7 +86,7 @@ class Training extends Component<Props> {
         const {componentId} = this.props
         const {model} = this.props.Training
 
-        this.props.dispatch(DeleteTraining(model.id, componentId))
+        this.props.dispatch(DeleteTraining(model, componentId))
     }
 
     change = (key, value) => {
@@ -131,15 +111,7 @@ class Training extends Component<Props> {
     openWorkout = (workout) => () => {
         const {model} = this.props.Training
 
-        Navigation.push(this.props.componentId, {
-            component: {
-                name: Pages.WORKOUT,
-                passProps: {
-                    training: model.training,
-                    workout
-                }
-            }
-        })
+        navigateToWorkout(this.props.componentId, model.id, workout)
     }
 
     removeWorkout = payload => () => {
@@ -167,15 +139,7 @@ class Training extends Component<Props> {
             payload: newWorkout
         })
 
-        Navigation.push(this.props.componentId, {
-            component: {
-                name: Pages.EXERCISE,
-                passProps: {
-                    training: newWorkout.training,
-                    workout: newWorkout.id
-                }
-            }
-        })
+        navigateToExercise(this.props.componentId, model.id, newWorkout.id)
     }
 
     renderWorkout = (item, key) => {
@@ -211,7 +175,7 @@ class Training extends Component<Props> {
                     {exerciseTranslation ? exerciseTranslation.name : "..."}
                 </Text>
 
-                <View row>
+                <View row marginB-10>
 
                     <View column paddingR-5>
                         <View row left>
@@ -225,10 +189,12 @@ class Training extends Component<Props> {
                     {repeats.map((workout, key) =>
                         <View key={key} column paddingH-5>
                             <View row right>
-                                <Text text80 dark30 numberOfLines={1}>{workout.weight.toFixed(1)}</Text>
+                                <Text text80 dark30
+                                      numberOfLines={1}>{workout.weight > 0 ? workout.weight.toFixed(1) : '-'}</Text>
                             </View>
                             <View row right>
-                                <Text text80 dark30 numberOfLines={1}>x{workout.repeatCount}</Text>
+                                <Text text80 dark30
+                                      numberOfLines={1}>x{workout.repeatCount > 0 ? workout.repeatCount : '-'}</Text>
                             </View>
                         </View>
                     )}
@@ -269,8 +235,8 @@ class Training extends Component<Props> {
         const {model} = this.props.Training
 
         const workouts = objectValues(model.workouts).sort((a, b) => {
-            if (a.createdAt < b.createdAt) return -1
-            if (a.createdAt > b.createdAt) return 1
+            if (a.createdAt < b.createdAt) return 1
+            if (a.createdAt > b.createdAt) return -1
             return 0
         })
 
@@ -318,6 +284,7 @@ class Training extends Component<Props> {
 
                 <Button
                     marginB-10
+                    disabled={!(model.id && model.startedAt && model.humanWeight > 0)}
                     onPress={this.addWorkout}>
                     <Text>
                         <Icon name="plus"/>

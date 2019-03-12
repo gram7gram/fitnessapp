@@ -11,7 +11,7 @@ import uuid from "uuid";
 import debounce from "lodash/debounce";
 import {withLocalization} from "../../../context/LocaleProvider";
 import {Navigation} from "react-native-navigation";
-import * as Pages from "../../../router/Pages";
+import {closeModals} from "../../../router";
 
 const weightsArr = []
 const repeatsArr = []
@@ -19,14 +19,14 @@ const repeatsArr = []
 for (let i = 0.5; i < 1500; i += 0.5) {
     weightsArr.push({
         value: i,
-        label: i.toFixed(1) + "",
+        label: i.toFixed(1),
     })
 }
 
 for (let i = 1; i < 250; i++) {
     repeatsArr.push({
         value: i,
-        label: i + "",
+        label: i.toFixed(0),
     })
 }
 
@@ -63,15 +63,7 @@ class Workout extends Component<Props> {
             topBar: {
                 title: {
                     text: title
-                },
-                rightButtons: [
-                    {
-                        id: 'workout-save',
-                        systemItem: 'done',
-                        text: i18n.t('workout.save'),
-                        color: Colors.dark80
-                    }
-                ]
+                }
             }
         });
 
@@ -107,24 +99,18 @@ class Workout extends Component<Props> {
 
     save = () => {
 
-        const {training} = this.props
-
         this.props.dispatch({
             type: UPDATE_WORKOUT_METRICS_REQUEST
         })
 
-        Navigation.push(this.props.componentId, {
-            component: {
-                name: Pages.TRAINING,
-                passProps: {
-                    training
-                }
-            }
-        })
+        closeModals()
     }
 
     addRepeat = () => {
         const {workout} = this.props
+
+        const humanWeight = this.getHumanWeight()
+        const isHumanWeight = this.isHumanWeight()
 
         this.props.dispatch({
             type: ADD_REPEAT,
@@ -132,9 +118,9 @@ class Workout extends Component<Props> {
                 id: uuid(),
                 createdAt: new Date().getTime(),
                 workout,
-                isHumanWeight: false,
-                weight: 0,
-                repeatCount: 0,
+                isHumanWeight,
+                weight: isHumanWeight ? humanWeight : 0,
+                repeatCount: 15,
             }
         })
     }
@@ -204,6 +190,18 @@ class Workout extends Component<Props> {
         return model.workouts[workout] || {}
     }
 
+    isHumanWeight = () => {
+        const workout = this.getWorkout()
+
+        return workout && workout.exercise && workout.exercise.isHumanWeight === true
+    }
+
+    getHumanWeight = () => {
+        const {model} = this.props.Training
+
+        return model.humanWeight || 0
+    }
+
     renderRepeat = (item, key) => {
 
         const {currentRepeat} = this.props.Workout
@@ -242,6 +240,8 @@ class Workout extends Component<Props> {
             return 0
         })
 
+        const humanWeight = this.getHumanWeight()
+        const isHumanWeight = this.isHumanWeight()
         const repeatModel = this.getCurrentRepeatModel()
 
         return <View flex>
@@ -268,14 +268,23 @@ class Workout extends Component<Props> {
 
                     <Text text70 dark80 numberOfLines={1} center>{i18n.t('workout.set_weight')}</Text>
 
-                    <WheelPicker
-                        style={styles.picker}
-                        selectedValue={repeatModel ? repeatModel.weight : weightsArr[0].value}
-                        onValueChange={debounce(this.changeFloat('weight'), 200)}>
-                        {weightsArr.map((item, key) =>
-                            <WheelPicker.Item key={key} value={item.value} label={item.label}/>
-                        )}
-                    </WheelPicker>
+                    {isHumanWeight
+
+                        ? <WheelPicker
+                            style={styles.picker}
+                            selectedValue={humanWeight}>
+                            <WheelPicker.Item value={humanWeight} label={humanWeight.toFixed(1)}/>
+                        </WheelPicker>
+
+                        : <WheelPicker
+                            style={styles.picker}
+                            selectedValue={repeatModel ? repeatModel.weight : weightsArr[0].value}
+                            onValueChange={debounce(this.changeFloat('weight'), 200)}>
+                            {weightsArr.map((item, key) =>
+                                <WheelPicker.Item key={key} value={item.value} label={item.label}/>
+                            )}
+                        </WheelPicker>}
+
                 </View>
 
                 <View flex-1 column>

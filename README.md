@@ -22,6 +22,7 @@ Training {
 ```
 Exercise {
     id: string
+    isHumanWeight: ?boolean
     translations: Array<Translation>
     variants: ?Array<Exercise>
     children: ?Array<Exercise>

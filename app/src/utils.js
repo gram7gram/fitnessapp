@@ -12,6 +12,41 @@ export const findTranslation = (translations, locale) => {
     return translations[defaultLocale]
 }
 
+export const getMetrics = (training, startedAt, completedAt) => {
+
+    let totalWeight = 0, duration = 0, totalWeightPerHour = 0;
+
+    objectValues(training.workouts).forEach(workout => {
+        objectValues(workout.repeats).forEach(repeat => {
+
+            if (!repeat.isHumanWeight) {
+                totalWeight += repeat.weight * repeat.repeatCount
+            } else {
+                totalWeight += training.humanWeight * repeat.repeatCount
+            }
+
+        })
+    })
+
+    if (completedAt && startedAt) {
+
+        const date1 = moment(startedAt, 'YYYY-MM-DD HH:mm')
+        const date2 = moment(completedAt, 'YYYY-MM-DD HH:mm')
+
+        duration = date2.diff(date1, 'minutes') / 60
+    }
+
+    if (duration > 0) {
+        totalWeightPerHour = totalWeight / duration / 1000
+    }
+
+    return {
+        duration: Number(duration.toFixed(2)),
+        totalWeight: Number(totalWeight.toFixed(2)),
+        totalWeightPerHour: Number(totalWeightPerHour.toFixed(2)),
+    }
+}
+
 export const sortByDate = (items, key, direction) => {
 
     items.sort((a, b) => {

@@ -2,23 +2,25 @@
 import {rm} from '../../../storage/fs'
 import {DELETE_TRAINING_BEFORE, DELETE_TRAINING_FAILURE, DELETE_TRAINING_SUCCESS} from "../actions";
 
-export default (id, componentId) => dispatch => {
+export default (model, componentId) => dispatch => {
 
     dispatch({
         type: DELETE_TRAINING_BEFORE,
         componentId,
         payload: {
-            id
+            id: model.id,
+            startedAt: model.startedAt
         }
     })
 
-    rm('/trainings/' + id + '.json')
+    rm('/trainings/' + model.id + '.json')
         .then(() => {
             dispatch({
                 type: DELETE_TRAINING_SUCCESS,
                 componentId,
                 payload: {
-                    id
+                    id: model.id,
+                    startedAt: model.startedAt
                 }
             })
         })
@@ -26,7 +28,11 @@ export default (id, componentId) => dispatch => {
             dispatch({
                 type: DELETE_TRAINING_FAILURE,
                 componentId,
-                payload: message
+                payload: {
+                    id: model.id,
+                    startedAt: model.startedAt,
+                    message
+                }
             })
         })
 }

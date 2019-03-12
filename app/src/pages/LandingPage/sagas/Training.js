@@ -2,20 +2,9 @@ import {all, delay, put, select, takeEvery, takeLatest, throttle} from 'redux-sa
 
 import moment from 'moment'
 import SaveTrainings from '../actions/SaveTrainings'
-import SaveTraining from '../../TrainingPage/actions/SaveTraining'
 import * as TrainingActions from '../../TrainingPage/actions'
-import {Navigation} from "react-native-navigation";
-import * as Pages from "../../../router/Pages";
 import {objectValues} from "../../../utils";
-
-function* saveAfterChange() {
-
-    yield delay(200)
-
-    const model = yield select(store => store.Training.model)
-
-    yield put(SaveTraining(model))
-}
+import {navigateToLanding} from "../../../router";
 
 function* updateRegistry({payload}) {
     const trainings = yield select(store => store.Landing.trainings)
@@ -64,29 +53,12 @@ function* redirect({payload, componentId}) {
     }
 
     if (componentId) {
-        Navigation.push(componentId, {
-            component: {
-                name: Pages.LANDING,
-                options: {
-                    drawBehind: true,
-                    visible: false,
-                }
-            }
-        })
+        navigateToLanding(componentId)
     }
 }
 
 export default function* sagas() {
     yield all([
-        takeLatest([
-            TrainingActions.CHANGED,
-            TrainingActions.ADD_WORKOUT,
-            TrainingActions.REMOVE_WORKOUT,
-            TrainingActions.WORKOUT_CHANGED,
-            TrainingActions.REPEAT_CHANGED,
-            TrainingActions.ADD_REPEAT,
-            TrainingActions.REMOVE_REPEAT,
-        ], saveAfterChange),
 
         takeEvery(TrainingActions.SAVE_TRAINING_SUCCESS, updateRegistry),
 

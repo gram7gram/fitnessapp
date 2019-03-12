@@ -6,7 +6,6 @@ import i18n from '../../../i18n';
 import {Button, Card, Text, View} from 'react-native-ui-lib';
 import {Image, ScrollView, StyleSheet} from "react-native";
 import FetchTrainings from "../actions/FetchTrainings";
-import * as Pages from "../../../router/Pages";
 import Logo from "../../../../assets/images/landing-logo-inverted.png";
 import {Navigation} from "react-native-navigation";
 import {objectValues, sortByDate} from "../../../utils";
@@ -14,6 +13,7 @@ import {rm} from "../../../storage/fs";
 import FadeInView from "../../../components/FadeIn";
 import {ADD_DISPLAYED_MONTH} from "../actions";
 import {imageMap} from "../../../assets";
+import {navigateToTraining} from "../../../router";
 
 type Props = {};
 
@@ -26,40 +26,15 @@ class Landing extends Component<Props> {
     }
 
     componentDidAppear() {
-
-        Navigation.mergeOptions(this.props.componentId, {
-            topBar: {
-                drawBehind: true,
-                visible: false,
-                title: {
-                    text: i18n.t('landing.title')
-                }
-            }
-        })
-
         this.props.dispatch(FetchTrainings())
     }
 
     openTraining = training => () => {
-        Navigation.push(this.props.componentId, {
-            component: {
-                name: Pages.TRAINING,
-                passProps: {
-                    training
-                }
-            }
-        })
+        navigateToTraining(this.props.componentId, training)
     }
 
     addTraining = () => {
-        Navigation.push(this.props.componentId, {
-            component: {
-                name: Pages.TRAINING,
-                passProps: {
-                    training: null
-                }
-            }
-        })
+        navigateToTraining(this.props.componentId, null)
     }
 
     getPrevMonth = () => {
@@ -151,11 +126,13 @@ class Landing extends Component<Props> {
 
                     {items.map(this.renderTraining)}
 
-                    <Button marginB-10
+                    {items.length > 0
+                        ? <Button marginB-10
                             disabled={!hasMore}
                             onPress={this.addMonth}>
                         <Text>{i18n.t('landing.show_more')}</Text>
                     </Button>
+                        : null}
 
                     <Button link marginB-10
                             onPress={() => {

@@ -141,7 +141,7 @@ const totalWeightPerHour = (prev = 0, action) => {
 
 const muscleGroups = (prev = [], action) => {
 
-    let items, muscleGroup
+    let muscleGroup
 
     switch (action.type) {
         case Actions.RESET:
@@ -165,15 +165,7 @@ const muscleGroups = (prev = [], action) => {
 
                 if (muscleGroup) {
 
-                    items = {}
-
-                    prev.forEach(item => {
-                        items[item] = true
-                    })
-
-                    delete items[muscleGroup]
-
-                    return Object.keys(items)
+                    return prev.filter(item => item !== muscleGroup)
                 }
             }
 
@@ -187,15 +179,9 @@ const muscleGroups = (prev = [], action) => {
 
                 if (muscleGroup) {
 
-                    items = {
-                        [muscleGroup]: true
-                    }
+                    prev.push(muscleGroup)
 
-                    prev.forEach(item => {
-                        items[item] = true
-                    })
-
-                    return Object.keys(items)
+                    return [...new Set(prev)]
                 }
             }
 
@@ -266,6 +252,7 @@ const workouts = (prev = {}, action) => {
         case Actions.REMOVE_REPEAT:
 
             id = action.payload.id
+            workoutId = action.payload.workout
 
             items = objectValues(prev).map(workout => {
 

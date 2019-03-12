@@ -20,6 +20,17 @@
         },
         "variants": [
           {
+            "id": "zz2ca6ff-2cc8-4afa-aae4-ab5f436b5rt4",
+            "image": "/images/exercises/chest-11.jpg",
+            "muscleGroup": "chest",
+            "isHumanWeight": true,
+            "translations": {
+              "en": {
+                "name": "Отжимания от пола"
+              }
+            }
+          },
+          {
             "id": "cd2ca6ff-2cc8-4afa-aae4-ab5f436b2ea4",
             "image": "/images/exercises/chest-3.jpg",
             "muscleGroup": "chest",
@@ -288,6 +299,7 @@
       {
         "id": "ecc518d9-7f56-4c0f-844b-ace3b83f011a",
         "muscleGroup": "abs",
+        "isHumanWeight": true,
         "translations": {
           "en": {
             "name": "Верхний"
@@ -298,6 +310,7 @@
       {
         "id": "b7644712-425a-45de-9c65-dfce40e45384",
         "muscleGroup": "abs",
+        "isHumanWeight": true,
         "translations": {
           "en": {
             "name": "Средний"
@@ -308,6 +321,7 @@
       {
         "id": "c6626da7-885b-4013-bb59-b5d22a6c6710",
         "muscleGroup": "abs",
+        "isHumanWeight": true,
         "translations": {
           "en": {
             "name": "Нижний"

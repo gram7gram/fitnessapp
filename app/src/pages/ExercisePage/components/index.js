@@ -10,9 +10,9 @@ import {RESET, SEARCH_CHANGED, TOGGLE_SEARCH} from "../actions";
 import {WORKOUT_CHANGED} from "../../TrainingPage/actions";
 import FetchExercises from "../actions/FetchExercises";
 import {findTranslation} from "../../../utils";
-import * as Pages from "../../../router/Pages";
 import i18n from "../../../i18n";
 import {imageMap} from "../../../assets";
+import {navigateToWorkout} from "../../../router";
 
 type Props = {
     training: ?string,
@@ -28,23 +28,6 @@ class Exercise extends Component<Props> {
     }
 
     componentDidAppear() {
-
-        Navigation.mergeOptions(this.props.componentId, {
-            topBar: {
-                title: {
-                    text: i18n.t('exercise.title')
-                },
-                rightButtons: [
-                    {
-                        id: 'exercise-search',
-                        systemItem: 'search',
-                        text: i18n.t('exercise.search'),
-                        color: Colors.dark80
-                    }
-                ]
-            }
-        })
-
         this.props.dispatch(FetchExercises())
     }
 
@@ -55,6 +38,9 @@ class Exercise extends Component<Props> {
     }
 
     navigationButtonPressed({buttonId}) {
+
+        console.log('navigationButtonPressed', buttonId);
+
         switch (buttonId) {
             case 'exercise-search':
                 this.toggleSearch()
@@ -109,15 +95,7 @@ class Exercise extends Component<Props> {
             }
         })
 
-        Navigation.push(this.props.componentId, {
-            component: {
-                name: Pages.WORKOUT,
-                passProps: {
-                    training,
-                    workout
-                }
-            }
-        })
+        navigateToWorkout(this.props.componentId, training, workout)
     }
 
     renderItem = (item, key) => {

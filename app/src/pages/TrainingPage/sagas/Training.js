@@ -1,8 +1,6 @@
 import {all, delay, put, select, takeEvery, takeLatest, throttle} from 'redux-saga/effects'
-
-import moment from 'moment'
 import * as TrainingActions from '../../TrainingPage/actions'
-import {objectValues} from "../../../utils";
+import {getMetrics} from "../../../utils";
 
 function* debounceUpdateIfDateChanged({payload}) {
     if (payload.startedAt !== undefined || payload.completedAt !== undefined) {
@@ -24,33 +22,9 @@ function* updateMetrics({payload = {}}) {
     const startedAt = payload.startedAt || training.startedAt
     const completedAt = payload.completedAt || training.completedAt
 
-    let totalWeight = 0, duration = 0, totalWeightPerHour = 0;
-
-    objectValues(training.workouts).forEach(workout => {
-        objectValues(workout.repeats).forEach(repeat => {
-            totalWeight += repeat.weight * repeat.repeatCount
-        })
-    })
-
-    if (completedAt && startedAt) {
-
-        const date1 = moment(startedAt, 'YYYY-MM-DD HH:mm')
-        const date2 = moment(completedAt, 'YYYY-MM-DD HH:mm')
-
-        duration = date2.diff(date1, 'minutes') / 60
-    }
-
-    if (duration > 0) {
-        totalWeightPerHour = totalWeight / duration / 1000
-    }
-
     yield put({
         type: TrainingActions.CHANGED,
-        payload: {
-            duration: Number(duration.toFixed(2)),
-            totalWeight: Number(totalWeight.toFixed(2)),
-            totalWeightPerHour: Number(totalWeightPerHour.toFixed(2)),
-        }
+        payload: getMetrics(training, startedAt, completedAt)
     })
 }
 
