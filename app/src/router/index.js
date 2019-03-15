@@ -89,7 +89,7 @@ export function createRouter() {
             }
         }
     }).catch((e) => {
-        console.error(e);
+        console.log(e);
     });
 }
 
@@ -122,11 +122,11 @@ export const navigateToTraining = (referer, training) => {
             }
         }
     }).catch((e) => {
-        console.error(e);
+        console.log(e);
     });
 }
 
-export const navigateToExercise = (referer, training, workout) => {
+export const navigateToExercise = (training, workout) => {
 
     console.log('navigateToExercise');
 
@@ -160,11 +160,11 @@ export const navigateToExercise = (referer, training, workout) => {
             }]
         }
     }).catch((e) => {
-        console.error(e);
+        console.log(e);
     });
 }
 
-export const navigateToWorkout = (referer, training, workout) => {
+export const navigateToWorkout = (training, workout) => {
 
     console.log('navigateToWorkout');
 
@@ -198,7 +198,7 @@ export const navigateToWorkout = (referer, training, workout) => {
             }]
         }
     }).catch((e) => {
-        console.error(e);
+        console.log(e);
     });
 }
 
@@ -209,7 +209,7 @@ export const navigateToLanding = (referer) => {
     closeModals()
 
     Navigation.popToRoot(referer).catch((e) => {
-        console.error(e);
+        console.log(e);
     });
 }
 

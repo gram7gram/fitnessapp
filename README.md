@@ -1,7 +1,7 @@
 
 ### Storage
 
-Android `/data/user/0/com.fitnessapp/files`
+Android `/data/user/0/ua.gram.fitnessapp/files`
 
 ### Schema
 
@@ -23,9 +23,9 @@ Training {
 Exercise {
     id: string
     isHumanWeight: ?boolean
+    image: ?string
     translations: Array<Translation>
     variants: ?Array<Exercise>
-    children: ?Array<Exercise>
 }
 ```
 

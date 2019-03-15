@@ -5,7 +5,16 @@ import intersectionBy from 'lodash/intersectionBy';
 import selectors from './selectors';
 import {Dimensions, ScrollView} from 'react-native'
 import {Colors, Text, Typography, View} from 'react-native-ui-lib'
-import {LineChart} from 'react-native-chart-kit'
+import MyChart from "./MyChart";
+
+const chartConfig = {
+    backgroundGradientFrom: Colors.rgba(Colors.dark10, 1),
+    backgroundGradientTo: Colors.rgba(Colors.dark10, 1),
+    color: (opacity = 1) => Colors.rgba(Colors.blue10, opacity),
+    selectedColor: (opacity = 1) => Colors.rgba(Colors.red10, opacity),
+    decimalPlaces: 2,
+    strokeWidth: 1,
+}
 
 type Props = {}
 
@@ -19,7 +28,7 @@ class Chart extends PureComponent<Props> {
     }
 
     render() {
-        const {chartData, muscleGroups} = this.props
+        const {chartData, muscleGroups, training} = this.props
 
         if (muscleGroups.length === 0) return null
 
@@ -31,18 +40,12 @@ class Chart extends PureComponent<Props> {
 
         if (items.length < 2) return null
 
-        const chartConfig = {
-            backgroundGradientFrom: Colors.rgba(Colors.dark10, 1),
-            backgroundGradientTo: Colors.rgba(Colors.dark10, 1),
-            color: (opacity = 1) => Colors.rgba(Colors.blue10, opacity),
-            decimalPlaces: 2,
-            strokeWidth: 1,
-        }
-
         const data = {
-            labels: items.map(item => moment(item.startedAt, 'YYYY-MM-DD HH:mm').format('MM.DD')),
+            labels: items.map(item => moment(item.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM')),
             datasets: [{
                 data: items.map(item => item.totalWeightPerHour),
+                originalData: items,
+                currentTraining: training.id
             }]
         }
 
@@ -50,11 +53,11 @@ class Chart extends PureComponent<Props> {
 
         return <ScrollView
             ref={ref => this.scroll = ref}
-            horizontal
-            marginB-10>
+            horizontal>
 
-            <LineChart
+            <MyChart
                 bezier
+                withDots
                 data={data}
                 width={Math.max(50 * items.length, screenWidth)}
                 height={200}

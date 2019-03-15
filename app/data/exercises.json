@@ -8,7 +8,7 @@
         "name": "Грудь"
       }
     },
-    "children": [
+    "variants": [
       {
         "id": "690262ac-da38-48fa-828a-7ccd8fcb9958",
         "image": "/images/exercises/chest-2.jpg",
@@ -295,7 +295,7 @@
         "name": "Пресс"
       }
     },
-    "children": [
+    "variants": [
       {
         "id": "ecc518d9-7f56-4c0f-844b-ace3b83f011a",
         "muscleGroup": "abs",
@@ -304,8 +304,7 @@
           "en": {
             "name": "Верхний"
           }
-        },
-        "children": []
+        }
       },
       {
         "id": "b7644712-425a-45de-9c65-dfce40e45384",
@@ -315,8 +314,7 @@
           "en": {
             "name": "Средний"
           }
-        },
-        "children": []
+        }
       },
       {
         "id": "c6626da7-885b-4013-bb59-b5d22a6c6710",
@@ -326,8 +324,7 @@
           "en": {
             "name": "Нижний"
           }
-        },
-        "children": []
+        }
       }
     ]
   },
@@ -339,7 +336,7 @@
         "name": "Плечи"
       }
     },
-    "children": [
+    "variants": [
       {
         "id": "3de10db4-ddc5-461f-a35f-203e36af6a09",
         "muscleGroup": "shoulders",
@@ -347,8 +344,7 @@
           "en": {
             "name": "Задняя дельта"
           }
-        },
-        "children": []
+        }
       },
       {
         "id": "3f9faabf-cb45-4f8e-b5be-acfb0ccc88e1",
@@ -357,8 +353,7 @@
           "en": {
             "name": "Средняя дельта"
           }
-        },
-        "children": []
+        }
       },
       {
         "id": "539c05aa-809c-47ba-a537-8fc081e7899c",
@@ -367,8 +362,7 @@
           "en": {
             "name": "Передняя дельта"
           }
-        },
-        "children": []
+        }
       }
     ]
   },
@@ -380,7 +374,7 @@
         "name": "Руки"
       }
     },
-    "children": [
+    "variants": [
       {
         "id": "b358d86c-a2cb-4f95-9e2b-801077f8feb0",
         "muscleGroup": "biceps",
@@ -388,8 +382,7 @@
           "en": {
             "name": "Бицепс"
           }
-        },
-        "children": []
+        }
       },
       {
         "id": "f2ccd614-0e60-4ccf-9f97-5a20276c318e",
@@ -398,8 +391,7 @@
           "en": {
             "name": "Трицепс"
           }
-        },
-        "children": []
+        }
       },
       {
         "id": "c6fbf536-8370-4e5b-a342-87eeb298bada",
@@ -408,8 +400,7 @@
           "en": {
             "name": "Передплечие"
           }
-        },
-        "children": []
+        }
       }
     ]
   },
@@ -421,7 +412,7 @@
         "name": "Ноги"
       }
     },
-    "children": [
+    "variants": [
       {
         "id": "4cd8bac8-0277-4bb2-a2ca-e91daf51a61e",
         "muscleGroup": "legs",
@@ -429,8 +420,7 @@
           "en": {
             "name": "Передние икры"
           }
-        },
-        "children": []
+        }
       },
       {
         "id": "8e26a8d6-bab7-43c1-b5d5-c896f5acddc1",
@@ -439,8 +429,7 @@
           "en": {
             "name": "Задние икры"
           }
-        },
-        "children": []
+        }
       },
       {
         "id": "f6a15f42-87e8-45a9-b9bb-b2490d657307",
@@ -449,8 +438,7 @@
           "en": {
             "name": "Бицепс бедра"
           }
-        },
-        "children": []
+        }
       },
       {
         "id": "ce2b077c-3fa9-42f2-8235-9177daf2ccc0",
@@ -459,8 +447,7 @@
           "en": {
             "name": "Трицепс бедра"
           }
-        },
-        "children": []
+        }
       },
       {
         "id": "a064eaa9-5c99-4460-9231-2abd6192f4c9",
@@ -469,8 +456,7 @@
           "en": {
             "name": "Ягодицы"
           }
-        },
-        "children": []
+        }
       }
     ]
   }

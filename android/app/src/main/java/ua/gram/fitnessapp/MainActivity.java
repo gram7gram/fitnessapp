@@ -1,4 +1,4 @@
-package com.fitnessapp;
+package ua.gram.fitnessapp;
 
 import com.reactnativenavigation.NavigationActivity;
 

@@ -1,4 +1,4 @@
-package com.fitnessapp;
+package ua.gram.fitnessapp;
 
 import android.app.Application;
 
@@ -12,8 +12,6 @@ import java.util.List;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
-
-import com.oblador.vectoricons.VectorIconsPackage;
 
 import com.rnfs.RNFSPackage;
 
@@ -47,8 +45,7 @@ public class MainApplication extends NavigationApplication {
             new TextInputDelKeyHandlerPackage(),
             new WheelPickerPackage(),
             new RNFSPackage(),
-            new SvgPackage(),
-            new VectorIconsPackage()
+            new SvgPackage()
         );
     }
 

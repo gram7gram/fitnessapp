@@ -6,7 +6,7 @@ import i18n from '../../../i18n';
 import {Button, Card, Text, View} from 'react-native-ui-lib';
 import {Image, ScrollView, StyleSheet} from "react-native";
 import FetchTrainings from "../actions/FetchTrainings";
-import Logo from "../../../../assets/images/landing-logo-inverted.png";
+import Logo from "../../../../assets/images/logo.png";
 import {Navigation} from "react-native-navigation";
 import {objectValues, sortByDate} from "../../../utils";
 import {rm} from "../../../storage/fs";
@@ -63,7 +63,7 @@ class Landing extends Component<Props> {
 
             <View padding-10 flex>
                 <Text text80 dark10 numberOfLines={1}>
-                    {moment(item.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')}, {item.totalWeightPerHour}
+                    {moment(item.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')}
                 </Text>
 
                 {item.muscleGroups
@@ -126,13 +126,10 @@ class Landing extends Component<Props> {
 
                     {items.map(this.renderTraining)}
 
-                    {items.length > 0
-                        ? <Button marginB-10
-                            disabled={!hasMore}
-                            onPress={this.addMonth}>
+                    {items.length > 0 && hasMore
+                        ? <Button marginB-10 onPress={this.addMonth}>
                         <Text>{i18n.t('landing.show_more')}</Text>
-                    </Button>
-                        : null}
+                    </Button> : null}
 
                     <Button link marginB-10
                             onPress={() => {
@@ -144,7 +141,7 @@ class Landing extends Component<Props> {
                                     })
                                 })
                             }}>
-                        <Text red10>remove all</Text>
+                        <Text red10>{i18n.t('landing.remove_all')}</Text>
                     </Button>
 
                 </ScrollView>

@@ -8,27 +8,14 @@ const id = (prev = null, action) => {
         case Actions.RESET:
             return null
         case Actions.FETCH_TRAINING_SUCCESS:
-            return action.payload.id
-        case Actions.CHANGED:
             if (action.payload.id !== undefined) {
                 return action.payload.id
             }
 
-            return prev
-        default:
-            return prev
-    }
-}
-
-const createdAt = (prev = null, action) => {
-    switch (action.type) {
-        case Actions.RESET:
             return null
-        case Actions.FETCH_TRAINING_SUCCESS:
-            return action.payload.createdAt
         case Actions.CHANGED:
-            if (action.payload.createdAt !== undefined) {
-                return action.payload.createdAt
+            if (action.payload.id !== undefined) {
+                return action.payload.id
             }
 
             return prev
@@ -42,7 +29,11 @@ const humanWeight = (prev = 0, action) => {
         case Actions.RESET:
             return 0
         case Actions.FETCH_TRAINING_SUCCESS:
-            return action.payload.humanWeight
+            if (action.payload.humanWeight !== undefined) {
+                return action.payload.humanWeight
+            }
+
+            return 0
         case Actions.CHANGED:
             if (action.payload.humanWeight !== undefined) {
                 return action.payload.humanWeight
@@ -59,7 +50,11 @@ const startedAt = (prev = null, action) => {
         case Actions.RESET:
             return null
         case Actions.FETCH_TRAINING_SUCCESS:
-            return action.payload.startedAt
+            if (action.payload.startedAt !== undefined) {
+                return action.payload.startedAt
+            }
+
+            return null
         case Actions.CHANGED:
             if (action.payload.startedAt !== undefined) {
                 return action.payload.startedAt
@@ -76,7 +71,11 @@ const completedAt = (prev = null, action) => {
         case Actions.RESET:
             return null
         case Actions.FETCH_TRAINING_SUCCESS:
-            return action.payload.completedAt
+            if (action.payload.completedAt !== undefined) {
+                return action.payload.completedAt
+            }
+
+            return null
         case Actions.CHANGED:
             if (action.payload.completedAt !== undefined) {
                 return action.payload.completedAt
@@ -93,7 +92,11 @@ const duration = (prev = 0, action) => {
         case Actions.RESET:
             return 0
         case Actions.FETCH_TRAINING_SUCCESS:
-            return action.payload.duration
+            if (action.payload.duration !== undefined) {
+                return action.payload.duration
+            }
+
+            return 0
         case Actions.CHANGED:
             if (action.payload.duration !== undefined) {
                 return action.payload.duration
@@ -110,7 +113,11 @@ const totalWeight = (prev = 0, action) => {
         case Actions.RESET:
             return 0
         case Actions.FETCH_TRAINING_SUCCESS:
-            return action.payload.totalWeight
+            if (action.payload.totalWeight !== undefined) {
+                return action.payload.totalWeight
+            }
+
+            return 0
         case Actions.CHANGED:
             if (action.payload.totalWeight !== undefined) {
                 return action.payload.totalWeight
@@ -127,7 +134,11 @@ const totalWeightPerHour = (prev = 0, action) => {
         case Actions.RESET:
             return 0
         case Actions.FETCH_TRAINING_SUCCESS:
-            return action.payload.totalWeightPerHour
+            if (action.payload.totalWeightPerHour !== undefined) {
+                return action.payload.totalWeightPerHour
+            }
+
+            return 0
         case Actions.CHANGED:
             if (action.payload.totalWeightPerHour !== undefined) {
                 return action.payload.totalWeightPerHour
@@ -155,7 +166,11 @@ const muscleGroups = (prev = [], action) => {
             return prev
 
         case Actions.FETCH_TRAINING_SUCCESS:
-            return action.payload.muscleGroups
+            if (action.payload.muscleGroups !== undefined) {
+                return action.payload.muscleGroups
+            }
+
+            return []
 
         case Actions.REMOVE_WORKOUT:
 
@@ -303,7 +318,6 @@ const workouts = (prev = {}, action) => {
 
 export default combineReducers({
     id,
-    createdAt,
     startedAt,
     completedAt,
     humanWeight,

@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
-import {Text, View} from 'react-native-ui-lib'
+import React, {PureComponent} from 'react';
+import {StyleSheet} from 'react-native'
+import {Text, View, Colors} from 'react-native-ui-lib'
+import i18n from '../i18n'
 
-class ErrorBoundary extends Component {
+class ErrorBoundary extends PureComponent {
 
     state = {hasError: false};
 
@@ -11,13 +13,23 @@ class ErrorBoundary extends Component {
 
     render() {
         if (this.state.hasError) {
-            return <View marginB-10>
-                <Text red10 center>[Unable to display component]</Text>
+            return <View style={styles.container}>
+                <Text style={styles.text} center>{i18n.t('validation.component_error')}</Text>
             </View>
         }
 
         return this.props.children;
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: Colors.red30,
+        padding: 20
+    },
+    text: {
+        color: Colors.dark80
+    }
+})
 
 export default ErrorBoundary

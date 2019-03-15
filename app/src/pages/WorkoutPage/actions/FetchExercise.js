@@ -19,10 +19,6 @@ export default id => dispatch => {
 
             items.push(item)
 
-            if (item.children) {
-                item.children.forEach(flatten)
-            }
-
             if (item.variants) {
                 item.variants.forEach(flatten)
             }

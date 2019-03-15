@@ -1,0 +1,5872 @@
+{
+  "06f09cbe-9d35-48c6-9a3f-9eb9eba10f37": {
+    "id": "06f09cbe-9d35-48c6-9a3f-9eb9eba10f37",
+    "muscleGroups": [
+      "chest",
+      "triceps"
+    ],
+    "workouts": {
+      "cd1c975e-fa05-4ede-8071-82fb7f65e2c5": {
+        "id": "cd1c975e-fa05-4ede-8071-82fb7f65e2c5",
+        "createdAt": 1552668488161,
+        "exercise": {
+          "id": "80a5526b-493b-43d8-a74e-6db8597c55b5",
+          "translations": {
+            "en": {
+              "name": "Жим 45*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "8fd475dd-16b4-4cd0-8bc5-365b1feef27f",
+            "createdAt": 1552668488164,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "e7443fa0-5ba7-4a7a-a8cb-8bc7c4359caa",
+            "createdAt": 1552668488165,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "69b5cd33-0fe2-486c-8b1f-31468ca9b672",
+            "createdAt": 1552668488166,
+            "weight": 35,
+            "repeatCount": 10
+          },
+          "6": {
+            "id": "6bdd22c2-f1f0-4d43-b5d2-708c6bc84ad2",
+            "createdAt": 1552668488167,
+            "weight": 25,
+            "repeatCount": 5
+          },
+          "7": {
+            "id": "153577aa-1840-498f-8cac-53b9ada2582c",
+            "createdAt": 1552668488168,
+            "weight": 35,
+            "repeatCount": 10
+          },
+          "8": {
+            "id": "4298868d-cd7a-4480-ac6f-fdbcee7bce7e",
+            "createdAt": 1552668488169,
+            "weight": 25,
+            "repeatCount": 5
+          }
+        }
+      },
+      "b00a3bf8-2743-439b-bba4-e0013cad7b6f": {
+        "id": "b00a3bf8-2743-439b-bba4-e0013cad7b6f",
+        "createdAt": 1552668488163,
+        "exercise": {
+          "id": "bfb41817-d15f-4ac9-9d77-02d08f04a50e",
+          "translations": {
+            "en": {
+              "name": "Батерфляй"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "0d3e7408-6d2c-47be-8d52-7bd4c836c952",
+            "createdAt": 1552668488166,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "ceeca1cc-84d7-4e4a-bdf9-15cf399173e7",
+            "createdAt": 1552668488167,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "49a77d77-1de3-43be-b213-d78d132750d4",
+            "createdAt": 1552668488168,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "f403fd22-1082-40c5-a042-da367aeff9c0",
+            "createdAt": 1552668488169,
+            "weight": 25,
+            "repeatCount": 15
+          }
+        }
+      },
+      "7fc699ff-38b6-4116-a44c-8d83a6e7a01f": {
+        "id": "7fc699ff-38b6-4116-a44c-8d83a6e7a01f",
+        "createdAt": 1552668488165,
+        "exercise": {
+          "id": "e3c36ae5-b172-435c-aff1-1c83f7205790",
+          "translations": {
+            "en": {
+              "name": "Жим гантелей"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "4d044061-b16b-45b3-8a89-105fa23b3089",
+            "createdAt": 1552668488168,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "5987efb0-cd56-45fd-a99b-78a89eef9a64",
+            "createdAt": 1552668488169,
+            "weight": 9,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "20ec9116-e35a-423c-886b-bf2775c76849",
+            "createdAt": 1552668488170,
+            "weight": 9,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "1436848e-30f8-4ba2-87a5-0cbc89524c21",
+            "createdAt": 1552668488171,
+            "weight": 9,
+            "repeatCount": 15
+          }
+        }
+      },
+      "a409dc97-db1a-4cf4-95da-49ef8a7f95fe": {
+        "id": "a409dc97-db1a-4cf4-95da-49ef8a7f95fe",
+        "createdAt": 1552668488167,
+        "exercise": {
+          "id": "837cf169-51d4-4930-9208-32a07e28ec81",
+          "translations": {
+            "en": {
+              "name": "Разводка гентелей с ротацией"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "98e23b08-52b6-40c3-ab2c-6516de91dda2",
+            "createdAt": 1552668488170,
+            "weight": 6,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "04b0ac3e-b96b-47fd-929d-b437ba261139",
+            "createdAt": 1552668488171,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "10598261-73e0-494d-98f3-83f152283a11",
+            "createdAt": 1552668488172,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "83ded013-6f95-45a5-bb91-7873795a0c7c",
+            "createdAt": 1552668488173,
+            "weight": 4,
+            "repeatCount": 15
+          }
+        }
+      },
+      "1f79e7af-ece8-4139-93ad-3916280e0161": {
+        "id": "1f79e7af-ece8-4139-93ad-3916280e0161",
+        "createdAt": 1552668488169,
+        "exercise": {
+          "id": "0766af5e-f730-4ee6-87cf-d316195a09d5",
+          "translations": {
+            "en": {
+              "name": "Отжимания"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "41b1a8ca-1313-499f-88f7-499d98b7c9ce",
+            "createdAt": 1552668488172,
+            "weight": 101,
+            "repeatCount": 8
+          },
+          "4": {
+            "id": "d711ef6b-d3ad-4cc7-917f-86d21218b24f",
+            "createdAt": 1552668488173,
+            "weight": 101,
+            "repeatCount": 6
+          },
+          "5": {
+            "id": "eef75d47-c759-42b3-8f93-2379a3a0745b",
+            "createdAt": 1552668488174,
+            "weight": 101,
+            "repeatCount": 4
+          }
+        }
+      },
+      "9b4d25fd-2d0d-4069-99ce-5db208e63546": {
+        "id": "9b4d25fd-2d0d-4069-99ce-5db208e63546",
+        "createdAt": 1552668488171,
+        "exercise": {
+          "id": "07be4276-6909-44a2-91c2-db3e37327410",
+          "translations": {
+            "en": {
+              "name": "Трицепс из-за головы"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "52846067-10c1-4dee-8146-44d6ddc048d5",
+            "createdAt": 1552668488174,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "d917ab0d-5351-42bd-bfcb-615b85babd94",
+            "createdAt": 1552668488175,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "aa97159b-9a54-4d4a-b898-9df87d4d7c3d",
+            "createdAt": 1552668488176,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "d71d9e35-fb6a-4bef-9b81-5cd2840d92f0",
+            "createdAt": 1552668488177,
+            "weight": 12,
+            "repeatCount": 15
+          }
+        }
+      },
+      "f071be7d-19d6-44d6-a549-ebc703f267ae": {
+        "id": "f071be7d-19d6-44d6-a549-ebc703f267ae",
+        "createdAt": 1552668488173,
+        "exercise": {
+          "id": "c23bde05-b395-47cb-9816-c71bc6e5ffff",
+          "translations": {
+            "en": {
+              "name": "Канаты"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "e1e3dc4e-7a42-4020-b477-e9751da9c293",
+            "createdAt": 1552668488176,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "df334d29-724d-41f2-9f73-23aa1b123c2b",
+            "createdAt": 1552668488177,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "a91b65bc-faef-4a78-9442-aeacb4f711a2",
+            "createdAt": 1552668488178,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "317c520c-5a4d-4d25-a4ad-ebe983a00f50",
+            "createdAt": 1552668488179,
+            "weight": 5,
+            "repeatCount": 15
+          }
+        }
+      },
+      "ad04b801-0b96-456d-90e2-3855b9aa9ec7": {
+        "id": "ad04b801-0b96-456d-90e2-3855b9aa9ec7",
+        "createdAt": 1552668488175,
+        "exercise": {
+          "id": "92dbc967-3214-4f92-9cbb-a1cd876a84a4",
+          "translations": {
+            "en": {
+              "name": "Лыжник"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "d950c86b-67e4-4e81-b0c7-66c5c487a0f8",
+            "createdAt": 1552668488178,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "f0936f35-7c52-4080-865e-554ae4c3a1de",
+            "createdAt": 1552668488179,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "e9c57836-8e38-4196-ad75-6e5d56298d7f",
+            "createdAt": 1552668488180,
+            "weight": 3,
+            "repeatCount": 15
+          }
+        }
+      }
+    },
+    "duration": 1.5,
+    "humanWeight": 101,
+    "totalWeight": 7.21,
+    "totalWeightPerHour": 4.81,
+    "startedAt": "2019-02-06 13:30",
+    "completedAt": "2019-02-06 15:00"
+  },
+  "54663d29-4b5a-49a4-b95a-8b0b85349b23": {
+    "id": "54663d29-4b5a-49a4-b95a-8b0b85349b23",
+    "muscleGroups": [
+      "back",
+      "biceps"
+    ],
+    "workouts": {
+      "f7786206-47ce-4927-a4ec-d21020a1c249": {
+        "id": "f7786206-47ce-4927-a4ec-d21020a1c249",
+        "createdAt": 1552668488179,
+        "exercise": {
+          "id": "2ff881e0-f2ed-4266-ad9c-42a6dc3eb3bc",
+          "translations": {
+            "en": {
+              "name": "Тяга штанги в наклоне"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "19326ee7-2219-48a2-b3f1-17d4ac01505c",
+            "createdAt": 1552668488182,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "6cfab789-9c07-47d5-8ec3-73c4fff787b6",
+            "createdAt": 1552668488183,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "35a6721b-0baa-4016-9f3c-aeb81ce2afeb",
+            "createdAt": 1552668488184,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "84ca71e3-3aa9-4bac-bd22-d3d738e15b1a",
+            "createdAt": 1552668488185,
+            "weight": 25,
+            "repeatCount": 15
+          }
+        }
+      },
+      "5ada0302-8792-4bee-ab8b-4e30e5c9dbfe": {
+        "id": "5ada0302-8792-4bee-ab8b-4e30e5c9dbfe",
+        "createdAt": 1552668488182,
+        "exercise": {
+          "id": "92e8a9f6-2017-43ff-8c62-ac74db47bcca",
+          "translations": {
+            "en": {
+              "name": "Подтягивание с резинкой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "1caf7706-0564-42ae-a1dd-cdad15a6bd83",
+            "createdAt": 1552668488185,
+            "weight": 101,
+            "repeatCount": 6
+          },
+          "4": {
+            "id": "95eef9ce-54d7-4a7a-bc6a-e16afcf3f7f1",
+            "createdAt": 1552668488186,
+            "weight": 101,
+            "repeatCount": 4
+          },
+          "5": {
+            "id": "0d223b2b-60f6-4ba8-8eae-d3d222b6bf14",
+            "createdAt": 1552668488187,
+            "weight": 101,
+            "repeatCount": 4
+          },
+          "6": {
+            "id": "ac12f260-0be8-4456-8083-7ef61de9786b",
+            "createdAt": 1552668488188,
+            "weight": 101,
+            "repeatCount": 2
+          }
+        }
+      },
+      "e19861f4-0905-4cbd-82b6-b94241607416": {
+        "id": "e19861f4-0905-4cbd-82b6-b94241607416",
+        "createdAt": 1552668488184,
+        "exercise": {
+          "id": "9a6fc29a-0063-4d1d-9fbb-31bdb919cdb3",
+          "translations": {
+            "en": {
+              "name": "Тяга гантелей лежа"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "c1cbb524-ab9e-42e7-9f3b-ff1643819d53",
+            "createdAt": 1552668488187,
+            "weight": 8,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "a502f46d-116d-4231-9e9c-42965c648fc2",
+            "createdAt": 1552668488188,
+            "weight": 8,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "ebfab664-4cd7-4cd4-93f8-3327fde67aeb",
+            "createdAt": 1552668488189,
+            "weight": 8,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "b10d4a5b-3b8a-4f54-8ba5-e0f4ed91fe77",
+            "createdAt": 1552668488190,
+            "weight": 8,
+            "repeatCount": 15
+          }
+        }
+      },
+      "6d403225-10a8-4f30-a952-265c90165ffc": {
+        "id": "6d403225-10a8-4f30-a952-265c90165ffc",
+        "createdAt": 1552668488186,
+        "exercise": {
+          "id": "3f0d175d-6bc0-49bb-b25d-915b3985d6bd",
+          "translations": {
+            "en": {
+              "name": "Горизонтальная тяга"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "928c4fea-20e6-4aea-87b8-64baeb3403b5",
+            "createdAt": 1552668488189,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "da7b685e-f50b-4f85-bcd7-d2bf52359c62",
+            "createdAt": 1552668488190,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "9b267ecb-48aa-427c-858d-5f944f674d3a",
+            "createdAt": 1552668488191,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "47219a9f-523b-4225-a1c0-f9d8520ac5cf",
+            "createdAt": 1552668488192,
+            "weight": 20,
+            "repeatCount": 15
+          }
+        }
+      },
+      "6c947f60-4e4e-42c3-9fab-48974b6386e7": {
+        "id": "6c947f60-4e4e-42c3-9fab-48974b6386e7",
+        "createdAt": 1552668488188,
+        "exercise": {
+          "id": "3c785c41-3d19-4d72-9b0b-5e28758589a4",
+          "translations": {
+            "en": {
+              "name": "Хаммер"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "b51c8455-59d1-420e-9945-030d06a33e0a",
+            "createdAt": 1552668488191,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "ec214d30-8efb-4342-93a6-e2fc7643835a",
+            "createdAt": 1552668488192,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "cfebc336-4a16-4c14-bd6d-1ff51068f7cb",
+            "createdAt": 1552668488193,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "6bf3afc0-c1f5-4e08-a57c-8ee7968b8ca1",
+            "createdAt": 1552668488194,
+            "weight": 30,
+            "repeatCount": 15
+          }
+        }
+      },
+      "904365f2-7836-484e-9927-bf6e684df023": {
+        "id": "904365f2-7836-484e-9927-bf6e684df023",
+        "createdAt": 1552668488190,
+        "exercise": {
+          "id": "27cd3ad0-bd3f-4f30-86df-f7213fe060c8",
+          "translations": {
+            "en": {
+              "name": "Бицепс гантели открытым хватом"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "e74e0357-8490-4abc-bef9-eca0875fcdb2",
+            "createdAt": 1552668488193,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "433bb899-c61f-41ab-9861-a7e4db4d4a63",
+            "createdAt": 1552668488194,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "7c7fc47a-2917-4d1f-b7fc-e6693cd4d23f",
+            "createdAt": 1552668488195,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "3b32c8c1-af36-4fc0-9500-dfbe2d55b9bb",
+            "createdAt": 1552668488196,
+            "weight": 5,
+            "repeatCount": 15
+          }
+        }
+      },
+      "4b0ef63f-d896-404e-a03b-2e7f20115fea": {
+        "id": "4b0ef63f-d896-404e-a03b-2e7f20115fea",
+        "createdAt": 1552668488192,
+        "exercise": {
+          "id": "de32d86c-c089-4e92-b58f-b5d3005c7b6c",
+          "translations": {
+            "en": {
+              "name": "Молоток"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "7fe89546-7f1a-400b-af5e-b06ace95af3c",
+            "createdAt": 1552668488195,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "555b9efd-1f71-4af4-be5d-fade948d8d91",
+            "createdAt": 1552668488196,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "9723f0fc-a1f0-4b8f-a6e1-6606e026abfe",
+            "createdAt": 1552668488197,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "77a29aa3-26c2-4c35-a811-087eb0392656",
+            "createdAt": 1552668488198,
+            "weight": 5,
+            "repeatCount": 15
+          }
+        }
+      },
+      "a0c3e972-c637-4c95-93a0-9fee3448ca67": {
+        "id": "a0c3e972-c637-4c95-93a0-9fee3448ca67",
+        "createdAt": 1552668488194,
+        "exercise": {
+          "id": "3908cfb9-cc09-4787-9355-f38e9ea3c09a",
+          "translations": {
+            "en": {
+              "name": "Скотт"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "4856d3e1-8ac0-441b-93cf-2f7df63270d4",
+            "createdAt": 1552668488197,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "32b4383d-6901-445a-8159-243f303b0bbf",
+            "createdAt": 1552668488198,
+            "weight": 7,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "036cb012-5505-4bf7-b28a-aef07f74ccd2",
+            "createdAt": 1552668488199,
+            "weight": 7,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "b8760057-996c-43e4-b15c-3c86b0a84cbb",
+            "createdAt": 1552668488200,
+            "weight": 5,
+            "repeatCount": 10
+          },
+          "7": {
+            "id": "c70ca6d9-3ef6-4609-af80-62dead050b16",
+            "createdAt": 1552668488201,
+            "weight": 5,
+            "repeatCount": 10
+          }
+        }
+      }
+    },
+    "duration": 1.5,
+    "humanWeight": 101,
+    "totalWeight": 7.23,
+    "totalWeightPerHour": 4.82,
+    "startedAt": "2019-02-08 14:00",
+    "completedAt": "2019-02-08 15:30"
+  },
+  "5391aa3c-0141-4f51-b3d5-9a553e3a71e3": {
+    "id": "5391aa3c-0141-4f51-b3d5-9a553e3a71e3",
+    "muscleGroups": [
+      "legs",
+      "shoulders"
+    ],
+    "workouts": {
+      "c2286ae2-8d37-4a11-8126-78cf45d7a52b": {
+        "id": "c2286ae2-8d37-4a11-8126-78cf45d7a52b",
+        "createdAt": 1552668488198,
+        "exercise": {
+          "id": "5fe11d22-4401-40cf-8acc-72ace418ec43",
+          "translations": {
+            "en": {
+              "name": "Разгибание ног"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "c1da4504-5657-46a9-b824-fc9c038a94f8",
+            "createdAt": 1552668488201,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "0a6d4215-912b-43a8-94ed-5541f401b684",
+            "createdAt": 1552668488202,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "164ca782-bcb0-4218-96dc-84de161e50f5",
+            "createdAt": 1552668488203,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "d5b3ce72-e635-4af2-b9d4-7df22677aa84",
+            "createdAt": 1552668488204,
+            "weight": 45,
+            "repeatCount": 15
+          }
+        }
+      },
+      "111d70c8-5d3c-4aea-861f-ae4ce1750cc2": {
+        "id": "111d70c8-5d3c-4aea-861f-ae4ce1750cc2",
+        "createdAt": 1552668488200,
+        "exercise": {
+          "id": "b8b9dba1-9c02-4eee-b94f-a0eb034fe6b4",
+          "translations": {
+            "en": {
+              "name": "Жим ногами"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "6df0b0bb-1297-4988-a7ab-645e78735764",
+            "createdAt": 1552668488203,
+            "weight": 100,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "8abd77de-9b80-4177-ada1-b91b35d97046",
+            "createdAt": 1552668488204,
+            "weight": 140,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "279691a2-270e-4234-b6a2-f8166b7a68c0",
+            "createdAt": 1552668488205,
+            "weight": 160,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "fbf1205e-1a3a-42b5-8ad4-4948cc28a652",
+            "createdAt": 1552668488206,
+            "weight": 180,
+            "repeatCount": 15
+          }
+        }
+      },
+      "1101ba09-fdbc-4cb5-b348-cec6b30b164b": {
+        "id": "1101ba09-fdbc-4cb5-b348-cec6b30b164b",
+        "createdAt": 1552668488202,
+        "exercise": {
+          "id": "e51d34dd-b116-4a3c-948f-0f76f3accfa9",
+          "translations": {
+            "en": {
+              "name": "Выпады по залу"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "ea5b2b67-fb07-4eb1-b442-823090e1c8df",
+            "createdAt": 1552668488205,
+            "weight": 0,
+            "repeatCount": 35
+          },
+          "4": {
+            "id": "747bd2fb-0a6e-40bc-8bed-fb8a7dac28bb",
+            "createdAt": 1552668488206,
+            "weight": 6,
+            "repeatCount": 35
+          },
+          "5": {
+            "id": "b7d36ad1-cf1a-4cdc-8105-581ed9efcc03",
+            "createdAt": 1552668488207,
+            "weight": 6,
+            "repeatCount": 35
+          },
+          "6": {
+            "id": "00374699-237a-4436-b388-6176515881ea",
+            "createdAt": 1552668488208,
+            "weight": 6,
+            "repeatCount": 35
+          }
+        }
+      },
+      "aea84b01-c261-4961-b3aa-87e376295c5a": {
+        "id": "aea84b01-c261-4961-b3aa-87e376295c5a",
+        "createdAt": 1552668488204,
+        "exercise": {
+          "id": "5c0813f9-bc12-47c4-acc2-e2b971e1b780",
+          "translations": {
+            "en": {
+              "name": "Сгибания ног"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "4d62fd97-08f9-4e11-884e-d2699058dce2",
+            "createdAt": 1552668488207,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "3e55eb41-0ee9-4404-b1ee-718e037f8d85",
+            "createdAt": 1552668488208,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "56407b9e-4170-4ee3-af66-899810dcddca",
+            "createdAt": 1552668488209,
+            "weight": 30,
+            "repeatCount": 15
+          }
+        }
+      },
+      "d16949d9-c8af-4198-afae-ee3a0eb0e0f2": {
+        "id": "d16949d9-c8af-4198-afae-ee3a0eb0e0f2",
+        "createdAt": 1552668488206,
+        "exercise": {
+          "id": "f4367fc1-5578-4dba-8dfa-c6f0919ad6e5",
+          "translations": {
+            "en": {
+              "name": "Подъем на носки стоя"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "13ed8e84-230d-4cf1-acc1-4046f6ba6c49",
+            "createdAt": 1552668488209,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "bae68f23-feb1-4083-9945-e0208cbf7f2a",
+            "createdAt": 1552668488210,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "975b8bbb-5e40-4e46-a63f-e3d096041a5d",
+            "createdAt": 1552668488211,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "38919d03-34f6-4dd7-9e9c-e88b7be32711",
+            "createdAt": 1552668488212,
+            "weight": 15,
+            "repeatCount": 15
+          }
+        }
+      },
+      "a9c449bb-3dee-474a-b3aa-6ef29c9a54d0": {
+        "id": "a9c449bb-3dee-474a-b3aa-6ef29c9a54d0",
+        "createdAt": 1552668488208,
+        "exercise": {
+          "id": "c58543fb-aeb7-4ea9-83a1-61f225f7aca6",
+          "translations": {
+            "en": {
+              "name": "Махи гантелей в стороны"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "401ad721-aed2-462a-89a8-51cd9e6438ff",
+            "createdAt": 1552668488211,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "4103ea69-6644-4229-b9ce-f293155ebfc2",
+            "createdAt": 1552668488212,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "b73e9fd7-fd97-4dd6-bdd1-caf128845919",
+            "createdAt": 1552668488213,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "ce579934-e60d-4f1c-bd69-b21e20693431",
+            "createdAt": 1552668488214,
+            "weight": 4,
+            "repeatCount": 15
+          }
+        }
+      },
+      "4ea6a5a4-dfa2-4d5d-8684-0b8e9ba01157": {
+        "id": "4ea6a5a4-dfa2-4d5d-8684-0b8e9ba01157",
+        "createdAt": 1552668488210,
+        "exercise": {
+          "id": "48b79bc8-4cc0-4875-930a-267a4c2a1686",
+          "translations": {
+            "en": {
+              "name": "Махи гантелей вперед"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "87cfb360-ac80-4e5a-9c10-a066d5c3438c",
+            "createdAt": 1552668488213,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "82718d08-3e21-4d87-b5cf-6a177ab24266",
+            "createdAt": 1552668488214,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "fd090749-31dd-4526-b48f-e3fb8387c18b",
+            "createdAt": 1552668488215,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "616de331-3d3b-4092-b62e-dc790af3afed",
+            "createdAt": 1552668488216,
+            "weight": 4,
+            "repeatCount": 15
+          }
+        }
+      }
+    },
+    "duration": 2,
+    "humanWeight": 101,
+    "totalWeight": 13.88,
+    "totalWeightPerHour": 6.94,
+    "startedAt": "2019-02-11 13:30",
+    "completedAt": "2019-02-11 15:30"
+  },
+  "04e46de4-102e-4610-877b-9bab4c8ad696": {
+    "id": "04e46de4-102e-4610-877b-9bab4c8ad696",
+    "muscleGroups": [
+      "chest",
+      "triceps"
+    ],
+    "workouts": {
+      "cffa2f88-b71f-4b00-a72b-2e2d347d83b8": {
+        "id": "cffa2f88-b71f-4b00-a72b-2e2d347d83b8",
+        "createdAt": 1552668488214,
+        "exercise": {
+          "id": "8614283d-23fb-47d6-8cb1-2c072187c120",
+          "translations": {
+            "en": {
+              "name": "Жим 45*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "54bdc2de-47df-49c5-b9b7-863387b90830",
+            "createdAt": 1552668488217,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "c63180b3-2265-4c16-a2b8-ffbb28bb0bb8",
+            "createdAt": 1552668488218,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "5e728097-6643-424f-ad17-108dd5adf1ec",
+            "createdAt": 1552668488219,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "c5a31d2a-cb41-4dd7-9c01-67fdd42acffb",
+            "createdAt": 1552668488220,
+            "weight": 30,
+            "repeatCount": 15
+          }
+        }
+      },
+      "697ce64a-52f6-48ed-97e9-4fdc7be612f3": {
+        "id": "697ce64a-52f6-48ed-97e9-4fdc7be612f3",
+        "createdAt": 1552668488216,
+        "exercise": {
+          "id": "b8d46b9c-019a-4869-96c0-16ab4791f2b0",
+          "translations": {
+            "en": {
+              "name": "Батерфляй"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "6feadcd0-3026-42b9-90e6-dcd02e976f06",
+            "createdAt": 1552668488220,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "bdf490f9-3859-4236-b775-df65cee64f13",
+            "createdAt": 1552668488221,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "1c2aea84-4d43-4243-b3fe-07f6cbb4680b",
+            "createdAt": 1552668488222,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "1d737873-e4ab-481d-ad5a-6017f4e08d01",
+            "createdAt": 1552668488223,
+            "weight": 30,
+            "repeatCount": 15
+          }
+        }
+      },
+      "2ecd2b03-eb5a-4ba1-95fe-92dc08f3ea8e": {
+        "id": "2ecd2b03-eb5a-4ba1-95fe-92dc08f3ea8e",
+        "createdAt": 1552668488219,
+        "exercise": {
+          "id": "4830a0a0-0982-4ec5-8f84-d9384a2984fe",
+          "translations": {
+            "en": {
+              "name": "Жим гантелей"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "fa022b22-1522-43d1-86e5-5927d37edef1",
+            "createdAt": 1552668488222,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "8deafb18-c538-4003-9699-0822c5d81718",
+            "createdAt": 1552668488223,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "9a606866-a64e-404e-965f-3f6e1bf208e8",
+            "createdAt": 1552668488224,
+            "weight": 10,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "c016b99b-49e0-4d86-b237-67776405101b",
+            "createdAt": 1552668488225,
+            "weight": 10,
+            "repeatCount": 15
+          }
+        }
+      },
+      "00792707-223b-45e1-b697-66fdee9305ec": {
+        "id": "00792707-223b-45e1-b697-66fdee9305ec",
+        "createdAt": 1552668488221,
+        "exercise": {
+          "id": "f6dc35ed-5e2a-472a-88f7-974a908ea23a",
+          "translations": {
+            "en": {
+              "name": "Разводка гентелей с ротацией"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "381c8a19-8b6b-4bca-be52-17583565f9cc",
+            "createdAt": 1552668488224,
+            "weight": 6,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "590f0035-7524-4754-9280-7677cdb312b2",
+            "createdAt": 1552668488225,
+            "weight": 6,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "3bb370e0-6667-4463-a44f-5091c223b1d9",
+            "createdAt": 1552668488226,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "dc67f63b-144b-43ab-bbe6-d1aac06696fa",
+            "createdAt": 1552668488227,
+            "weight": 4,
+            "repeatCount": 10
+          }
+        }
+      },
+      "d146972a-1679-495f-bd38-101cf5c39024": {
+        "id": "d146972a-1679-495f-bd38-101cf5c39024",
+        "createdAt": 1552668488223,
+        "exercise": {
+          "id": "c3c63493-b880-470f-9b4d-57c94f3f7491",
+          "translations": {
+            "en": {
+              "name": "Отжимания"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "4cb076a1-19b7-4c72-803c-4dbefd7745f2",
+            "createdAt": 1552668488226,
+            "weight": 101,
+            "repeatCount": 10
+          },
+          "4": {
+            "id": "884e09b2-9468-4a54-b6b8-b61cb9c1f0c7",
+            "createdAt": 1552668488227,
+            "weight": 101,
+            "repeatCount": 8
+          },
+          "5": {
+            "id": "bb7f7919-04bd-4799-8db7-0342a2957142",
+            "createdAt": 1552668488228,
+            "weight": 101,
+            "repeatCount": 8
+          }
+        }
+      },
+      "6c62fbad-0878-4590-82d1-0d5a093bfc21": {
+        "id": "6c62fbad-0878-4590-82d1-0d5a093bfc21",
+        "createdAt": 1552668488225,
+        "exercise": {
+          "id": "d37be9a4-e170-4058-abc6-14f891cc13b9",
+          "translations": {
+            "en": {
+              "name": "Трицепс из-за головы"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "86c42a2e-e262-42da-bf7c-df708ac7225f",
+            "createdAt": 1552668488228,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "e97adeb6-04c3-4435-ae54-5c42feaec98a",
+            "createdAt": 1552668488229,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "26fca86b-fe7b-4fd5-a5d7-c0d08c41e4ae",
+            "createdAt": 1552668488230,
+            "weight": 12,
+            "repeatCount": 13
+          },
+          "6": {
+            "id": "a1113541-7903-4b34-b497-45a7e0a3b4f8",
+            "createdAt": 1552668488231,
+            "weight": 12,
+            "repeatCount": 15
+          }
+        }
+      },
+      "2e3f3263-f896-450e-bde1-b082e6364722": {
+        "id": "2e3f3263-f896-450e-bde1-b082e6364722",
+        "createdAt": 1552668488227,
+        "exercise": {
+          "id": "01f165b1-384a-4f41-83c8-b61e19782313",
+          "translations": {
+            "en": {
+              "name": "Канаты"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "06b60b19-cd31-4c02-81de-26691b6adfdb",
+            "createdAt": 1552668488230,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "88c68c81-c749-436f-80c0-69bf25ae94ca",
+            "createdAt": 1552668488231,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "3512dba1-7af6-4e5b-8bbc-d7054bd9b93b",
+            "createdAt": 1552668488232,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "22b52826-cffb-4509-b673-0040c4d1b132",
+            "createdAt": 1552668488233,
+            "weight": 15,
+            "repeatCount": 15
+          }
+        }
+      },
+      "c8b18f7c-6103-4041-bdc5-448e106d6dbf": {
+        "id": "c8b18f7c-6103-4041-bdc5-448e106d6dbf",
+        "createdAt": 1552668488229,
+        "exercise": {
+          "id": "e8108055-ec72-4141-8154-8d8e96cf8174",
+          "translations": {
+            "en": {
+              "name": "Лыжник"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "0eff2c99-5bb2-4b8a-8f02-5c7051e68e5f",
+            "createdAt": 1552668488232,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "061ff9e4-9b38-4791-88dd-ce23b944084d",
+            "createdAt": 1552668488233,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "b12e94fe-29cb-4a79-beed-4e08f5538f9a",
+            "createdAt": 1552668488234,
+            "weight": 4,
+            "repeatCount": 15
+          }
+        }
+      }
+    },
+    "duration": 1.5,
+    "humanWeight": 100.85,
+    "totalWeight": 8.73,
+    "totalWeightPerHour": 5.82,
+    "startedAt": "2019-02-13 13:30",
+    "completedAt": "2019-02-13 15:00"
+  },
+  "088ce8af-99e4-4929-8122-4790c5e10941": {
+    "id": "088ce8af-99e4-4929-8122-4790c5e10941",
+    "muscleGroups": [
+      "back",
+      "biceps"
+    ],
+    "workouts": {
+      "2bd9484c-9df9-4141-9861-818304bee1c7": {
+        "id": "2bd9484c-9df9-4141-9861-818304bee1c7",
+        "createdAt": 1552668488233,
+        "exercise": {
+          "id": "630b637c-7007-467f-827e-50584aca3fa1",
+          "translations": {
+            "en": {
+              "name": "Тяга к носу"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "c5c1433d-b4c1-4ac2-bc05-a01bb80ba298",
+            "createdAt": 1552668488236,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "4858f752-a218-4a30-8b4e-a355e78dcd23",
+            "createdAt": 1552668488237,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "87de4973-c96d-4f69-ba77-9d5c35aa4f90",
+            "createdAt": 1552668488238,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "ca988610-9968-4cd5-85fd-7bf63eee1b4c",
+            "createdAt": 1552668488239,
+            "weight": 30,
+            "repeatCount": 15
+          }
+        }
+      },
+      "13fcc473-1e30-4f80-98eb-453ab450a04a": {
+        "id": "13fcc473-1e30-4f80-98eb-453ab450a04a",
+        "createdAt": 1552668488235,
+        "exercise": {
+          "id": "74395bbb-ab22-41a3-9013-ed92475ba3e1",
+          "translations": {
+            "en": {
+              "name": "Хаммер"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "6f24d95f-302c-4a7e-b24e-6366c5dd5654",
+            "createdAt": 1552668488238,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "9e8b4cae-72a4-4b69-98fe-9a12ea502169",
+            "createdAt": 1552668488239,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "ca4984e9-56cf-462d-9a23-25f397023562",
+            "createdAt": 1552668488240,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "607c11f0-62f5-4c16-b792-b8093d8b9963",
+            "createdAt": 1552668488241,
+            "weight": 35,
+            "repeatCount": 15
+          }
+        }
+      },
+      "73cf7004-8717-4bdf-82af-e63c3521b906": {
+        "id": "73cf7004-8717-4bdf-82af-e63c3521b906",
+        "createdAt": 1552668488237,
+        "exercise": {
+          "id": "9c0ef3d7-f56c-4ba9-b771-145cced93fef",
+          "translations": {
+            "en": {
+              "name": "Тяга гантели в упоре"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "6ede64c0-d2b9-4bd1-85fe-c75e4b77addb",
+            "createdAt": 1552668488240,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "c90e9fd3-834f-4ea7-9c66-8edf82003074",
+            "createdAt": 1552668488241,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "825cd91a-badf-4ce3-b0d2-80598078d250",
+            "createdAt": 1552668488242,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "fee74d00-48ce-442f-885a-ce463d619b64",
+            "createdAt": 1552668488243,
+            "weight": 10,
+            "repeatCount": 10
+          },
+          "7": {
+            "id": "e7ac3b23-bae2-4cfa-addf-26e4dbcde91b",
+            "createdAt": 1552668488244,
+            "weight": 6,
+            "repeatCount": 5
+          }
+        }
+      },
+      "c3f9cf92-e1d3-46fe-af1b-708e837e561d": {
+        "id": "c3f9cf92-e1d3-46fe-af1b-708e837e561d",
+        "createdAt": 1552668488239,
+        "exercise": {
+          "id": "767efc7b-4039-4a4f-944f-1d6df8353b4d",
+          "translations": {
+            "en": {
+              "name": "Вертикальная тяга"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "446ef3f0-bf28-4864-9ff8-35ffe8d68ed3",
+            "createdAt": 1552668488242,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "1e537c56-d644-49b3-9da4-16effe2a74c0",
+            "createdAt": 1552668488243,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "4f1e3944-cca5-4449-b35d-aa0ead41d0e7",
+            "createdAt": 1552668488244,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "fcad8e31-c305-4fc3-baed-1fd7b3e60049",
+            "createdAt": 1552668488245,
+            "weight": 35,
+            "repeatCount": 15
+          }
+        }
+      },
+      "9b6e7261-6112-40b1-be6a-a283a729b40d": {
+        "id": "9b6e7261-6112-40b1-be6a-a283a729b40d",
+        "createdAt": 1552668488241,
+        "exercise": {
+          "id": "6df1e43c-d2b7-403c-a80c-857d285e5bff",
+          "translations": {
+            "en": {
+              "name": "Тяга гантели 1 рукой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "848b65df-cd48-4363-acc7-112c01edb48c",
+            "createdAt": 1552668488244,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "50ce2a45-a5b3-4a3e-a579-beb861e07528",
+            "createdAt": 1552668488245,
+            "weight": 8,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "82815165-5dea-4137-b337-c83cfa450807",
+            "createdAt": 1552668488246,
+            "weight": 8,
+            "repeatCount": 15
+          }
+        }
+      },
+      "a548e04b-a67f-4388-8c0d-033bf5bcbb1b": {
+        "id": "a548e04b-a67f-4388-8c0d-033bf5bcbb1b",
+        "createdAt": 1552668488243,
+        "exercise": {
+          "id": "8994910d-09f3-4f0c-950b-76396365e8df",
+          "translations": {
+            "en": {
+              "name": "Штанга на бицепс обратным хватом"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "8d8cc276-307e-4903-bfd0-81047ec238ac",
+            "createdAt": 1552668488246,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "86f26ec4-3deb-4658-9736-4c99682f5272",
+            "createdAt": 1552668488247,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "8f8cddf5-8b05-45e6-9da1-da27b5f9c72f",
+            "createdAt": 1552668488248,
+            "weight": 8,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "06688c25-c3a1-4042-aa1f-ca62ce181367",
+            "createdAt": 1552668488249,
+            "weight": 8,
+            "repeatCount": 15
+          }
+        }
+      }
+    },
+    "duration": 1.3,
+    "humanWeight": 100.8,
+    "totalWeight": 6.76,
+    "totalWeightPerHour": 5.2,
+    "startedAt": "2019-02-15 13:30",
+    "completedAt": "2019-02-15 14:48"
+  },
+  "d7a3370a-2276-4369-8da4-1e8dad7c4224": {
+    "id": "d7a3370a-2276-4369-8da4-1e8dad7c4224",
+    "muscleGroups": [
+      "legs",
+      "shoulders"
+    ],
+    "workouts": {
+      "d601f17c-3f1d-462a-bb8f-f1ecc6b8f9bb": {
+        "id": "d601f17c-3f1d-462a-bb8f-f1ecc6b8f9bb",
+        "createdAt": 1552668488247,
+        "exercise": {
+          "id": "35b670f8-0e9e-4bb5-8952-93fcad27fbf6",
+          "translations": {
+            "en": {
+              "name": "Разгибание ног"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "cca6dbe4-e22a-4ed9-a0e1-17693d87ac0c",
+            "createdAt": 1552668488250,
+            "weight": 50,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "3e5f691d-6268-4d15-b282-57f71fd95de2",
+            "createdAt": 1552668488251,
+            "weight": 60,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "666dc255-ecc3-4102-957a-2d1d33edfd80",
+            "createdAt": 1552668488252,
+            "weight": 65,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "0bce781d-7964-4e5b-b586-3539b3aef4c9",
+            "createdAt": 1552668488253,
+            "weight": 70,
+            "repeatCount": 12
+          }
+        }
+      },
+      "fc9aa848-7947-4d2d-9363-55e1100a331f": {
+        "id": "fc9aa848-7947-4d2d-9363-55e1100a331f",
+        "createdAt": 1552668488249,
+        "exercise": {
+          "id": "6b72bc63-260f-4390-b5bb-7efaba0582d6",
+          "translations": {
+            "en": {
+              "name": "Выпады"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "9e7c41e3-2479-46b5-8d19-a9bcae5af19a",
+            "createdAt": 1552668488252,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "38089912-d6fe-4b08-9855-3c644315a6fc",
+            "createdAt": 1552668488253,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "b3e37b7a-f4c4-4225-b0b4-7711e8e3e073",
+            "createdAt": 1552668488255,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "3e266d3f-08be-4156-8674-7d102740a589",
+            "createdAt": 1552668488256,
+            "weight": 10,
+            "repeatCount": 15
+          }
+        }
+      },
+      "db0db984-1873-4ab8-8d61-cfb3e8ab8c27": {
+        "id": "db0db984-1873-4ab8-8d61-cfb3e8ab8c27",
+        "createdAt": 1552668488252,
+        "exercise": {
+          "id": "aeb617fb-80b4-4320-b6ad-7ad5eda82c5b",
+          "translations": {
+            "en": {
+              "name": "Подъем на платформу"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "66120403-bf35-4472-b86d-7f7dbb541871",
+            "createdAt": 1552668488255,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "25db483f-38cc-4c35-b287-8a6c6da45ca4",
+            "createdAt": 1552668488256,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "35e29395-ac66-4655-bd70-78fcadb26404",
+            "createdAt": 1552668488257,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "3877219d-0b92-4d43-bb17-4710ac0515f3",
+            "createdAt": 1552668488258,
+            "weight": 0,
+            "repeatCount": 15
+          }
+        }
+      },
+      "10736116-d0a1-4a4f-b7a6-8fd77c73c575": {
+        "id": "10736116-d0a1-4a4f-b7a6-8fd77c73c575",
+        "createdAt": 1552668488254,
+        "exercise": {
+          "id": "e700e877-a966-49c7-a590-cd6ee414c042",
+          "translations": {
+            "en": {
+              "name": "Статически/динамические приседание"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "6b840003-38cc-40bb-a23d-5c26564eeaa8",
+            "createdAt": 1552668488257,
+            "weight": 0,
+            "repeatCount": 30
+          },
+          "4": {
+            "id": "f4dd9aab-341e-458e-bf30-8593c1bab04c",
+            "createdAt": 1552668488258,
+            "weight": 0,
+            "repeatCount": 20
+          },
+          "5": {
+            "id": "15191334-c0f0-438b-b7d4-cfb661c7b3ad",
+            "createdAt": 1552668488259,
+            "weight": 0,
+            "repeatCount": 20
+          },
+          "6": {
+            "id": "6149d741-10aa-4344-b834-e4a456fd8144",
+            "createdAt": 1552668488260,
+            "weight": 0,
+            "repeatCount": 20
+          }
+        }
+      },
+      "2e83db90-ea93-41f6-a48c-7bed610e3a4e": {
+        "id": "2e83db90-ea93-41f6-a48c-7bed610e3a4e",
+        "createdAt": 1552668488256,
+        "exercise": {
+          "id": "b9bba97f-9cf2-4364-8e95-1e7236c38e7a",
+          "translations": {
+            "en": {
+              "name": "Сгибание ног"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "2a4d7619-e7b9-47f6-b6cd-b1dc3849f4fe",
+            "createdAt": 1552668488259,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "8907679d-d626-4d12-b9f0-1d9ccee99ec2",
+            "createdAt": 1552668488260,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "a67dc22e-56a3-4671-a83e-ae8a6fce2fd6",
+            "createdAt": 1552668488261,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "09968c45-c49c-4a32-b5f5-ad872fda87e5",
+            "createdAt": 1552668488262,
+            "weight": 25,
+            "repeatCount": 15
+          }
+        }
+      },
+      "a972de4b-1be3-4ac8-a79d-e917decda5df": {
+        "id": "a972de4b-1be3-4ac8-a79d-e917decda5df",
+        "createdAt": 1552668488258,
+        "exercise": {
+          "id": "81d0bd83-3c62-4047-8eb5-f4c3c99a3787",
+          "translations": {
+            "en": {
+              "name": "Статический стул"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "fedeb9a8-7c74-46e2-a5c7-fa30bc2cca0e",
+            "createdAt": 1552668488261,
+            "weight": 101,
+            "repeatCount": 0.6
+          },
+          "4": {
+            "id": "d2eb6044-896d-4f84-9ac7-cd87ddf0e454",
+            "createdAt": 1552668488262,
+            "weight": 101,
+            "repeatCount": 0.5
+          },
+          "5": {
+            "id": "f5264bae-f914-4627-bdae-397360194263",
+            "createdAt": 1552668488263,
+            "weight": 101,
+            "repeatCount": 0.6
+          }
+        }
+      },
+      "7427b11b-b2d1-4d5a-aeef-dbe7027d51c9": {
+        "id": "7427b11b-b2d1-4d5a-aeef-dbe7027d51c9",
+        "createdAt": 1552668488260,
+        "exercise": {
+          "id": "cf110bc7-4eff-4ceb-90f0-65a6693c214a",
+          "translations": {
+            "en": {
+              "name": "Жим в Смите плечи"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "4bfbc59b-ab0e-4c4a-8e14-9f654c0ae906",
+            "createdAt": 1552668488263,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "b2c703bf-1bb3-45b3-99f3-a6474250e0ac",
+            "createdAt": 1552668488264,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "febd0885-5039-4f4e-bb1c-f2556a5e7e56",
+            "createdAt": 1552668488265,
+            "weight": 30,
+            "repeatCount": 10
+          },
+          "6": {
+            "id": "1d270dea-14ae-4c5e-a38f-f9859bbfb887",
+            "createdAt": 1552668488266,
+            "weight": 30,
+            "repeatCount": 8
+          }
+        }
+      },
+      "6f3a5367-96b8-4597-964e-c3b4da5845db": {
+        "id": "6f3a5367-96b8-4597-964e-c3b4da5845db",
+        "createdAt": 1552668488262,
+        "exercise": {
+          "id": "87163bba-087b-4129-9e81-ded7a020a9d2",
+          "translations": {
+            "en": {
+              "name": "Махи гантелей"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "149af3b2-5511-44cc-8441-3f842114594a",
+            "createdAt": 1552668488265,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "c6e54ddd-d3ac-490e-a129-82cd7a7bac3a",
+            "createdAt": 1552668488266,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "dbcee664-ea66-4443-ade2-d4d8cfc76f24",
+            "createdAt": 1552668488267,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "3c591317-0414-4f0e-a454-1f92c0ee8014",
+            "createdAt": 1552668488268,
+            "weight": 5,
+            "repeatCount": 15
+          }
+        }
+      },
+      "ae229c69-7ff5-496b-8df5-fd2607af914d": {
+        "id": "ae229c69-7ff5-496b-8df5-fd2607af914d",
+        "createdAt": 1552668488264,
+        "exercise": {
+          "id": "0129793a-0e46-4c64-ad7f-359f06be5d5d",
+          "translations": {
+            "en": {
+              "name": "Удары прямые"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "2596df28-6921-4846-9fb1-7fa43468b8f7",
+            "createdAt": 1552668488267,
+            "weight": 3,
+            "repeatCount": 1
+          },
+          "4": {
+            "id": "e3d1db53-1b8c-4e1b-a87e-a304c154f38c",
+            "createdAt": 1552668488268,
+            "weight": 3,
+            "repeatCount": 1
+          },
+          "5": {
+            "id": "b7928fcf-6f26-483d-990c-28f54f1773fb",
+            "createdAt": 1552668488269,
+            "weight": 3,
+            "repeatCount": 1
+          },
+          "6": {
+            "id": "787fcc83-b79d-42c5-a480-62c7a0bef75b",
+            "createdAt": 1552668488270,
+            "weight": 3,
+            "repeatCount": 1
+          }
+        }
+      }
+    },
+    "duration": 1.5,
+    "humanWeight": 100.9,
+    "totalWeight": 7.86,
+    "totalWeightPerHour": 5.24,
+    "startedAt": "2019-02-16 12:30",
+    "completedAt": "2019-02-16 14:00"
+  },
+  "c2b67489-3e52-4825-963f-9769023337b2": {
+    "id": "c2b67489-3e52-4825-963f-9769023337b2",
+    "muscleGroups": [
+      "chest",
+      "triceps"
+    ],
+    "workouts": {
+      "db731ed1-23a1-4ff9-8fd6-8a5d987ca2cb": {
+        "id": "db731ed1-23a1-4ff9-8fd6-8a5d987ca2cb",
+        "createdAt": 1552668488268,
+        "exercise": {
+          "id": "776f449c-5175-45ea-bd32-2d9957151f89",
+          "translations": {
+            "en": {
+              "name": "Жим пирамидой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "91eb5c46-6136-475a-b5bb-7721be2a38a5",
+            "createdAt": 1552668488271,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "ae8a7042-4e25-44cc-a385-f5c32f23e1f2",
+            "createdAt": 1552668488272,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "53509d31-18fb-44e0-ace1-7ae96127aba5",
+            "createdAt": 1552668488273,
+            "weight": 45,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "87799db2-0970-406d-8e0c-f6ed7adf9f84",
+            "createdAt": 1552668488274,
+            "weight": 50,
+            "repeatCount": 10
+          },
+          "7": {
+            "id": "12c2cb3b-9703-48aa-8cda-655cf795bbce",
+            "createdAt": 1552668488275,
+            "weight": 55,
+            "repeatCount": 8
+          },
+          "8": {
+            "id": "1006bd0d-eb0d-4705-800a-32914baebcce",
+            "createdAt": 1552668488276,
+            "weight": 60,
+            "repeatCount": 8
+          },
+          "9": {
+            "id": "d0c0d254-a052-47c6-9a17-e7cae7a3a55a",
+            "createdAt": 1552668488277,
+            "weight": 65,
+            "repeatCount": 6
+          },
+          "10": {
+            "id": "6021a48b-7b22-4107-8869-7e394c38c222",
+            "createdAt": 1552668488278,
+            "weight": 70,
+            "repeatCount": 5
+          },
+          "11": {
+            "id": "e7f40527-c1f8-4dac-970a-71b75221cbcf",
+            "createdAt": 1552668488279,
+            "weight": null,
+            "repeatCount": null
+          },
+          "12": {
+            "id": "a3c87d0e-d5e5-48e6-8e92-b656628bcb7c",
+            "createdAt": 1552668488280,
+            "weight": null,
+            "repeatCount": null
+          },
+          "13": {
+            "id": "ff3e552e-7a55-45e9-a790-7281ce810889",
+            "createdAt": 1552668488281,
+            "weight": null,
+            "repeatCount": null
+          },
+          "14": {
+            "id": "b55387ab-8e48-4dea-b2f4-aae8e547df3f",
+            "createdAt": 1552668488282,
+            "weight": null,
+            "repeatCount": null
+          },
+          "15": {
+            "id": "e223f992-2fe0-4520-9472-08b4a9b48537",
+            "createdAt": 1552668488283,
+            "weight": null,
+            "repeatCount": null
+          },
+          "16": {
+            "id": "dcacf361-899a-4a76-ab94-8f7ab21ab02c",
+            "createdAt": 1552668488284,
+            "weight": null,
+            "repeatCount": null
+          },
+          "17": {
+            "id": "ff141fe8-bbc1-4d3c-a0b4-c01d4cd4a00e",
+            "createdAt": 1552668488285,
+            "weight": null,
+            "repeatCount": null
+          },
+          "18": {
+            "id": "d8291f7a-be47-4bd0-9f30-ad67406c6c12",
+            "createdAt": 1552668488286,
+            "weight": null,
+            "repeatCount": null
+          },
+          "19": {
+            "id": "fa2b5feb-5978-4621-98a2-0441b119f661",
+            "createdAt": 1552668488287,
+            "weight": null,
+            "repeatCount": null
+          },
+          "20": {
+            "id": "8021e19d-7cc7-4644-a80e-8caded7507ad",
+            "createdAt": 1552668488288,
+            "weight": null,
+            "repeatCount": null
+          }
+        }
+      },
+      "40611c89-1c01-47f6-bcc4-85f4cbc92730": {
+        "id": "40611c89-1c01-47f6-bcc4-85f4cbc92730",
+        "createdAt": 1552668488270,
+        "exercise": {
+          "id": "e81f1ac3-641b-4f94-8ff5-be813e4b002d",
+          "translations": {
+            "en": {
+              "name": "Разводка гантелей"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "c6696197-ca49-4b7c-a51c-da049d83b37b",
+            "createdAt": 1552668488273,
+            "weight": 6,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "2ed4a9bf-9a16-481d-9a47-9cf683eba304",
+            "createdAt": 1552668488274,
+            "weight": 6,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "c1f378cd-5ed8-4d53-8819-fa633ee8fdfc",
+            "createdAt": 1552668488275,
+            "weight": 7,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "88e2ae5d-46f0-43d3-b270-32eb9ef381ea",
+            "createdAt": 1552668488276,
+            "weight": 8,
+            "repeatCount": 15
+          }
+        }
+      },
+      "3f6e27df-7692-4472-af4b-5d1829a33935": {
+        "id": "3f6e27df-7692-4472-af4b-5d1829a33935",
+        "createdAt": 1552668488272,
+        "exercise": {
+          "id": "156a95eb-563b-4c8d-9abb-7a761b30620e",
+          "translations": {
+            "en": {
+              "name": "Глубокие отжимания"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "292d212b-401f-4bbf-b783-0f7d95556b92",
+            "createdAt": 1552668488275,
+            "weight": 100,
+            "repeatCount": 8
+          },
+          "4": {
+            "id": "1bd738a9-3064-4bb9-83f6-b7cd456ae2a6",
+            "createdAt": 1552668488276,
+            "weight": 100,
+            "repeatCount": 6
+          },
+          "5": {
+            "id": "538c9118-5825-4181-891a-9994499b57ee",
+            "createdAt": 1552668488277,
+            "weight": 100,
+            "repeatCount": 4
+          }
+        }
+      },
+      "d3cabdf4-52e5-412e-a4d6-3114ff279a48": {
+        "id": "d3cabdf4-52e5-412e-a4d6-3114ff279a48",
+        "createdAt": 1552668488274,
+        "exercise": {
+          "id": "99cbbc0a-cf63-4cec-9cd4-5cc4a59c5d0c",
+          "translations": {
+            "en": {
+              "name": "Жим гантелей 30*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "4513e18d-a93d-4264-9abc-242bc9f84182",
+            "createdAt": 1552668488277,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "eb66355c-2aed-4709-9596-0b5d7f15fffe",
+            "createdAt": 1552668488278,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "11af3466-81fc-41aa-a251-1570e06f59cf",
+            "createdAt": 1552668488279,
+            "weight": 14,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "67ad28d6-329c-4cac-b96b-2167a1619447",
+            "createdAt": 1552668488280,
+            "weight": 14,
+            "repeatCount": 10
+          }
+        }
+      },
+      "bacd0e58-099b-4638-8546-5db87b02ca4d": {
+        "id": "bacd0e58-099b-4638-8546-5db87b02ca4d",
+        "createdAt": 1552668488276,
+        "exercise": {
+          "id": "aa4e7c3e-0da0-48fd-a1ae-143255758fa5",
+          "translations": {
+            "en": {
+              "name": "Батерфляй"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "98ddedd4-e555-430f-ac09-4eafaf0e9a29",
+            "createdAt": 1552668488279,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "97657675-3d30-4e51-9fcd-9f3d6870ab7f",
+            "createdAt": 1552668488280,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "861a592c-b48b-4073-b422-e4977da6130a",
+            "createdAt": 1552668488281,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "cf07dfe4-fc1c-4aed-b495-9fd4a8f516b4",
+            "createdAt": 1552668488282,
+            "weight": 35,
+            "repeatCount": 15
+          }
+        }
+      },
+      "9024e968-09c9-47f5-ae7d-adbae043ff60": {
+        "id": "9024e968-09c9-47f5-ae7d-adbae043ff60",
+        "createdAt": 1552668488278,
+        "exercise": {
+          "id": "d2df0373-f7ca-4ffb-ba47-2a3b695fb3c0",
+          "translations": {
+            "en": {
+              "name": "Жим узкий"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "87d76003-7197-4ce3-8943-7f442105c53a",
+            "createdAt": 1552668488281,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "2d29e24b-0a22-4ba0-b48c-6f0178e5f8b9",
+            "createdAt": 1552668488282,
+            "weight": 30,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "87d148d7-fbef-41ff-ad44-0b1527d83e6c",
+            "createdAt": 1552668488283,
+            "weight": 30,
+            "repeatCount": 10
+          },
+          "6": {
+            "id": "c8b1eaa0-ed74-4874-a80d-ac3d2387021f",
+            "createdAt": 1552668488284,
+            "weight": 30,
+            "repeatCount": 8
+          }
+        }
+      },
+      "72850a9e-452b-4b18-bf60-62e97bd6290a": {
+        "id": "72850a9e-452b-4b18-bf60-62e97bd6290a",
+        "createdAt": 1552668488280,
+        "exercise": {
+          "id": "474873cf-7034-4b3c-8beb-c55ec3f2ec62",
+          "translations": {
+            "en": {
+              "name": "Обратные отжимания от скамейки"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "35c4aa5c-2af8-4416-8218-58365d95c9b7",
+            "createdAt": 1552668488283,
+            "weight": 100,
+            "repeatCount": 4
+          },
+          "4": {
+            "id": "5760cbd8-9e3c-4cfd-ab35-1ef8933e33e4",
+            "createdAt": 1552668488284,
+            "weight": 100,
+            "repeatCount": 3
+          },
+          "5": {
+            "id": "fe9cb35c-14e6-4f7e-a961-f33d3e5ad2e3",
+            "createdAt": 1552668488285,
+            "weight": 100,
+            "repeatCount": 3
+          },
+          "6": {
+            "id": "d3464e97-64fc-418c-b4c0-8d5959a5eac0",
+            "createdAt": 1552668488286,
+            "weight": 100,
+            "repeatCount": 2
+          }
+        }
+      },
+      "0181a018-a41a-4dd9-8200-66966129d24b": {
+        "id": "0181a018-a41a-4dd9-8200-66966129d24b",
+        "createdAt": 1552668488282,
+        "exercise": {
+          "id": "39005fc6-cad9-45d9-b09e-abc9fb9f2e4b",
+          "translations": {
+            "en": {
+              "name": "Жим гантели из-за головы 1 рукой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "111ea004-3cff-4928-9464-f6df55c67db8",
+            "createdAt": 1552668488285,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "6bd72359-9bff-4a99-a76d-3d4a42065673",
+            "createdAt": 1552668488286,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "7c2fd4bc-ab99-4c1c-b060-6c69ad5873ef",
+            "createdAt": 1552668488287,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "e30d25b6-9adc-4ea8-8e19-7b5723d0e735",
+            "createdAt": 1552668488288,
+            "weight": 4,
+            "repeatCount": 15
+          }
+        }
+      },
+      "c14c195c-8223-4e85-9115-0bcb55c72c1f": {
+        "id": "c14c195c-8223-4e85-9115-0bcb55c72c1f",
+        "createdAt": 1552668488285,
+        "exercise": {
+          "id": "136c370e-586e-465b-aac8-a93329fcca6c",
+          "translations": {
+            "en": {
+              "name": "Канаты"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "541da315-950b-4e20-8040-21fbb54329cc",
+            "createdAt": 1552668488288,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "768ae337-b1de-480e-ba3d-68f8c943309f",
+            "createdAt": 1552668488289,
+            "weight": 10,
+            "repeatCount": 10
+          },
+          "5": {
+            "id": "2058a953-e2f1-4202-a4c5-7153a14c07a4",
+            "createdAt": 1552668488290,
+            "weight": 6,
+            "repeatCount": 10
+          },
+          "6": {
+            "id": "d5b52ee9-bdd5-47ed-9b7e-55164f59b438",
+            "createdAt": 1552668488291,
+            "weight": 6,
+            "repeatCount": 10
+          }
+        }
+      }
+    },
+    "duration": 1.5,
+    "humanWeight": 100.3,
+    "totalWeight": 11.59,
+    "totalWeightPerHour": 7.73,
+    "startedAt": "2019-02-18 13:30",
+    "completedAt": "2019-02-18 15:00"
+  },
+  "7cf247f6-b5c1-4cef-aea4-34eb481e886c": {
+    "id": "7cf247f6-b5c1-4cef-aea4-34eb481e886c",
+    "muscleGroups": [
+      "back",
+      "biceps"
+    ],
+    "workouts": {
+      "51d0df36-9ce9-49e2-8574-ebd41a1fc596": {
+        "id": "51d0df36-9ce9-49e2-8574-ebd41a1fc596",
+        "createdAt": 1552668488289,
+        "exercise": {
+          "id": "d1504247-41d4-48ba-9845-bff6ed0d579f",
+          "translations": {
+            "en": {
+              "name": "Горизонтальная тцгя с грубной рукоятью"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "32b2a39d-aaeb-40fc-a0c7-2b15a5ad03a3",
+            "createdAt": 1552668488292,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "b31d5969-5e01-4caf-986a-bd8dc157e314",
+            "createdAt": 1552668488293,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "725eb6bb-b403-4c4d-b1c4-9311d2c36ffa",
+            "createdAt": 1552668488294,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "fc2b36ef-bb00-46c8-b009-03746ad336f1",
+            "createdAt": 1552668488295,
+            "weight": 40,
+            "repeatCount": 15
+          }
+        }
+      },
+      "0f36a341-1f0d-44f1-b2dc-e2726e6d2978": {
+        "id": "0f36a341-1f0d-44f1-b2dc-e2726e6d2978",
+        "createdAt": 1552668488291,
+        "exercise": {
+          "id": "c4e1cdca-1356-4c20-b53f-8c72efa2a535",
+          "translations": {
+            "en": {
+              "name": "Вертикальная тяга параллельным хватом"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "80105add-e674-40dc-9254-a2423828f570",
+            "createdAt": 1552668488294,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "db791651-974c-4c37-894c-6f3d2b15d33f",
+            "createdAt": 1552668488295,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "6ef898c5-8e3d-4d88-a9e5-ce60462b4c40",
+            "createdAt": 1552668488296,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "33b33f23-058d-4a46-8af7-7a202a77dec5",
+            "createdAt": 1552668488297,
+            "weight": 35,
+            "repeatCount": 15
+          }
+        }
+      },
+      "76cb54f5-b305-4395-9d87-25b1d2c25707": {
+        "id": "76cb54f5-b305-4395-9d87-25b1d2c25707",
+        "createdAt": 1552668488293,
+        "exercise": {
+          "id": "1c1f1d0c-90ad-4689-aa78-2e7630cd303c",
+          "translations": {
+            "en": {
+              "name": "Вертикальная тяга за голову"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "deb3e2fb-bc35-4c25-b0b7-208bcc31c45a",
+            "createdAt": 1552668488296,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "7d490219-0d11-4651-a5dc-12aa3b809e8d",
+            "createdAt": 1552668488297,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "cc1a2a47-6bb8-4e39-bd28-853b8361dd17",
+            "createdAt": 1552668488298,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "c576fc5d-5621-44c9-af5a-b8469c04d72a",
+            "createdAt": 1552668488299,
+            "weight": 40,
+            "repeatCount": 15
+          }
+        }
+      },
+      "f7d92588-1f47-4b76-973b-da467299e985": {
+        "id": "f7d92588-1f47-4b76-973b-da467299e985",
+        "createdAt": 1552668488295,
+        "exercise": {
+          "id": "8ef8c709-978c-4004-9374-0d34d1900ced",
+          "translations": {
+            "en": {
+              "name": "Тяга гантелей 30*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "c2c21dc9-a799-43fa-9d5f-0e755ba04381",
+            "createdAt": 1552668488298,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "239084c6-e1bb-49fa-9c7e-cae1875ef104",
+            "createdAt": 1552668488299,
+            "weight": 14,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "a16c2176-ae31-4677-8ad8-ff2f1084bc0c",
+            "createdAt": 1552668488300,
+            "weight": 14,
+            "repeatCount": 10
+          },
+          "6": {
+            "id": "004bd77a-06ff-4ff7-bee3-66d0ca7acd2c",
+            "createdAt": 1552668488301,
+            "weight": 6,
+            "repeatCount": 5
+          },
+          "7": {
+            "id": "76374bd5-b10f-4485-a3ea-b19e21839d6f",
+            "createdAt": 1552668488302,
+            "weight": 14,
+            "repeatCount": 10
+          },
+          "8": {
+            "id": "10861b23-ee0c-4d52-a540-2b55bef2d526",
+            "createdAt": 1552668488303,
+            "weight": 6,
+            "repeatCount": 5
+          }
+        }
+      },
+      "20c234fd-2522-4278-a32b-7843e910d308": {
+        "id": "20c234fd-2522-4278-a32b-7843e910d308",
+        "createdAt": 1552668488297,
+        "exercise": {
+          "id": "7dd62cc8-16dd-48bf-8794-1fc7a530083e",
+          "translations": {
+            "en": {
+              "name": "Шраги гантелей"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "26ed7c74-7fa8-44d0-a96e-60572fac400d",
+            "createdAt": 1552668488300,
+            "weight": 14,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "c7072687-2189-4b41-8710-f58bdab79349",
+            "createdAt": 1552668488301,
+            "weight": 14,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "8138f4cf-7904-43cd-b71e-03c4b48c7e8d",
+            "createdAt": 1552668488302,
+            "weight": 14,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "7956e190-5afa-4623-bab0-c19f1a2cb9fe",
+            "createdAt": 1552668488303,
+            "weight": 14,
+            "repeatCount": 15
+          }
+        }
+      },
+      "f5853633-04da-464d-beb0-d6ee6a1eb5d5": {
+        "id": "f5853633-04da-464d-beb0-d6ee6a1eb5d5",
+        "createdAt": 1552668488299,
+        "exercise": {
+          "id": "47cb9f03-6362-41df-b6ac-c7c462b0c78a",
+          "translations": {
+            "en": {
+              "name": "Скотт"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "25b74502-d733-453e-a411-84db999b5fc7",
+            "createdAt": 1552668488302,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "8f68182e-26f8-4995-8575-2951fc0974cd",
+            "createdAt": 1552668488303,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "ea7d324f-8545-4284-a25a-6a841275834a",
+            "createdAt": 1552668488304,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "523f7fa7-c7ad-4189-8f85-f84073c14fde",
+            "createdAt": 1552668488305,
+            "weight": 20,
+            "repeatCount": 5
+          },
+          "7": {
+            "id": "fc219ef0-9a4c-4536-a93e-e3c954b31a01",
+            "createdAt": 1552668488306,
+            "weight": 15,
+            "repeatCount": 5
+          },
+          "8": {
+            "id": "ffb0bbd9-9758-45ea-9fbf-ef8b07ff6739",
+            "createdAt": 1552668488307,
+            "weight": 10,
+            "repeatCount": 5
+          },
+          "9": {
+            "id": "b21b1d0f-2772-4e4f-b948-53bdb037ea54",
+            "createdAt": 1552668488308,
+            "weight": 5,
+            "repeatCount": 5
+          }
+        }
+      },
+      "a6a73a1d-45de-4171-918b-71370aa70831": {
+        "id": "a6a73a1d-45de-4171-918b-71370aa70831",
+        "createdAt": 1552668488301,
+        "exercise": {
+          "id": "5d99296c-3a0f-42ae-8f56-ae6a15c903dd",
+          "translations": {
+            "en": {
+              "name": "Гантели на бицепс без ротации по очереди"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "b9e7fad7-54e2-4220-9347-a009f81db14e",
+            "createdAt": 1552668488304,
+            "weight": 6,
+            "repeatCount": 10
+          },
+          "4": {
+            "id": "826d9bc2-1ee1-449f-b54d-baf1446b1738",
+            "createdAt": 1552668488305,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "55ba4994-6f70-40fd-a46a-a39c51ad42bb",
+            "createdAt": 1552668488306,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "0b59e424-0703-4051-8302-3520f5b2f8b7",
+            "createdAt": 1552668488307,
+            "weight": 4,
+            "repeatCount": 15
+          }
+        }
+      },
+      "4df8fa5d-df48-4d8a-899f-3172909332f7": {
+        "id": "4df8fa5d-df48-4d8a-899f-3172909332f7",
+        "createdAt": 1552668488303,
+        "exercise": {
+          "id": "3ac49807-b9e6-47a7-b350-db517d004dca",
+          "translations": {
+            "en": {
+              "name": "Гантели на бицепс 60* 1 рукой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "91e5d786-c2f1-460f-9461-7aa07977850f",
+            "createdAt": 1552668488306,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "a6ff6b0b-96a3-4f19-989d-9c0730488f4f",
+            "createdAt": 1552668488307,
+            "weight": 6,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "b84994b9-90d3-440f-9d94-765aee9e306f",
+            "createdAt": 1552668488308,
+            "weight": 6,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "30ae8f36-6223-4de0-a92e-811160e63700",
+            "createdAt": 1552668488309,
+            "weight": 6,
+            "repeatCount": 15
+          }
+        }
+      }
+    },
+    "duration": 1.5,
+    "humanWeight": 100.4,
+    "totalWeight": 9.4,
+    "totalWeightPerHour": 6.26,
+    "startedAt": "2019-02-20 13:30",
+    "completedAt": "2019-02-20 15:00"
+  },
+  "4a132356-aa8f-4301-8542-6dfcb6f8495a": {
+    "id": "4a132356-aa8f-4301-8542-6dfcb6f8495a",
+    "muscleGroups": [
+      "legs",
+      "shoulders"
+    ],
+    "workouts": {
+      "a6197a5e-c185-4a23-939d-a918880481d1": {
+        "id": "a6197a5e-c185-4a23-939d-a918880481d1",
+        "createdAt": 1552668488307,
+        "exercise": {
+          "id": "1cde9283-4a5e-4f1e-b301-6957bb89ee0a",
+          "translations": {
+            "en": {
+              "name": "Гакк приседания"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "c9300844-bd12-4e18-8673-c129ca7a42bb",
+            "createdAt": 1552668488310,
+            "weight": 0,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "33150a84-5c98-4e44-9758-bbf98fc9dea9",
+            "createdAt": 1552668488311,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "c448374c-bf03-4183-9d65-d1703563bc4c",
+            "createdAt": 1552668488312,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "b2bfd1ba-aac7-4fa5-9d97-f306b41bcfa6",
+            "createdAt": 1552668488313,
+            "weight": 40,
+            "repeatCount": 15
+          }
+        }
+      },
+      "1136dd5f-efa8-4f3b-9efa-3467c4d28fac": {
+        "id": "1136dd5f-efa8-4f3b-9efa-3467c4d28fac",
+        "createdAt": 1552668488309,
+        "exercise": {
+          "id": "0ca0dddb-9eaf-4bcf-94b3-809999375d21",
+          "translations": {
+            "en": {
+              "name": "Выпады с гантелей по-очереди"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "3fce0246-f259-4bd2-b52a-466b22b0c4f4",
+            "createdAt": 1552668488312,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "d651827c-89e4-4fff-8642-02fdb533a25d",
+            "createdAt": 1552668488313,
+            "weight": 8,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "2d149cbf-434e-4ee4-bec5-4bba54e7129a",
+            "createdAt": 1552668488314,
+            "weight": 9,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "4ed0e5a6-b7c7-40ec-89b6-bbccbcc655f1",
+            "createdAt": 1552668488315,
+            "weight": 10,
+            "repeatCount": 15
+          }
+        }
+      },
+      "5c09b948-8cd8-420b-8314-e292ec2f1e5d": {
+        "id": "5c09b948-8cd8-420b-8314-e292ec2f1e5d",
+        "createdAt": 1552668488311,
+        "exercise": {
+          "id": "13413fdd-628c-4f68-b714-d79671260c0b",
+          "translations": {
+            "en": {
+              "name": "Разгибания ног"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "274defcd-7516-448e-a0cc-03cbaa11da8d",
+            "createdAt": 1552668488314,
+            "weight": 50,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "a3f04c14-86e4-4c3b-ba61-824d2c5c5281",
+            "createdAt": 1552668488315,
+            "weight": 60,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "84c0cc0f-bc98-43a9-9eaa-700bb9ee76c7",
+            "createdAt": 1552668488316,
+            "weight": 60,
+            "repeatCount": 10
+          },
+          "6": {
+            "id": "301d0a6a-435e-4b9f-861f-0f028b48b439",
+            "createdAt": 1552668488317,
+            "weight": 45,
+            "repeatCount": 5
+          },
+          "7": {
+            "id": "55996503-c362-4719-b8f4-d202271d56ac",
+            "createdAt": 1552668488318,
+            "weight": 20,
+            "repeatCount": 5
+          }
+        }
+      },
+      "77a9d222-29ae-4de9-8819-03f5e1a19719": {
+        "id": "77a9d222-29ae-4de9-8819-03f5e1a19719",
+        "createdAt": 1552668488313,
+        "exercise": {
+          "id": "1d67be40-9d2b-4edd-b722-bc585744be12",
+          "translations": {
+            "en": {
+              "name": "Сгибания ног"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "b96f1a46-ac49-4455-a8cf-89dd960ae06e",
+            "createdAt": 1552668488316,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "e7c59c90-f1d5-4fd2-ade0-0f54c1a753ca",
+            "createdAt": 1552668488317,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "64b93202-6f48-45d5-9bb4-ed94ea4f4a44",
+            "createdAt": 1552668488318,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "03c5c4f9-b351-4e8d-992d-95513dda405b",
+            "createdAt": 1552668488319,
+            "weight": 25,
+            "repeatCount": 15
+          }
+        }
+      },
+      "f926ea7b-006d-447e-aee9-029742745dcd": {
+        "id": "f926ea7b-006d-447e-aee9-029742745dcd",
+        "createdAt": 1552668488315,
+        "exercise": {
+          "id": "5cfc017c-e247-4e1d-a0fa-3b8cb8ce49fd",
+          "translations": {
+            "en": {
+              "name": "Гиперэкстензия"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "4b752251-0024-4e72-baae-e69e29bef36a",
+            "createdAt": 1552668488318,
+            "weight": 0,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "b12f0923-7e8c-4703-bab8-e6f46a31b8a3",
+            "createdAt": 1552668488320,
+            "weight": 0,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "1b6b7c41-25ba-42d1-8884-bd9e99de54a5",
+            "createdAt": 1552668488321,
+            "weight": 0,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "49325aec-5adb-4ac9-9a91-5554f846c0f1",
+            "createdAt": 1552668488322,
+            "weight": 0,
+            "repeatCount": 15
+          }
+        }
+      },
+      "78d86eb2-7257-4e0e-a4b9-2dd2e8a18b89": {
+        "id": "78d86eb2-7257-4e0e-a4b9-2dd2e8a18b89",
+        "createdAt": 1552668488318,
+        "exercise": {
+          "id": "bc9e92c7-f267-4179-94fd-be159e33669e",
+          "translations": {
+            "en": {
+              "name": "Подъем на носки сидя (камбала)"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "723b7a80-1cf0-46a7-bb62-b2c0985e2d22",
+            "createdAt": 1552668488321,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "7ea73dda-9045-4341-a801-e38066e0a79b",
+            "createdAt": 1552668488322,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "67e99263-c911-4f6f-9a9b-54c978683616",
+            "createdAt": 1552668488323,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "fb2a001c-87bf-4c46-9cbb-809ed072ed95",
+            "createdAt": 1552668488324,
+            "weight": 45,
+            "repeatCount": 15
+          }
+        }
+      },
+      "68466cdd-22f4-4376-98e0-4958d80aea9b": {
+        "id": "68466cdd-22f4-4376-98e0-4958d80aea9b",
+        "createdAt": 1552668488320,
+        "exercise": {
+          "id": "85cdc325-f9db-4e24-8812-04c0bfe4b9f7",
+          "translations": {
+            "en": {
+              "name": "Средняя дельта в тренажере"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "7be509c3-df31-40cc-bdc4-1597bae8e204",
+            "createdAt": 1552668488323,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "27e7b4be-2fe6-44df-9b7f-79233f3c3ae7",
+            "createdAt": 1552668488324,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "17351124-1d80-4a90-81d7-dd571db34e06",
+            "createdAt": 1552668488325,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "4877dd03-6d55-44ec-b18e-1583cec9d41b",
+            "createdAt": 1552668488326,
+            "weight": 30,
+            "repeatCount": 15
+          }
+        }
+      },
+      "00f3f92c-eea8-4779-936f-df4e33f6624b": {
+        "id": "00f3f92c-eea8-4779-936f-df4e33f6624b",
+        "createdAt": 1552668488322,
+        "exercise": {
+          "id": "c3d250f1-ae03-4884-98d9-a16ceaa1f296",
+          "translations": {
+            "en": {
+              "name": "Жим гантелей Арнольда"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "ef57832b-3397-4678-848a-57d6c9dc8b1e",
+            "createdAt": 1552668488325,
+            "weight": 6,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "ae1e02f1-4245-4f96-b2a4-e06bd846bcb4",
+            "createdAt": 1552668488326,
+            "weight": 8,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "7d7ce57b-2d19-4a5c-bbac-aac7ab5da219",
+            "createdAt": 1552668488327,
+            "weight": 7,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "b727d661-a8c6-4efb-94fb-e5b2747add44",
+            "createdAt": 1552668488328,
+            "weight": 7,
+            "repeatCount": 15
+          }
+        }
+      },
+      "38afdc96-5c7e-4929-936a-8dd8398aa272": {
+        "id": "38afdc96-5c7e-4929-936a-8dd8398aa272",
+        "createdAt": 1552668488324,
+        "exercise": {
+          "id": "a5b6dbb4-c92e-4cde-b507-937de7f2d627",
+          "translations": {
+            "en": {
+              "name": "Пекдек задняя дельта"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "66c87ece-dc12-4075-9952-0f1844b5e3c5",
+            "createdAt": 1552668488327,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "103699ed-ce55-4ae1-9cfb-2dd0bbef278d",
+            "createdAt": 1552668488328,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "21a0e676-20e0-4900-a8c9-550e2baf6124",
+            "createdAt": 1552668488329,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "d0f53d79-0fd2-4f5d-a497-44d1060f1d7d",
+            "createdAt": 1552668488330,
+            "weight": 25,
+            "repeatCount": 10
+          },
+          "7": {
+            "id": "11efb911-ad94-4a2e-a335-bbd65f9e96a7",
+            "createdAt": 1552668488331,
+            "weight": 15,
+            "repeatCount": 5
+          }
+        }
+      },
+      "6f6b67db-d531-49b2-89af-0e0335abd20b": {
+        "id": "6f6b67db-d531-49b2-89af-0e0335abd20b",
+        "createdAt": 1552668488326,
+        "exercise": {
+          "id": "c2f13f4b-6c02-4acf-ac6e-98e4aae7fbb7",
+          "translations": {
+            "en": {
+              "name": "Руль (передняя дельта)"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "1354a1f6-50a7-4fd2-b079-f85ab879adc1",
+            "createdAt": 1552668488329,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "15d7d910-a35c-40ac-a23c-8b561a11d4ce",
+            "createdAt": 1552668488330,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "5a508235-0a75-40a8-b82c-4e14a10ffb32",
+            "createdAt": 1552668488331,
+            "weight": 10,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "3dd13507-1f7b-4aad-b01a-ea83a42f1ce7",
+            "createdAt": 1552668488332,
+            "weight": 10,
+            "repeatCount": 12
+          }
+        }
+      }
+    },
+    "duration": 1.5,
+    "humanWeight": 99.6,
+    "totalWeight": 11.58,
+    "totalWeightPerHour": 7.72,
+    "startedAt": "2019-02-22 13:30",
+    "completedAt": "2019-02-22 15:00"
+  },
+  "500ee153-6daf-4dd7-aba5-174ac217cf84": {
+    "id": "500ee153-6daf-4dd7-aba5-174ac217cf84",
+    "muscleGroups": [
+      "chest",
+      "triceps"
+    ],
+    "workouts": {
+      "13bc9a60-691c-4aa7-b656-5d2d69a264a5": {
+        "id": "13bc9a60-691c-4aa7-b656-5d2d69a264a5",
+        "createdAt": 1552668488330,
+        "exercise": {
+          "id": "f2949ff6-faf3-4132-8d5b-f3886b1709f0",
+          "translations": {
+            "en": {
+              "name": "Жим гантелей 45*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "69dfbeb7-31c6-4ae2-af86-72968c7ad428",
+            "createdAt": 1552668488333,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "e5311b78-9c7e-4535-b497-b53958622871",
+            "createdAt": 1552668488334,
+            "weight": 18,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "210d7f27-e1c9-4914-a577-3268c4679de9",
+            "createdAt": 1552668488335,
+            "weight": 22,
+            "repeatCount": 10
+          },
+          "6": {
+            "id": "ec25cb6d-8198-484e-a65f-b58d4190ec93",
+            "createdAt": 1552668488336,
+            "weight": 24,
+            "repeatCount": 8
+          },
+          "7": {
+            "id": "965aaf03-20a8-4d04-8024-73d05a650b15",
+            "createdAt": 1552668488337,
+            "weight": 26,
+            "repeatCount": 5
+          },
+          "8": {
+            "id": "9b279a9a-cf72-4b2a-899f-5df8bd30a3a9",
+            "createdAt": 1552668488338,
+            "weight": 28,
+            "repeatCount": 4
+          }
+        }
+      },
+      "b9e0ee62-f021-47b7-a965-e729fdbb5a8d": {
+        "id": "b9e0ee62-f021-47b7-a965-e729fdbb5a8d",
+        "createdAt": 1552668488332,
+        "exercise": {
+          "id": "66284dc9-885b-4bdf-9d67-a6411ecdd283",
+          "translations": {
+            "en": {
+              "name": "Баттерфляй"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "774c78fe-9377-477c-8903-130e717b2a5c",
+            "createdAt": 1552668488335,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "db71c1ca-0f7c-45ab-8a30-9e7db2bb7710",
+            "createdAt": 1552668488336,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "835225eb-217c-4797-9a02-01b6f3998136",
+            "createdAt": 1552668488337,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "e3b279b1-97d0-4d1b-8721-fe87df3343e7",
+            "createdAt": 1552668488338,
+            "weight": 35,
+            "repeatCount": 15
+          }
+        }
+      },
+      "e87ef8f4-b033-4bf2-8452-b509c2813f37": {
+        "id": "e87ef8f4-b033-4bf2-8452-b509c2813f37",
+        "createdAt": 1552668488334,
+        "exercise": {
+          "id": "92f7f5bf-345a-4fea-b824-e73ea9cbc905",
+          "translations": {
+            "en": {
+              "name": "Разводки в тренажере 30*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "6a8da77b-ca37-4f64-81b3-7ce225a40ab8",
+            "createdAt": 1552668488337,
+            "weight": 15,
+            "repeatCount": 10
+          },
+          "4": {
+            "id": "bde0f5f4-1f60-47f1-898e-a0741e45414d",
+            "createdAt": 1552668488338,
+            "weight": 13,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "a84294e9-f119-4d08-b20e-26132c0aab13",
+            "createdAt": 1552668488339,
+            "weight": 12,
+            "repeatCount": 15
+          }
+        }
+      },
+      "9cf7f6dd-95a3-4112-8faa-e4502b915db1": {
+        "id": "9cf7f6dd-95a3-4112-8faa-e4502b915db1",
+        "createdAt": 1552668488336,
+        "exercise": {
+          "id": "bbae77e1-00ca-4b1d-ab70-4715f2ad6cc8",
+          "translations": {
+            "en": {
+              "name": "Разводки в тренажере 0*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "991635c6-bfa9-4ae6-bc30-18ca86d514a8",
+            "createdAt": 1552668488339,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "1261ccc9-1653-4a56-9486-ec0715eae924",
+            "createdAt": 1552668488340,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "88e5b760-8a5b-4c64-8892-cba71acd2ed4",
+            "createdAt": 1552668488341,
+            "weight": 10,
+            "repeatCount": 15
+          }
+        }
+      },
+      "3027dc64-deaf-48b9-8fe7-4c5a83115052": {
+        "id": "3027dc64-deaf-48b9-8fe7-4c5a83115052",
+        "createdAt": 1552668488338,
+        "exercise": {
+          "id": "71b2d288-9ab1-4d7e-8702-c269f0b5c94c",
+          "translations": {
+            "en": {
+              "name": "Жим гантелей 0*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "b964f414-ae1d-4f95-baaa-e0e09ef3a637",
+            "createdAt": 1552668488341,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "19743f72-ea0c-4f0c-b949-1144065e5467",
+            "createdAt": 1552668488342,
+            "weight": 14,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "073487b9-9fa7-49d0-a513-74adc03e1951",
+            "createdAt": 1552668488343,
+            "weight": 14,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "005557b2-2515-4287-aabc-8e8f7ca8cf6d",
+            "createdAt": 1552668488345,
+            "weight": 14,
+            "repeatCount": 15
+          }
+        }
+      },
+      "33cce813-d57b-4159-9fab-fcb70996f6c1": {
+        "id": "33cce813-d57b-4159-9fab-fcb70996f6c1",
+        "createdAt": 1552668488341,
+        "exercise": {
+          "id": "f4e5461a-3e96-42c9-8bb4-7b29d07d5297",
+          "translations": {
+            "en": {
+              "name": "Пуловер"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "9bf41c0c-1ec7-40bc-98fc-b3bd651d56fd",
+            "createdAt": 1552668488344,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "301d491d-b31b-4265-a0b9-e747edfb1c2f",
+            "createdAt": 1552668488345,
+            "weight": 14,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "9c3ee97e-c9a5-42ff-9b82-6667892b6573",
+            "createdAt": 1552668488346,
+            "weight": 14,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "7b982953-4e3f-450d-9194-82db926925d3",
+            "createdAt": 1552668488347,
+            "weight": 14,
+            "repeatCount": 15
+          }
+        }
+      },
+      "7e66a179-ea6f-4003-824a-ca4843c2be85": {
+        "id": "7e66a179-ea6f-4003-824a-ca4843c2be85",
+        "createdAt": 1552668488343,
+        "exercise": {
+          "id": "3a13b54a-793d-456c-8a2e-accff3cd04c0",
+          "translations": {
+            "en": {
+              "name": "Брусья с резинкой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "41ac893f-fe45-4881-b363-d9b6d7a21ed7",
+            "createdAt": 1552668488346,
+            "weight": 100.1,
+            "repeatCount": 3
+          },
+          "4": {
+            "id": "b0ca4e4e-15b1-4f71-89ae-f25382bdc322",
+            "createdAt": 1552668488347,
+            "weight": 100.1,
+            "repeatCount": 3
+          },
+          "5": {
+            "id": "b8efdf55-1e42-4ce6-b953-a90296b648d6",
+            "createdAt": 1552668488348,
+            "weight": 100.1,
+            "repeatCount": 3
+          },
+          "6": {
+            "id": "651e3c42-3ef3-4afa-912e-ecc8d4ef0481",
+            "createdAt": 1552668488349,
+            "weight": 100.1,
+            "repeatCount": 3
+          }
+        }
+      },
+      "bf78da27-a428-4999-b050-47e978b4d712": {
+        "id": "bf78da27-a428-4999-b050-47e978b4d712",
+        "createdAt": 1552668488345,
+        "exercise": {
+          "id": "855a623d-fb05-4a1a-ae4f-2a126c8b6f5b",
+          "translations": {
+            "en": {
+              "name": "Канаты из-за головы"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "89dfbb2a-64e5-4369-ab0c-44defb68b59e",
+            "createdAt": 1552668488348,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "59f97287-4d0a-46f5-8860-3627bdd0c345",
+            "createdAt": 1552668488349,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "3730c037-5231-45a1-a2e1-2d3df706af40",
+            "createdAt": 1552668488350,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "d49b40d7-4106-41c1-b3f4-5eb93f0cf988",
+            "createdAt": 1552668488351,
+            "weight": 15,
+            "repeatCount": 15
+          }
+        }
+      },
+      "bf0e02b1-cb45-442c-b6d6-93038620156f": {
+        "id": "bf0e02b1-cb45-442c-b6d6-93038620156f",
+        "createdAt": 1552668488347,
+        "exercise": {
+          "id": "a653ca2e-8b2b-45de-a166-e678540f88ff",
+          "translations": {
+            "en": {
+              "name": "Жим гантелей из-за головы"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "7867ca36-f3ec-452b-8826-d95254dc7e52",
+            "createdAt": 1552668488350,
+            "weight": 14,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "ce0ac4f7-0866-4911-b964-af9eb3905084",
+            "createdAt": 1552668488351,
+            "weight": 14,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "318a9066-8b10-465a-a55a-6815aee91acd",
+            "createdAt": 1552668488352,
+            "weight": 14,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "1ebc521a-9709-4e36-8722-dfe048bf974a",
+            "createdAt": 1552668488353,
+            "weight": 14,
+            "repeatCount": 15
+          }
+        }
+      }
+    },
+    "duration": 1.5,
+    "humanWeight": 100.1,
+    "totalWeight": 8.7,
+    "totalWeightPerHour": 5.8,
+    "startedAt": "2019-02-25 13:30",
+    "completedAt": "2019-02-25 15:00"
+  },
+  "c9e09af3-886d-441e-8279-7a25fb6766a3": {
+    "id": "c9e09af3-886d-441e-8279-7a25fb6766a3",
+    "muscleGroups": [
+      "back",
+      "biceps"
+    ],
+    "workouts": {
+      "61ff33d9-6acf-4224-8570-63178ddf0aff": {
+        "id": "61ff33d9-6acf-4224-8570-63178ddf0aff",
+        "createdAt": 1552668488351,
+        "exercise": {
+          "id": "1570846e-4e5e-4494-9837-089c4777f80d",
+          "translations": {
+            "en": {
+              "name": "Тяга гантелей в наклоне 2 руками"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "cc7c030f-9ba8-4baf-81ab-9007a1d63577",
+            "createdAt": 1552668488354,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "8e10bb7f-6a8b-4585-a4a3-e537e8d790cb",
+            "createdAt": 1552668488355,
+            "weight": 16,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "fa440663-0b45-4fb1-99e8-21f133d93619",
+            "createdAt": 1552668488356,
+            "weight": 16,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "b4d5c529-e4d4-45ad-8052-2dc3d294998b",
+            "createdAt": 1552668488357,
+            "weight": 16,
+            "repeatCount": 15
+          }
+        }
+      },
+      "aa2c10ba-d449-4449-b3af-d5705ce771c9": {
+        "id": "aa2c10ba-d449-4449-b3af-d5705ce771c9",
+        "createdAt": 1552668488353,
+        "exercise": {
+          "id": "87da840a-1797-4547-a8e4-b1313d57a762",
+          "translations": {
+            "en": {
+              "name": "Хаммер"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "55a5605e-a832-4b5a-9650-bf0a6f8ed5f0",
+            "createdAt": 1552668488356,
+            "weight": 35,
+            "repeatCount": 13
+          },
+          "4": {
+            "id": "8659e404-0c98-4f70-802a-fc44e653cf5e",
+            "createdAt": 1552668488357,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "aa033ee7-73da-433d-8ed7-66693f2e9223",
+            "createdAt": 1552668488358,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "bb7498c7-6ac8-4388-a7a6-d04ec95083e3",
+            "createdAt": 1552668488359,
+            "weight": 40,
+            "repeatCount": 15
+          }
+        }
+      },
+      "cc2593e0-da24-4034-8e50-207f1cd253ff": {
+        "id": "cc2593e0-da24-4034-8e50-207f1cd253ff",
+        "createdAt": 1552668488355,
+        "exercise": {
+          "id": "5392cdfd-3566-4aca-a4ff-090e7ba68267",
+          "translations": {
+            "en": {
+              "name": "Тяга гантелей в наклоне 1 рукой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "589641a8-63fe-43fc-b9e0-6a9ba2da3369",
+            "createdAt": 1552668488358,
+            "weight": 16,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "22bb2bf0-af9d-4b9e-b796-1e3865c0e135",
+            "createdAt": 1552668488359,
+            "weight": 16,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "02bba77d-f57f-45ba-8f12-66e8fda974fe",
+            "createdAt": 1552668488360,
+            "weight": 16,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "cade38d1-d963-4f96-af3f-7d34cf3983bc",
+            "createdAt": 1552668488361,
+            "weight": 16,
+            "repeatCount": 15
+          }
+        }
+      },
+      "60d88252-5ccf-4e69-8fdf-8cc18ded00ec": {
+        "id": "60d88252-5ccf-4e69-8fdf-8cc18ded00ec",
+        "createdAt": 1552668488357,
+        "exercise": {
+          "id": "0fe25522-00e6-447e-8f36-d650e06b1283",
+          "translations": {
+            "en": {
+              "name": "Вертикальная тяга"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "038af4bf-cc31-44b8-b958-663b1b0fb925",
+            "createdAt": 1552668488360,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "205bbb7b-4b6b-4a4e-b433-0c8cfffb583e",
+            "createdAt": 1552668488361,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "0e9c5055-2308-42eb-bc39-27519d668ba9",
+            "createdAt": 1552668488362,
+            "weight": 40,
+            "repeatCount": 15
+          }
+        }
+      },
+      "3b60518f-700a-4079-a37d-c4dde22f092f": {
+        "id": "3b60518f-700a-4079-a37d-c4dde22f092f",
+        "createdAt": 1552668488359,
+        "exercise": {
+          "id": "408306ed-45ec-4f0f-9d30-555f800048e7",
+          "translations": {
+            "en": {
+              "name": "Вертикальная тяга за голову"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "4e8147fb-9636-44d3-875e-a7f4a1a63a2e",
+            "createdAt": 1552668488362,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "ebc8ec1f-c376-42f4-bd24-f066a6d423e5",
+            "createdAt": 1552668488363,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "09c98ef7-34e2-4b7e-b989-1c64b14bbb3b",
+            "createdAt": 1552668488364,
+            "weight": 35,
+            "repeatCount": 15
+          }
+        }
+      },
+      "37b25e93-d543-4206-8d67-4aca1555579e": {
+        "id": "37b25e93-d543-4206-8d67-4aca1555579e",
+        "createdAt": 1552668488361,
+        "exercise": {
+          "id": "055ec4fc-a920-46f6-94e9-7221b00314f7",
+          "translations": {
+            "en": {
+              "name": "Горизонтальная тяга 1 рукой в тренажере"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "2020a0b4-9b10-4b21-a823-035286349354",
+            "createdAt": 1552668488364,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "84a43367-2475-4090-aa63-7bb16166767b",
+            "createdAt": 1552668488365,
+            "weight": 15,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "9441c56a-2acb-49ee-96b3-18b7082c1a60",
+            "createdAt": 1552668488366,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "e041fb9a-d611-4cd2-8584-16aa4a31a237",
+            "createdAt": 1552668488367,
+            "weight": 12,
+            "repeatCount": 15
+          }
+        }
+      },
+      "7c4b2016-9cb4-4244-b583-096549fedd9c": {
+        "id": "7c4b2016-9cb4-4244-b583-096549fedd9c",
+        "createdAt": 1552668488363,
+        "exercise": {
+          "id": "ceb08c62-9338-4914-8cd1-b3be1ebd13e4",
+          "translations": {
+            "en": {
+              "name": "Подъем на бицепс лежа 45*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "5f9851dd-d2ab-4fd5-8c42-618a3dccc051",
+            "createdAt": 1552668488366,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "46408a2a-f4e4-48ee-85a7-ccae3099d6bf",
+            "createdAt": 1552668488367,
+            "weight": 7,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "c1c2489a-8ecc-4c63-b0cf-376a54d0632a",
+            "createdAt": 1552668488368,
+            "weight": 7,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "57a674cb-23a9-4f00-8efb-2adbb825abe2",
+            "createdAt": 1552668488369,
+            "weight": 6,
+            "repeatCount": 15
+          }
+        }
+      },
+      "c507ca33-7c6e-4f46-add8-5956b3ce58d0": {
+        "id": "c507ca33-7c6e-4f46-add8-5956b3ce58d0",
+        "createdAt": 1552668488365,
+        "exercise": {
+          "id": "4c14d14f-8659-4532-b402-f019f59eda27",
+          "translations": {
+            "en": {
+              "name": "Канаты на бицепс"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "6ae4f4de-cdba-4612-8d4c-06485a0e9ec6",
+            "createdAt": 1552668488368,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "41ae5045-4c97-480d-8466-ec890ef2d6d7",
+            "createdAt": 1552668488369,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "71af55cf-b312-485b-a46e-d2c46eb957e0",
+            "createdAt": 1552668488370,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "35768c5c-b544-479f-bc23-b0f929d7e2e1",
+            "createdAt": 1552668488371,
+            "weight": 15,
+            "repeatCount": 15
+          }
+        }
+      },
+      "37b0bd45-c425-4011-9a0e-e49ac0a5c544": {
+        "id": "37b0bd45-c425-4011-9a0e-e49ac0a5c544",
+        "createdAt": 1552668488367,
+        "exercise": {
+          "id": "750b7adb-1a43-4ccc-bb4f-3bcafa7770d0",
+          "translations": {
+            "en": {
+              "name": "Шраги в тренажере"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "a42d77dd-2e65-43d1-9bd7-d42fa99ab476",
+            "createdAt": 1552668488370,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "96f60c59-c986-4a4d-82b3-268253b9178a",
+            "createdAt": 1552668488371,
+            "weight": 45,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "cab04000-a399-40cf-9a3e-18a047742b8e",
+            "createdAt": 1552668488372,
+            "weight": 45,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "97a13cfc-0188-4f80-b959-cd53827b05b0",
+            "createdAt": 1552668488373,
+            "weight": 45,
+            "repeatCount": 15
+          }
+        }
+      },
+      "26846ff2-409d-4f80-bf44-4efd537c1f3f": {
+        "id": "26846ff2-409d-4f80-bf44-4efd537c1f3f",
+        "createdAt": 1552668488369,
+        "exercise": {
+          "id": "c26006fa-1647-4c4e-91e0-48a1d71bae5b",
+          "translations": {
+            "en": {
+              "name": "Подьем гантели на бицепс 1 рукой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "f7a32eb3-215e-4061-ab98-54a0cc00baff",
+            "createdAt": 1552668488372,
+            "weight": 5,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "5b730584-8313-4a6f-a168-5e1b03ffd4b2",
+            "createdAt": 1552668488373,
+            "weight": 7,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "d86a72ca-63ea-4f79-9372-fada0bed6d9d",
+            "createdAt": 1552668488374,
+            "weight": 7,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "8eccf8cf-4714-440f-a6ff-e19fe23a642d",
+            "createdAt": 1552668488375,
+            "weight": 7,
+            "repeatCount": 15
+          }
+        }
+      }
+    },
+    "duration": 1.9,
+    "humanWeight": 99.6,
+    "totalWeight": 12.28,
+    "totalWeightPerHour": 6.46,
+    "startedAt": "2019-02-27 13:35",
+    "completedAt": "2019-02-27 15:29"
+  },
+  "1a15ad70-a05d-4061-8e9e-1c17eaeff172": {
+    "id": "1a15ad70-a05d-4061-8e9e-1c17eaeff172",
+    "muscleGroups": [
+      "legs",
+      "shoulders"
+    ],
+    "workouts": {
+      "23e04021-d143-462c-abc2-6a0096958f73": {
+        "id": "23e04021-d143-462c-abc2-6a0096958f73",
+        "createdAt": 1552668488374,
+        "exercise": {
+          "id": "7cb4dfff-8b45-4c4d-bbe9-90ac769da3ca",
+          "translations": {
+            "en": {
+              "name": "Сгибание ног"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "b903b80c-46e0-43d9-b571-d7345cd2988d",
+            "createdAt": 1552668488377,
+            "weight": 40,
+            "repeatCount": 12
+          },
+          "4": {
+            "id": "1ab16525-96b1-4d98-b1ef-383af7bb0692",
+            "createdAt": 1552668488378,
+            "weight": 40,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "ea9d98fe-c463-4cad-b476-809c12dce62c",
+            "createdAt": 1552668488379,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "0a408dda-681d-4b02-b60b-b86be25cfc0f",
+            "createdAt": 1552668488380,
+            "weight": 40,
+            "repeatCount": 15
+          }
+        }
+      },
+      "0474b83a-3f6e-4795-8674-1a91dc81c3bb": {
+        "id": "0474b83a-3f6e-4795-8674-1a91dc81c3bb",
+        "createdAt": 1552668488376,
+        "exercise": {
+          "id": "9e88784f-cbf8-4ffc-bf7c-3aa4fc65da1c",
+          "translations": {
+            "en": {
+              "name": "Жим ногами в тренажере"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "ea216225-b170-482d-96a0-96fc5ac7c1db",
+            "createdAt": 1552668488379,
+            "weight": 100,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "10558fd1-93ef-4bac-a671-7ba56ba894e0",
+            "createdAt": 1552668488380,
+            "weight": 140,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "54a67086-d603-4d98-a8f0-bc5f6f082c80",
+            "createdAt": 1552668488381,
+            "weight": 180,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "1c9dea82-cdc2-47b4-83ea-2cdd5fb46285",
+            "createdAt": 1552668488382,
+            "weight": 220,
+            "repeatCount": 15
+          }
+        }
+      },
+      "d4999343-6cff-410b-91f0-f2705f218607": {
+        "id": "d4999343-6cff-410b-91f0-f2705f218607",
+        "createdAt": 1552668488378,
+        "exercise": {
+          "id": "640c0621-5a7d-4d8f-b4d6-b5bccd2b77c0",
+          "translations": {
+            "en": {
+              "name": "Разгибание ног"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "9d3ed7c9-6e3f-4a79-91ee-07e1f7ff5ac0",
+            "createdAt": 1552668488381,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "22ad4c13-f5a2-4652-bf85-676ddb0ba69d",
+            "createdAt": 1552668488382,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "e21244c0-302a-49c0-98e1-fff966d3332a",
+            "createdAt": 1552668488383,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "f349b479-fedc-4c0d-bc2a-d1bb4f17ea7c",
+            "createdAt": 1552668488384,
+            "weight": 35,
+            "repeatCount": 10
+          },
+          "7": {
+            "id": "6fbeeb5f-ebfa-49dd-995b-d8b2e0ca802e",
+            "createdAt": 1552668488385,
+            "weight": 20,
+            "repeatCount": 5
+          },
+          "8": {
+            "id": "6c7c0d72-077a-4e25-9016-7a9b0570b00b",
+            "createdAt": 1552668488386,
+            "weight": 10,
+            "repeatCount": 5
+          }
+        }
+      },
+      "74e9f716-cfee-40b8-9eb1-f7bd7528f379": {
+        "id": "74e9f716-cfee-40b8-9eb1-f7bd7528f379",
+        "createdAt": 1552668488380,
+        "exercise": {
+          "id": "1b9be7b5-4276-46e1-992b-aed816e77085",
+          "translations": {
+            "en": {
+              "name": "Смитт приседания"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "cf1caec0-62d8-461b-8a8b-596ce16e4535",
+            "createdAt": 1552668488383,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "200d5a1b-8f3f-48fe-9d18-6a36a192de52",
+            "createdAt": 1552668488384,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "b80e6eae-a698-4cfe-828b-c8b9c4370638",
+            "createdAt": 1552668488385,
+            "weight": 45,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "289cb9f9-65e1-430d-ba79-f59709ede288",
+            "createdAt": 1552668488386,
+            "weight": 45,
+            "repeatCount": 15
+          }
+        }
+      },
+      "a35f06f7-4c50-47ff-80d9-8baf6dabd307": {
+        "id": "a35f06f7-4c50-47ff-80d9-8baf6dabd307",
+        "createdAt": 1552668488382,
+        "exercise": {
+          "id": "4e2596e4-258c-4ae3-a9d7-e504fc21a8a8",
+          "translations": {
+            "en": {
+              "name": "Приседания с гантелей по-очереди"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "03759ca1-3006-43ee-bdd9-77606df44813",
+            "createdAt": 1552668488385,
+            "weight": 8,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "a71c72db-ddf6-43a1-8341-0bff724f8991",
+            "createdAt": 1552668488386,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "d85eb2b0-904f-49c0-bddd-3fdeeace5795",
+            "createdAt": 1552668488387,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "221b80ee-7de9-41f3-b985-73ac1dd1fe35",
+            "createdAt": 1552668488388,
+            "weight": 12,
+            "repeatCount": 15
+          }
+        }
+      },
+      "84727eb8-7f3c-4963-8f2b-3d240f95663d": {
+        "id": "84727eb8-7f3c-4963-8f2b-3d240f95663d",
+        "createdAt": 1552668488384,
+        "exercise": {
+          "id": "5924f495-8700-4e78-9f0f-df5c606418c8",
+          "translations": {
+            "en": {
+              "name": "Подьем на носки стоя"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "5a5b48cf-5f86-4f6e-a035-90a1152393bc",
+            "createdAt": 1552668488387,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "3e29ae6a-fb72-42d5-bbff-bfa3c647fee9",
+            "createdAt": 1552668488388,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "3f24620c-e2cf-46d5-b34d-aa34d7a3489f",
+            "createdAt": 1552668488389,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "5f8098dd-cc6c-4d24-85f9-777dc0b554bb",
+            "createdAt": 1552668488390,
+            "weight": 35,
+            "repeatCount": 12
+          }
+        }
+      },
+      "97a610eb-8d73-446e-a7a7-df4aabf62460": {
+        "id": "97a610eb-8d73-446e-a7a7-df4aabf62460",
+        "createdAt": 1552668488386,
+        "exercise": {
+          "id": "a62cb7b2-04c6-4184-bc63-91e6dc351bd9",
+          "translations": {
+            "en": {
+              "name": "Статические приседания"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "f0265bc2-5915-46af-98e7-475f08218dcf",
+            "createdAt": 1552668488389,
+            "weight": 98.8,
+            "repeatCount": 0.5
+          },
+          "4": {
+            "id": "565a34fe-d68d-4b0e-a0be-5a3ba14259d7",
+            "createdAt": 1552668488390,
+            "weight": 98.8,
+            "repeatCount": 0.65
+          },
+          "5": {
+            "id": "230b12aa-845b-42e0-a051-31c2fb01a630",
+            "createdAt": 1552668488391,
+            "weight": 98.8,
+            "repeatCount": 0.5
+          },
+          "6": {
+            "id": "5e852d4d-8c45-4411-a53c-6c6eb3a28286",
+            "createdAt": 1552668488392,
+            "weight": 98.8,
+            "repeatCount": 0.5
+          }
+        }
+      },
+      "606ee8b5-3406-4359-9aa9-a5f312091e37": {
+        "id": "606ee8b5-3406-4359-9aa9-a5f312091e37",
+        "createdAt": 1552668488388,
+        "exercise": {
+          "id": "562446ea-8ae6-4bfc-bf57-44b7ef6758f3",
+          "translations": {
+            "en": {
+              "name": "Жим гантелей сидя"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "1530bc53-e6b8-4f85-a4da-3ed9a9c6ed12",
+            "createdAt": 1552668488391,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "8d3d6cf4-e84e-452c-8743-e910dfb8f970",
+            "createdAt": 1552668488392,
+            "weight": 16,
+            "repeatCount": 10
+          },
+          "5": {
+            "id": "af41d99b-0b79-4d07-aeef-9357635e6dad",
+            "createdAt": 1552668488393,
+            "weight": 16,
+            "repeatCount": 10
+          },
+          "6": {
+            "id": "5de6a6a6-ca3e-4b10-82ed-d37bbef0576d",
+            "createdAt": 1552668488394,
+            "weight": 8,
+            "repeatCount": 5
+          },
+          "7": {
+            "id": "9586574a-2f90-498e-8411-5c2c1b01b164",
+            "createdAt": 1552668488395,
+            "weight": 16,
+            "repeatCount": 10
+          },
+          "8": {
+            "id": "cf4ac797-75ae-4706-bd22-2f2c81dc0453",
+            "createdAt": 1552668488396,
+            "weight": 8,
+            "repeatCount": 5
+          }
+        }
+      },
+      "df7ebdb8-895a-4622-8775-9d946fe25f04": {
+        "id": "df7ebdb8-895a-4622-8775-9d946fe25f04",
+        "createdAt": 1552668488390,
+        "exercise": {
+          "id": "800dd1dd-7df8-4fd9-82e4-2b5ced76af9d",
+          "translations": {
+            "en": {
+              "name": "Задняя дельта в наклоне"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "fbfca7d6-e802-4cd3-bbab-156caa5c8d9c",
+            "createdAt": 1552668488393,
+            "weight": 4,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "aa9d4bb2-35aa-4789-a28c-9a0b614a84a2",
+            "createdAt": 1552668488394,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "daf633a5-47bf-45af-8ebc-3cea662a4d60",
+            "createdAt": 1552668488395,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "b26d3a92-8d12-4f59-af74-76381137af76",
+            "createdAt": 1552668488396,
+            "weight": 3,
+            "repeatCount": 15
+          }
+        }
+      },
+      "efe3bc84-1903-416a-92eb-35854fa48aa9": {
+        "id": "efe3bc84-1903-416a-92eb-35854fa48aa9",
+        "createdAt": 1552668488392,
+        "exercise": {
+          "id": "9655797c-5287-483e-942e-6d2ccd034b65",
+          "translations": {
+            "en": {
+              "name": "Задняя дельта боком 1 рукой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "c0b70f6f-0342-41d1-a663-fca4c51ea9b7",
+            "createdAt": 1552668488395,
+            "weight": 2,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "0af9f32c-acb1-443d-96a4-54abae3d9c98",
+            "createdAt": 1552668488396,
+            "weight": 2,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "aceee0c0-5ffd-4c96-9d15-720aa4ef36b9",
+            "createdAt": 1552668488397,
+            "weight": 2,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "4efa6d0b-2491-48dd-be83-6fe4aa44279f",
+            "createdAt": 1552668488398,
+            "weight": 2,
+            "repeatCount": 15
+          }
+        }
+      }
+    },
+    "duration": 2.1,
+    "humanWeight": 98.8,
+    "totalWeight": 20.02,
+    "totalWeightPerHour": 9.53,
+    "startedAt": "2019-03-01 13:30",
+    "completedAt": "2019-03-01 15:36"
+  },
+  "0fdfa72d-979e-4719-b48f-c70af103d4db": {
+    "id": "0fdfa72d-979e-4719-b48f-c70af103d4db",
+    "muscleGroups": [
+      "chest",
+      "triceps"
+    ],
+    "workouts": {
+      "41ef3c2b-a59b-45fd-b8d3-885d184ff6c9": {
+        "id": "41ef3c2b-a59b-45fd-b8d3-885d184ff6c9",
+        "createdAt": 1552668488396,
+        "exercise": {
+          "id": "257da8de-0f18-4597-b53f-cf28d03c9729",
+          "translations": {
+            "en": {
+              "name": "Жим штанги 45*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "c752b096-5424-4f21-8dc2-9ccbdc5f59ed",
+            "createdAt": 1552668488399,
+            "weight": 30,
+            "repeatCount": 12
+          },
+          "4": {
+            "id": "83e1cdbb-5437-40ac-a414-2ee0296c9993",
+            "createdAt": 1552668488400,
+            "weight": 40,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "6afd3513-912d-4a9a-93fc-aa2638c0b1fc",
+            "createdAt": 1552668488401,
+            "weight": 42.5,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "fcdc9464-ae94-4129-9889-23a60f6f7036",
+            "createdAt": 1552668488402,
+            "weight": 35,
+            "repeatCount": 12
+          },
+          "7": {
+            "id": "13d9db71-212d-4954-8fe7-3c3cb80235fb",
+            "createdAt": 1552668488403,
+            "weight": 40,
+            "repeatCount": 12
+          }
+        }
+      },
+      "e2b359d8-1665-4146-b556-cdbb5e9e88f7": {
+        "id": "e2b359d8-1665-4146-b556-cdbb5e9e88f7",
+        "createdAt": 1552668488398,
+        "exercise": {
+          "id": "bdba78b5-313e-452b-8c46-0f47565bec14",
+          "translations": {
+            "en": {
+              "name": "Жим Смитт 30*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "77d0856d-40ef-4240-a8a2-20d672fa5208",
+            "createdAt": 1552668488401,
+            "weight": 25,
+            "repeatCount": 12
+          },
+          "4": {
+            "id": "65d8c6eb-e457-4720-93ca-3f27811d45c8",
+            "createdAt": 1552668488402,
+            "weight": 30,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "d30b98d0-8667-4e31-aa6f-6bc3c2de4450",
+            "createdAt": 1552668488403,
+            "weight": 35,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "f690ae23-a148-4764-842f-ac3fd5d9b3ca",
+            "createdAt": 1552668488404,
+            "weight": 35,
+            "repeatCount": 12
+          }
+        }
+      },
+      "feb8320f-9b00-404e-a360-6517555ad264": {
+        "id": "feb8320f-9b00-404e-a360-6517555ad264",
+        "createdAt": 1552668488400,
+        "exercise": {
+          "id": "7da401cc-b109-44c7-aa98-b38a1fba75fe",
+          "translations": {
+            "en": {
+              "name": "Жим штанги 0*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "a149df00-8064-482e-b2df-5c1907426a81",
+            "createdAt": 1552668488403,
+            "weight": 30,
+            "repeatCount": 12
+          },
+          "4": {
+            "id": "5f414dc9-5444-4030-bffe-7d71011223c2",
+            "createdAt": 1552668488404,
+            "weight": 40,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "e45dcbf6-3bb8-4787-8aa9-c1ed341a5e52",
+            "createdAt": 1552668488405,
+            "weight": 45,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "c1eb8b63-e005-4705-aec0-5c1bf2d29c72",
+            "createdAt": 1552668488406,
+            "weight": 50,
+            "repeatCount": 12
+          }
+        }
+      },
+      "8a550593-4916-4aa5-9340-f98fbc4ba89b": {
+        "id": "8a550593-4916-4aa5-9340-f98fbc4ba89b",
+        "createdAt": 1552668488402,
+        "exercise": {
+          "id": "9a199988-fd37-405a-80c5-918c6fd99055",
+          "translations": {
+            "en": {
+              "name": "Разводки гантелей 45*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "096e69ed-e54f-4b57-8d92-65817877fc0f",
+            "createdAt": 1552668488405,
+            "weight": 8,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "73587c5f-53bc-4db3-af2b-cc4814c7c2ea",
+            "createdAt": 1552668488406,
+            "weight": 8,
+            "repeatCount": 15
+          }
+        }
+      },
+      "6087da66-f8b9-4c45-a880-97b8f2a8da4f": {
+        "id": "6087da66-f8b9-4c45-a880-97b8f2a8da4f",
+        "createdAt": 1552668488404,
+        "exercise": {
+          "id": "b44648b3-20d5-4b55-87a8-30295e83a8ce",
+          "translations": {
+            "en": {
+              "name": "Разводки гантелей 30*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "c7ee4c2f-1621-4e58-b538-5603ee77df70",
+            "createdAt": 1552668488407,
+            "weight": 8,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "7dbfbf30-4f63-4f6a-ada9-660b59aeb096",
+            "createdAt": 1552668488408,
+            "weight": 8,
+            "repeatCount": 15
+          }
+        }
+      },
+      "934eaa54-ab84-4b79-a0ec-b648a333926f": {
+        "id": "934eaa54-ab84-4b79-a0ec-b648a333926f",
+        "createdAt": 1552668488406,
+        "exercise": {
+          "id": "9dbf8a70-39dc-4e5a-95a2-234d3455043e",
+          "translations": {
+            "en": {
+              "name": "Разводки гантелей 15*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "c2b9392b-f5e4-4300-81f8-137bafe9185d",
+            "createdAt": 1552668488410,
+            "weight": 8,
+            "repeatCount": 10
+          },
+          "4": {
+            "id": "13101cba-1535-499c-a741-19f9c0ca9c4a",
+            "createdAt": 1552668488411,
+            "weight": 6,
+            "repeatCount": 5
+          },
+          "5": {
+            "id": "b734b9ee-3c83-4c32-a2ac-09bb199d7891",
+            "createdAt": 1552668488412,
+            "weight": 8,
+            "repeatCount": 10
+          },
+          "6": {
+            "id": "4b75754d-a1c8-4dfd-b63f-9a35b67d5ac5",
+            "createdAt": 1552668488413,
+            "weight": 6,
+            "repeatCount": 5
+          }
+        }
+      },
+      "1ae622e8-6abf-4ab3-abd1-d833c10e6f3e": {
+        "id": "1ae622e8-6abf-4ab3-abd1-d833c10e6f3e",
+        "createdAt": 1552668488409,
+        "exercise": {
+          "id": "1ec22d28-c378-418c-8611-92b12e6d0e57",
+          "translations": {
+            "en": {
+              "name": "Разводки гантелей 0*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "d3a41d16-281f-46db-87d0-e4afaf1d511b",
+            "createdAt": 1552668488412,
+            "weight": 7,
+            "repeatCount": 10
+          },
+          "4": {
+            "id": "23ea45a5-81bf-48b7-a15c-582f9de9f217",
+            "createdAt": 1552668488413,
+            "weight": 6,
+            "repeatCount": 5
+          },
+          "5": {
+            "id": "d487dede-0ffd-4637-91cb-e712c7875569",
+            "createdAt": 1552668488414,
+            "weight": 6,
+            "repeatCount": 13
+          }
+        }
+      },
+      "06aad6a4-0da4-4f1d-8619-2301d9323468": {
+        "id": "06aad6a4-0da4-4f1d-8619-2301d9323468",
+        "createdAt": 1552668488411,
+        "exercise": {
+          "id": "c8392280-7a46-41e5-87d3-70d48dcb0304",
+          "translations": {
+            "en": {
+              "name": "Сведение рук в тренажере"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "d74bea59-4395-4ad0-9f11-03bd3f983c4f",
+            "createdAt": 1552668488414,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "40918398-3b23-4eab-81a8-1a9f276e4d32",
+            "createdAt": 1552668488415,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "4aac68d2-84ac-4db8-92fb-b87fa4908e57",
+            "createdAt": 1552668488416,
+            "weight": 18,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "0fdbecb9-06a7-4274-8700-a3b48402f8d9",
+            "createdAt": 1552668488417,
+            "weight": 18,
+            "repeatCount": 15
+          },
+          "7": {
+            "id": "3ecfcb06-7ba9-45bb-98cd-f482d514fd15",
+            "createdAt": 1552668488418,
+            "weight": 18,
+            "repeatCount": 15
+          }
+        }
+      },
+      "2afd32d3-9756-472b-ab56-161256227c80": {
+        "id": "2afd32d3-9756-472b-ab56-161256227c80",
+        "createdAt": 1552668488413,
+        "exercise": {
+          "id": "25e82e9b-68a3-4ca9-920c-4a930a444434",
+          "translations": {
+            "en": {
+              "name": "Пуловер"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "ea74e14f-8f18-4baa-b509-404ef0cd6d87",
+            "createdAt": 1552668488416,
+            "weight": 12,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "41284974-a8a2-4436-a0e7-43ab996a5a4a",
+            "createdAt": 1552668488417,
+            "weight": 14,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "cad8b2fc-bdf6-4eb0-832b-d1247cc88062",
+            "createdAt": 1552668488418,
+            "weight": 16,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "52d2be8c-5beb-4ccf-8e35-a903788fbab4",
+            "createdAt": 1552668488419,
+            "weight": 16,
+            "repeatCount": 13
+          }
+        }
+      },
+      "25b54f32-574b-4888-a23b-45b37e8195c8": {
+        "id": "25b54f32-574b-4888-a23b-45b37e8195c8",
+        "createdAt": 1552668488415,
+        "exercise": {
+          "id": "d76fe6ea-a8d8-46d3-8d96-ad2b3536c4c4",
+          "translations": {
+            "en": {
+              "name": "Разгибание в блоке на трицепс обратным хватом"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "a8ef68b4-8366-4094-b034-e04cc926d3ab",
+            "createdAt": 1552668488418,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "c913ec0b-c072-436c-9791-cfe5c53289be",
+            "createdAt": 1552668488419,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "3fb8b5ba-646d-45ef-b888-83c6eae03a2f",
+            "createdAt": 1552668488420,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "b135e3b4-9209-4eb7-b756-578bf3383338",
+            "createdAt": 1552668488421,
+            "weight": 35,
+            "repeatCount": 10
+          },
+          "7": {
+            "id": "2a776680-7e86-4604-a40c-d752e0039121",
+            "createdAt": 1552668488422,
+            "weight": 20,
+            "repeatCount": 5
+          },
+          "8": {
+            "id": "a6dc3b40-9dde-48b1-951d-233b3b00a5ca",
+            "createdAt": 1552668488423,
+            "weight": 35,
+            "repeatCount": 10
+          },
+          "9": {
+            "id": "178caf7b-0b1c-46e2-8f34-cf312892f0ff",
+            "createdAt": 1552668488424,
+            "weight": 20,
+            "repeatCount": 5
+          }
+        }
+      }
+    },
+    "duration": 2,
+    "humanWeight": 100.1,
+    "totalWeight": 10.88,
+    "totalWeightPerHour": 5.44,
+    "startedAt": "2019-03-04 13:30",
+    "completedAt": "2019-03-04 15:30"
+  },
+  "bca828c1-00ed-45a6-8a9f-36a3b985be0f": {
+    "id": "bca828c1-00ed-45a6-8a9f-36a3b985be0f",
+    "muscleGroups": [
+      "back",
+      "biceps"
+    ],
+    "workouts": {
+      "18eddd2d-9a60-46c2-9295-c0aa8c04e32e": {
+        "id": "18eddd2d-9a60-46c2-9295-c0aa8c04e32e",
+        "createdAt": 1552668488419,
+        "exercise": {
+          "id": "0f6c5117-1d47-4651-96b2-6a3173302909",
+          "translations": {
+            "en": {
+              "name": "Вертикальная тяга"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "230fbec9-3229-4c13-ac67-4b35a340edee",
+            "createdAt": 1552668488422,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "50978542-1f3e-498d-a9c7-c66c0f1b2b23",
+            "createdAt": 1552668488423,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "a6e1b8f7-6020-4097-afc3-3deb0426ba10",
+            "createdAt": 1552668488424,
+            "weight": 45,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "5d461da6-e5e1-42fd-beea-43412fa09221",
+            "createdAt": 1552668488425,
+            "weight": 50,
+            "repeatCount": 10
+          },
+          "7": {
+            "id": "0c47cd5c-6033-4a9f-8c41-6926ae225051",
+            "createdAt": 1552668488426,
+            "weight": 25,
+            "repeatCount": 5
+          }
+        }
+      },
+      "782d02d6-8099-4057-b81f-d4e540ba5da9": {
+        "id": "782d02d6-8099-4057-b81f-d4e540ba5da9",
+        "createdAt": 1552668488421,
+        "exercise": {
+          "id": "b5325f32-a5bb-4554-9c80-3ef2091a0aa8",
+          "translations": {
+            "en": {
+              "name": "Тяга штанги в наклоне"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "f305451e-9d81-4a05-8543-aa61d1982c69",
+            "createdAt": 1552668488424,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "cddde832-fdc6-42b6-8540-62ce95ee7e9d",
+            "createdAt": 1552668488425,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "c370e390-057c-48fd-b564-9b71f7fb90d3",
+            "createdAt": 1552668488426,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "0e9bd132-c1fe-466f-a90b-4b77c34af122",
+            "createdAt": 1552668488427,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "7": {
+            "id": "8c9531d2-fd78-49c9-8aff-1461d47ee992",
+            "createdAt": 1552668488428,
+            "weight": 40,
+            "repeatCount": 15
+          }
+        }
+      },
+      "ca53263b-8d8f-4ce9-9be2-7b47be3fa6b0": {
+        "id": "ca53263b-8d8f-4ce9-9be2-7b47be3fa6b0",
+        "createdAt": 1552668488423,
+        "exercise": {
+          "id": "775cb27e-7a50-4e50-8ec0-65d5c90bd9b9",
+          "translations": {
+            "en": {
+              "name": "Тяга гантели 1 рукой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "26530605-fef4-4935-a678-112c744c38d9",
+            "createdAt": 1552668488426,
+            "weight": 16,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "cdf2038d-8c40-47bb-879b-706491ae78f2",
+            "createdAt": 1552668488427,
+            "weight": 18,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "32c02577-9032-4447-935f-6ce1b000bcc9",
+            "createdAt": 1552668488428,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "a9224df2-e384-458e-9226-9bfed31414c7",
+            "createdAt": 1552668488429,
+            "weight": 22,
+            "repeatCount": 15
+          }
+        }
+      },
+      "62ff86a9-a7f9-4039-921d-feb878fe1f2f": {
+        "id": "62ff86a9-a7f9-4039-921d-feb878fe1f2f",
+        "createdAt": 1552668488425,
+        "exercise": {
+          "id": "38a64efe-cdff-4a7c-86f2-62c1489bb49f",
+          "translations": {
+            "en": {
+              "name": "Верт. тяга узким хватом"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "0f821f0f-082c-436d-b197-4bb041ec9222",
+            "createdAt": 1552668488428,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "fcb7bd46-f8ce-44ee-99b5-a0422b63bbee",
+            "createdAt": 1552668488429,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "fcd4cc42-aba1-4f50-9c05-454389f3c056",
+            "createdAt": 1552668488430,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "f926d012-1efe-4aca-bd68-a261172ab933",
+            "createdAt": 1552668488431,
+            "weight": 35,
+            "repeatCount": 15
+          }
+        }
+      },
+      "f8ea0f74-ae6c-4ccc-b885-8abea28af5dc": {
+        "id": "f8ea0f74-ae6c-4ccc-b885-8abea28af5dc",
+        "createdAt": 1552668488427,
+        "exercise": {
+          "id": "0676a464-6057-431e-990b-fbbef74b62a0",
+          "translations": {
+            "en": {
+              "name": "Тяга 1 рукой в тренажере"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "8e59eff5-c8ae-4c32-a772-3ec816e74442",
+            "createdAt": 1552668488430,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "26856961-037b-40a9-a9a3-e9e5f85dfda0",
+            "createdAt": 1552668488431,
+            "weight": 15,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "c4789762-4cab-485c-afbb-3c98d03f6583",
+            "createdAt": 1552668488432,
+            "weight": 15,
+            "repeatCount": 15
+          }
+        }
+      },
+      "ac0be1e9-a30b-4092-bd28-0d43f28ba766": {
+        "id": "ac0be1e9-a30b-4092-bd28-0d43f28ba766",
+        "createdAt": 1552668488429,
+        "exercise": {
+          "id": "7f7eca82-f2dc-4786-b39c-1fc78bf8ec12",
+          "translations": {
+            "en": {
+              "name": "Хаммер"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "6fc63586-04a0-40f4-b4aa-8d3393c4d3cc",
+            "createdAt": 1552668488432,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "a7c6cee1-09e8-4671-8502-b0bd97680381",
+            "createdAt": 1552668488433,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "55b105a1-3e57-43e5-8848-19e7fca6ff5e",
+            "createdAt": 1552668488434,
+            "weight": 35,
+            "repeatCount": 12
+          }
+        }
+      },
+      "ca85250e-b117-4069-a3e3-fe2757f61f6c": {
+        "id": "ca85250e-b117-4069-a3e3-fe2757f61f6c",
+        "createdAt": 1552668488431,
+        "exercise": {
+          "id": "bfc187e7-7d81-40ce-8597-7bf4663951fd",
+          "translations": {
+            "en": {
+              "name": "Шраги"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "38171a6b-9f09-4a2c-8118-0ec9c15134cc",
+            "createdAt": 1552668488434,
+            "weight": 20,
+            "repeatCount": 12
+          },
+          "4": {
+            "id": "73778ad5-37e2-4241-979c-46535df6e4a5",
+            "createdAt": 1552668488435,
+            "weight": 12,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "6cbb56cf-e17d-43e1-a047-4e3d55c2c80a",
+            "createdAt": 1552668488436,
+            "weight": 22,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "c82d7752-0d11-4bfb-9bc8-1ab1103d872f",
+            "createdAt": 1552668488437,
+            "weight": 14,
+            "repeatCount": 12
+          },
+          "7": {
+            "id": "9b0ee90e-ca47-4b3d-b4fe-b9ad8fc14738",
+            "createdAt": 1552668488438,
+            "weight": 22,
+            "repeatCount": 12
+          },
+          "8": {
+            "id": "83e32bdb-412a-4765-9561-8d968c04ed1e",
+            "createdAt": 1552668488439,
+            "weight": 14,
+            "repeatCount": 12
+          },
+          "9": {
+            "id": "acbdd47d-f28a-4efb-836d-86b1fa5ec03a",
+            "createdAt": 1552668488440,
+            "weight": 22,
+            "repeatCount": 12
+          },
+          "10": {
+            "id": "964c02de-4978-47fa-bf84-4fa80916f825",
+            "createdAt": 1552668488441,
+            "weight": 12,
+            "repeatCount": 12
+          },
+          "11": {
+            "id": "b448fa79-5a23-48cb-a219-fc78c076e30e",
+            "createdAt": 1552668488442,
+            "weight": null,
+            "repeatCount": null
+          },
+          "12": {
+            "id": "a34fa8ac-a45a-4117-b3cc-16f37e098d51",
+            "createdAt": 1552668488443,
+            "weight": null,
+            "repeatCount": null
+          },
+          "13": {
+            "id": "1b280f4b-d793-413c-940c-2e329fc0a17f",
+            "createdAt": 1552668488444,
+            "weight": null,
+            "repeatCount": null
+          },
+          "14": {
+            "id": "7594d34d-0cc4-423b-8d34-b800339ab880",
+            "createdAt": 1552668488445,
+            "weight": null,
+            "repeatCount": null
+          },
+          "15": {
+            "id": "91ba77a2-6e52-48ab-a55e-54f33ae9ece6",
+            "createdAt": 1552668488446,
+            "weight": null,
+            "repeatCount": null
+          },
+          "16": {
+            "id": "9ae10554-8a29-4d95-aabe-2f6bf533ed48",
+            "createdAt": 1552668488447,
+            "weight": null,
+            "repeatCount": null
+          },
+          "17": {
+            "id": "d045321e-a48e-453a-b1f3-d2bd773c66dc",
+            "createdAt": 1552668488448,
+            "weight": null,
+            "repeatCount": null
+          },
+          "18": {
+            "id": "f1dd5012-3662-4990-9a64-975c64fefd3b",
+            "createdAt": 1552668488449,
+            "weight": null,
+            "repeatCount": null
+          },
+          "19": {
+            "id": "c586b420-29ed-4027-b9c0-6093643723d9",
+            "createdAt": 1552668488450,
+            "weight": null,
+            "repeatCount": null
+          },
+          "20": {
+            "id": "e748bc00-fe50-41e1-ac58-17cbd27aff60",
+            "createdAt": 1552668488451,
+            "weight": null,
+            "repeatCount": null
+          }
+        }
+      },
+      "7c369251-f096-4931-82a4-fa0a563ad6a7": {
+        "id": "7c369251-f096-4931-82a4-fa0a563ad6a7",
+        "createdAt": 1552668488433,
+        "exercise": {
+          "id": "29b3ac08-2aa6-4512-8c61-c3e680e2b9a1",
+          "translations": {
+            "en": {
+              "name": "Подьем штанги на бицепс обр. хватом"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "73488e98-f387-4935-9923-ed20e81d0a66",
+            "createdAt": 1552668488436,
+            "weight": 15,
+            "repeatCount": 12
+          },
+          "4": {
+            "id": "cad0ec9d-50b5-49e1-a001-56be3d0a4637",
+            "createdAt": 1552668488437,
+            "weight": 20,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "e42c0b62-f69a-4cd7-80ab-3ebb64f4b2af",
+            "createdAt": 1552668488438,
+            "weight": 20,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "0029318e-69f5-4ab3-b667-7d6559c6a7af",
+            "createdAt": 1552668488439,
+            "weight": 20,
+            "repeatCount": 12
+          },
+          "7": {
+            "id": "728a1a3b-46ed-47d8-a663-8b0819467781",
+            "createdAt": 1552668488440,
+            "weight": 10,
+            "repeatCount": 5
+          }
+        }
+      },
+      "13ad5eca-b147-4317-a70d-06ca7ebad7e6": {
+        "id": "13ad5eca-b147-4317-a70d-06ca7ebad7e6",
+        "createdAt": 1552668488435,
+        "exercise": {
+          "id": "f1f01a59-d576-498d-a2ae-dda2631fa165",
+          "translations": {
+            "en": {
+              "name": "Гантели на бицепс 1 рукой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "48a5938c-58c2-4552-a624-82407cf8116f",
+            "createdAt": 1552668488438,
+            "weight": 6,
+            "repeatCount": 10
+          },
+          "4": {
+            "id": "356c3dc7-e359-4ed7-9b14-dc49c664d44a",
+            "createdAt": 1552668488439,
+            "weight": 5,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "071f4cf3-5516-4c20-9dc9-99e6c0a6d375",
+            "createdAt": 1552668488440,
+            "weight": 5,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "20b0c3a7-b70c-4236-9830-483f66ce4504",
+            "createdAt": 1552668488441,
+            "weight": 5,
+            "repeatCount": 12
+          }
+        }
+      },
+      "a72f8809-a995-415f-9b0f-6db7373f62a9": {
+        "id": "a72f8809-a995-415f-9b0f-6db7373f62a9",
+        "createdAt": 1552668488437,
+        "exercise": {
+          "id": "7f973bda-4a64-4ba0-8ff5-59c1f36d01a0",
+          "translations": {
+            "en": {
+              "name": "Гантели на бицепс стоя"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "6163beab-7e37-4020-aa69-9ef7ec23b770",
+            "createdAt": 1552668488440,
+            "weight": 6,
+            "repeatCount": 10
+          },
+          "4": {
+            "id": "43399ddc-9641-4c5c-b8fa-9049c1dc2868",
+            "createdAt": 1552668488441,
+            "weight": 6,
+            "repeatCount": 10
+          },
+          "5": {
+            "id": "ff6dc6e8-b63c-40ce-be00-2e44dd94b28a",
+            "createdAt": 1552668488442,
+            "weight": 4,
+            "repeatCount": 5
+          },
+          "6": {
+            "id": "cad52322-086a-4d18-a80b-a60fc0ad3408",
+            "createdAt": 1552668488443,
+            "weight": 6,
+            "repeatCount": 10
+          },
+          "7": {
+            "id": "3f7dfa51-9c57-454e-af86-1642121d656c",
+            "createdAt": 1552668488444,
+            "weight": 4,
+            "repeatCount": 5
+          },
+          "8": {
+            "id": "c5e5d7da-4c35-4579-a316-49db16a0ffc8",
+            "createdAt": 1552668488445,
+            "weight": 6,
+            "repeatCount": 10
+          },
+          "9": {
+            "id": "9fcfa0b4-2f70-4962-a878-57a9721a5cc5",
+            "createdAt": 1552668488446,
+            "weight": 4,
+            "repeatCount": 5
+          }
+        }
+      }
+    },
+    "duration": 1.9,
+    "humanWeight": 99.6,
+    "totalWeight": 13.51,
+    "totalWeightPerHour": 7.11,
+    "startedAt": "2019-03-06 13:30",
+    "completedAt": "2019-03-06 15:24"
+  },
+  "9b9ca3a3-66e3-473e-8a01-4520e2fbfe5c": {
+    "id": "9b9ca3a3-66e3-473e-8a01-4520e2fbfe5c",
+    "muscleGroups": [
+      "legs",
+      "shoulders"
+    ],
+    "workouts": {
+      "90e1b153-8741-4d7e-af87-f0dba6117aea": {
+        "id": "90e1b153-8741-4d7e-af87-f0dba6117aea",
+        "createdAt": 1552668488443,
+        "exercise": {
+          "id": "bcedfbfe-2bcd-43db-9b2f-75bb23fa7d45",
+          "translations": {
+            "en": {
+              "name": "Сгибание ног"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "ad6a48a7-c0aa-424a-a982-f8bae3fdde6d",
+            "createdAt": 1552668488446,
+            "weight": 25,
+            "repeatCount": 20
+          },
+          "4": {
+            "id": "1fb68b74-2083-4089-b6b5-22dc4971da88",
+            "createdAt": 1552668488447,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "8415f9b0-0d92-4669-9dbe-e53ca6df57b3",
+            "createdAt": 1552668488448,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "d83ea9a0-1919-49c1-b788-7f36b305f93d",
+            "createdAt": 1552668488449,
+            "weight": 35,
+            "repeatCount": 13
+          }
+        }
+      },
+      "b7384bc3-d605-4d12-b221-cafc5421f16b": {
+        "id": "b7384bc3-d605-4d12-b221-cafc5421f16b",
+        "createdAt": 1552668488445,
+        "exercise": {
+          "id": "6be5c98e-c7b2-49ff-8273-8a88accebe6e",
+          "translations": {
+            "en": {
+              "name": "Жим 1 ногой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "1a22ef3e-daf4-4ba8-b61f-7d51a1c9f270",
+            "createdAt": 1552668488448,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "ae2b1018-864e-4634-ba5d-7df7716bf918",
+            "createdAt": 1552668488449,
+            "weight": 60,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "9070856f-0c4b-4b1b-8cfa-4e1f59b8ed4c",
+            "createdAt": 1552668488450,
+            "weight": 70,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "e9d02405-93ea-4929-b48f-ac3bae5b4791",
+            "createdAt": 1552668488451,
+            "weight": 70,
+            "repeatCount": 15
+          }
+        }
+      },
+      "a79973ea-d18f-4482-a7f2-53ad983d4406": {
+        "id": "a79973ea-d18f-4482-a7f2-53ad983d4406",
+        "createdAt": 1552668488447,
+        "exercise": {
+          "id": "e1bd7da9-6a2b-436f-8622-95b05b27406b",
+          "translations": {
+            "en": {
+              "name": "Жим ногами"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "a9c71a0f-37d1-4b7b-bbf5-dea233e6f860",
+            "createdAt": 1552668488450,
+            "weight": 160,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "f8cf8d01-f99f-45fe-aa86-a319c6f59d21",
+            "createdAt": 1552668488451,
+            "weight": 180,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "0c6592a2-a3bd-40ea-bd7c-ff7091f3f96a",
+            "createdAt": 1552668488452,
+            "weight": 200,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "36ab274f-8244-4207-8925-237368987052",
+            "createdAt": 1552668488453,
+            "weight": 240,
+            "repeatCount": 15
+          }
+        }
+      },
+      "ab56da2f-d6c2-435c-9e34-9239f4ede1f8": {
+        "id": "ab56da2f-d6c2-435c-9e34-9239f4ede1f8",
+        "createdAt": 1552668488449,
+        "exercise": {
+          "id": "c743291e-d4cd-46e8-bf68-868423280357",
+          "translations": {
+            "en": {
+              "name": "Выпады 1 ногой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "8bea1cfe-42d1-4b55-99c0-6fd5aeef2294",
+            "createdAt": 1552668488452,
+            "weight": 24,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "244a7140-0fcc-4a84-a1dc-4e702c0a2375",
+            "createdAt": 1552668488453,
+            "weight": 36,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "600d50c9-13ac-462b-b34d-d06144c3352d",
+            "createdAt": 1552668488454,
+            "weight": 36,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "2fbf80bc-88f1-4253-8ba0-f4adf06ac633",
+            "createdAt": 1552668488455,
+            "weight": 40,
+            "repeatCount": 10
+          }
+        }
+      },
+      "dcf3fd75-0896-48c5-8cff-8e8dfffe0999": {
+        "id": "dcf3fd75-0896-48c5-8cff-8e8dfffe0999",
+        "createdAt": 1552668488451,
+        "exercise": {
+          "id": "4b4be94d-3253-44b0-8ca4-2e817348e126",
+          "translations": {
+            "en": {
+              "name": "Гакк приседания"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "974919f1-5d6b-4d07-b11a-f4aaf4f63102",
+            "createdAt": 1552668488454,
+            "weight": 0,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "7e44fd38-ee20-471f-b5ed-a28b1015cb4b",
+            "createdAt": 1552668488455,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "f296c43d-6f1b-453c-9299-725476149afc",
+            "createdAt": 1552668488456,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "f1357d3c-e5c2-4ffd-aed4-6f515bae15d7",
+            "createdAt": 1552668488457,
+            "weight": 50,
+            "repeatCount": 12
+          },
+          "7": {
+            "id": "17a45dc3-9d6c-4bae-9272-7e5797843cb3",
+            "createdAt": 1552668488458,
+            "weight": 30,
+            "repeatCount": 5
+          }
+        }
+      },
+      "6e0f09f0-31ab-4ebb-b736-cc3ea8ca3f66": {
+        "id": "6e0f09f0-31ab-4ebb-b736-cc3ea8ca3f66",
+        "createdAt": 1552668488453,
+        "exercise": {
+          "id": "49a5a410-bca2-432c-ba93-802f63942d02",
+          "translations": {
+            "en": {
+              "name": "Разгибание ног"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "32ea139b-32ea-4a9d-b798-d01fdf9a1def",
+            "createdAt": 1552668488456,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "033a184f-b37c-46c6-99c1-a3b03a26e2af",
+            "createdAt": 1552668488457,
+            "weight": 45,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "245cb15d-5051-4032-80e5-661aa260b6a4",
+            "createdAt": 1552668488458,
+            "weight": 45,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "d1af4f80-a275-4aa2-8f42-69ef8f6b73e5",
+            "createdAt": 1552668488459,
+            "weight": 45,
+            "repeatCount": 15
+          }
+        }
+      },
+      "80cb54a4-e5da-4ce5-8483-40497e008f33": {
+        "id": "80cb54a4-e5da-4ce5-8483-40497e008f33",
+        "createdAt": 1552668488455,
+        "exercise": {
+          "id": "aaa6f72d-a149-452a-89ea-c38c05a7c266",
+          "translations": {
+            "en": {
+              "name": "Подьем на носки стоя"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "79653b0c-faac-452e-b8ae-71064e88d4e2",
+            "createdAt": 1552668488458,
+            "weight": 25,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "475be712-6e1c-44a4-b30d-52520f4dd903",
+            "createdAt": 1552668488459,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "35b1653a-f844-4ccb-8736-2268f70bfc9c",
+            "createdAt": 1552668488460,
+            "weight": 30,
+            "repeatCount": 12
+          }
+        }
+      },
+      "d9943b36-fe89-4816-95da-e6a7603f376d": {
+        "id": "d9943b36-fe89-4816-95da-e6a7603f376d",
+        "createdAt": 1552668488457,
+        "exercise": {
+          "id": "46428719-063b-4dbc-90ce-aa7c30211e73",
+          "translations": {
+            "en": {
+              "name": "Протяжка плеч"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "a9599fe7-37cc-48bf-a5e2-f8c4a635f81b",
+            "createdAt": 1552668488460,
+            "weight": 10,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "8d87a94c-b0ca-499d-9df1-8e81eab8cc34",
+            "createdAt": 1552668488461,
+            "weight": 15,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "b29694a6-507f-4d2e-aa43-a7afc4bb3849",
+            "createdAt": 1552668488462,
+            "weight": 15,
+            "repeatCount": 12
+          },
+          "6": {
+            "id": "85c89766-11c7-46a0-bd28-038c2973d8eb",
+            "createdAt": 1552668488463,
+            "weight": 15,
+            "repeatCount": 10
+          },
+          "7": {
+            "id": "277280f4-123a-4f2f-ad94-ae9a2604809d",
+            "createdAt": 1552668488464,
+            "weight": 5,
+            "repeatCount": 5
+          }
+        }
+      },
+      "13bf4135-f97d-49aa-afa4-165fb800b26b": {
+        "id": "13bf4135-f97d-49aa-afa4-165fb800b26b",
+        "createdAt": 1552668488459,
+        "exercise": {
+          "id": "133f8b0e-4c53-401e-9f2a-17c8f4f307c3",
+          "translations": {
+            "en": {
+              "name": "Махи гантелями"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "29f1d30d-d0f0-418b-b225-9d6df39ec27b",
+            "createdAt": 1552668488462,
+            "weight": 5,
+            "repeatCount": 12
+          },
+          "4": {
+            "id": "14726ba8-0214-4585-9887-d98584062b47",
+            "createdAt": 1552668488463,
+            "weight": 4,
+            "repeatCount": 12
+          },
+          "5": {
+            "id": "78e21e29-ac4e-449d-a2e8-b9cbd75ad3e8",
+            "createdAt": 1552668488464,
+            "weight": 5,
+            "repeatCount": 9
+          },
+          "6": {
+            "id": "542e2ae7-f718-4103-acb9-6c24c4916792",
+            "createdAt": 1552668488465,
+            "weight": 3,
+            "repeatCount": 5
+          },
+          "7": {
+            "id": "7fbee644-8666-4f46-bb89-9a5c599c568e",
+            "createdAt": 1552668488466,
+            "weight": 4,
+            "repeatCount": 10
+          }
+        }
+      },
+      "78c349c8-49e8-49ac-9323-ec7158590479": {
+        "id": "78c349c8-49e8-49ac-9323-ec7158590479",
+        "createdAt": 1552668488461,
+        "exercise": {
+          "id": "12ad2bb4-0aa2-4290-a631-82da2a647c8e",
+          "translations": {
+            "en": {
+              "name": "Задняя дельта боком 1 рукой"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "6a5cfbea-2373-4957-beee-f301d7a963ae",
+            "createdAt": 1552668488464,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "5bd0661c-65c7-4e48-ad89-a3e08cff39b5",
+            "createdAt": 1552668488465,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "338f50a8-22c8-47b7-84bd-07d8b367d192",
+            "createdAt": 1552668488466,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "1c81bda3-4aa1-4654-b344-36be0d969ce9",
+            "createdAt": 1552668488467,
+            "weight": 3,
+            "repeatCount": 15
+          }
+        }
+      }
+    },
+    "duration": 2.1,
+    "humanWeight": 99,
+    "totalWeight": 25.01,
+    "totalWeightPerHour": 11.91,
+    "startedAt": "2019-03-08 13:30",
+    "completedAt": "2019-03-08 15:36"
+  },
+  "44ef2083-9d99-4552-84c7-de9ebd3fc5a0": {
+    "id": "44ef2083-9d99-4552-84c7-de9ebd3fc5a0",
+    "muscleGroups": [
+      "chest",
+      "triceps"
+    ],
+    "workouts": {
+      "28037d32-90b5-4de5-afdd-9f55fd2804ba": {
+        "id": "28037d32-90b5-4de5-afdd-9f55fd2804ba",
+        "createdAt": 1552668488465,
+        "exercise": {
+          "id": "6980edd4-327b-496e-94e9-2311ea2d2263",
+          "translations": {
+            "en": {
+              "name": "Отжимания"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "436a093d-60e7-4e0f-bffc-228f023d3797",
+            "createdAt": 1552668488468,
+            "weight": 48.7,
+            "repeatCount": 25
+          },
+          "4": {
+            "id": "e4af4432-b910-4d98-98be-1eb5557ad8c8",
+            "createdAt": 1552668488469,
+            "weight": 48.7,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "9e4595e2-b8e1-4d55-896f-7406cca9a0dd",
+            "createdAt": 1552668488470,
+            "weight": 48.7,
+            "repeatCount": 10
+          }
+        }
+      },
+      "1b7a4708-c46a-4b88-b529-7c7e74835fc6": {
+        "id": "1b7a4708-c46a-4b88-b529-7c7e74835fc6",
+        "createdAt": 1552668488467,
+        "exercise": {
+          "id": "21ca2eaa-7f3f-48bd-a6ad-5754f3447aa8",
+          "translations": {
+            "en": {
+              "name": "Жим штанги 45*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "315265dc-ed07-4907-a5cd-8c3c7c512410",
+            "createdAt": 1552668488470,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "bde26e45-03d3-4950-9b5e-6402c40cec8d",
+            "createdAt": 1552668488471,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "d3c40f02-2816-4b2a-9745-4029c3423e32",
+            "createdAt": 1552668488472,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "241f8b40-8404-4f13-a531-f258c4c31526",
+            "createdAt": 1552668488473,
+            "weight": 45,
+            "repeatCount": 15
+          },
+          "7": {
+            "id": "7f7d4303-aa88-445c-90e4-78306ab20aad",
+            "createdAt": 1552668488474,
+            "weight": 45,
+            "repeatCount": 10
+          },
+          "8": {
+            "id": "d781ff60-db97-4c02-8f8e-07ae1a70e8ee",
+            "createdAt": 1552668488475,
+            "weight": 35,
+            "repeatCount": 5
+          }
+        }
+      },
+      "5edc79e0-ab0e-4654-b084-7328e148438b": {
+        "id": "5edc79e0-ab0e-4654-b084-7328e148438b",
+        "createdAt": 1552668488469,
+        "exercise": {
+          "id": "d68b29df-e3c7-475b-90ed-03b585d96c46",
+          "translations": {
+            "en": {
+              "name": "Жим штанги 0*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "d2882e4e-02e2-4a14-9531-d18c85cb2aad",
+            "createdAt": 1552668488472,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "f2589afd-510f-4b42-954f-dd1723db1cee",
+            "createdAt": 1552668488473,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "896d580e-37e7-4510-838b-deae9d9816e9",
+            "createdAt": 1552668488474,
+            "weight": 35,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "4beb1864-7220-4f26-b96d-e4958633d3fc",
+            "createdAt": 1552668488475,
+            "weight": 35,
+            "repeatCount": 10
+          },
+          "7": {
+            "id": "6a1a565a-a608-4cb5-8910-d420b09c29d9",
+            "createdAt": 1552668488476,
+            "weight": 25,
+            "repeatCount": 5
+          }
+        }
+      },
+      "d8bac7e6-cf29-487f-8230-05fec983a4fd": {
+        "id": "d8bac7e6-cf29-487f-8230-05fec983a4fd",
+        "createdAt": 1552668488471,
+        "exercise": {
+          "id": "b8031eaf-3317-49f8-89a6-cd2a70e7b013",
+          "translations": {
+            "en": {
+              "name": "Разводки гантелей 15*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "c531b59e-a094-4df6-afb7-b666ad53f438",
+            "createdAt": 1552668488474,
+            "weight": 6,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "ea4cdf89-794c-4cd9-9922-fccbecff77b1",
+            "createdAt": 1552668488475,
+            "weight": 8,
+            "repeatCount": 15
+          }
+        }
+      },
+      "425f3776-2793-4cef-ad4e-3fe42dbf4e06": {
+        "id": "425f3776-2793-4cef-ad4e-3fe42dbf4e06",
+        "createdAt": 1552668488473,
+        "exercise": {
+          "id": "dc166706-98bb-4887-a60b-df906b05205c",
+          "translations": {
+            "en": {
+              "name": "Разводки гантелей 0*"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "22f49a3e-776e-4c90-80ce-99e01702fe5f",
+            "createdAt": 1552668488476,
+            "weight": 8,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "1730f88e-e3ff-498f-afd0-a3f99542e602",
+            "createdAt": 1552668488477,
+            "weight": 10,
+            "repeatCount": 15
+          }
+        }
+      },
+      "5f578d3b-ceca-4b47-b8c2-d278a8f58e6a": {
+        "id": "5f578d3b-ceca-4b47-b8c2-d278a8f58e6a",
+        "createdAt": 1552668488475,
+        "exercise": {
+          "id": "f919bc00-687a-4a60-8b31-cacfae8068c3",
+          "translations": {
+            "en": {
+              "name": "Батерфляй"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "01e838e6-932f-4a4f-bee7-949a71d94240",
+            "createdAt": 1552668488478,
+            "weight": 20,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "586e3d42-b2f6-4acb-a55f-d71006bf3b2d",
+            "createdAt": 1552668488479,
+            "weight": 30,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "35c6d6c9-1e42-420d-aecf-287a7f3c15fb",
+            "createdAt": 1552668488480,
+            "weight": 40,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "b14fd125-5055-49a4-ad32-e38ff8b0acb4",
+            "createdAt": 1552668488482,
+            "weight": 40,
+            "repeatCount": 15
+          }
+        }
+      },
+      "e50e9d7e-45ca-4331-8f2a-97899345c595": {
+        "id": "e50e9d7e-45ca-4331-8f2a-97899345c595",
+        "createdAt": 1552668488478,
+        "exercise": {
+          "id": "124566f0-7789-44e9-823e-cb5ddc770a25",
+          "translations": {
+            "en": {
+              "name": "Трицераптор"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "ce2b7a8d-965b-4870-9a10-80ef02d0af13",
+            "createdAt": 1552668488481,
+            "weight": 6,
+            "repeatCount": 12
+          },
+          "4": {
+            "id": "bee34a9b-f1be-4c68-8350-437c8f067bbe",
+            "createdAt": 1552668488482,
+            "weight": 6,
+            "repeatCount": 10
+          },
+          "5": {
+            "id": "51feee21-bc98-4c4e-9a62-7f5ef332e0b2",
+            "createdAt": 1552668488483,
+            "weight": 6,
+            "repeatCount": 10
+          },
+          "6": {
+            "id": "49abe3d0-f42f-4608-9c38-718f57d08aba",
+            "createdAt": 1552668488484,
+            "weight": 6,
+            "repeatCount": 10
+          }
+        }
+      },
+      "3bfb6388-7a21-498b-9355-10933c954f89": {
+        "id": "3bfb6388-7a21-498b-9355-10933c954f89",
+        "createdAt": 1552668488480,
+        "exercise": {
+          "id": "e7c2db88-1afb-4a97-a93e-556aee9d32fe",
+          "translations": {
+            "en": {
+              "name": "Канат"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "49f66905-82ee-4fd8-902b-39ccef52d115",
+            "createdAt": 1552668488483,
+            "weight": 10,
+            "repeatCount": 10
+          },
+          "4": {
+            "id": "d00146ce-ae0c-46ec-a947-699f96649fb5",
+            "createdAt": 1552668488484,
+            "weight": 5,
+            "repeatCount": 5
+          },
+          "5": {
+            "id": "1261b53c-678c-4b2b-bca4-6c2745ce4c1b",
+            "createdAt": 1552668488485,
+            "weight": 10,
+            "repeatCount": 5
+          },
+          "6": {
+            "id": "90541b43-fb63-44e4-aff6-2ce8e59e4c41",
+            "createdAt": 1552668488486,
+            "weight": 5,
+            "repeatCount": 5
+          },
+          "7": {
+            "id": "5a4c6809-ec1f-4ff2-9b41-990f67dc6da7",
+            "createdAt": 1552668488487,
+            "weight": 5,
+            "repeatCount": 10
+          },
+          "8": {
+            "id": "aa8180ee-1e9a-4665-abb7-5eadf9d03f75",
+            "createdAt": 1552668488488,
+            "weight": 5,
+            "repeatCount": 10
+          }
+        }
+      },
+      "d27cc6a4-c257-4e5c-bca6-b38149705e73": {
+        "id": "d27cc6a4-c257-4e5c-bca6-b38149705e73",
+        "createdAt": 1552668488482,
+        "exercise": {
+          "id": "5d7a445b-d75a-4ad0-9af8-05041510def3",
+          "translations": {
+            "en": {
+              "name": "Обратные отжимания"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "df37001a-8915-4a93-8db9-bfa1755646b7",
+            "createdAt": 1552668488485,
+            "weight": 48.7,
+            "repeatCount": 15
+          },
+          "4": {
+            "id": "5ff23846-fc6e-46e8-985d-54aa4f43f2e1",
+            "createdAt": 1552668488486,
+            "weight": 48.7,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "8526025d-528f-48f9-abb2-45d931cdbd7b",
+            "createdAt": 1552668488487,
+            "weight": 48.7,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "3f17dbba-3af7-45bc-807a-e9fca5f66cc6",
+            "createdAt": 1552668488488,
+            "weight": 48.7,
+            "repeatCount": 15
+          }
+        }
+      },
+      "157db5fe-b7fa-4414-b0e6-c33c1a5b6ab0": {
+        "id": "157db5fe-b7fa-4414-b0e6-c33c1a5b6ab0",
+        "createdAt": 1552668488484,
+        "exercise": {
+          "id": "5646d278-ee45-45b0-bd95-10db796d4d94",
+          "translations": {
+            "en": {
+              "name": "Лыжник"
+            }
+          }
+        },
+        "repeats": {
+          "3": {
+            "id": "9c580a8e-7238-4eca-9136-d6c0f47fd775",
+            "createdAt": 1552668488487,
+            "weight": 3,
+            "repeatCount": 12
+          },
+          "4": {
+            "id": "48621469-fea2-448a-a7a5-2f54fafb68cd",
+            "createdAt": 1552668488488,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "5": {
+            "id": "7e84dbe5-f613-4dd9-94ab-fce59fe33484",
+            "createdAt": 1552668488489,
+            "weight": 3,
+            "repeatCount": 15
+          },
+          "6": {
+            "id": "dfefa7ae-cc7c-4792-98a1-d2d27eb2f0fc",
+            "createdAt": 1552668488490,
+            "weight": 3,
+            "repeatCount": 15
+          }
+        }
+      }
+    },
+    "duration": 1.5,
+    "humanWeight": 97.4,
+    "totalWeight": 13.14,
+    "totalWeightPerHour": 8.76,
+    "startedAt": "2019-03-11 13:40",
+    "completedAt": "2019-03-11 15:10"
+  }
+}

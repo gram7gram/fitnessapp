@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {ADD_WORKOUT, CHANGED, REMOVE_WORKOUT, UPDATE_WORKOUT_METRICS_REQUEST} from '../actions';
+import {ADD_WORKOUT, CHANGED, FETCH_TRAINING_SUCCESS, REMOVE_WORKOUT, UPDATE_WORKOUT_METRICS_REQUEST} from '../actions';
 import selectors from './selectors';
 import moment from 'moment';
 import i18n from '../../../i18n';
@@ -13,7 +13,6 @@ import FetchTraining from "../actions/FetchTraining";
 import uuid from "uuid";
 import DeleteTraining from "../actions/DeleteTraining";
 import {Navigation} from "react-native-navigation";
-import Icon from 'react-native-vector-icons/FontAwesome5';
 import Chart from './Chart';
 import Legend from './Chart/Legend';
 import ErrorBoundary from "../../../components/ErrorBoundary";
@@ -42,7 +41,7 @@ class Training extends Component<Props> {
 
         } else {
             this.props.dispatch({
-                type: CHANGED,
+                type: FETCH_TRAINING_SUCCESS,
                 payload: {
                     id: uuid(),
                     createdAt: new Date().getTime(),
@@ -60,9 +59,13 @@ class Training extends Component<Props> {
     }
 
     componentDidAppear() {
-        this.props.dispatch({
-            type: UPDATE_WORKOUT_METRICS_REQUEST
-        })
+        const {model} = this.props.Training
+
+        if (model.id) {
+            this.props.dispatch({
+                type: UPDATE_WORKOUT_METRICS_REQUEST
+            })
+        }
     }
 
     navigationButtonPressed({buttonId}) {
@@ -111,7 +114,7 @@ class Training extends Component<Props> {
     openWorkout = (workout) => () => {
         const {model} = this.props.Training
 
-        navigateToWorkout(this.props.componentId, model.id, workout)
+        navigateToWorkout(model.id, workout)
     }
 
     removeWorkout = payload => () => {
@@ -139,7 +142,7 @@ class Training extends Component<Props> {
             payload: newWorkout
         })
 
-        navigateToExercise(this.props.componentId, model.id, newWorkout.id)
+        navigateToExercise(model.id, newWorkout.id)
     }
 
     renderWorkout = (item, key) => {
@@ -243,11 +246,13 @@ class Training extends Component<Props> {
         return <ScrollView keyboardShouldPersistTaps="always">
             <View flex padding-10>
 
-                <Legend/>
+                <View flex marginB-10>
+                    <Legend/>
 
-                <ErrorBoundary>
-                    <Chart/>
-                </ErrorBoundary>
+                    <ErrorBoundary>
+                        <Chart/>
+                    </ErrorBoundary>
+                </View>
 
                 <View row marginB-10>
                     <View flex-1 marginR-5>
@@ -286,10 +291,7 @@ class Training extends Component<Props> {
                     marginB-10
                     disabled={!(model.id && model.startedAt && model.humanWeight > 0)}
                     onPress={this.addWorkout}>
-                    <Text>
-                        <Icon name="plus"/>
-                        &nbsp;{i18n.t('training.add_workout')}
-                    </Text>
+                    <Text>{i18n.t('training.add_workout')}</Text>
                 </Button>
 
                 <View marginB-10>

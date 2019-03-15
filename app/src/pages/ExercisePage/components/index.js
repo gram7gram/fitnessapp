@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import selectors from './selectors';
 import {ScrollView, StyleSheet} from 'react-native';
 import {Button, Card, Colors, ListItem, Text, TextField, View} from 'react-native-ui-lib';
-import Icon from 'react-native-vector-icons/FontAwesome5';
 import {Navigation} from 'react-native-navigation'
 import {withLocalization} from "../../../context/LocaleProvider";
 import {RESET, SEARCH_CHANGED, TOGGLE_SEARCH} from "../actions";
@@ -95,7 +94,7 @@ class Exercise extends Component<Props> {
             }
         })
 
-        navigateToWorkout(this.props.componentId, training, workout)
+        navigateToWorkout(training, workout)
     }
 
     renderItem = (item, key) => {
@@ -104,8 +103,7 @@ class Exercise extends Component<Props> {
 
         const translation = findTranslation(item.translations, locale)
 
-        const hasSubitems = (item.children !== undefined && item.children.length > 0)
-            || (item.variants !== undefined && item.variants.length > 0)
+        const hasSubitems = item.variants !== undefined && item.variants.length > 0
 
         return <Card
             style={styles.cardStyle}
@@ -118,7 +116,7 @@ class Exercise extends Component<Props> {
             <View padding-10 flex>
                 <Text text70 numberOfLines={2}>
                     {hasSubitems
-                        ? <Text><Icon name="chevron-down"/>&nbsp;</Text>
+                        ? <Text>-&nbsp;</Text>
                         : null}
                     {translation ? translation.name : "..."}
                 </Text>

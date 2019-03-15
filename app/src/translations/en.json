@@ -3,13 +3,12 @@
     "title": "Welcome",
     "start_session": "Start training",
     "show_more": "Show more",
-    "prev_session": "Open previous",
-    "next_session": "Open next"
+    "remove_all": "Remove all"
   },
   "training": {
     "title": "Training",
     "chart_title": "Your progress",
-    "chart_legend": "ton per hour",
+    "chart_legend": "Ton per hour",
     "add_workout": "Add workout",
     "human_weight": "Your weight",
     "started_at": "Started at",
@@ -53,5 +52,8 @@
     "back": "Back",
     "legs": "Legs",
     "arms": "Arms"
+  },
+  "validation": {
+    "component_error": "Oops, an error"
   }
 }

@@ -4,10 +4,10 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 
-import {defaultLocale} from '../../../app.json';
+import {defaultLocale} from '../../app.json';
 
-import reducers from '../reducers';
-import sagas from '../sagas'
+import reducers from './reducers';
+import sagas from './sagas'
 
 const sagaMiddleware = createSagaMiddleware()
 
