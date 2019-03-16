@@ -18,6 +18,7 @@ import Legend from './Chart/Legend';
 import ErrorBoundary from "../../../components/ErrorBoundary";
 import {navigateToExercise, navigateToLanding, navigateToWorkout} from "../../../router";
 import SaveTraining from "../actions/SaveTraining";
+import {Column as Col, Row} from "react-native-responsive-grid";
 
 type Props = {
     componentId: string,
@@ -222,9 +223,11 @@ class Training extends Component<Props> {
                         : null}
 
                     <View right flex>
-                        <Button link onPress={this.removeWorkout(item)}>
-                            <Text red10>{i18n.t('training.remove_workout')}</Text>
-                        </Button>
+                        <Button
+                            link
+                            label={i18n.t('training.remove_workout')}
+                            color={Colors.red10}
+                            onPress={this.removeWorkout(item)}/>
                     </View>
                 </View>
 
@@ -254,55 +257,74 @@ class Training extends Component<Props> {
                     </ErrorBoundary>
                 </View>
 
-                <View row marginB-10>
-                    <View flex-1 marginR-5>
+                <Row>
 
-                        <Text text80 dark40>{i18n.t('training.started_at')}</Text>
+                    <Col size={50}>
 
-                        <DatePicker
-                            date={model.startedAt || ''}
-                            maxDate={model.completedAt || undefined}
-                            onDateChange={this.changeString('startedAt')}/>
+                        <View marginR-5 marginB-10>
+                            <Text text80 dark40>{i18n.t('training.started_at')}</Text>
 
-                    </View>
+                            <DatePicker
+                                date={model.startedAt || ''}
+                                maxDate={model.completedAt || undefined}
+                                onDateChange={this.changeString('startedAt')}/>
+                        </View>
 
-                    <View flex-1 marginL-5>
+                    </Col>
+                    <Col size={50}>
 
-                        <Text text80 dark40>{i18n.t('training.completed_at')}</Text>
+                        <View marginL-5 marginB-10>
+                            <Text text80 dark40>{i18n.t('training.completed_at')}</Text>
 
-                        <DatePicker
-                            disabled={!model.startedAt}
-                            date={model.completedAt || ''}
-                            minDate={model.startedAt || undefined}
-                            onDateChange={this.changeString('completedAt')}/>
-                    </View>
-                </View>
+                            <DatePicker
+                                disabled={!model.startedAt}
+                                date={model.completedAt || ''}
+                                minDate={model.startedAt || undefined}
+                                onDateChange={this.changeString('completedAt')}/>
+                        </View>
+                    </Col>
+                </Row>
 
-                <TextField
-                    marginB-10
-                    keyboardType="numeric"
-                    floatingPlaceholder={false}
-                    title={i18n.t('training.human_weight')}
-                    placeholder={i18n.t('placeholders.number')}
-                    onChangeText={this.changeFloat('humanWeight')}
-                    value={(model.humanWeight > 0 ? model.humanWeight : '') + ''}/>
+                <Row>
 
-                <Button
-                    marginB-10
-                    disabled={!(model.id && model.startedAt && model.humanWeight > 0)}
-                    onPress={this.addWorkout}>
-                    <Text>{i18n.t('training.add_workout')}</Text>
-                </Button>
+                    <Col size={50}>
+                        <View marginR-5 marginB-10>
 
-                <View marginB-10>
-                    {workouts.map(this.renderWorkout)}
-                </View>
+                            <TextField
+                                marginB-10
+                                keyboardType="numeric"
+                                floatingPlaceholder={false}
+                                title={i18n.t('training.human_weight')}
+                                placeholder={i18n.t('placeholders.number')}
+                                onChangeText={this.changeFloat('humanWeight')}
+                                value={(model.humanWeight > 0 ? model.humanWeight : '') + ''}/>
 
-                <Button marginB-10 link onPress={this.remove}>
-                    <Text red10>{i18n.t('training.remove')}</Text>
-                </Button>
+                        </View>
+                    </Col>
 
+                </Row>
 
+                <Row>
+                    <Col size={100} mdSize={90} lgSize={80} mdOffset={5} lgOffset={10}>
+
+                        <Button
+                            marginB-10
+                            label={i18n.t('training.add_workout')}
+                            disabled={!(model.id && model.startedAt && model.humanWeight > 0)}
+                            onPress={this.addWorkout}/>
+
+                        <View marginB-10>
+                            {workouts.map(this.renderWorkout)}
+                        </View>
+
+                        <Button
+                            link
+                            marginB-10
+                            label={i18n.t('training.remove')}
+                            color={Colors.red10}
+                            onPress={this.remove}/>
+                    </Col>
+                </Row>
 
             </View>
         </ScrollView>

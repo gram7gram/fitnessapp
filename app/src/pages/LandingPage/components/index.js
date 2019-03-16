@@ -3,8 +3,10 @@ import {connect} from 'react-redux';
 import moment from 'moment';
 import selectors from './selectors';
 import i18n from '../../../i18n';
-import {Button, Card, Text, View} from 'react-native-ui-lib';
-import {Image, ScrollView, StyleSheet} from "react-native";
+import {Button, Card, Text, View, Colors} from 'react-native-ui-lib';
+import Image from "react-native-responsive-image";
+import {Row, Column as Col} from "react-native-responsive-grid";
+import {ScrollView, StyleSheet} from "react-native";
 import FetchTrainings from "../actions/FetchTrainings";
 import Logo from "../../../../assets/images/logo.png";
 import {Navigation} from "react-native-navigation";
@@ -110,41 +112,49 @@ class Landing extends Component<Props> {
         return <View flex padding-10>
 
             <View centerH>
-                <Image source={Logo}
-                       resizeMethod="scale"
-                       style={styles.image}/>
+                <Image
+                    source={Logo}
+                    initHeight={1280 / 1.5}
+                    initWidth={985 / 1.5}
+                    style={styles.image}/>
             </View>
 
             <FadeInView style={styles.container}>
 
                 <ScrollView style={styles.scroll}>
 
-                    <Button marginB-10
-                            onPress={this.addTraining}>
-                        <Text>{i18n.t('landing.start_session')}</Text>
-                    </Button>
+                    <Row>
+                        <Col size={100} mdSize={90} lgSize={80} mdOffset={5} lgOffset={10}>
 
-                    {items.map(this.renderTraining)}
+                            <Button marginB-10
+                                    label={i18n.t('landing.start_session')}
+                                    onPress={this.addTraining}/>
 
-                    {items.length > 0 && hasMore
-                        ? <Button marginB-10 onPress={this.addMonth}>
-                        <Text>{i18n.t('landing.show_more')}</Text>
-                    </Button> : null}
+                            {items.map(this.renderTraining)}
 
-                    <Button link marginB-10
-                            onPress={() => {
-                                rm('/trainingRegistry.json').catch(() => {
-                                })
+                            {items.length > 0 && hasMore
+                                ? <Button
+                                    marginB-10
+                                    onPress={this.addMonth}
+                                    label={i18n.t('landing.show_more')}/> : null}
 
-                                items.forEach(item => {
-                                    rm('/trainings/' + item.id + ".json").catch(() => {
-                                    })
-                                })
-                            }}>
-                        <Text red10>{i18n.t('landing.remove_all')}</Text>
-                    </Button>
+                            <Button link marginB-10
+                                    color={Colors.red10}
+                                    label={i18n.t('landing.remove_all')}
+                                    onPress={() => {
+                                        rm('/trainingRegistry.json').catch(() => {
+                                        })
+
+                                        items.forEach(item => {
+                                            rm('/trainings/' + item.id + ".json").catch(() => {
+                                            })
+                                        })
+                                    }}/>
+                        </Col>
+                    </Row>
 
                 </ScrollView>
+
 
             </FadeInView>
         </View>
@@ -162,9 +172,7 @@ const styles = StyleSheet.create({
     },
     image: {
         position: 'absolute',
-        bottom: -475,
-        width: 775 / 3.5,
-        height: 1000 / 3.5
+        top: 100,
     }
 })
 

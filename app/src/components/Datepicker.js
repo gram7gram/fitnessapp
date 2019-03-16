@@ -17,6 +17,7 @@ class Picker extends Component<Props> {
         }
 
         return <DatePicker
+            style={styles.picker}
             customStyles={datePickerStyles}
             showIcon={false}
             mode="datetime"
@@ -31,6 +32,9 @@ class Picker extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+    picker: {
+        width: '100%'
+    },
     datepickerInput: {
         borderWidth: 0,
         borderBottomWidth: 1,

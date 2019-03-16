@@ -7,9 +7,10 @@
     "npm": "6"
   },
   "scripts": {
-    "start": "NODE_ENV=development react-native start",
-    "android": "NODE_ENV=development react-native run-android",
-    "log": "NODE_ENV=development react-native log-android",
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "android:release": "cd android && ./gradlew assembleRelease",
+    "log": "react-native log-android",
     "emulator": "emulator -read-only -no-boot-anim -avd Nexus_S_API_28",
     "emulator-menu": "adb shell input keyevent 82",
     "test": "jest"
@@ -25,6 +26,8 @@
     "react-native-fs": "^2.13.3",
     "react-native-localize": "^1.0.4",
     "react-native-navigation": "^2.13.1",
+    "react-native-responsive-grid": "^0.41.992",
+    "react-native-responsive-image": "^2.3.1",
     "react-native-svg": "^9.2.4",
     "react-native-ui-lib": "^3.19.1",
     "react-native-vector-icons": "^6.3.0",

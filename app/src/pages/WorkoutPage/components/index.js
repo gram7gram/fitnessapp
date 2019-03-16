@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import selectors from './selectors';
 import i18n from '../../../i18n';
-import {Button, Card, Colors, ListItem, Text, View, WheelPicker} from 'react-native-ui-lib';
+import {Button, Card, Colors, ListItem, Text, View, WheelPicker, Typography} from 'react-native-ui-lib';
 import {ScrollView, StyleSheet} from "react-native";
 import {ADD_REPEAT, REMOVE_REPEAT, REPEAT_CHANGED, UPDATE_WORKOUT_METRICS_REQUEST} from "../../TrainingPage/actions";
 import {RESET, SET_CURRENT_REPEAT} from "../actions";
@@ -12,6 +12,8 @@ import debounce from "lodash/debounce";
 import {withLocalization} from "../../../context/LocaleProvider";
 import {Navigation} from "react-native-navigation";
 import {closeModals} from "../../../router";
+import {TextField} from "../../TrainingPage/components";
+import {Column as Col, Row} from "react-native-responsive-grid";
 
 const weightsArr = []
 const repeatsArr = []
@@ -224,9 +226,11 @@ class Workout extends Component<Props> {
                 </Text>
 
                 <View right>
-                    <Button link onPress={this.removeRepeat(item.id)}>
-                        <Text red10>{i18n.t('workout.remove_repeat')}</Text>
-                    </Button>
+                    <Button
+                        link
+                        label={i18n.t('workout.remove_repeat')}
+                        color={Colors.red10}
+                        onPress={this.removeRepeat(item.id)}/>
                 </View>
             </View>
         </Card>
@@ -249,15 +253,20 @@ class Workout extends Component<Props> {
 
                 <ScrollView vertical>
 
-                    <Button
-                        marginB-10
-                        onPress={this.addRepeat}>
-                        <Text>{i18n.t('workout.add_repeat')}</Text>
-                    </Button>
+                    <Row>
+                        <Col size={100} mdSize={90} lgSize={80} mdOffset={5} lgOffset={10}>
 
-                    <View marginB-10>
-                        {repeats.map(this.renderRepeat)}
-                    </View>
+                            <Button
+                                marginB-10
+                                label={i18n.t('workout.add_repeat')}
+                                onPress={this.addRepeat}/>
+
+                            <View marginB-10>
+                                {repeats.map(this.renderRepeat)}
+                            </View>
+
+                        </Col>
+                    </Row>
 
                 </ScrollView>
             </View>
@@ -271,12 +280,14 @@ class Workout extends Component<Props> {
                     {isHumanWeight
 
                         ? <WheelPicker
+                            labelStyle={Typography.text70}
                             style={styles.picker}
                             selectedValue={humanWeight}>
                             <WheelPicker.Item value={humanWeight} label={humanWeight.toFixed(1)}/>
                         </WheelPicker>
 
                         : <WheelPicker
+                            labelStyle={Typography.text70}
                             style={styles.picker}
                             selectedValue={repeatModel ? repeatModel.weight : weightsArr[0].value}
                             onValueChange={debounce(this.changeFloat('weight'), 200)}>
@@ -293,6 +304,7 @@ class Workout extends Component<Props> {
 
                     <WheelPicker
                         style={styles.picker}
+                        labelStyle={Typography.text70}
                         selectedValue={repeatModel ? repeatModel.repeatCount : repeatsArr[0].value}
                         onValueChange={debounce(this.changeInt('repeatCount'), 200)}>
                         {repeatsArr.map((item, key) =>
@@ -321,7 +333,8 @@ const styles = StyleSheet.create({
     },
     picker: {
         backgroundColor: Colors.dark20,
-        height: '100%'
+        height: '100%',
+        width: '100%'
     }
 })
 
