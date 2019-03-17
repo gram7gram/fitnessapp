@@ -15,7 +15,7 @@ import {rm} from "../../../storage/fs";
 import FadeInView from "../../../components/FadeIn";
 import {ADD_DISPLAYED_MONTH} from "../actions";
 import {imageMap} from "../../../assets";
-import {navigateToTraining} from "../../../router";
+import {navigateToDonate, navigateToTraining} from "../../../router";
 
 type Props = {};
 
@@ -125,6 +125,11 @@ class Landing extends Component<Props> {
 
                     <Row>
                         <Col size={100} mdSize={90} lgSize={80} mdOffset={5} lgOffset={10}>
+
+                            <Button marginB-10
+                                    red10
+                                    label={'Donate'}
+                                    onPress={navigateToDonate}/>
 
                             <Button marginB-10
                                     label={i18n.t('landing.start_session')}

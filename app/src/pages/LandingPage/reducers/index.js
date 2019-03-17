@@ -1,14 +1,14 @@
 import {combineReducers} from 'redux';
 import moment from 'moment';
-import {ADD_DISPLAYED_MONTH, FETCH_TRAININGS_FAILURE, FETCH_TRAININGS_SUCCESS} from "../actions";
+import * as Actions from "../actions";
 
 const currentMonth = moment().format('YYYY-MM')
 
 const trainings = (prev = {}, action) => {
     switch (action.type) {
-        case FETCH_TRAININGS_FAILURE:
+        case Actions.FETCH_TRAININGS_FAILURE:
             return {}
-        case FETCH_TRAININGS_SUCCESS:
+        case Actions.FETCH_TRAININGS_SUCCESS:
             return action.payload
         default:
             return prev
@@ -17,9 +17,9 @@ const trainings = (prev = {}, action) => {
 
 const months = (prev = [currentMonth], action) => {
     switch (action.type) {
-        case FETCH_TRAININGS_FAILURE:
+        case Actions.FETCH_TRAININGS_FAILURE:
             return [currentMonth]
-        case ADD_DISPLAYED_MONTH:
+        case Actions.ADD_DISPLAYED_MONTH:
 
             const items = [...prev,]
 
@@ -31,7 +31,27 @@ const months = (prev = [currentMonth], action) => {
     }
 }
 
+const landingOpenedCount = (prev = 0, action) => {
+    switch (action.type) {
+        case Actions.INCREMENT_LANDING_COUNT:
+            return prev + 1
+        default:
+            return prev
+    }
+}
+
+const isDonateDialogVisible = (prev = false, action) => {
+    switch (action.type) {
+        case Actions.TOGGLE_DONATE_DIALOG:
+            return !prev
+        default:
+            return prev
+    }
+}
+
 export default combineReducers({
+    isDonateDialogVisible,
+    landingOpenedCount,
     trainings,
     months,
 });
