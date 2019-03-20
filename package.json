@@ -8,11 +8,11 @@
   },
   "scripts": {
     "start": "react-native start",
-    "android": "react-native run-android",
+    "android:debug": "react-native run-android",
     "android:release": "cd android && ./gradlew assembleRelease",
     "log": "react-native log-android",
     "emulator": "emulator -read-only -no-boot-anim -avd Nexus_S_API_28",
-    "emulator-menu": "adb shell input keyevent 82",
+    "emulator:menu": "adb shell input keyevent 82",
     "test": "jest"
   },
   "dependencies": {
@@ -31,7 +31,6 @@
     "react-native-svg": "^9.2.4",
     "react-native-ui-lib": "^3.19.1",
     "react-native-vector-icons": "^6.3.0",
-    "react-native-wheel-pick": "^1.0.9",
     "react-redux": "^6.0.1",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",

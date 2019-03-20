@@ -1,4 +1,4 @@
-export const LANDING = 'Landing';
-export const TRAINING = 'Training';
-export const EXERCISE = 'Exercise';
-export const WORKOUT = 'Workout';
+export const LANDING = 'navigation.Landing';
+export const TRAINING = 'navigation.Training';
+export const EXERCISE = 'navigation.Exercise';
+export const WORKOUT = 'navigation.Workout';
