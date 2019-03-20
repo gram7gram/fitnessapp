@@ -1,7 +1,6 @@
 import {combineReducers} from 'redux';
 import moment from 'moment';
 import Rate from "./Rate";
-import Donate from "./Donate";
 import * as Actions from "../actions";
 
 const currentMonth = moment().format('YYYY-MM')
@@ -35,7 +34,6 @@ const months = (prev = [currentMonth], action) => {
 
 export default combineReducers({
     Rate,
-    Donate,
     trainings,
     months,
 });

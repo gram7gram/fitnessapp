@@ -3,5 +3,6 @@
   "displayName": "FitnessApp",
   "defaultLocale": "en",
   "defaultTheme": "dark",
+  "donationUrl": "dark",
   "androidMarketId": "ua.gram.fitnessapp"
 }

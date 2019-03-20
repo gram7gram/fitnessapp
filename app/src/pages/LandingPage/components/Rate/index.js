@@ -10,9 +10,7 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import {TOGGLE_RATE_DIALOG} from "../../actions";
 import {androidMarketId} from "../../../../../../app.json";
 
-type Props = {};
-
-class Rate extends PureComponent<Props> {
+class Rate extends PureComponent {
 
     onOkPress = () => {
         this.props.dispatch({
@@ -28,8 +26,6 @@ class Rate extends PureComponent<Props> {
         this.props.dispatch({
             type: TOGGLE_RATE_DIALOG
         })
-
-        AsyncStorage.setItem('Landing.isRateAlreadyOpened', '1')
     }
 
     render() {

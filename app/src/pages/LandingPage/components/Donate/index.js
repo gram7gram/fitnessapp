@@ -4,23 +4,28 @@ import selectors from './selectors';
 import i18n from '../../../../i18n';
 import {Button, Card, Colors, Text, Typography, View} from 'react-native-ui-lib';
 import {Column as Col, Row} from "react-native-responsive-grid";
-import {AsyncStorage, StyleSheet} from "react-native";
+import {AsyncStorage, Linking, StyleSheet} from "react-native";
 import FadeInView from "../../../../components/FadeIn";
 import Icon from "react-native-vector-icons/FontAwesome";
 import {TOGGLE_DONATE_DIALOG} from "../../actions";
+import {donationUrl} from "../../../../../../app.json";
 
-type Props = {
+class Donate extends PureComponent {
 
-};
-
-class Donate extends PureComponent<Props> {
-
-    onCancelPress = () => {
+    onOkPress = () => {
         this.props.dispatch({
             type: TOGGLE_DONATE_DIALOG
         })
 
         AsyncStorage.setItem('Landing.isDonateAlreadyOpened', '1')
+
+        Linking.openURL(donationUrl)
+    }
+
+    onCancelPress = () => {
+        this.props.dispatch({
+            type: TOGGLE_DONATE_DIALOG
+        })
     }
 
     render() {
@@ -59,7 +64,7 @@ class Donate extends PureComponent<Props> {
                                 size="small"
                                 round
                                 backgroundColor={Colors.green40}
-                                onPress={this.onCancelPress}>
+                                onPress={this.onOkPress}>
                                 <Text>
                                     <Icon
                                         name="dollar"
