@@ -6,16 +6,18 @@ import i18n from '../../../i18n';
 import {Button, Card, Text, View, Colors} from 'react-native-ui-lib';
 import Image from "react-native-responsive-image";
 import {Row, Column as Col} from "react-native-responsive-grid";
-import {ScrollView, StyleSheet} from "react-native";
+import {ScrollView, StyleSheet, AsyncStorage} from "react-native";
 import FetchTrainings from "../actions/FetchTrainings";
 import Logo from "../../../../assets/images/logo.png";
 import {Navigation} from "react-native-navigation";
 import {objectValues, sortByDate} from "../../../utils";
 import {rm} from "../../../storage/fs";
 import FadeInView from "../../../components/FadeIn";
-import {ADD_DISPLAYED_MONTH} from "../actions";
+import {ADD_DISPLAYED_MONTH, TOGGLE_DONATE_DIALOG, TOGGLE_RATE_DIALOG} from "../actions";
 import {imageMap} from "../../../assets";
-import {navigateToDonate, navigateToTraining} from "../../../router";
+import {navigateToTraining} from "../../../router";
+import Donate from "./Donate";
+import Rate from "./Rate";
 
 type Props = {};
 
@@ -29,6 +31,60 @@ class Landing extends Component<Props> {
 
     componentDidAppear() {
         this.props.dispatch(FetchTrainings())
+
+        this.openRateOrDonate().catch(e => {
+            console.log(e);
+        })
+    }
+
+    openRateOrDonate = async () => {
+        const isDonateVisible = this.props.Landing.Donate.isVisible
+        const isRateVisible = this.props.Landing.Rate.isVisible
+
+        let openedCount = parseInt(await AsyncStorage.getItem('Landing.openedCount') || 1)
+        if (isNaN(openedCount)) openedCount = 1
+
+        let isRateAlreadyOpened = parseInt(await AsyncStorage.getItem('Landing.isRateAlreadyOpened') || 0)
+        if (isNaN(isRateAlreadyOpened)) isRateAlreadyOpened = 0
+
+        isRateAlreadyOpened = isRateAlreadyOpened === 1
+
+        let isDonateAlreadyOpened = parseInt(await AsyncStorage.getItem('Landing.isDonateAlreadyOpened') || 0)
+        if (isNaN(isDonateAlreadyOpened)) isDonateAlreadyOpened = 0
+
+        isDonateAlreadyOpened = isDonateAlreadyOpened === 1
+
+        if (openedCount >= 10) {
+
+            await AsyncStorage.removeItem('Landing.openedCount')
+
+            if (!isRateAlreadyOpened && !isRateVisible) {
+                this.props.dispatch({
+                    type: TOGGLE_RATE_DIALOG
+                })
+
+            } else if (!isDonateAlreadyOpened && !isDonateVisible) {
+                this.props.dispatch({
+                    type: TOGGLE_DONATE_DIALOG
+                })
+            }
+
+        } else {
+            await AsyncStorage.setItem('Landing.openedCount', (openedCount + 1) + '')
+        }
+    }
+
+    rm = () => {
+
+        const {trainings} = this.props.Landing
+
+        rm('/trainingRegistry.json').catch(() => {
+        })
+
+        objectValues(trainings).forEach(item => {
+            rm('/trainings/' + item.id + ".json").catch(() => {
+            })
+        })
     }
 
     openTraining = training => () => {
@@ -109,7 +165,13 @@ class Landing extends Component<Props> {
 
         sortByDate(items, 'startedAt', 'DESC')
 
-        return <View flex padding-10>
+        return <View flex>
+
+            <Donate/>
+
+            <Rate/>
+
+            <View flex padding-10>
 
             <View centerH>
                 <Image
@@ -127,11 +189,6 @@ class Landing extends Component<Props> {
                         <Col size={100} mdSize={90} lgSize={80} mdOffset={5} lgOffset={10}>
 
                             <Button marginB-10
-                                    red10
-                                    label={'Donate'}
-                                    onPress={navigateToDonate}/>
-
-                            <Button marginB-10
                                     label={i18n.t('landing.start_session')}
                                     onPress={this.addTraining}/>
 
@@ -146,15 +203,7 @@ class Landing extends Component<Props> {
                             <Button link marginB-10
                                     color={Colors.red10}
                                     label={i18n.t('landing.remove_all')}
-                                    onPress={() => {
-                                        rm('/trainingRegistry.json').catch(() => {
-                                        })
-
-                                        items.forEach(item => {
-                                            rm('/trainings/' + item.id + ".json").catch(() => {
-                                            })
-                                        })
-                                    }}/>
+                                    onPress={this.rm}/>
                         </Col>
                     </Row>
 
@@ -162,6 +211,7 @@ class Landing extends Component<Props> {
 
 
             </FadeInView>
+        </View>
         </View>
     }
 

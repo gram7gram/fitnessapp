@@ -4,28 +4,37 @@ import selectors from './selectors';
 import i18n from '../../../../i18n';
 import {Button, Card, Colors, Text, Typography, View} from 'react-native-ui-lib';
 import {Column as Col, Row} from "react-native-responsive-grid";
-import {AsyncStorage, StyleSheet} from "react-native";
+import {AsyncStorage, StyleSheet, Linking} from "react-native";
 import FadeInView from "../../../../components/FadeIn";
 import Icon from "react-native-vector-icons/FontAwesome";
-import {TOGGLE_DONATE_DIALOG} from "../../actions";
+import {TOGGLE_RATE_DIALOG} from "../../actions";
+import {androidMarketId} from "../../../../../../app.json";
 
-type Props = {
+type Props = {};
 
-};
+class Rate extends PureComponent<Props> {
 
-class Donate extends PureComponent<Props> {
+    onOkPress = () => {
+        this.props.dispatch({
+            type: TOGGLE_RATE_DIALOG
+        })
+
+        AsyncStorage.setItem('Landing.isRateAlreadyOpened', '1')
+
+        Linking.openURL(`market://details?id=${androidMarketId}`)
+    }
 
     onCancelPress = () => {
         this.props.dispatch({
-            type: TOGGLE_DONATE_DIALOG
+            type: TOGGLE_RATE_DIALOG
         })
 
-        AsyncStorage.setItem('Landing.isDonateAlreadyOpened', '1')
+        AsyncStorage.setItem('Landing.isRateAlreadyOpened', '1')
     }
 
     render() {
 
-        const {isVisible} = this.props.Donate
+        const {isVisible} = this.props.Rate
         if (!isVisible) return null;
 
         return <FadeInView style={styles.container} duration={200}>
@@ -34,8 +43,8 @@ class Donate extends PureComponent<Props> {
                     <Col size={100}>
 
                         <View style={styles.header} padding-5>
-                            <Text text60 dark10 numberOfLines={1}>{i18n.t('donation.title')}</Text>
-                            <Text text90 dark30>{i18n.t('donation.content')}</Text>
+                            <Text text60 dark10 numberOfLines={1}>{i18n.t('rate.title')}</Text>
+                            <Text text90 dark30>{i18n.t('rate.content')}</Text>
                         </View>
                         <View style={styles.footer}>
 
@@ -58,12 +67,12 @@ class Donate extends PureComponent<Props> {
                                 style={styles.icon}
                                 size="small"
                                 round
-                                backgroundColor={Colors.green40}
-                                onPress={this.onCancelPress}>
+                                backgroundColor={Colors.yellow40}
+                                onPress={this.onOkPress}>
                                 <Text>
                                     <Icon
-                                        name="dollar"
-                                        color={Colors.green10}
+                                        name="star"
+                                        color={Colors.yellow10}
                                         size={Typography.text40.fontSize}
                                         solid/>
                                 </Text>
@@ -82,11 +91,9 @@ const styles = StyleSheet.create({
     container: {
         justifyContent: 'flex-start',
     },
-    body: {
-
-    },
+    body: {},
     header: {
-        backgroundColor: Colors.green60,
+        backgroundColor: Colors.yellow60,
         paddingBottom: 25
     },
     footer: {
@@ -105,4 +112,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default connect(selectors)(Donate);
+export default connect(selectors)(Rate);

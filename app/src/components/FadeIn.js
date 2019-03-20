@@ -1,7 +1,11 @@
 import React, {PureComponent} from 'react';
 import {Animated} from 'react-native';
 
-class FadeInView extends PureComponent {
+type Props = {
+    duration: ?number
+}
+
+class FadeInView extends PureComponent<Props> {
 
     state = {
         opacity: new Animated.Value(0),
@@ -10,7 +14,7 @@ class FadeInView extends PureComponent {
     componentDidMount() {
         Animated.timing(this.state.opacity, {
             toValue: 1,
-            duration: 1500,
+            duration: this.props.duration,
             useNativeDriver: true
         }).start();
     }
@@ -18,16 +22,18 @@ class FadeInView extends PureComponent {
     render() {
         const {opacity} = this.state;
 
-        return (
-            <Animated.View
-                style={{
-                    ...this.props.style,
-                    opacity: opacity,
-                }}>
-                {this.props.children}
-            </Animated.View>
-        );
+        return <Animated.View
+            style={{
+                ...this.props.style,
+                opacity: opacity,
+            }}>
+            {this.props.children}
+        </Animated.View>
     }
+}
+
+FadeInView.defaultProps = {
+    duration: 1500
 }
 
 export default FadeInView

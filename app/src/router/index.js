@@ -14,7 +14,6 @@ import Landing from '../pages/LandingPage/components';
 import Training from '../pages/TrainingPage/components';
 import Exercise from '../pages/ExercisePage/components';
 import Workout from '../pages/WorkoutPage/components';
-import Donate from '../pages/LandingPage/components/Donate';
 
 import * as Pages from './Pages';
 import {defaultLocale, defaultTheme} from "../../../app.json";
@@ -43,8 +42,6 @@ export function createRouter() {
     Navigation.registerComponent(Pages.EXERCISE, () => withStore(Exercise));
 
     Navigation.registerComponent(Pages.WORKOUT, () => withStore(Workout));
-
-    Navigation.registerComponent(Pages.DONATE, () => withStore(Donate));
 
     Navigation.setDefaultOptions({
         topBar: {
@@ -212,37 +209,6 @@ export const navigateToLanding = (referer) => {
     closeModals()
 
     Navigation.popToRoot(referer).catch((e) => {
-        console.log(e);
-    });
-}
-
-export const navigateToDonate = () => {
-
-    console.log('navigateToDonate');
-
-    closeModals()
-
-    Navigation.showOverlay({
-        component: {
-            name: Pages.DONATE,
-            options: {
-                overlay: {
-                    interceptTouchOutside: true
-                }
-            }
-        }
-    }).catch((e) => {
-        console.log(e);
-    });
-}
-
-export const dismissDonateOverlay = (referer) => {
-
-    console.log('dismissDonateOverlay');
-
-    closeModals()
-
-    Navigation.dismissOverlay(referer).catch((e) => {
         console.log(e);
     });
 }

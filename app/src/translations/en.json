@@ -5,6 +5,14 @@
     "show_more": "Show more",
     "remove_all": "Remove all"
   },
+  "donation": {
+    "title": "Tip me",
+    "content": "If you like an app, consider donating small amount"
+  },
+  "rate": {
+    "title": "Rate me",
+    "content": "Share your opinion about the app"
+  },
   "training": {
     "title": "Training",
     "chart_title": "Your progress",

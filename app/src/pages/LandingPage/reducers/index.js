@@ -1,5 +1,7 @@
 import {combineReducers} from 'redux';
 import moment from 'moment';
+import Rate from "./Rate";
+import Donate from "./Donate";
 import * as Actions from "../actions";
 
 const currentMonth = moment().format('YYYY-MM')
@@ -31,27 +33,9 @@ const months = (prev = [currentMonth], action) => {
     }
 }
 
-const landingOpenedCount = (prev = 0, action) => {
-    switch (action.type) {
-        case Actions.INCREMENT_LANDING_COUNT:
-            return prev + 1
-        default:
-            return prev
-    }
-}
-
-const isDonateDialogVisible = (prev = false, action) => {
-    switch (action.type) {
-        case Actions.TOGGLE_DONATE_DIALOG:
-            return !prev
-        default:
-            return prev
-    }
-}
-
 export default combineReducers({
-    isDonateDialogVisible,
-    landingOpenedCount,
+    Rate,
+    Donate,
     trainings,
     months,
 });
