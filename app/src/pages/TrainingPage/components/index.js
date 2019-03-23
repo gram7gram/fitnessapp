@@ -5,7 +5,7 @@ import selectors from './selectors';
 import moment from 'moment';
 import i18n from '../../../i18n';
 import DatePicker from '../../../components/Datepicker';
-import {ScrollView} from 'react-native';
+import {ScrollView, FlatList} from 'react-native';
 import {Button, Card, Colors, Text, TextField, Typography, View} from 'react-native-ui-lib';
 import {findTranslation, objectValues} from "../../../utils";
 import {withLocalization} from "../../../context/LocaleProvider";
@@ -146,7 +146,7 @@ class Training extends Component<Props> {
         navigateToExercise(model.id, newWorkout.id)
     }
 
-    renderWorkout = (item, key) => {
+    renderWorkout = ({item}) => {
 
         const {locale} = this.props
 
@@ -168,8 +168,9 @@ class Training extends Component<Props> {
             repeats = repeats.splice(0, 4)
         }
 
+        const isHumanWeight = item.exercise && item.exercise.isHumanWeight
+
         return <Card
-            key={key}
             marginB-10
             onPress={this.openWorkout(item.id)}>
 
@@ -183,22 +184,33 @@ class Training extends Component<Props> {
 
                     <View column paddingR-5>
                         <View row left>
-                            <Text text80 dark30 numberOfLines={1}>{i18n.t('training.weight')}</Text>
+                            <Text text80 dark30 numberOfLines={1}>
+                                {i18n.t('training.weight')}
+                            </Text>
                         </View>
+
                         <View row left>
-                            <Text text80 dark30 numberOfLines={1}>{i18n.t('training.repeatCount')}</Text>
+                            <Text text80 dark30 numberOfLines={1}>
+                                {i18n.t('training.repeatCount')}
+                            </Text>
                         </View>
                     </View>
 
                     {repeats.map((workout, key) =>
                         <View key={key} column paddingH-5>
+
                             <View row right>
-                                <Text text80 dark30
-                                      numberOfLines={1}>{workout.weight > 0 ? workout.weight.toFixed(1) : '-'}</Text>
+                                <Text text80 dark30 numberOfLines={1}>
+                                    {!isHumanWeight && workout.weight > 0
+                                        ? workout.weight.toFixed(1)
+                                        : '-'}
+                                </Text>
                             </View>
+
                             <View row right>
-                                <Text text80 dark30
-                                      numberOfLines={1}>x{workout.repeatCount > 0 ? workout.repeatCount : '-'}</Text>
+                                <Text text80 dark30 numberOfLines={1}>
+                                    x{workout.repeatCount > 0 ? workout.repeatCount : '-'}
+                                </Text>
                             </View>
                         </View>
                     )}
@@ -206,10 +218,14 @@ class Training extends Component<Props> {
                     {isOverflowing
                         ? <View column padding-5>
                             <View row center>
-                                <Text text100 blue20 numberOfLines={1}>+{diff}</Text>
+                                <Text text100 blue20 numberOfLines={1}>
+                                    +{diff}
+                                </Text>
                             </View>
                             <View row center>
-                                <Text text100 blue20 numberOfLines={1}>more</Text>
+                                <Text text100 blue20 numberOfLines={1}>
+                                    {i18n.t('training.diff_more')}
+                                </Text>
                             </View>
                         </View>
                         : null}
@@ -313,9 +329,10 @@ class Training extends Component<Props> {
                             disabled={!(model.id && model.startedAt && model.humanWeight > 0)}
                             onPress={this.addWorkout}/>
 
-                        <View marginB-10>
-                            {workouts.map(this.renderWorkout)}
-                        </View>
+                        <FlatList
+                            data={workouts}
+                            renderItem={this.renderWorkout}
+                            keyExtractor={item => item.id}/>
 
                         <Button
                             link

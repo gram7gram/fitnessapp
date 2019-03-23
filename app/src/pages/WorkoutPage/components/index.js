@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import selectors from './selectors';
 import i18n from '../../../i18n';
 import {Button, Card, Colors, ListItem, Text, View, WheelPicker, Typography} from 'react-native-ui-lib';
-import {ScrollView, StyleSheet} from "react-native";
+import {FlatList, ScrollView, StyleSheet} from "react-native";
 import {ADD_REPEAT, REMOVE_REPEAT, REPEAT_CHANGED, UPDATE_WORKOUT_METRICS_REQUEST} from "../../TrainingPage/actions";
 import {RESET, SET_CURRENT_REPEAT} from "../actions";
 import {findTranslation, objectValues} from "../../../utils";
@@ -111,8 +111,15 @@ class Workout extends Component<Props> {
     addRepeat = () => {
         const {workout} = this.props
 
-        const humanWeight = this.getHumanWeight()
+        let weight = 0
         const isHumanWeight = this.isHumanWeight()
+
+        if (isHumanWeight) {
+            const humanWeight = this.getHumanWeight()
+            const scale = this.getExerciseScale()
+
+            weight = humanWeight * scale
+        }
 
         this.props.dispatch({
             type: ADD_REPEAT,
@@ -121,7 +128,7 @@ class Workout extends Component<Props> {
                 createdAt: new Date().getTime(),
                 workout,
                 isHumanWeight,
-                weight: isHumanWeight ? humanWeight : 0,
+                weight,
                 repeatCount: 15,
             }
         })
@@ -198,32 +205,45 @@ class Workout extends Component<Props> {
         return workout && workout.exercise && workout.exercise.isHumanWeight === true
     }
 
+    getExerciseScale = () => {
+        const workout = this.getWorkout()
+
+        return workout && workout.exercise ? workout.exercise.scale : 0
+    }
+
     getHumanWeight = () => {
         const {model} = this.props.Training
 
         return model.humanWeight || 0
     }
 
-    renderRepeat = (item, key) => {
+    renderRepeat = ({item}) => {
 
         const {currentRepeat} = this.props.Workout
 
+        const isHumanWeight = this.isHumanWeight()
         const isCurrent = currentRepeat === item.id
 
         return <Card
-            key={key}
             onPress={this.setRepeatActive(item)}
             style={isCurrent ? styles.currentRepeatCard : null}
             marginB-10>
 
             <View padding-10>
 
-                <Text text50 dark20 center numberOfLines={1}>
-                    <Text red10> {item.weight || 0}</Text>
-                    {i18n.t('workout.weight_short')}
-                    <Text red10>{item.repeatCount || 0}</Text>
-                    {i18n.t('workout.repeats_short')}
-                </Text>
+                {isHumanWeight
+
+                    ? <Text text50 dark20 center numberOfLines={1}>
+                        <Text red10>{item.repeatCount || 0}</Text>
+                        {i18n.t('workout.repeats_short')}
+                    </Text>
+
+                    : <Text text50 dark20 center numberOfLines={1}>
+                        <Text red10> {item.weight || 0}</Text>
+                        {i18n.t('workout.weight_short')}
+                        <Text red10>{item.repeatCount || 0}</Text>
+                        {i18n.t('workout.repeats_short')}
+                    </Text>}
 
                 <View right>
                     <Button
@@ -244,7 +264,6 @@ class Workout extends Component<Props> {
             return 0
         })
 
-        const humanWeight = this.getHumanWeight()
         const isHumanWeight = this.isHumanWeight()
         const repeatModel = this.getCurrentRepeatModel()
 
@@ -261,9 +280,10 @@ class Workout extends Component<Props> {
                                 label={i18n.t('workout.add_repeat')}
                                 onPress={this.addRepeat}/>
 
-                            <View marginB-10>
-                                {repeats.map(this.renderRepeat)}
-                            </View>
+                            <FlatList
+                                data={repeats}
+                                renderItem={this.renderRepeat}
+                                keyExtractor={item => item.id}/>
 
                         </Col>
                     </Row>
@@ -273,20 +293,13 @@ class Workout extends Component<Props> {
 
             <View row style={styles.pickerContainer} marginB-20>
 
-                <View flex-1 column>
+                {!isHumanWeight
 
-                    <Text text70 dark80 numberOfLines={1} center>{i18n.t('workout.set_weight')}</Text>
+                    ? <View flex-1 column>
 
-                    {isHumanWeight
+                        <Text text70 dark80 numberOfLines={1} center>{i18n.t('workout.set_weight')}</Text>
 
-                        ? <WheelPicker
-                            labelStyle={Typography.text70}
-                            style={styles.picker}
-                            selectedValue={humanWeight}>
-                            <WheelPicker.Item value={humanWeight} label={humanWeight.toFixed(1)}/>
-                        </WheelPicker>
-
-                        : <WheelPicker
+                        <WheelPicker
                             labelStyle={Typography.text70}
                             style={styles.picker}
                             selectedValue={repeatModel ? repeatModel.weight : weightsArr[0].value}
@@ -294,9 +307,9 @@ class Workout extends Component<Props> {
                             {weightsArr.map((item, key) =>
                                 <WheelPicker.Item key={key} value={item.value} label={item.label}/>
                             )}
-                        </WheelPicker>}
+                        </WheelPicker>
 
-                </View>
+                    </View> : null}
 
                 <View flex-1 column>
 

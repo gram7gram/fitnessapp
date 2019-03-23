@@ -6,7 +6,7 @@ import i18n from '../../../i18n';
 import {Button, Card, Colors, Text, View} from 'react-native-ui-lib';
 import Image from "react-native-responsive-image";
 import {Column as Col, Row} from "react-native-responsive-grid";
-import {AsyncStorage, ScrollView, StyleSheet} from "react-native";
+import {AsyncStorage, FlatList, ScrollView, StyleSheet} from "react-native";
 import FetchTrainings from "../actions/FetchTrainings";
 import Logo from "../../../../assets/images/logo.png";
 import {Navigation} from "react-native-navigation";
@@ -99,10 +99,9 @@ class Landing extends Component<Props> {
         })
     }
 
-    renderTraining = (item, key) => {
+    renderTraining = ({item}) => {
 
         return <Card
-            key={key}
             row
             height={50}
             onPress={this.openTraining(item.id)}
@@ -179,7 +178,10 @@ class Landing extends Component<Props> {
                                     label={i18n.t('landing.start_session')}
                                     onPress={this.addTraining}/>
 
-                            {items.map(this.renderTraining)}
+                            <FlatList
+                                data={items}
+                                renderItem={this.renderTraining}
+                                keyExtractor={item => item.id}/>
 
                             {items.length > 0 && hasMore
                                 ? <Button

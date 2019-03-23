@@ -16,7 +16,9 @@
   "training": {
     "title": "Training",
     "chart_title": "Your progress",
-    "chart_legend": "Ton per hour",
+    "legend_progress": "Progress",
+    "legend_duration": "Duration",
+    "legend_weight": "Ton per hour",
     "add_workout": "Add workout",
     "human_weight": "Your weight, kg",
     "started_at": "Started at",
@@ -25,6 +27,7 @@
     "repeatCount": "Repeats",
     "remove_workout": "Remove",
     "remove": "Remove training",
+    "diff_more": "more",
     "save": "Save"
   },
   "exercise": {

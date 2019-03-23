@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import selectors from './selectors';
-import {ScrollView, StyleSheet} from 'react-native';
+import {FlatList} from 'react-native';
 import {Button, Card, Colors, ListItem, Text, TextField, View} from 'react-native-ui-lib';
 import {Navigation} from 'react-native-navigation'
 import {withLocalization} from "../../../context/LocaleProvider";
@@ -37,8 +37,6 @@ class Exercise extends Component<Props> {
     }
 
     navigationButtonPressed({buttonId}) {
-
-        console.log('navigationButtonPressed', buttonId);
 
         switch (buttonId) {
             case 'exercise-search':
@@ -97,27 +95,29 @@ class Exercise extends Component<Props> {
         navigateToWorkout(training, workout)
     }
 
-    renderItem = (item, key) => {
+    renderItem = ({item}) => {
 
         const {locale} = this.props
 
         const translation = findTranslation(item.translations, locale)
 
-        const hasSubitems = item.variants !== undefined && item.variants.length > 0
+        if (item.isRoot) {
+            return <View
+                flex
+                padding-10
+                marginB-10>
+                <Text text50 dark80 numberOfLines={2} center>
+                    {translation ? translation.name : "..."}
+                </Text>
+            </View>
+        }
 
         return <Card
-            style={styles.cardStyle}
-            key={key}
-            row
-            height={50}
-            onPress={!hasSubitems ? this.openWorkout(item.id) : null}
+            onPress={this.openWorkout(item.id)}
             marginB-10>
 
             <View padding-10 flex>
                 <Text text70 numberOfLines={2}>
-                    {hasSubitems
-                        ? <Text>-&nbsp;</Text>
-                        : null}
                     {translation ? translation.name : "..."}
                 </Text>
             </View>
@@ -154,23 +154,15 @@ class Exercise extends Component<Props> {
                 ? <Text dark80 text80 center>{i18n.t('exercise.no_items_title')}</Text>
                 : null}
 
-            <ScrollView>
-                {list.map(this.renderItem)}
-            </ScrollView>
+            <FlatList
+                data={list}
+                renderItem={this.renderItem}
+                keyExtractor={item => item.id}/>
 
         </View>
     }
 
 }
-
-const styles = StyleSheet.create({
-    listItem: {
-        backgroundColor: 'transparent'
-    },
-    cardStyle: {
-        alignItems: 'center'
-    }
-})
 
 export default withLocalization(
     connect(selectors)(Exercise)

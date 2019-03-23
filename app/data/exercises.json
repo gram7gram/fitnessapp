@@ -1,462 +1,2153 @@
 [
   {
-    "id": "805613b8-a221-4b05-8c53-bbb37d121013",
-    "image": "/images/exercises/chest-1.jpg",
+    "id": "f4300933-eecb-49ce-a1c0-d964d6b2faf9",
     "muscleGroup": "chest",
+    "isHumanWeight": false,
+    "scale": 0,
+    "isRoot": true,
     "translations": {
       "en": {
+        "name": "Грудь"
+      },
+      "ru": {
         "name": "Грудь"
       }
     },
     "variants": [
       {
-        "id": "690262ac-da38-48fa-828a-7ccd8fcb9958",
-        "image": "/images/exercises/chest-2.jpg",
+        "id": "1cadfad2-dafc-4c79-8788-077232a0f71c",
         "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Верхняя грудь"
+            "name": "Жим штанги"
+          },
+          "ru": {
+            "name": "Жим штанги"
           }
         },
-        "variants": [
-          {
-            "id": "zz2ca6ff-2cc8-4afa-aae4-ab5f436b5rt4",
-            "image": "/images/exercises/chest-11.jpg",
-            "muscleGroup": "chest",
-            "isHumanWeight": true,
-            "translations": {
-              "en": {
-                "name": "Отжимания от пола"
-              }
-            }
-          },
-          {
-            "id": "cd2ca6ff-2cc8-4afa-aae4-ab5f436b2ea4",
-            "image": "/images/exercises/chest-3.jpg",
-            "muscleGroup": "chest",
-            "translations": {
-              "en": {
-                "name": "Жим штанги нормальным хватом в наклоне 30*"
-              }
-            }
-          },
-          {
-            "id": "e40d1267-8bac-4326-bd54-6a434c2fa27c",
-            "muscleGroup": "chest",
-            "translations": {
-              "en": {
-                "name": "Жим штанги широким хватом в наклоне 30*"
-              }
-            }
-          },
-          {
-            "id": "2a7cbe1a-76a1-40cf-b8c3-d92dcdde3348",
-            "muscleGroup": "chest",
-            "image": "/images/exercises/chest-4.jpg",
-            "translations": {
-              "en": {
-                "name": "Жим штанги узким хватом в наклоне 30*"
-              }
-            }
-          },
-          {
-            "id": "dc541911-e9f0-4373-8824-c73403e5b5a2",
-            "muscleGroup": "chest",
-            "translations": {
-              "en": {
-                "name": "Жим гантелей нормальным хватом в наклоне 30*"
-              }
-            }
-          },
-          {
-            "id": "0b0549d2-b4ad-416f-b625-c13ce6eeb798",
-            "muscleGroup": "chest",
-            "image": "/images/exercises/chest-5.jpg",
-            "translations": {
-              "en": {
-                "name": "Жим гантелей широким хватом в наклоне 30*"
-              }
-            }
-          },
-          {
-            "id": "3a9bcfd9-bd00-4b57-b279-6511054f63c2",
-            "muscleGroup": "chest",
-            "image": "/images/exercises/chest-6.jpg",
-            "translations": {
-              "en": {
-                "name": "Жим гантелей узким хватом в наклоне 30*"
-              }
-            }
-          },
-          {
-            "id": "cbd56a1b-9f7b-4329-a0b4-31a5745fe703",
-            "muscleGroup": "chest",
-            "translations": {
-              "en": {
-                "name": "Жим штанги нормальным хватом в наклоне 45*"
-              }
-            }
-          },
-          {
-            "id": "8427b584-ee57-4515-b49f-ba234a194b4f",
-            "muscleGroup": "chest",
-            "translations": {
-              "en": {
-                "name": "Жим штанги широким хватом в наклоне 45*"
-              }
-            }
-          },
-          {
-            "id": "6e2d4699-c519-4cdb-abaf-5b18c419717c",
-            "muscleGroup": "chest",
-            "image": "/images/exercises/chest-7.jpg",
-            "translations": {
-              "en": {
-                "name": "Жим штанги узким хватом в наклоне 45*"
-              }
-            }
-          },
-          {
-            "id": "0d1dfe62-af0b-4ea5-9cd2-98e6df607c13",
-            "muscleGroup": "chest",
-            "image": "/images/exercises/chest-9.jpg",
-            "translations": {
-              "en": {
-                "name": "Жим гантелей нормальным хватом в наклоне 45*"
-              }
-            }
-          },
-          {
-            "id": "5e53bdbc-47c2-4b6b-9cfc-245b298352f8",
-            "muscleGroup": "chest",
-            "image": "/images/exercises/chest-8.jpg",
-            "translations": {
-              "en": {
-                "name": "Жим гантелей широким хватом в наклоне 45*"
-              }
-            }
-          },
-          {
-            "id": "535f0b34-c5f1-47d0-9cd8-c770ba8bddc3",
-            "muscleGroup": "chest",
-            "translations": {
-              "en": {
-                "name": "Жим гантелей узким хватом в наклоне 45*"
-              }
-            }
-          }
-        ]
+        "variants": []
       },
       {
-        "id": "d7cff969-008a-4542-850a-7dcb28a3ed4e",
+        "id": "918af88e-2fd4-4b97-b4c7-9d746032bb99",
         "muscleGroup": "chest",
-        "image": "/images/exercises/chest-11.jpg",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Средняя грудь"
+            "name": "Жим штанги узким хватом"
+          },
+          "ru": {
+            "name": "Жим штанги узким хватом"
           }
         },
-        "variants": [
-          {
-            "id": "37785332-3b68-4e53-ba4b-2a69c84520f2",
-            "muscleGroup": "chest",
-            "image": "/images/exercises/chest-6.jpg",
-            "translations": {
-              "en": {
-                "name": "Жим штанги нормальным хватом"
-              }
-            }
-          },
-          {
-            "id": "6c250262-10c3-42d8-969e-7eebb139d4b6",
-            "muscleGroup": "chest",
-            "image": "/images/exercises/chest-1.jpg",
-            "translations": {
-              "en": {
-                "name": "Жим штанги широким хватом"
-              }
-            }
-          },
-          {
-            "id": "2380e7ff-b479-4569-ad2e-e396248b6b5e",
-            "muscleGroup": "chest",
-            "translations": {
-              "en": {
-                "name": "Жим штанги узким хватом"
-              }
-            }
-          },
-          {
-            "id": "7a9636a7-8e44-4fc6-8bf5-c284ed8a44b2",
-            "muscleGroup": "chest",
-            "image": "/images/exercises/chest-3.jpg",
-            "translations": {
-              "en": {
-                "name": "Жим гантелей нормальным хватом"
-              }
-            }
-          },
-          {
-            "id": "293b35e4-9c4f-4f74-8710-a1bc8a7adb0f",
-            "muscleGroup": "chest",
-            "translations": {
-              "en": {
-                "name": "Жим гантелей широким хватом"
-              }
-            }
-          },
-          {
-            "id": "46eb9f62-1eb5-4fa6-9228-117183efbe78",
-            "muscleGroup": "chest",
-            "translations": {
-              "en": {
-                "name": "Жим гантелей узким хватом"
-              }
-            }
-          }
-        ]
+        "variants": []
       },
       {
-        "id": "1c4f4249-b60f-426f-9e03-22b0d0aa8108",
+        "id": "e9aa0209-76bf-44ab-ad24-7093a74438a5",
         "muscleGroup": "chest",
-        "image": "/images/exercises/chest-10.jpg",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Нижняя грудь"
+            "name": "Жим штанги широким хватом"
+          },
+          "ru": {
+            "name": "Жим штанги широким хватом"
           }
         },
-        "variants": [
-          {
-            "id": "cbb322c9-7eac-4da2-9d2c-bfea5596c7a6",
-            "muscleGroup": "chest",
-            "image": "/images/exercises/chest-8.jpg",
-            "translations": {
-              "en": {
-                "name": "Жим штанги нормальным хватом в наклоне -30*"
-              }
-            }
+        "variants": []
+      },
+      {
+        "id": "220ea074-7f80-4eef-8f3a-803c3a3c1259",
+        "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Жим гантелей"
           },
-          {
-            "id": "d4642ebc-a2cf-4f6f-a026-e79eb2ae8474",
-            "muscleGroup": "chest",
-            "image": "/images/exercises/chest-11.jpg",
-            "translations": {
-              "en": {
-                "name": "Жим штанги широким хватом в наклоне -30*"
-              }
-            }
-          },
-          {
-            "id": "0f06ab6a-a510-415f-9c12-8882f45a05d2",
-            "muscleGroup": "chest",
-            "translations": {
-              "en": {
-                "name": "Жим штанги узким хватом в наклоне -30*"
-              }
-            }
-          },
-          {
-            "id": "9f963d1a-4e91-47c7-90c8-0b5d25b6a6b6",
-            "muscleGroup": "chest",
-            "image": "/images/exercises/chest-1.jpg",
-            "translations": {
-              "en": {
-                "name": "Жим гантелей нормальным хватом в наклоне -30*"
-              }
-            }
-          },
-          {
-            "id": "832bbcb1-15b4-4fb3-9856-0bbb8bba0623",
-            "muscleGroup": "chest",
-            "translations": {
-              "en": {
-                "name": "Жим гантелей широким хватом в наклоне -30*"
-              }
-            }
-          },
-          {
-            "id": "46fbfc91-81fe-41ff-b87c-3d04b98ecbfe",
-            "muscleGroup": "chest",
-            "translations": {
-              "en": {
-                "name": "Жим гантелей узким хватом в наклоне -30*"
-              }
-            }
+          "ru": {
+            "name": "Жим гантелей"
           }
-        ]
+        },
+        "variants": []
+      },
+      {
+        "id": "11a5f1e0-15d7-4ba1-885d-233a606b5a31",
+        "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Жим штанги узким хватом в наклоне"
+          },
+          "ru": {
+            "name": "Жим штанги узким хватом в наклоне"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "d3f1fbab-aa37-4c55-bafb-57007f26d3e9",
+        "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Жим штанги в наклоне"
+          },
+          "ru": {
+            "name": "Жим штанги в наклоне"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "b652e8e6-e268-41fd-95c6-fee130a627db",
+        "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Жим штанги широким хватом в наклоне"
+          },
+          "ru": {
+            "name": "Жим штанги широким хватом в наклоне"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "194e2176-7696-4cfe-9749-2caab6d30fe1",
+        "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Жим гантелей в наклоне"
+          },
+          "ru": {
+            "name": "Жим гантелей в наклоне"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "1b892059-b2e7-45e9-8836-965331d56935",
+        "muscleGroup": "chest",
+        "isHumanWeight": true,
+        "scale": 0.8,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Отжимания от пола"
+          },
+          "ru": {
+            "name": "Отжимания от пола"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "ce3b6598-18fc-4ac1-8c60-ddd1a6c6324c",
+        "muscleGroup": "chest",
+        "isHumanWeight": true,
+        "scale": 0.8,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Отжимания от пола узким хватом"
+          },
+          "ru": {
+            "name": "Отжимания от пола узким хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "26d007db-6053-4715-a4c9-b1811fb65089",
+        "muscleGroup": "chest",
+        "isHumanWeight": true,
+        "scale": 0.8,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Отжимания от пола широким хватом"
+          },
+          "ru": {
+            "name": "Отжимания от пола широким хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "ff21bc26-2182-4e43-8d37-3812a747ae13",
+        "muscleGroup": "chest",
+        "isHumanWeight": true,
+        "scale": 0.9,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Глубокие отжимания от пола"
+          },
+          "ru": {
+            "name": "Глубокие отжимания от пола"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "80066ea4-358c-4893-935f-0de3535cf381",
+        "muscleGroup": "chest",
+        "isHumanWeight": true,
+        "scale": 0.9,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Глубокие отжимания от пола узким хватом"
+          },
+          "ru": {
+            "name": "Глубокие отжимания от пола узким хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "224df943-abe6-45db-aaa2-7f056c3d32b0",
+        "muscleGroup": "chest",
+        "isHumanWeight": true,
+        "scale": 0.9,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Глубокие отжимания от пола широким хватом"
+          },
+          "ru": {
+            "name": "Глубокие отжимания от пола широким хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "5b6488ea-dcb9-494b-812d-ff050e4bf900",
+        "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Батерфляй"
+          },
+          "ru": {
+            "name": "Батерфляй"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "24ec8796-b3fc-4a23-9188-c39b34b45486",
+        "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разводка гантелей"
+          },
+          "ru": {
+            "name": "Разводка гантелей"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "4f46f4f4-517f-4cda-922d-0d646f1a483d",
+        "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разводка гантелей в наклоне"
+          },
+          "ru": {
+            "name": "Разводка гантелей в наклоне"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "df2b9bb8-db8f-4b64-9cb1-8292a8d930a9",
+        "muscleGroup": "chest",
+        "isHumanWeight": true,
+        "scale": 0.4,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Отжимания трицепсами спиной к скамье"
+          },
+          "ru": {
+            "name": "Отжимания трицепсами спиной к скамье"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "e888fcbd-e475-4033-84a2-603cc63870cb",
+        "muscleGroup": "chest",
+        "isHumanWeight": true,
+        "scale": 1,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Отжимания на брусьях"
+          },
+          "ru": {
+            "name": "Отжимания на брусьях"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "739753f2-81bf-4ebf-ac84-b8e038e927bf",
+        "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Пуловер"
+          },
+          "ru": {
+            "name": "Пуловер"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "562d5d0f-8742-4b1b-a1e6-02d8b972935f",
+        "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Кроссоверы стоя"
+          },
+          "ru": {
+            "name": "Кроссоверы стоя"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "24bef0fc-b656-4be6-afbd-8c25400a8fa8",
+        "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Пуловеры прямыми руками"
+          },
+          "ru": {
+            "name": "Пуловеры прямыми руками"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "9dac8756-2add-44bf-8695-80d5f63fde19",
+        "muscleGroup": "chest",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Армейский жим"
+          },
+          "ru": {
+            "name": "Армейский жим"
+          }
+        },
+        "variants": []
       }
     ]
   },
   {
-    "id": "95b6b793-43c6-4d6d-9580-2d5f89b1e5e5",
-    "muscleGroup": "abs",
+    "id": "399ce5b0-defb-491d-a001-45aad96deb98",
+    "muscleGroup": "back",
+    "isHumanWeight": false,
+    "scale": 0,
+    "isRoot": true,
     "translations": {
       "en": {
-        "name": "Пресс"
+        "name": "Спина"
+      },
+      "ru": {
+        "name": "Спина"
       }
     },
     "variants": [
       {
-        "id": "ecc518d9-7f56-4c0f-844b-ace3b83f011a",
-        "muscleGroup": "abs",
+        "id": "ac5ad778-5086-4d1d-af8f-3b598a863d58",
+        "muscleGroup": "back",
         "isHumanWeight": true,
+        "scale": 1,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Верхний"
+            "name": "Подтягивания"
+          },
+          "ru": {
+            "name": "Подтягивания"
           }
-        }
+        },
+        "variants": []
       },
       {
-        "id": "b7644712-425a-45de-9c65-dfce40e45384",
-        "muscleGroup": "abs",
+        "id": "961837c5-4938-48af-bba7-2ebd005dec24",
+        "muscleGroup": "back",
         "isHumanWeight": true,
+        "scale": 1,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Средний"
+            "name": "Подтягивания узким хватом"
+          },
+          "ru": {
+            "name": "Подтягивания узким хватом"
           }
-        }
+        },
+        "variants": []
       },
       {
-        "id": "c6626da7-885b-4013-bb59-b5d22a6c6710",
-        "muscleGroup": "abs",
+        "id": "ba18655f-17c2-42e6-bf74-9300d7e617de",
+        "muscleGroup": "back",
         "isHumanWeight": true,
+        "scale": 1,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Нижний"
+            "name": "Подтягивания широким хватом"
+          },
+          "ru": {
+            "name": "Подтягивания широким хватом"
           }
-        }
+        },
+        "variants": []
+      },
+      {
+        "id": "2348d8a8-9b8d-4dc5-a300-b40526c00825",
+        "muscleGroup": "back",
+        "isHumanWeight": true,
+        "scale": 1,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подтягивания обратным хватом"
+          },
+          "ru": {
+            "name": "Подтягивания обратным хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "4586f7ca-c126-4b38-9eb7-57c0f24ab14c",
+        "muscleGroup": "back",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подтягивания с резинкой"
+          },
+          "ru": {
+            "name": "Подтягивания с резинкой"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "6ec7b951-f0b6-4693-80ae-46d4049ab8ef",
+        "muscleGroup": "back",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подтягивания с резинкой узким хватом"
+          },
+          "ru": {
+            "name": "Подтягивания с резинкой узким хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "f96b863c-d186-4a8f-aaea-dd9ba934b4dd",
+        "muscleGroup": "back",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подтягивания с резинкой широким хватом"
+          },
+          "ru": {
+            "name": "Подтягивания с резинкой широким хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "3fcd3015-bd34-4f67-bacb-c63f011339c6",
+        "muscleGroup": "back",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подтягивания с резинкой обратным хватом"
+          },
+          "ru": {
+            "name": "Подтягивания с резинкой обратным хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "129b7fe6-c4ad-4b82-baa4-aeefd071a080",
+        "muscleGroup": "back",
+        "isHumanWeight": true,
+        "scale": 1,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подтягивания за голову"
+          },
+          "ru": {
+            "name": "Подтягивания за голову"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "9a2b7060-90d0-4739-a364-80a20420a075",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Горизонтальная тяга блока сидя"
+          },
+          "ru": {
+            "name": "Горизонтальная тяга блока сидя"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "a730a80b-6503-4dd7-85c9-3133cbcc2b47",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Горизонтальная тяга блока сидя узким хватом"
+          },
+          "ru": {
+            "name": "Горизонтальная тяга блока сидя узким хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "4463141d-62d8-4d41-a948-db3b7cfc8665",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Горизонтальная тяга блока сидя широким хватом"
+          },
+          "ru": {
+            "name": "Горизонтальная тяга блока сидя широким хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "9d8c6644-e095-43e7-9cf3-2a6bc7ea8883",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Вертикальная тяга блока"
+          },
+          "ru": {
+            "name": "Вертикальная тяга блока"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "0024f7e0-7521-4b48-bb4f-c8a4ab1440e2",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Вертикальная тяга блока узким хватом"
+          },
+          "ru": {
+            "name": "Вертикальная тяга блока узким хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "4116966b-3959-4d5a-a145-47f9b743e12d",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Вертикальная тяга блока широким хватом"
+          },
+          "ru": {
+            "name": "Вертикальная тяга блока широким хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "4b37bd70-6d85-4c80-b3cc-7df760b060a3",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Вертикальная тяга блока обратным хватом"
+          },
+          "ru": {
+            "name": "Вертикальная тяга блока обратным хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "a3178944-bf38-4c5f-9ea2-0e432cfc774e",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Вертикальная тяга за голову"
+          },
+          "ru": {
+            "name": "Вертикальная тяга за голову"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "b26c0791-fc24-4881-adb1-044763dd4af2",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Вертикальная тяга за голову узким хватом"
+          },
+          "ru": {
+            "name": "Вертикальная тяга за голову узким хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "51c23da7-bacf-4ebc-905c-4930a40edbb6",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Вертикальная тяга за голову широким хватом"
+          },
+          "ru": {
+            "name": "Вертикальная тяга за голову широким хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "fa220b2b-225b-48e3-acc1-d59c66f1dd6c",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Тяга в Хаммере"
+          },
+          "ru": {
+            "name": "Тяга в Хаммере"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "616bbe91-47ac-4f3a-a06c-4c99d35990c6",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Тяга гантели 1 рукой"
+          },
+          "ru": {
+            "name": "Тяга гантели 1 рукой"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "207961ed-93c7-48ab-9fe4-11ea98001409",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разводки в тренажере"
+          },
+          "ru": {
+            "name": "Разводки в тренажере"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "937015ed-2914-46f5-a73d-84af0f78b58d",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Тяга штанги в наклоне"
+          },
+          "ru": {
+            "name": "Тяга штанги в наклоне"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "0c7efb74-0d75-48e2-8606-4f1a3ebcc491",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Тяга гантелей в наклоне"
+          },
+          "ru": {
+            "name": "Тяга гантелей в наклоне"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "9b656202-8ac4-4afc-8b75-c159f9bc373e",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Шраги гантелей"
+          },
+          "ru": {
+            "name": "Шраги гантелей"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "a6c6bb57-293b-43b7-b101-0aefd9868d85",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Шраги штанги"
+          },
+          "ru": {
+            "name": "Шраги штанги"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "6a3590a2-1ae2-4400-8270-00cb9f361155",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Шраги в тренажере"
+          },
+          "ru": {
+            "name": "Шраги в тренажере"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "9c6f948a-5d36-4e19-9a2c-65e027006af6",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Становая тяга"
+          },
+          "ru": {
+            "name": "Становая тяга"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "64c84ff0-47ca-44ed-ab29-624f84d23f79",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Тяга к подбородку"
+          },
+          "ru": {
+            "name": "Тяга к подбородку"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "fbc9b542-ee78-48b6-b501-05355bf7b5e4",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Наклоны вперед со штангой"
+          },
+          "ru": {
+            "name": "Наклоны вперед со штангой"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "7457aa83-398a-4394-b7d5-48da5bcfd707",
+        "muscleGroup": "back",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Гиперэкстензии"
+          },
+          "ru": {
+            "name": "Гиперэкстензии"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "74963bfa-e74c-4f18-a081-afb57cf12f2a",
+        "muscleGroup": "back",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Обратные разведения в тренажере Peck-Deck"
+          },
+          "ru": {
+            "name": "Обратные разведения в тренажере Peck-Deck"
+          }
+        },
+        "variants": []
       }
     ]
   },
   {
-    "id": "2845004a-ae38-4857-9f8f-eaca90125191",
-    "muscleGroup": "shoulders",
+    "id": "69a7b2fb-39a2-4bae-8fe4-639d64476154",
+    "muscleGroup": "triceps",
+    "isHumanWeight": false,
+    "scale": 0,
+    "isRoot": true,
     "translations": {
       "en": {
+        "name": "Трицепс"
+      },
+      "ru": {
+        "name": "Трицепс"
+      }
+    },
+    "variants": [
+      {
+        "id": "edb36015-0c91-4f17-a9b1-1359986a5c08",
+        "muscleGroup": "triceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Французкий жим штанги"
+          },
+          "ru": {
+            "name": "Французкий жим штанги"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "43d397ba-e94d-41bf-98ae-fa902c2636e6",
+        "muscleGroup": "triceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Французский жим сидя с гантелью"
+          },
+          "ru": {
+            "name": "Французский жим сидя с гантелью"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "2e416b8f-603b-407f-91d6-ebb12f87d180",
+        "muscleGroup": "triceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разгибание рук в наклоне"
+          },
+          "ru": {
+            "name": "Разгибание рук в наклоне"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "90f51381-eb0c-46bd-97d4-19d5091f2dcc",
+        "muscleGroup": "triceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разгибание одной руки с гантелью из-за головы"
+          },
+          "ru": {
+            "name": "Разгибание одной руки с гантелью из-за головы"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "66428684-5ea3-4462-8a8f-aa4a3b47e499",
+        "muscleGroup": "triceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разгибание рук с гантелями лежа"
+          },
+          "ru": {
+            "name": "Разгибание рук с гантелями лежа"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "f1dfce27-7318-40ba-a9a0-c4bfb3305474",
+        "muscleGroup": "triceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разгибание рук с изогнутым грифом штанги из-за головы"
+          },
+          "ru": {
+            "name": "Разгибание рук с изогнутым грифом штанги из-за головы"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "51d6a4a2-c582-44b4-bac5-3f9cbef833ba",
+        "muscleGroup": "triceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разгибание рук с канатами"
+          },
+          "ru": {
+            "name": "Разгибание рук с канатами"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "d7f112aa-6fe5-4dd4-a69e-fe43b1d51432",
+        "muscleGroup": "triceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разгибание рук на верхнем блоке стоя хватом снизу"
+          },
+          "ru": {
+            "name": "Разгибание рук на верхнем блоке стоя хватом снизу"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "fde060ff-f381-4885-92f3-1145b3387122",
+        "muscleGroup": "triceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разгибание рук на тренажере"
+          },
+          "ru": {
+            "name": "Разгибание рук на тренажере"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "70a8d560-c961-4009-b2a0-96174a4c3a5a",
+        "muscleGroup": "triceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разгибания рук на нижнем блоке"
+          },
+          "ru": {
+            "name": "Разгибания рук на нижнем блоке"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "d3d8715d-4c4c-45bd-92a2-2148b1cfba5d",
+        "muscleGroup": "triceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разгибание одной руки на нижнем блоке"
+          },
+          "ru": {
+            "name": "Разгибание одной руки на нижнем блоке"
+          }
+        },
+        "variants": []
+      }
+    ]
+  },
+  {
+    "id": "5351dfd2-381b-41c1-950c-cefa9ecaa907",
+    "muscleGroup": "biceps",
+    "isHumanWeight": false,
+    "scale": 0,
+    "isRoot": true,
+    "translations": {
+      "en": {
+        "name": "Бицепс"
+      },
+      "ru": {
+        "name": "Бицепс"
+      }
+    },
+    "variants": [
+      {
+        "id": "1ca20658-b0c7-4a5a-9634-ffe11266f32e",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем штанги"
+          },
+          "ru": {
+            "name": "Подъем штанги"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "6edcaebd-e9b2-48ef-9cac-69791b9ab57b",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем штанги обратным хватом"
+          },
+          "ru": {
+            "name": "Подъем штанги обратным хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "dd5f481c-9fe6-44b3-9019-2a8fa02cce02",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем гантелей"
+          },
+          "ru": {
+            "name": "Подъем гантелей"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "010c2733-5ebf-4db1-9f7e-d88630da27ca",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем гантелей обратным хватом"
+          },
+          "ru": {
+            "name": "Подъем гантелей обратным хватом"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "893d7319-c726-4e3a-ba74-eb0cc2cafffe",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Сгибание рук с гантелями хватом «молоток»"
+          },
+          "ru": {
+            "name": "Сгибание рук с гантелями хватом «молоток»"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "6d8e154f-d3c0-4a13-be4e-9bc6263315ff",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Сгибание рук с гантелями в наклоне"
+          },
+          "ru": {
+            "name": "Сгибание рук с гантелями в наклоне"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "acd05086-f57e-4b36-8550-127ff92f1383",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем в тренежере"
+          },
+          "ru": {
+            "name": "Подъем в тренежере"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "16a87f52-b4b7-4b0c-a855-ca9dd0a1da35",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Сгибания рук на скамье Скотта"
+          },
+          "ru": {
+            "name": "Сгибания рук на скамье Скотта"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "a2719556-cb97-4ce5-b2dd-54ff66ea8f3a",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем на бицепс сидя на тренажере"
+          },
+          "ru": {
+            "name": "Подъем на бицепс сидя на тренажере"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "2b670470-a40b-48a2-a227-6cb87837bdf9",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Сгибание рук с рукоятками верхних блоков"
+          },
+          "ru": {
+            "name": "Сгибание рук с рукоятками верхних блоков"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "a149dd3d-f287-45cd-9c41-dae4a4d4ce9a",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Паучьи сгибания"
+          },
+          "ru": {
+            "name": "Паучьи сгибания"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "d85ad21c-5bf2-4188-9b8c-9d9c84929090",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Концентрированное сгибание рук"
+          },
+          "ru": {
+            "name": "Концентрированное сгибание рук"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "bda05a2a-08e4-44ed-aeb6-8604b0e43bc5",
+        "muscleGroup": "biceps",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Сгибание одной руки с рукояткой нижнего блока"
+          },
+          "ru": {
+            "name": "Сгибание одной руки с рукояткой нижнего блока"
+          }
+        },
+        "variants": []
+      }
+    ]
+  },
+  {
+    "id": "e50ff36f-bb69-4564-b72e-e7b7fc740d0b",
+    "muscleGroup": "delta",
+    "isHumanWeight": false,
+    "scale": 0,
+    "isRoot": true,
+    "translations": {
+      "en": {
+        "name": "Плечи"
+      },
+      "ru": {
         "name": "Плечи"
       }
     },
     "variants": [
       {
-        "id": "3de10db4-ddc5-461f-a35f-203e36af6a09",
-        "muscleGroup": "shoulders",
+        "id": "f62ecef5-2a88-4776-b298-a770b1a9bc55",
+        "muscleGroup": "delta",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Задняя дельта"
+            "name": "Разводки гантелей"
+          },
+          "ru": {
+            "name": "Разводки гантелей"
           }
-        }
+        },
+        "variants": []
       },
       {
-        "id": "3f9faabf-cb45-4f8e-b5be-acfb0ccc88e1",
-        "muscleGroup": "shoulders",
+        "id": "81733e8a-b810-4526-a1d8-8030938def15",
+        "muscleGroup": "delta",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Средняя дельта"
+            "name": "Разводки гантелей в наклоне"
+          },
+          "ru": {
+            "name": "Разводки гантелей в наклоне"
           }
-        }
+        },
+        "variants": []
       },
       {
-        "id": "539c05aa-809c-47ba-a537-8fc081e7899c",
-        "muscleGroup": "shoulders",
+        "id": "8b8a473b-1c50-473c-8ee6-9e33e880f850",
+        "muscleGroup": "delta",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Передняя дельта"
+            "name": "Разводки в тренажере"
+          },
+          "ru": {
+            "name": "Разводки в тренажере"
           }
-        }
+        },
+        "variants": []
+      },
+      {
+        "id": "8453a34e-5421-487c-9291-7a6e7e959fc7",
+        "muscleGroup": "delta",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем гантелей перед собой"
+          },
+          "ru": {
+            "name": "Подъем гантелей перед собой"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "19ceed8d-5829-41c5-b7df-21886d374b1e",
+        "muscleGroup": "delta",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем штанги перед собой"
+          },
+          "ru": {
+            "name": "Подъем штанги перед собой"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "58febd8d-53ec-447c-b74c-7ab4053f110c",
+        "muscleGroup": "delta",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Тяга нижнего блока вперед"
+          },
+          "ru": {
+            "name": "Тяга нижнего блока вперед"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "81c5907c-2b3f-4d1b-9729-9855c5cf8ac4",
+        "muscleGroup": "delta",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Жим штанги с груди стоя"
+          },
+          "ru": {
+            "name": "Жим штанги с груди стоя"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "90d1c135-1ea0-428b-98e2-ddc6b6275875",
+        "muscleGroup": "delta",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Жим штанги сидя из-за головы"
+          },
+          "ru": {
+            "name": "Жим штанги сидя из-за головы"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "abfef27f-05a2-424e-b5d6-ead706720fa5",
+        "muscleGroup": "delta",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Тяга штанги к подбородку"
+          },
+          "ru": {
+            "name": "Тяга штанги к подбородку"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "f5781969-c928-4f31-aa97-46e646a8380c",
+        "muscleGroup": "delta",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Жим Арнольда"
+          },
+          "ru": {
+            "name": "Жим Арнольда"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "0f689200-3981-488a-9bbb-56b1369958da",
+        "muscleGroup": "delta",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Армейский жим с гантелями"
+          },
+          "ru": {
+            "name": "Армейский жим с гантелями"
+          }
+        },
+        "variants": []
       }
     ]
   },
   {
-    "id": "b9789644-4751-42ad-b7c5-3099ad439935",
-    "muscleGroup": "hands",
+    "id": "a14186c7-6646-42be-bbf4-16d8448fe93f",
+    "muscleGroup": "forearm",
+    "isHumanWeight": false,
+    "scale": 0,
+    "isRoot": true,
     "translations": {
       "en": {
-        "name": "Руки"
+        "name": "Предплечья"
+      },
+      "ru": {
+        "name": "Предплечья"
       }
     },
     "variants": [
       {
-        "id": "b358d86c-a2cb-4f95-9e2b-801077f8feb0",
-        "muscleGroup": "biceps",
-        "translations": {
-          "en": {
-            "name": "Бицепс"
-          }
-        }
-      },
-      {
-        "id": "f2ccd614-0e60-4ccf-9f97-5a20276c318e",
-        "muscleGroup": "triceps",
-        "translations": {
-          "en": {
-            "name": "Трицепс"
-          }
-        }
-      },
-      {
-        "id": "c6fbf536-8370-4e5b-a342-87eeb298bada",
+        "id": "282c7e2c-6ced-48fc-83a0-f4416c042be2",
         "muscleGroup": "forearm",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Передплечие"
+            "name": "Эспендер"
+          },
+          "ru": {
+            "name": "Эспендер"
           }
-        }
+        },
+        "variants": []
+      },
+      {
+        "id": "6825571b-ef2e-4883-ad9f-e04a952d0d34",
+        "muscleGroup": "forearm",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разгибание рук в запястьях"
+          },
+          "ru": {
+            "name": "Разгибание рук в запястьях"
+          }
+        },
+        "variants": []
       }
     ]
   },
   {
-    "id": "d808bd94-adb9-4b98-9637-4e62edb162e6",
+    "id": "dea178cf-98c9-4cc5-86fc-4455fee26fcc",
     "muscleGroup": "legs",
+    "isHumanWeight": false,
+    "scale": 0,
+    "isRoot": true,
     "translations": {
       "en": {
+        "name": "Ноги"
+      },
+      "ru": {
         "name": "Ноги"
       }
     },
     "variants": [
       {
-        "id": "4cd8bac8-0277-4bb2-a2ca-e91daf51a61e",
+        "id": "a46821cb-383e-4785-a42c-2cc96601768e",
         "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Передние икры"
+            "name": "Приседания на тренажере Смита"
+          },
+          "ru": {
+            "name": "Приседания на тренажере Смита"
           }
-        }
+        },
+        "variants": []
       },
       {
-        "id": "8e26a8d6-bab7-43c1-b5d5-c896f5acddc1",
+        "id": "f33fc2b9-90e3-4425-9e40-0ef108c05a4b",
         "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Задние икры"
+            "name": "Гакк-приседания"
+          },
+          "ru": {
+            "name": "Гакк-приседания"
           }
-        }
+        },
+        "variants": []
       },
       {
-        "id": "f6a15f42-87e8-45a9-b9bb-b2490d657307",
+        "id": "03b0c3d7-f3f3-4ef5-83ae-811966473e78",
         "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Бицепс бедра"
+            "name": "Жим одной ногой в тренажере"
+          },
+          "ru": {
+            "name": "Жим одной ногой в тренажере"
           }
-        }
+        },
+        "variants": []
       },
       {
-        "id": "ce2b077c-3fa9-42f2-8235-9177daf2ccc0",
+        "id": "bee21aad-daaf-44d6-b25f-b0180de276b3",
         "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Трицепс бедра"
+            "name": "Жим ногами на тренажере"
+          },
+          "ru": {
+            "name": "Жим ногами на тренажере"
           }
-        }
+        },
+        "variants": []
       },
       {
-        "id": "a064eaa9-5c99-4460-9231-2abd6192f4c9",
+        "id": "13a818a3-29c2-4c63-b07b-a62fdfe79373",
         "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
         "translations": {
           "en": {
-            "name": "Ягодицы"
+            "name": "Сгибание ног в тренажере"
+          },
+          "ru": {
+            "name": "Сгибание ног в тренажере"
           }
-        }
+        },
+        "variants": []
+      },
+      {
+        "id": "b4e9359e-cb9c-4e4b-9934-6841f658a7f4",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разведение ног на тренажере"
+          },
+          "ru": {
+            "name": "Разведение ног на тренажере"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "3a5ec7cc-46e9-4d49-8720-efc0215fe414",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Приседания со штангой"
+          },
+          "ru": {
+            "name": "Приседания со штангой"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "3e5a1ef4-80a1-4fd5-aea1-58c50f5f69d5",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Приседания со штангой на груди"
+          },
+          "ru": {
+            "name": "Приседания со штангой на груди"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "11c3ee3d-71ea-4efa-a11b-d68d20623180",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Приседания с гантелями"
+          },
+          "ru": {
+            "name": "Приседания с гантелями"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "1e8a3f05-3e74-4880-a2b7-4e7e479a1e8f",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Разгибания ног в тренажере"
+          },
+          "ru": {
+            "name": "Разгибания ног в тренажере"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "0cbc98b4-6d67-4589-8cb1-890dfda430d7",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Выпады со штангой"
+          },
+          "ru": {
+            "name": "Выпады со штангой"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "f29e32ce-58fd-4eaa-af4e-2d42f4e995bb",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Выпады с гантелями"
+          },
+          "ru": {
+            "name": "Выпады с гантелями"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "4f7eb4c2-55ae-4021-8a42-5b31b1812d33",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем на носки сидя в тренажере"
+          },
+          "ru": {
+            "name": "Подъем на носки сидя в тренажере"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "978d3f9e-272a-4aa2-ba62-e7f01d17e0c3",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем на носки стоя в тренажере"
+          },
+          "ru": {
+            "name": "Подъем на носки стоя в тренажере"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "186d01b6-f8ce-4712-8521-ddf99d23eea5",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем на носки сидя"
+          },
+          "ru": {
+            "name": "Подъем на носки сидя"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "68712a23-551b-46f1-a125-9acb72d3ed06",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем на носки стоя"
+          },
+          "ru": {
+            "name": "Подъем на носки стоя"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "317d214e-a672-4e3f-8f42-4787fc819951",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем на носки стоя в тренажере Гакка"
+          },
+          "ru": {
+            "name": "Подъем на носки стоя в тренажере Гакка"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "53e8127b-2ade-4f6e-b66d-f64b0760e4e8",
+        "muscleGroup": "legs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "\"Подъем на носки \"\"осликом\"\"\""
+          },
+          "ru": {
+            "name": "\"Подъем на носки \"\"осликом\"\"\""
+          }
+        },
+        "variants": []
+      }
+    ]
+  },
+  {
+    "id": "263a536e-ff10-4e54-8a38-be21e1c51481",
+    "muscleGroup": "abs",
+    "isHumanWeight": false,
+    "scale": 0,
+    "isRoot": true,
+    "translations": {
+      "en": {
+        "name": "Пресс"
+      },
+      "ru": {
+        "name": "Пресс"
+      }
+    },
+    "variants": [
+      {
+        "id": "e271a777-20fd-49c7-969f-3066f4939a5f",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Скручивания на наклонной скамье"
+          },
+          "ru": {
+            "name": "Скручивания на наклонной скамье"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "a4b45eeb-311d-42bb-b1ed-ef0be9919abf",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем ног на скамье для пресса"
+          },
+          "ru": {
+            "name": "Подъем ног на скамье для пресса"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "d0421947-741f-464d-a109-a926685a08de",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем ног в висе"
+          },
+          "ru": {
+            "name": "Подъем ног в висе"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "c6244d0b-559f-4f26-8151-51829cc4d1e2",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем корпуса лежа с согнутыми коленями"
+          },
+          "ru": {
+            "name": "Подъем корпуса лежа с согнутыми коленями"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "b78e7e64-18c9-47c2-8f89-5866f86c7802",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Подъем согнутых ног на брусьях"
+          },
+          "ru": {
+            "name": "Подъем согнутых ног на брусьях"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "c80a12d7-d5e0-4a88-82ba-be9506405dc8",
+        "muscleGroup": "abs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Боковые наклоны с гантелями"
+          },
+          "ru": {
+            "name": "Боковые наклоны с гантелями"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "3ad0ec71-9d2d-4b3c-8b70-a088d8c30d5f",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "V-повороты"
+          },
+          "ru": {
+            "name": "V-повороты"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "3e4536a2-2f2e-4a21-8daf-6952c99c5986",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Повороты ног лежа"
+          },
+          "ru": {
+            "name": "Повороты ног лежа"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "2be2d150-0601-4ea6-ba9f-f139c56b94ac",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Повороты таза в висе"
+          },
+          "ru": {
+            "name": "Повороты таза в висе"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "822e5f0c-87b8-404d-9845-4013ec0d3170",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Боковые скручивания"
+          },
+          "ru": {
+            "name": "Боковые скручивания"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "cc995bf9-1b6e-4452-aeb4-a374b5111e0c",
+        "muscleGroup": "abs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Наклоны Самсона"
+          },
+          "ru": {
+            "name": "Наклоны Самсона"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "997aaa8b-215a-45af-9efe-a82f4cd73bfb",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Боковые скручивания на кроссовере"
+          },
+          "ru": {
+            "name": "Боковые скручивания на кроссовере"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "f64e7e8e-186e-4f3c-8ce8-988eca84b868",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 0.5,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Диагональное скручивание"
+          },
+          "ru": {
+            "name": "Диагональное скручивание"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "2f77a529-46f0-477b-87c0-c76b7adf585c",
+        "muscleGroup": "abs",
+        "isHumanWeight": false,
+        "scale": 0,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Скручивания в тренажере"
+          },
+          "ru": {
+            "name": "Скручивания в тренажере"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "43ad1149-68a9-4c20-8f42-b7ef983d8155",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 0.7,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Планка"
+          },
+          "ru": {
+            "name": "Планка"
+          }
+        },
+        "variants": []
+      },
+      {
+        "id": "cba34ad2-75c7-40f9-894c-4111224ccdd6",
+        "muscleGroup": "abs",
+        "isHumanWeight": true,
+        "scale": 1,
+        "isRoot": false,
+        "translations": {
+          "en": {
+            "name": "Роллер"
+          },
+          "ru": {
+            "name": "Роллер"
+          }
+        },
+        "variants": []
       }
     ]
   }
