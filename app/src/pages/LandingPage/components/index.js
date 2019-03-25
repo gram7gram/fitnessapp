@@ -71,9 +71,12 @@ class Landing extends Component<Props> {
         })
 
         objectValues(trainings).forEach(item => {
-            rm('/trainings/' + item.id + ".json").catch(() => {
-            })
+            if (item && item.id)
+                rm('/trainings/' + item.id + ".json").catch(() => {
+                })
         })
+
+        AsyncStorage.removeItem('hasDemo')
     }
 
     openTraining = training => () => {
@@ -87,7 +90,8 @@ class Landing extends Component<Props> {
     getPrevMonth = () => {
         const {months} = this.props.Landing
 
-        const lastMonth = months[months.length - 1]
+        const lastMonth = months !== undefined ? months[months.length - 1] : null
+        if (!lastMonth) return null
 
         return moment(lastMonth, 'YYYY-MM-01').subtract(1, 'month').format('YYYY-MM')
     }
@@ -132,7 +136,7 @@ class Landing extends Component<Props> {
 
     render() {
 
-        const {trainings, months} = this.props.Landing
+        const {trainings = {}, months = []} = this.props.Landing
 
         const prevMonth = this.getPrevMonth()
 

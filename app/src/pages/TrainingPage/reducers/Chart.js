@@ -4,6 +4,7 @@ import {objectValues, sortByDate} from "../../../utils";
 
 const chartData = (prev = [], action) => {
     switch (action.type) {
+        case Actions.SAVE_TRAININGS_SUCCESS:
         case Actions.FETCH_TRAININGS_SUCCESS:
 
             let flatten = []

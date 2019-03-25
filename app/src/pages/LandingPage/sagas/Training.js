@@ -5,11 +5,25 @@ import SaveTrainings from '../actions/SaveTrainings'
 import * as TrainingActions from '../../TrainingPage/actions'
 import {objectValues} from "../../../utils";
 import {navigateToLanding} from "../../../router";
+import {fileGetContents} from "../../../storage/fs";
+
+const getTrainings = async () => {
+    let content = await fileGetContents('/trainingRegistry.json')
+    if (!content) content = '{}'
+
+    let trainings
+    try {
+        trainings = JSON.parse(content)
+    } catch (e) {
+        trainings = {}
+    }
+
+    return trainings
+}
 
 function* updateRegistry({payload}) {
-    const trainings = yield select(store => store.Landing.trainings)
 
-    const items = {...trainings}
+    const trainings = yield getTrainings()
 
     let image = null;
     const workout = objectValues(payload.workouts)[0]
@@ -19,11 +33,11 @@ function* updateRegistry({payload}) {
 
     const month = moment(payload.startedAt, 'YYYY-MM-DD HH:mm').format('YYYY-MM')
 
-    if (items[month] === undefined) {
-        items[month] = {}
+    if (trainings[month] === undefined) {
+        trainings[month] = {}
     }
 
-    items[month][payload.id] = {
+    trainings[month][payload.id] = {
         id: payload.id,
         startedAt: payload.startedAt,
         totalWeightPerHour: payload.totalWeightPerHour,
@@ -31,25 +45,24 @@ function* updateRegistry({payload}) {
         image
     }
 
-    yield put(SaveTrainings(items))
+    yield put(SaveTrainings(trainings))
 }
 
 function* redirect({payload, componentId}) {
 
     if (payload && payload.id && payload.startedAt) {
-        const trainings = yield select(store => store.Landing.trainings)
 
-        const items = {...trainings}
+        const trainings = yield getTrainings()
 
         const month = moment(payload.startedAt, 'YYYY-MM-DD HH:mm').format('YYYY-MM')
 
-        if (items[month] !== undefined) {
-            if (items[month][payload.id] !== undefined) {
-                delete items[month][payload.id]
+        if (trainings[month] !== undefined) {
+            if (trainings[month][payload.id] !== undefined) {
+                delete trainings[month][payload.id]
             }
         }
 
-        yield put(SaveTrainings(items))
+        yield put(SaveTrainings(trainings))
     }
 
     if (componentId) {

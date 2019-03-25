@@ -1333,7 +1333,7 @@
   },
   {
     "id": "e50ff36f-bb69-4564-b72e-e7b7fc740d0b",
-    "muscleGroup": "delta",
+    "muscleGroup": "deltas",
     "isHumanWeight": false,
     "scale": 0,
     "isRoot": true,
@@ -1348,7 +1348,7 @@
     "variants": [
       {
         "id": "f62ecef5-2a88-4776-b298-a770b1a9bc55",
-        "muscleGroup": "delta",
+        "muscleGroup": "deltas",
         "isHumanWeight": false,
         "scale": 0,
         "isRoot": false,
@@ -1364,7 +1364,7 @@
       },
       {
         "id": "81733e8a-b810-4526-a1d8-8030938def15",
-        "muscleGroup": "delta",
+        "muscleGroup": "deltas",
         "isHumanWeight": false,
         "scale": 0,
         "isRoot": false,
@@ -1380,7 +1380,7 @@
       },
       {
         "id": "8b8a473b-1c50-473c-8ee6-9e33e880f850",
-        "muscleGroup": "delta",
+        "muscleGroup": "deltas",
         "isHumanWeight": false,
         "scale": 0,
         "isRoot": false,
@@ -1396,7 +1396,7 @@
       },
       {
         "id": "8453a34e-5421-487c-9291-7a6e7e959fc7",
-        "muscleGroup": "delta",
+        "muscleGroup": "deltas",
         "isHumanWeight": false,
         "scale": 0,
         "isRoot": false,
@@ -1412,7 +1412,7 @@
       },
       {
         "id": "19ceed8d-5829-41c5-b7df-21886d374b1e",
-        "muscleGroup": "delta",
+        "muscleGroup": "deltas",
         "isHumanWeight": false,
         "scale": 0,
         "isRoot": false,
@@ -1428,7 +1428,7 @@
       },
       {
         "id": "58febd8d-53ec-447c-b74c-7ab4053f110c",
-        "muscleGroup": "delta",
+        "muscleGroup": "deltas",
         "isHumanWeight": false,
         "scale": 0,
         "isRoot": false,
@@ -1444,7 +1444,7 @@
       },
       {
         "id": "81c5907c-2b3f-4d1b-9729-9855c5cf8ac4",
-        "muscleGroup": "delta",
+        "muscleGroup": "deltas",
         "isHumanWeight": false,
         "scale": 0,
         "isRoot": false,
@@ -1460,7 +1460,7 @@
       },
       {
         "id": "90d1c135-1ea0-428b-98e2-ddc6b6275875",
-        "muscleGroup": "delta",
+        "muscleGroup": "deltas",
         "isHumanWeight": false,
         "scale": 0,
         "isRoot": false,
@@ -1476,7 +1476,7 @@
       },
       {
         "id": "abfef27f-05a2-424e-b5d6-ead706720fa5",
-        "muscleGroup": "delta",
+        "muscleGroup": "deltas",
         "isHumanWeight": false,
         "scale": 0,
         "isRoot": false,
@@ -1492,7 +1492,7 @@
       },
       {
         "id": "f5781969-c928-4f31-aa97-46e646a8380c",
-        "muscleGroup": "delta",
+        "muscleGroup": "deltas",
         "isHumanWeight": false,
         "scale": 0,
         "isRoot": false,
@@ -1508,7 +1508,7 @@
       },
       {
         "id": "0f689200-3981-488a-9bbb-56b1369958da",
-        "muscleGroup": "delta",
+        "muscleGroup": "deltas",
         "isHumanWeight": false,
         "scale": 0,
         "isRoot": false,

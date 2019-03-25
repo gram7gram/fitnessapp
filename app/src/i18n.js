@@ -3,6 +3,7 @@ import {defaultLocale} from '../../app.json';
 
 const translations = {
     en: () => require("./translations/en.json"),
+    ru: () => require("./translations/ru.json"),
 }
 
 i18n.fallbacks = true;

@@ -36,7 +36,7 @@ class Chart extends PureComponent<Props> {
             data.muscleGroups !== undefined
             && data.muscleGroups.length > 0
             && intersectionBy(data.muscleGroups, muscleGroups).length > 0
-        )
+        ).reverse().slice(0, 100).reverse() //last 100 records
 
         if (items.length < 2) return null
 

@@ -13,6 +13,7 @@ import ThemeProvider from '../context/ThemeProvider';
 import Landing from '../pages/LandingPage/components';
 import Training from '../pages/TrainingPage/components';
 import Exercise from '../pages/ExercisePage/components';
+import ExerciseEdit from '../pages/ExerciseEditPage/components';
 import Workout from '../pages/WorkoutPage/components';
 
 import * as Pages from './Pages';
@@ -40,6 +41,8 @@ export function createRouter() {
     Navigation.registerComponent(Pages.TRAINING, () => withStore(Training));
 
     Navigation.registerComponent(Pages.EXERCISE, () => withStore(Exercise));
+
+    Navigation.registerComponent(Pages.EXERCISE_EDIT, () => withStore(ExerciseEdit));
 
     Navigation.registerComponent(Pages.WORKOUT, () => withStore(Workout));
 
@@ -115,7 +118,7 @@ export const navigateToTraining = (referer, training) => {
                     rightButtons: [{
                         id: 'training-save',
                         systemItem: 'save',
-                        text: i18n.t('training.save'),
+                        text: i18n.t('placeholders.save'),
                         color: Colors.dark80
                     }]
                 }
@@ -164,6 +167,52 @@ export const navigateToExercise = (training, workout) => {
     });
 }
 
+export const navigateToExerciseEdit = (training, workout) => {
+
+    console.log('navigateToExerciseEdit');
+
+    closeModals()
+
+    Navigation.showModal({
+        stack: {
+            children: [{
+                component: {
+                    name: Pages.EXERCISE_EDIT,
+                    passProps: {
+                        training,
+                        workout
+                    },
+                    options: {
+                        topBar: {
+                            visible: true,
+                            drawBehind: false,
+                            title: {
+                                text: i18n.t('exercise_edit.title')
+                            },
+                            rightButtons: [
+                                {
+                                    id: 'exercise-edit-save',
+                                    systemItem: 'save',
+                                    text: i18n.t('placeholders.save'),
+                                    color: Colors.dark80
+                                },
+                                {
+                                    id: 'exercise-edit-cancel',
+                                    systemItem: 'cancel',
+                                    text: i18n.t('placeholders.cancel'),
+                                    color: Colors.dark80
+                                }
+                            ]
+                        }
+                    }
+                }
+            }]
+        }
+    }).catch((e) => {
+        console.log(e);
+    });
+}
+
 export const navigateToWorkout = (training, workout) => {
 
     console.log('navigateToWorkout');
@@ -188,8 +237,8 @@ export const navigateToWorkout = (training, workout) => {
                             },
                             rightButtons: [{
                                 id: 'workout-save',
-                                systemItem: 'search',
-                                text: i18n.t('workout.save'),
+                                systemItem: 'save',
+                                text: i18n.t('placeholders.save'),
                                 color: Colors.dark80
                             }]
                         }

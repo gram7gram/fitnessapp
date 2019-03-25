@@ -10,8 +10,7 @@ import {WORKOUT_CHANGED} from "../../TrainingPage/actions";
 import FetchExercises from "../actions/FetchExercises";
 import {findTranslation} from "../../../utils";
 import i18n from "../../../i18n";
-import {imageMap} from "../../../assets";
-import {navigateToWorkout} from "../../../router";
+import {navigateToExerciseEdit, navigateToWorkout} from "../../../router";
 
 type Props = {
     training: ?string,
@@ -95,6 +94,16 @@ class Exercise extends Component<Props> {
         navigateToWorkout(training, workout)
     }
 
+    openEdit = () => {
+        const {training, workout} = this.props
+
+        navigateToExerciseEdit(training, workout)
+    }
+
+    removeExercise = item => () => {
+
+    }
+
     renderItem = ({item}) => {
 
         const {locale} = this.props
@@ -103,6 +112,7 @@ class Exercise extends Component<Props> {
 
         if (item.isRoot) {
             return <View
+                key={item.id}
                 flex
                 padding-10
                 marginB-10>
@@ -113,21 +123,25 @@ class Exercise extends Component<Props> {
         }
 
         return <Card
+            key={item.id}
             onPress={this.openWorkout(item.id)}
-            marginB-10>
+            marginB-5>
 
             <View padding-10 flex>
                 <Text text70 numberOfLines={2}>
                     {translation ? translation.name : "..."}
                 </Text>
-            </View>
 
-            {item.image
-                ? <Card.Image
-                    width={50}
-                    height={50}
-                    imageSource={imageMap[item.image]()}/>
-                : null}
+                {item.personal ?
+                    <View right flex>
+                        <Button
+                            link
+                            label={i18n.t('placeholders.remove')}
+                            color={Colors.red10}
+                            onPress={this.removeExercise(item)}/>
+                    </View>
+                    : null}
+            </View>
 
         </Card>
     }
@@ -151,13 +165,22 @@ class Exercise extends Component<Props> {
                 : null}
 
             {isSearchEnabled && filtered.length === 0
-                ? <Text dark80 text80 center>{i18n.t('exercise.no_items_title')}</Text>
+                ? <Text
+                    marginB-10
+                    dark80
+                    text80
+                    center>{i18n.t('exercise.no_items_title')}</Text>
                 : null}
+
+            <Button
+                marginB-10
+                label={i18n.t('exercise.add_exercise')}
+                onPress={this.openEdit}/>
 
             <FlatList
                 data={list}
                 renderItem={this.renderItem}
-                keyExtractor={item => item.id}/>
+                keyExtractor={(item, key) => key + ''}/>
 
         </View>
     }

@@ -1,6 +1,7 @@
 import {all, delay, put, select, takeEvery, takeLatest, throttle} from 'redux-saga/effects'
 import * as TrainingActions from '../../TrainingPage/actions'
 import {getMetrics} from "../../../utils";
+import SaveTraining from "../actions/SaveTraining";
 
 function* debounceUpdateIfDateChanged({payload}) {
     if (payload.startedAt !== undefined || payload.completedAt !== undefined) {
@@ -22,10 +23,21 @@ function* updateMetrics({payload = {}}) {
     const startedAt = payload.startedAt || training.startedAt
     const completedAt = payload.completedAt || training.completedAt
 
+    const metrics = getMetrics(training, startedAt, completedAt)
+
     yield put({
         type: TrainingActions.CHANGED,
-        payload: getMetrics(training, startedAt, completedAt)
+        payload: metrics
     })
+
+    console.log('updateMetrics', metrics.totalWeightPerHour > 0);
+
+    if (metrics.totalWeightPerHour > 0) {
+        yield put(SaveTraining({
+            ...training,
+            ...metrics
+        }))
+    }
 }
 
 

@@ -1,5 +1,5 @@
 import {createStructuredSelector} from 'reselect'
 
 export default createStructuredSelector({
-    Donate: store => store.Landing.Donate,
+    ExerciseEdit: store => store.ExerciseEdit,
 })

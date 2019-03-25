@@ -65,7 +65,7 @@ class Legend extends PureComponent {
                             numberOfLines={1}
                             center>
                             {(training && training.duration > 0 ? training.duration : 0).toFixed(1)}
-                            <Text dark30> h</Text>
+                            <Text dark30>h</Text>
                         </Text>
 
                         <Text
@@ -101,7 +101,7 @@ class Legend extends PureComponent {
                                 text70
                                 green10
                                 numberOfLines={1}>
-                                +&nbsp;{Math.abs(diff).toFixed(2)}%
+                                +{Math.abs(diff).toFixed(2)}%
                             </Text>
                             : null}
 
@@ -111,7 +111,7 @@ class Legend extends PureComponent {
                                 text70
                                 yellow10
                                 numberOfLines={1}>
-                                {Math.abs(diff).toFixed(2)}%
+                                {i18n.t('training.na')}
                             </Text>
                             : null}
 
@@ -121,7 +121,7 @@ class Legend extends PureComponent {
                                 text70
                                 red10
                                 numberOfLines={1}>
-                                -&nbsp;{Math.abs(diff).toFixed(2)}%
+                                -{Math.abs(diff).toFixed(2)}%
                             </Text>
                             : null}
 

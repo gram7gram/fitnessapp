@@ -5,10 +5,6 @@
     "show_more": "Show more",
     "remove_all": "Remove all"
   },
-  "donation": {
-    "title": "Tip me",
-    "content": "If you like an app, consider donating small amount"
-  },
   "rate": {
     "title": "Rate me",
     "content": "Share your opinion about the app"
@@ -25,44 +21,54 @@
     "completed_at": "Completed at",
     "weight": "Weight, kg",
     "repeatCount": "Repeats",
-    "remove_workout": "Remove",
     "remove": "Remove training",
     "diff_more": "more",
-    "save": "Save"
+    "na": "n/a"
   },
   "exercise": {
     "title": "Exercises",
     "no_items_title": "No exercises found",
+    "personal_title": "Custom",
     "search": "Search",
+    "add_exercise": "Create exercise",
     "add_workout": "Add workout"
+  },
+  "exercise_edit": {
+    "title": "New exercise",
+    "name": "Exercise name",
+    "muscle_group": "Main muscle group",
+    "scale": "Percentage of human weight",
+    "scale_notice": "Human weight is scaled by specified percentage in this exercise. For example, pull-ups with rubber band lightens exercise by approximately 40%, so the percentage should be set to 60.00",
+    "is_human_weight": "Use human weight?",
+    "is_human_weight_notice": "Some exercises do not use additional weights. For example, pull-ups or push-ups"
   },
   "workout": {
     "title": "Workout",
     "set_weight": "Weight, kg",
     "set_repeats": "Repeats",
     "add_repeat": "Add repeat",
-    "remove_repeat": "Remove",
     "weight_short": "kg",
-    "repeats_short": "times",
-    "save": "Save"
+    "repeats_short": "times"
   },
   "placeholders": {
+    "save": "Save",
+    "remove": "Remove",
     "search": "Search...",
     "confirm": "Confirm",
     "cancel": "Cancel",
     "date": "Enter date...",
-    "number": "Enter value..."
+    "number": "Enter value...",
+    "text": "Enter value..."
   },
   "muscle_groups": {
     "abs": "Abs",
     "chest": "Chest",
     "biceps": "Biceps",
     "triceps": "Triceps",
-    "shoulders": "Shoulders",
-    "forearm": "Forearm",
+    "deltas": "Deltas",
+    "forearm": "Forearms",
     "back": "Back",
-    "legs": "Legs",
-    "arms": "Arms"
+    "legs": "Legs"
   },
   "validation": {
     "component_error": "Oops, an error"

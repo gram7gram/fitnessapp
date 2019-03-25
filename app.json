@@ -1,7 +1,8 @@
 {
   "name": "FitnessApp",
   "displayName": "FitnessApp",
-  "defaultLocale": "en",
+  "locales": ["ru", "en"],
+  "defaultLocale": "ru",
   "defaultTheme": "dark",
   "donationUrl": "dark",
   "androidMarketId": "ua.gram.fitnessapp"

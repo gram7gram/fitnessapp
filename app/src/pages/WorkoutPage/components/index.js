@@ -248,7 +248,7 @@ class Workout extends Component<Props> {
                 <View right>
                     <Button
                         link
-                        label={i18n.t('workout.remove_repeat')}
+                        label={i18n.t('placeholders.remove')}
                         color={Colors.red10}
                         onPress={this.removeRepeat(item.id)}/>
                 </View>

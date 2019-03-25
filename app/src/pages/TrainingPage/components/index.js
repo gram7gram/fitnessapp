@@ -47,9 +47,9 @@ class Training extends Component<Props> {
                     id: uuid(),
                     createdAt: new Date().getTime(),
                     startedAt: moment().format('YYYY-MM-DD HH:mm'),
-                    completedAt: null,
-                    humanWeight: 0,
-                    duration: 0,
+                    completedAt: moment().add(2, 'hours').format('YYYY-MM-DD HH:mm'),
+                    humanWeight: 99,
+                    duration: 2,
                     totalWeight: 0,
                     totalWeightPerHour: 0,
                     muscleGroups: [],
@@ -241,7 +241,7 @@ class Training extends Component<Props> {
                     <View right flex>
                         <Button
                             link
-                            label={i18n.t('training.remove_workout')}
+                            label={i18n.t('placeholders.remove')}
                             color={Colors.red10}
                             onPress={this.removeWorkout(item)}/>
                     </View>
