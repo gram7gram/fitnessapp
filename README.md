@@ -1,4 +1,8 @@
 
+### Workout app
+
+![Preview](https://github.com/gram7gram/fitnessapp/blob/master/preview.jpg)
+
 ### Storage
 
 Android `/data/user/0/ua.gram.fitnessapp/files`
