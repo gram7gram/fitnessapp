@@ -42,11 +42,13 @@ const prepareDemo = () => {
         })
 }
 
-const hasDemo = parseInt(AsyncStorage.getItem('hasDemo')) === 1
+AsyncStorage.getItem('hasDemo').then(value => {
+    const hasDemo = parseInt(value) === 1
 
-if (!hasDemo) {
+    if (!hasDemo) {
 
-    prepareDemo()
+        prepareDemo()
 
-    AsyncStorage.setItem('hasDemo', '1')
-}
+        AsyncStorage.setItem('hasDemo', '1')
+    }
+})

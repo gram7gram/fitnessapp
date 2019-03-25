@@ -3,7 +3,6 @@ import {all, delay, put, select, takeEvery, takeLatest, throttle} from 'redux-sa
 import moment from 'moment'
 import SaveTrainings from '../actions/SaveTrainings'
 import * as TrainingActions from '../../TrainingPage/actions'
-import {objectValues} from "../../../utils";
 import {navigateToLanding} from "../../../router";
 import {fileGetContents} from "../../../storage/fs";
 
@@ -25,12 +24,6 @@ function* updateRegistry({payload}) {
 
     const trainings = yield getTrainings()
 
-    let image = null;
-    const workout = objectValues(payload.workouts)[0]
-    if (workout && workout.exercise) {
-        image = workout.exercise.image
-    }
-
     const month = moment(payload.startedAt, 'YYYY-MM-DD HH:mm').format('YYYY-MM')
 
     if (trainings[month] === undefined) {
@@ -42,7 +35,6 @@ function* updateRegistry({payload}) {
         startedAt: payload.startedAt,
         totalWeightPerHour: payload.totalWeightPerHour,
         muscleGroups: payload.muscleGroups,
-        image
     }
 
     yield put(SaveTrainings(trainings))
