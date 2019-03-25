@@ -5,6 +5,10 @@ const items = (prev = [], action) => {
     switch (action.type) {
         case Actions.RESET:
             return []
+
+        case Actions.DELETE_MY_EXERCISE_BEFORE:
+            return prev.filter(item => item.id !== action.payload.id)
+
         case Actions.FETCH_EXERCISES_SUCCESS:
 
             const flattenList = []

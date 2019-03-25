@@ -15,7 +15,7 @@
     "legend_progress": "Прогресс",
     "legend_duration": "Длительность",
     "legend_weight": "Тон в час",
-    "add_workout": "Начать тренировку",
+    "add_workout": "Начать упражнение",
     "human_weight": "Ваш вес, кг",
     "started_at": "Начато",
     "completed_at": "Закончено",
@@ -47,7 +47,7 @@
     "title": "Тренировка",
     "set_weight": "Вес, кг",
     "set_repeats": "Повторы",
-    "add_repeat": "Начать упражнение",
+    "add_repeat": "Новый повтор",
     "weight_short": "кг",
     "repeats_short": "повт."
   },

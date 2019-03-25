@@ -8,6 +8,7 @@ import {withLocalization} from "../../../context/LocaleProvider";
 import {RESET, SEARCH_CHANGED, TOGGLE_SEARCH} from "../actions";
 import {WORKOUT_CHANGED} from "../../TrainingPage/actions";
 import FetchExercises from "../actions/FetchExercises";
+import DeleteMyExercise from "../actions/DeleteMyExercise";
 import {findTranslation} from "../../../utils";
 import i18n from "../../../i18n";
 import {navigateToExerciseEdit, navigateToWorkout} from "../../../router";
@@ -101,7 +102,7 @@ class Exercise extends Component<Props> {
     }
 
     removeExercise = item => () => {
-
+        this.props.dispatch(DeleteMyExercise(item))
     }
 
     renderItem = ({item}) => {
