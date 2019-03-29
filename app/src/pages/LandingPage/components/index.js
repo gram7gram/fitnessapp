@@ -76,7 +76,7 @@ class Landing extends Component<Props> {
                 })
         })
 
-        AsyncStorage.removeItem('hasDemo')
+        AsyncStorage.removeItem('hasDemo').catch(() => {})
     }
 
     openTraining = training => () => {

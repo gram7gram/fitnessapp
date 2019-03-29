@@ -23,6 +23,8 @@
     "repeatCount": "Repeats",
     "remove": "Remove training",
     "diff_more": "more",
+    "comment": "Note",
+    "comment_placeholder": "Achieved something? Note it...",
     "na": "n/a"
   },
   "exercise": {

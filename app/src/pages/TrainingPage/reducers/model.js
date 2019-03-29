@@ -150,6 +150,27 @@ const totalWeightPerHour = (prev = 0, action) => {
     }
 }
 
+const comment = (prev = null, action) => {
+    switch (action.type) {
+        case Actions.RESET:
+            return null
+        case Actions.FETCH_TRAINING_SUCCESS:
+            if (action.payload.comment !== undefined) {
+                return action.payload.comment
+            }
+
+            return null
+        case Actions.CHANGED:
+            if (action.payload.comment !== undefined) {
+                return action.payload.comment
+            }
+
+            return prev
+        default:
+            return prev
+    }
+}
+
 const muscleGroups = (prev = [], action) => {
 
     let muscleGroup
@@ -321,9 +342,10 @@ export default combineReducers({
     startedAt,
     completedAt,
     humanWeight,
-    workouts,
     duration,
     totalWeight,
     totalWeightPerHour,
     muscleGroups,
+    workouts,
+    comment,
 });

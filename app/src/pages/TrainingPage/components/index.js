@@ -53,7 +53,8 @@ class Training extends Component<Props> {
                     totalWeight: 0,
                     totalWeightPerHour: 0,
                     muscleGroups: [],
-                    workouts: {}
+                    workouts: {},
+                    comment: null
                 }
             })
         }
@@ -154,19 +155,11 @@ class Training extends Component<Props> {
             ? findTranslation(item.exercise.translations, locale)
             : null
 
-        let repeats = objectValues(item.repeats).sort((a, b) => {
+        const repeats = objectValues(item.repeats).sort((a, b) => {
             if (a.createdAt < b.createdAt) return 1
             if (a.createdAt > b.createdAt) return -1
             return 0
         })
-
-        const isOverflowing = repeats.length > 4
-
-        let diff = 0
-        if (isOverflowing) {
-            diff = repeats.length - 4
-            repeats = repeats.splice(0, 4)
-        }
 
         const isHumanWeight = item.exercise && item.exercise.isHumanWeight
 
@@ -214,21 +207,6 @@ class Training extends Component<Props> {
                             </View>
                         </View>
                     )}
-
-                    {isOverflowing
-                        ? <View column padding-5>
-                            <View row center>
-                                <Text text100 blue20 numberOfLines={1}>
-                                    +{diff}
-                                </Text>
-                            </View>
-                            <View row center>
-                                <Text text100 blue20 numberOfLines={1}>
-                                    {i18n.t('training.diff_more')}
-                                </Text>
-                            </View>
-                        </View>
-                        : null}
                 </View>
 
                 <View row>
@@ -314,6 +292,20 @@ class Training extends Component<Props> {
                                 placeholder={i18n.t('placeholders.number')}
                                 onChangeText={this.changeFloat('humanWeight')}
                                 value={(model.humanWeight > 0 ? model.humanWeight : '') + ''}/>
+
+                        </View>
+                    </Col>
+
+                    <Col size={50}>
+                        <View marginL-5 marginB-10>
+
+                            <TextField
+                                marginB-10
+                                floatingPlaceholder={false}
+                                title={i18n.t('training.comment')}
+                                placeholder={i18n.t('training.comment_placeholder')}
+                                onChangeText={this.changeString('comment')}
+                                value={model.comment || ''}/>
 
                         </View>
                     </Col>

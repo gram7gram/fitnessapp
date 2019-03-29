@@ -23,6 +23,8 @@
     "repeatCount": "Повторы",
     "remove": "Удалить тренировку",
     "diff_more": "еще",
+    "comment": "Заметка",
+    "comment_placeholder": "Достигли чего-то? Запишите...",
     "na": "н/д"
   },
   "exercise": {
