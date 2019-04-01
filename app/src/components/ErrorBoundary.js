@@ -14,7 +14,7 @@ class ErrorBoundary extends PureComponent {
     render() {
         if (this.state.hasError) {
             return <View style={styles.container}>
-                <Text style={styles.text} center>{i18n.t('validation.component_error')}</Text>
+                <Text paragraph center>{i18n.t('validation.component_error')}</Text>
             </View>
         }
 
@@ -26,9 +26,6 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: Colors.red30,
         padding: 20
-    },
-    text: {
-        color: Colors.dark80
     }
 })
 

@@ -134,6 +134,20 @@ class Workout extends Component<Props> {
         })
     }
 
+    copyRepeat = (id) => () => {
+        const repeat = this.getRepeats()[id]
+        if (!repeat) return
+
+        this.props.dispatch({
+            type: ADD_REPEAT,
+            payload: {
+                ...repeat,
+                id: uuid(),
+                createdAt: new Date().getTime(),
+            }
+        })
+    }
+
     removeRepeat = (id) => () => {
         const {workout} = this.props
 
@@ -226,31 +240,50 @@ class Workout extends Component<Props> {
 
         return <Card
             onPress={this.setRepeatActive(item)}
-            style={isCurrent ? styles.currentRepeatCard : null}
+            style={isCurrent ? styles.activeCard : styles.card}
             marginB-10>
 
             <View padding-10>
 
                 {isHumanWeight
 
-                    ? <Text text50 dark20 center numberOfLines={1}>
-                        <Text red10>{item.repeatCount || 0}</Text>
+                    ? <Text
+                        text50 center numberOfLines={1}
+                        cdark={isCurrent}
+                        cmuted={!isCurrent}>
+
+                        <Text red10>{(item.repeatCount || 0).toFixed(0)}</Text>
                         {i18n.t('workout.repeats_short')}
                     </Text>
 
-                    : <Text text50 dark20 center numberOfLines={1}>
-                        <Text red10> {item.weight || 0}</Text>
+                    : <Text
+                        text50 center numberOfLines={1}
+                        cdark={isCurrent}
+                        cmuted={!isCurrent}>
+
+                        <Text red10> {(item.weight || 0).toFixed(1)}</Text>
                         {i18n.t('workout.weight_short')}
-                        <Text red10>{item.repeatCount || 0}</Text>
+                        &nbsp;
+                        <Text red10>{(item.repeatCount || 0).toFixed(0)}</Text>
                         {i18n.t('workout.repeats_short')}
                     </Text>}
 
-                <View right>
-                    <Button
-                        link
-                        label={i18n.t('placeholders.remove')}
-                        color={Colors.red10}
-                        onPress={this.removeRepeat(item.id)}/>
+                <View row>
+                    <View left flex>
+                        <Button
+                            link
+                            label={i18n.t('workout.duplicate')}
+                            color={Colors.blue10}
+                            onPress={this.copyRepeat(item.id)}/>
+                    </View>
+
+                    <View right flex>
+                        <Button
+                            link
+                            label={i18n.t('placeholders.remove')}
+                            color={Colors.red10}
+                            onPress={this.removeRepeat(item.id)}/>
+                    </View>
                 </View>
             </View>
         </Card>
@@ -297,11 +330,11 @@ class Workout extends Component<Props> {
 
                     ? <View flex-1 column>
 
-                        <Text text70 dark80 numberOfLines={1} center>{i18n.t('workout.set_weight')}</Text>
+                        <Text textPrimary numberOfLines={1} center>{i18n.t('workout.set_weight')}</Text>
 
                         <WheelPicker
-                            labelStyle={Typography.text70}
                             style={styles.picker}
+                            labelStyle={Typography.textPrimary}
                             selectedValue={repeatModel ? repeatModel.weight : weightsArr[0].value}
                             onValueChange={debounce(this.changeFloat('weight'), 200)}>
                             {weightsArr.map((item, key) =>
@@ -313,11 +346,11 @@ class Workout extends Component<Props> {
 
                 <View flex-1 column>
 
-                    <Text text70 dark80 numberOfLines={1} center>{i18n.t('workout.set_repeats')}</Text>
+                    <Text textPrimary numberOfLines={1} center>{i18n.t('workout.set_repeats')}</Text>
 
                     <WheelPicker
                         style={styles.picker}
-                        labelStyle={Typography.text70}
+                        labelStyle={Typography.textPrimary}
                         selectedValue={repeatModel ? repeatModel.repeatCount : repeatsArr[0].value}
                         onValueChange={debounce(this.changeInt('repeatCount'), 200)}>
                         {repeatsArr.map((item, key) =>
@@ -333,9 +366,11 @@ class Workout extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-    currentRepeatCard: {
-        color: Colors.dark80,
-        backgroundColor: Colors.green40
+    activeCard: {
+        backgroundColor: Colors.clight
+    },
+    card: {
+        backgroundColor: Colors.themeheader
     },
     scrollContainer: {
         height: '70%'
@@ -345,7 +380,7 @@ const styles = StyleSheet.create({
         alignItems: 'stretch'
     },
     picker: {
-        backgroundColor: Colors.dark20,
+        backgroundColor: Colors.themeheader,
         height: '100%',
         width: '100%'
     }

@@ -1,4 +1,6 @@
-import {AsyncStorage} from 'react-native';
+import "./theme";
+
+import AsyncStorage from '@react-native-community/async-storage';
 import {Navigation} from 'react-native-navigation';
 import {createRouter} from './router';
 import {objectValues} from "./utils";
@@ -43,12 +45,15 @@ const prepareDemo = () => {
 }
 
 AsyncStorage.getItem('hasDemo').then(value => {
-    const hasDemo = parseInt(value) === 1
+
+    const hasDemo = false;//parseInt(value) === 1
 
     if (!hasDemo) {
 
         prepareDemo()
 
+        AsyncStorage.removeItem('Landing.openedCount')
+        AsyncStorage.removeItem('Landing.isRateAlreadyOpened')
         AsyncStorage.setItem('hasDemo', '1')
     }
 })

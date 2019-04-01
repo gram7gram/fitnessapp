@@ -25,18 +25,21 @@ function* updateMetrics({payload = {}}) {
 
     const metrics = getMetrics(training, startedAt, completedAt)
 
-    yield put({
-        type: TrainingActions.CHANGED,
-        payload: metrics
-    })
+    if (training.totalWeightPerHour !== metrics.totalWeightPerHour
+        || training.totalWeight !== metrics.totalWeight
+        || training.duration !== metrics.duration) {
 
-    console.log('updateMetrics', metrics.totalWeightPerHour > 0);
+        yield put({
+            type: TrainingActions.CHANGED,
+            payload: metrics
+        })
 
-    if (metrics.totalWeightPerHour > 0) {
-        yield put(SaveTraining({
-            ...training,
-            ...metrics
-        }))
+        if (metrics.totalWeightPerHour > 0) {
+            yield put(SaveTraining({
+                ...training,
+                ...metrics
+            }))
+        }
     }
 }
 

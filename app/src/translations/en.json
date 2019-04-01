@@ -49,6 +49,7 @@
     "set_weight": "Weight, kg",
     "set_repeats": "Repeats",
     "add_repeat": "Add repeat",
+    "duplicate": "Duplicate",
     "weight_short": "kg",
     "repeats_short": "times"
   },
@@ -71,6 +72,17 @@
     "forearm": "Forearms",
     "back": "Back",
     "legs": "Legs"
+  },
+  "settings": {
+    "title": "Settings",
+    "version": "Version",
+    "unit": "Weight unit"
+  },
+  "unit": {
+    "pounds": "Pound",
+    "pounds_short": "LB",
+    "kilograms": "Kilogram",
+    "kilograms_short": "KG"
   },
   "validation": {
     "component_error": "Oops, an error"

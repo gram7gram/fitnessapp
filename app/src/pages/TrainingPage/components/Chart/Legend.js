@@ -50,8 +50,7 @@ class Legend extends PureComponent {
                     <Col size={100}>
 
                         <Text
-                            text70
-                            dark70
+                            paragraph
                             numberOfLines={1}
                             marginB-10
                             center>{i18n.t('training.chart_title')}</Text>
@@ -59,35 +58,26 @@ class Legend extends PureComponent {
 
                     <Col size={33}>
 
-                        <Text
-                            text70
-                            blue40
-                            numberOfLines={1}
-                            center>
-                            {(training && training.duration > 0 ? training.duration : 0).toFixed(1)}
-                            <Text dark30>h</Text>
+                        <Text header4Primary numberOfLines={1} center>
+                            {(training && training.duration > 0
+                                ? training.duration : 0).toFixed(1)}h
                         </Text>
 
                         <Text
-                            text100
-                            dark40
+                            textSmallSecondary
                             numberOfLines={1}
                             center>{i18n.t('training.legend_duration')}</Text>
                     </Col>
 
                     <Col size={33}>
 
-                        <Text
-                            text70
-                            blue40
-                            numberOfLines={1}
-                            center>
-                            {(training && training.totalWeightPerHour > 0 ? training.totalWeightPerHour : 0).toFixed(2)}
+                        <Text header4Primary numberOfLines={1} center>
+                            {(training && training.totalWeightPerHour > 0
+                                ? training.totalWeightPerHour : 0).toFixed(2)}
                         </Text>
 
                         <Text
-                            text100
-                            dark40
+                            textSmallSecondary
                             numberOfLines={1}
                             center>{i18n.t('training.legend_weight')}</Text>
 
@@ -96,38 +86,25 @@ class Legend extends PureComponent {
                     <Col size={33}>
 
                         {diff > 0
-                            ? <Text
-                                center
-                                text70
-                                green10
-                                numberOfLines={1}>
+                            ? <Text header4Success center numberOfLines={1}>
                                 +{Math.abs(diff).toFixed(2)}%
                             </Text>
                             : null}
 
                         {diff === 0
-                            ? <Text
-                                center
-                                text70
-                                yellow10
-                                numberOfLines={1}>
+                            ? <Text header4Warning center numberOfLines={1}>
                                 {i18n.t('training.na')}
                             </Text>
                             : null}
 
                         {diff < 0
-                            ? <Text
-                                center
-                                text70
-                                red10
-                                numberOfLines={1}>
+                            ? <Text header4Danger center numberOfLines={1}>
                                 -{Math.abs(diff).toFixed(2)}%
                             </Text>
                             : null}
 
                         <Text
-                            text100
-                            dark40
+                            textSmallSecondary
                             numberOfLines={1}
                             center>{i18n.t('training.legend_progress')}</Text>
                     </Col>

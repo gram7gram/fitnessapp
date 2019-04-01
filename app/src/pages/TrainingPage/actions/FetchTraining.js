@@ -16,6 +16,7 @@ export default (id, componentId) => dispatch => {
         .then(payload => {
             dispatch({
                 type: FETCH_TRAINING_SUCCESS,
+                componentId,
                 payload: JSON.parse(payload)
             })
         })

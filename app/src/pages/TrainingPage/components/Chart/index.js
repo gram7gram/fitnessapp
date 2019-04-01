@@ -6,12 +6,13 @@ import selectors from './selectors';
 import {Dimensions, ScrollView} from 'react-native'
 import {Colors, Text, Typography, View} from 'react-native-ui-lib'
 import MyChart from "./MyChart";
+import FadeInView from "../../../../components/FadeIn";
 
 const chartConfig = {
-    backgroundGradientFrom: Colors.rgba(Colors.dark10, 1),
-    backgroundGradientTo: Colors.rgba(Colors.dark10, 1),
-    color: (opacity = 1) => Colors.rgba(Colors.blue10, opacity),
-    selectedColor: (opacity = 1) => Colors.rgba(Colors.red10, opacity),
+    backgroundGradientFrom: Colors.rgba(Colors.themebackground, 1),
+    backgroundGradientTo: Colors.rgba(Colors.themebackground, 1),
+    color: (opacity = 1) => Colors.rgba(Colors.cprimary, opacity),
+    selectedColor: (opacity = 1) => Colors.rgba(Colors.cdanger, opacity),
     decimalPlaces: 2,
     strokeWidth: 1,
 }
@@ -27,18 +28,40 @@ class Chart extends PureComponent<Props> {
         }, 500)
     }
 
+    extractChartData = (chartData, muscleGroups) => {
+
+        const itemsWithGroups = chartData.filter(data =>
+            data.muscleGroups !== undefined && data.muscleGroups.length > 0
+        )
+
+        if (itemsWithGroups.length === 0) return null
+
+        //Find exact match of muscle groups for trainings
+        let items = itemsWithGroups.filter(data =>
+            intersectionBy(data.muscleGroups, muscleGroups).length === muscleGroups.length
+        )
+
+        if (items.length < 2) {
+
+            //Find partial match of muscle groups for trainings
+            items = itemsWithGroups.filter(data =>
+                intersectionBy(data.muscleGroups, muscleGroups).length > 0
+            )
+
+            if (items.length < 2) return null
+        }
+
+        return items.reverse().slice(0, 100).reverse() //last 100 records
+    }
+
     render() {
         const {chartData, muscleGroups, training} = this.props
 
         if (muscleGroups.length === 0) return null
 
-        let items = chartData.filter(data =>
-            data.muscleGroups !== undefined
-            && data.muscleGroups.length > 0
-            && intersectionBy(data.muscleGroups, muscleGroups).length > 0
-        ).reverse().slice(0, 100).reverse() //last 100 records
+        const items = this.extractChartData(chartData, muscleGroups)
 
-        if (items.length < 2) return null
+        if (!items) return null
 
         const data = {
             labels: items.map(item => moment(item.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM')),
@@ -51,19 +74,21 @@ class Chart extends PureComponent<Props> {
 
         const screenWidth = Dimensions.get('window').width - 20
 
-        return <ScrollView
-            ref={ref => this.scroll = ref}
-            horizontal>
+        return <FadeInView duration={300}>
+            <ScrollView
+                ref={ref => this.scroll = ref}
+                horizontal>
 
-            <MyChart
-                bezier
-                withDots
-                data={data}
-                width={Math.max(50 * items.length, screenWidth)}
-                height={200}
-                chartConfig={chartConfig}/>
+                <MyChart
+                    bezier
+                    withDots
+                    data={data}
+                    width={Math.max(50 * items.length, screenWidth)}
+                    height={200}
+                    chartConfig={chartConfig}/>
 
-        </ScrollView>
+            </ScrollView>
+        </FadeInView>
     }
 }
 

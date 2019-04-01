@@ -5,7 +5,7 @@ import selectors from './selectors';
 import moment from 'moment';
 import i18n from '../../../i18n';
 import DatePicker from '../../../components/Datepicker';
-import {ScrollView, FlatList} from 'react-native';
+import {ScrollView, FlatList, StyleSheet} from 'react-native';
 import {Button, Card, Colors, Text, TextField, Typography, View} from 'react-native-ui-lib';
 import {findTranslation, objectValues} from "../../../utils";
 import {withLocalization} from "../../../context/LocaleProvider";
@@ -165,11 +165,12 @@ class Training extends Component<Props> {
 
         return <Card
             marginB-10
-            onPress={this.openWorkout(item.id)}>
+            onPress={this.openWorkout(item.id)}
+            style={styles.card}>
 
             <View padding-10>
 
-                <Text text70 dark10 marginB-10>
+                <Text paragraph marginB-10>
                     {exerciseTranslation ? exerciseTranslation.name : "..."}
                 </Text>
 
@@ -177,13 +178,13 @@ class Training extends Component<Props> {
 
                     <View column paddingR-5>
                         <View row left>
-                            <Text text80 dark30 numberOfLines={1}>
+                            <Text textSmallSecondary numberOfLines={1}>
                                 {i18n.t('training.weight')}
                             </Text>
                         </View>
 
                         <View row left>
-                            <Text text80 dark30 numberOfLines={1}>
+                            <Text textSmallSecondary numberOfLines={1}>
                                 {i18n.t('training.repeatCount')}
                             </Text>
                         </View>
@@ -193,7 +194,7 @@ class Training extends Component<Props> {
                         <View key={key} column paddingH-5>
 
                             <View row right>
-                                <Text text80 dark30 numberOfLines={1}>
+                                <Text textSmallSecondary numberOfLines={1}>
                                     {!isHumanWeight && workout.weight > 0
                                         ? workout.weight.toFixed(1)
                                         : '-'}
@@ -201,7 +202,7 @@ class Training extends Component<Props> {
                             </View>
 
                             <View row right>
-                                <Text text80 dark30 numberOfLines={1}>
+                                <Text textSmallSecondary numberOfLines={1}>
                                     x{workout.repeatCount > 0 ? workout.repeatCount : '-'}
                                 </Text>
                             </View>
@@ -212,7 +213,7 @@ class Training extends Component<Props> {
                 <View row>
                     {item.exercise && item.exercise.muscleGroup
                         ? <View left flex>
-                            <Text blue20>{i18n.t('muscle_groups.' + item.exercise.muscleGroup)}</Text>
+                            <Text helpText>{i18n.t('muscle_groups.' + item.exercise.muscleGroup)}</Text>
                         </View>
                         : null}
 
@@ -253,61 +254,72 @@ class Training extends Component<Props> {
 
                 <Row>
 
-                    <Col size={50}>
+                    <Col size={33}>
 
                         <View marginR-5 marginB-10>
-                            <Text text80 dark40>{i18n.t('training.started_at')}</Text>
+
+                            <Text paragraph>{i18n.t('training.started_at')}</Text>
 
                             <DatePicker
-                                date={model.startedAt || ''}
+                                format={'DD.MM HH:mm'}
+                                date={model.startedAt
+                                    ? moment(model.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')
+                                    : ''}
                                 maxDate={model.completedAt || undefined}
                                 onDateChange={this.changeString('startedAt')}/>
                         </View>
 
                     </Col>
-                    <Col size={50}>
+                    <Col size={33}>
 
-                        <View marginL-5 marginB-10>
-                            <Text text80 dark40>{i18n.t('training.completed_at')}</Text>
+                        <View marginR-5 marginB-10>
+
+                            <Text paragraph>{i18n.t('training.completed_at')}</Text>
 
                             <DatePicker
+                                format={'DD.MM HH:mm'}
                                 disabled={!model.startedAt}
-                                date={model.completedAt || ''}
+                                date={model.completedAt
+                                    ? moment(model.completedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')
+                                    : ''}
                                 minDate={model.startedAt || undefined}
                                 onDateChange={this.changeString('completedAt')}/>
                         </View>
+                    </Col>
+                    <Col size={33}>
+
+                        <View marginB-10>
+
+                            <Text paragraph>{i18n.t('training.human_weight')}</Text>
+
+                            <TextField
+                                style={styles.weightInput}
+                                keyboardType="numeric"
+                                enableErrors={false}
+                                floatingPlaceholder={false}
+                                placeholder={i18n.t('placeholders.number')}
+                                onChangeText={this.changeFloat('humanWeight')}
+                                value={(model.humanWeight > 0 ? model.humanWeight : '') + ''}/>
+                        </View>
+
                     </Col>
                 </Row>
 
                 <Row>
 
-                    <Col size={50}>
-                        <View marginR-5 marginB-10>
+                    <Col size={100}>
+
+                        <View marginB-10>
 
                             <TextField
-                                marginB-10
-                                keyboardType="numeric"
+                                style={styles.noteInput}
+                                enableErrors={false}
                                 floatingPlaceholder={false}
-                                title={i18n.t('training.human_weight')}
-                                placeholder={i18n.t('placeholders.number')}
-                                onChangeText={this.changeFloat('humanWeight')}
-                                value={(model.humanWeight > 0 ? model.humanWeight : '') + ''}/>
-
-                        </View>
-                    </Col>
-
-                    <Col size={50}>
-                        <View marginL-5 marginB-10>
-
-                            <TextField
-                                marginB-10
-                                floatingPlaceholder={false}
-                                title={i18n.t('training.comment')}
                                 placeholder={i18n.t('training.comment_placeholder')}
                                 onChangeText={this.changeString('comment')}
                                 value={model.comment || ''}/>
-
                         </View>
+
                     </Col>
 
                 </Row>
@@ -329,6 +341,7 @@ class Training extends Component<Props> {
                         <Button
                             link
                             marginB-10
+                            marginT-25
                             label={i18n.t('training.remove')}
                             color={Colors.red10}
                             onPress={this.remove}/>
@@ -340,6 +353,18 @@ class Training extends Component<Props> {
     }
 
 }
+
+const styles = StyleSheet.create({
+    card: {
+        backgroundColor: Colors.themeheader
+    },
+    weightInput: {
+        marginTop: 6.5
+    },
+    noteInput: {
+        margin: 0
+    }
+})
 
 export default withLocalization(
     connect(selectors)(Training)

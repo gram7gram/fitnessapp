@@ -50,6 +50,7 @@
     "set_weight": "Вес, кг",
     "set_repeats": "Повторы",
     "add_repeat": "Новый повтор",
+    "duplicate": "Дублировать",
     "weight_short": "кг",
     "repeats_short": "повт."
   },
@@ -72,6 +73,17 @@
     "forearm": "Предплечия",
     "back": "Спина",
     "legs": "Ноги"
+  },
+  "settings": {
+    "title": "Настройки",
+    "version": "Версия",
+    "unit": "Единица измерения веса"
+  },
+  "unit": {
+    "pounds": "Фунт",
+    "pounds_short": "LB",
+    "kilograms": "Килограм",
+    "kilograms_short": "КГ"
   },
   "validation": {
     "component_error": "Уупс, ошибка"

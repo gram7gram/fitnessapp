@@ -4,9 +4,9 @@ import selectors from './selectors';
 import i18n from '../../../../i18n';
 import {Button, Card, Colors, Text, Typography, View} from 'react-native-ui-lib';
 import {Column as Col, Row} from "react-native-responsive-grid";
-import {AsyncStorage, StyleSheet, Linking} from "react-native";
+import AsyncStorage from "@react-native-community/async-storage";
+import {StyleSheet, Linking} from "react-native";
 import FadeInView from "../../../../components/FadeIn";
-import Icon from "react-native-vector-icons/FontAwesome";
 import {TOGGLE_RATE_DIALOG} from "../../actions";
 import {androidMarketId} from "../../../../../../app.json";
 
@@ -39,40 +39,26 @@ class Rate extends PureComponent {
                     <Col size={100}>
 
                         <View style={styles.header} padding-5>
-                            <Text text60 dark10 numberOfLines={1}>{i18n.t('rate.title')}</Text>
-                            <Text text90 dark30>{i18n.t('rate.content')}</Text>
+                            <Text header3 dark10 numberOfLines={1}>{i18n.t('rate.title')}</Text>
+                            <Text paragraph dark30>{i18n.t('rate.content')}</Text>
                         </View>
+
                         <View style={styles.footer}>
 
                             <Button
                                 style={styles.icon}
-                                size="small"
-                                round
-                                backgroundColor={Colors.dark60}
-                                onPress={this.onCancelPress}>
-                                <Text>
-                                    <Icon
-                                        name="times"
-                                        color={Colors.dark30}
-                                        size={Typography.text40.fontSize}
-                                        solid/>
-                                </Text>
-                            </Button>
+                                iconSource={require('../../../../../assets/icons/white/32/times.png')}
+                                iconStyle={{tintColor: Colors.dark30}}
+                                bg-dark60
+                                onPress={this.onCancelPress}/>
 
                             <Button
                                 style={styles.icon}
-                                size="small"
-                                round
-                                backgroundColor={Colors.yellow40}
-                                onPress={this.onOkPress}>
-                                <Text>
-                                    <Icon
-                                        name="star"
-                                        color={Colors.yellow10}
-                                        size={Typography.text40.fontSize}
-                                        solid/>
-                                </Text>
-                            </Button>
+                                iconSource={require('../../../../../assets/icons/white/32/star.png')}
+                                iconStyle={{tintColor: Colors.yellow10}}
+                                bg-yellow40
+                                onPress={this.onOkPress}/>
+
                         </View>
                     </Col>
                 </Row>

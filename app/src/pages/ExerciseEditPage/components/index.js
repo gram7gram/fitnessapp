@@ -25,12 +25,12 @@ import uuid from "uuid";
 const muscles = [
     {value: 'chest', label: i18n.t('muscle_groups.chest')},
     {value: 'back', label: i18n.t('muscle_groups.back')},
+    {value: 'legs', label: i18n.t('muscle_groups.legs')},
     {value: 'abs', label: i18n.t('muscle_groups.abs')},
     {value: 'biceps', label: i18n.t('muscle_groups.biceps')},
     {value: 'triceps', label: i18n.t('muscle_groups.triceps')},
     {value: 'deltas', label: i18n.t('muscle_groups.deltas')},
     {value: 'forearm', label: i18n.t('muscle_groups.forearm')},
-    {value: 'legs', label: i18n.t('muscle_groups.legs')},
 ]
 
 type Props = {
@@ -107,6 +107,8 @@ class ExerciseEdit extends Component<Props> {
         const {training, workout, locale} = this.props
         const {model} = this.props.ExerciseEdit
 
+        if (!(model.name && model.muscleGroup)) return
+
         const exercise = {
             id: uuid(),
             createdAt: new Date().getTime(),
@@ -153,29 +155,30 @@ class ExerciseEdit extends Component<Props> {
 
                         <View marginB-10>
 
+                            <Text paragraph numberOfLines={1}>{i18n.t('exercise_edit.name')}</Text>
+
                             <TextField
+                                enableErrors={false}
                                 floatingPlaceholder={false}
-                                title={i18n.t('exercise_edit.name')}
                                 placeholder={i18n.t('placeholders.text')}
                                 onChangeText={this.changeString('name')}
                                 value={model.name || ''}/>
                         </View>
-
                     </Col>
                 </Row>
 
                 <Row>
                     <Col size={100}>
-                        <View marginB-10>
+                        <View marginB-20>
 
-                            <Text dark40 text80
+                            <Text paragraph
                                   marginB-5>{i18n.t('exercise_edit.muscle_group')}</Text>
 
                             {muscles.map((muscle, key) =>
                                 <View key={key} marginB-5>
                                     <Row>
                                         <Col size={50}>
-                                            <Text dark60 text80>{muscle.label}</Text>
+                                            <Text paragraph>{muscle.label}</Text>
                                         </Col>
                                         <Col size={50}>
                                             <View right>
@@ -198,41 +201,47 @@ class ExerciseEdit extends Component<Props> {
                         <View marginB-10>
 
                             <Row>
-                                <Col size={50}>
-                                    <Text dark40 text80>{i18n.t('exercise_edit.is_human_weight')}</Text>
+                                <Col size={80}>
+                                    <Text paragraph>{i18n.t('exercise_edit.is_human_weight')}</Text>
                                 </Col>
-                                <Col size={50}>
+                                <Col size={20}>
                                     <View right>
                                         <Switch
-                                            marginB-10
                                             onColor={Colors.blue30}
                                             offColor={Colors.dark30}
                                             value={model.isHumanWeight}
                                             onValueChange={this.changeString('isHumanWeight')}/>
                                     </View>
                                 </Col>
-                                <Col size={100}>
-                                    <Text blue10 text90 centerV>{i18n.t('exercise_edit.is_human_weight_notice')}</Text>
-                                </Col>
                             </Row>
+
+                            <Text marginT-10 textSmallSecondary>
+                                {i18n.t('exercise_edit.is_human_weight_notice')}
+                            </Text>
 
                         </View>
 
                     </Col>
                     <Col size={100}>
 
-                        <TextField
-                            marginB-10
-                            editable={model.isHumanWeight}
-                            keyboardType="numeric"
-                            floatingPlaceholder={false}
-                            title={i18n.t('exercise_edit.scale')}
-                            placeholder={i18n.t('placeholders.number')}
-                            onChangeText={this.changeScale}
-                            value={(model.scale * 100).toFixed(0)}
-                            disabledColor={Colors.dark20}/>
+                        <View marginB-10>
 
-                        <Text blue10 text90 centerV>{i18n.t('exercise_edit.scale_notice')}</Text>
+                            <Text paragraph numberOfLines={1}>{i18n.t('exercise_edit.scale')}</Text>
+
+                            <TextField
+                                editable={model.isHumanWeight}
+                                keyboardType="numeric"
+                                enableErrors={false}
+                                floatingPlaceholder={false}
+                                placeholder={i18n.t('placeholders.number')}
+                                onChangeText={this.changeScale}
+                                value={(model.scale * 100).toFixed(0)}
+                                disabledColor={Colors.dark20}/>
+
+                            <Text marginT-10 textSmallSecondary>
+                                {i18n.t('exercise_edit.scale_notice')}
+                            </Text>
+                        </View>
                     </Col>
 
                 </Row>

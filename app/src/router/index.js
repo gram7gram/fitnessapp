@@ -3,22 +3,17 @@
 import React from 'react';
 import {Navigation} from 'react-native-navigation';
 import {Provider} from 'react-redux';
-import {Colors} from 'react-native-ui-lib';
+import {Colors, Typography} from 'react-native-ui-lib';
 
 import store from '../store';
 
 import LocaleProvider from '../context/LocaleProvider';
 import ThemeProvider from '../context/ThemeProvider';
 
-import Landing from '../pages/LandingPage/components';
-import Training from '../pages/TrainingPage/components';
-import Exercise from '../pages/ExercisePage/components';
-import ExerciseEdit from '../pages/ExerciseEditPage/components';
-import Workout from '../pages/WorkoutPage/components';
-
 import * as Pages from './Pages';
 import {defaultLocale, defaultTheme} from "../../../app.json";
 import i18n from "../i18n";
+import {Text} from "../pages/LandingPage/components/Rate";
 
 function withStore(Component) {
 
@@ -36,33 +31,41 @@ function withStore(Component) {
 
 export function createRouter() {
 
-    Navigation.registerComponent(Pages.LANDING, () => withStore(Landing));
+    Navigation.registerComponent(Pages.LANDING, () =>
+        withStore(require('../pages/LandingPage/components').default));
 
-    Navigation.registerComponent(Pages.TRAINING, () => withStore(Training));
+    Navigation.registerComponent(Pages.TRAINING, () =>
+        withStore(require('../pages/TrainingPage/components').default));
 
-    Navigation.registerComponent(Pages.EXERCISE, () => withStore(Exercise));
+    Navigation.registerComponent(Pages.EXERCISE, () =>
+        withStore(require('../pages/ExercisePage/components').default));
 
-    Navigation.registerComponent(Pages.EXERCISE_EDIT, () => withStore(ExerciseEdit));
+    Navigation.registerComponent(Pages.EXERCISE_EDIT, () =>
+        withStore(require('../pages/ExerciseEditPage/components').default));
 
-    Navigation.registerComponent(Pages.WORKOUT, () => withStore(Workout));
+    Navigation.registerComponent(Pages.WORKOUT, () =>
+        withStore(require('../pages/WorkoutPage/components').default));
+
+    Navigation.registerComponent(Pages.SETTINGS, () =>
+        withStore(require('../pages/SettingsPage/components').default));
 
     Navigation.setDefaultOptions({
         topBar: {
             drawBehind: false,
             visible: true,
             background: {
-                color: Colors.dark20
+                color: Colors.themeheader
             },
             title: {
-                color: Colors.dark80,
+                color: Colors.white,
             },
             backButton: {
-                title: '', // Remove previous screen name from back button
-                color: Colors.dark80
+                title: '',
+                color: Colors.white
             },
-            buttonColor: Colors.dark80,
+            buttonColor: Colors.white,
             rightButtons: {
-                color: Colors.dark80
+                color: Colors.white
             }
         },
         statusBar: {
@@ -70,8 +73,8 @@ export function createRouter() {
         },
         layout: {
             orientation: ['portrait'],
-            backgroundColor: Colors.dark10,
-            color: Colors.dark80,
+            backgroundColor: Colors.themebackground,
+            color: Colors.white,
         }
     });
 
@@ -89,6 +92,30 @@ export function createRouter() {
                         }
                     }
                 }]
+            }
+        }
+    }).catch((e) => {
+        console.log(e);
+    });
+}
+
+export const navigateToSettings = (referer) => {
+
+    console.log('navigateToSettings');
+
+    closeModals()
+
+    Navigation.push(referer, {
+        component: {
+            name: Pages.SETTINGS,
+            options: {
+                topBar: {
+                    visible: true,
+                    drawBehind: false,
+                    title: {
+                        text: i18n.t('settings.title')
+                    }
+                }
             }
         }
     }).catch((e) => {
@@ -118,8 +145,7 @@ export const navigateToTraining = (referer, training) => {
                     rightButtons: [{
                         id: 'training-save',
                         systemItem: 'save',
-                        text: i18n.t('placeholders.save'),
-                        color: Colors.dark80
+                        icon: require('../../assets/icons/white/32/check.png'),
                     }]
                 }
             }
@@ -154,8 +180,7 @@ export const navigateToExercise = (training, workout) => {
                             rightButtons: [{
                                 id: 'exercise-search',
                                 systemItem: 'search',
-                                text: i18n.t('exercise.search'),
-                                color: Colors.dark80
+                                icon: require('../../assets/icons/white/32/search.png'),
                             }]
                         }
                     }
@@ -193,14 +218,12 @@ export const navigateToExerciseEdit = (training, workout) => {
                                 {
                                     id: 'exercise-edit-save',
                                     systemItem: 'save',
-                                    text: i18n.t('placeholders.save'),
-                                    color: Colors.dark80
+                                    icon: require('../../assets/icons/white/32/check.png'),
                                 },
                                 {
                                     id: 'exercise-edit-cancel',
                                     systemItem: 'cancel',
-                                    text: i18n.t('placeholders.cancel'),
-                                    color: Colors.dark80
+                                    icon: require('../../assets/icons/white/32/times.png'),
                                 }
                             ]
                         }
@@ -238,8 +261,7 @@ export const navigateToWorkout = (training, workout) => {
                             rightButtons: [{
                                 id: 'workout-save',
                                 systemItem: 'save',
-                                text: i18n.t('placeholders.save'),
-                                color: Colors.dark80
+                                icon: require('../../assets/icons/white/32/check.png'),
                             }]
                         }
                     }

@@ -1,5 +1,6 @@
 {
   "name": "FitnessApp",
+  "version": "0.1.0",
   "displayName": "FitnessApp",
   "locales": ["ru", "en"],
   "defaultLocale": "ru",

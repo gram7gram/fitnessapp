@@ -38,9 +38,11 @@ const styles = StyleSheet.create({
     datepickerInput: {
         borderWidth: 0,
         borderBottomWidth: 1,
-        borderColor: Colors.white,
-        color: Colors.dark10,
+        borderColor: Colors.clight,
+        color: Colors.cdark,
         alignItems: 'flex-start',
+        margin: 0,
+        padding: 0
     },
     datepickerPlaceholder: {
         ...Typography.text70,
