@@ -1,4 +1,5 @@
 import moment from "moment";
+import {convertWeight} from "./Units";
 
 export const objectValues = (obj) => obj ? Object.keys(obj).map(i => obj[i]) : []
 
@@ -12,7 +13,7 @@ export const findTranslation = (translations, locale) => {
     return translations[defaultLocale]
 }
 
-export const getMetrics = (training, startedAt, completedAt) => {
+export const getMetrics = (training, startedAt, completedAt, unit) => {
 
     let totalWeight = 0, duration = 0, totalWeightPerHour = 0;
 
@@ -20,9 +21,9 @@ export const getMetrics = (training, startedAt, completedAt) => {
         objectValues(workout.repeats).forEach(repeat => {
 
             if (!repeat.isHumanWeight) {
-                totalWeight += repeat.weight * repeat.repeatCount
+                totalWeight += convertWeight(repeat.weight, unit) * repeat.repeatCount
             } else {
-                totalWeight += training.humanWeight * repeat.repeatCount
+                totalWeight += convertWeight(training.humanWeight, unit) * repeat.repeatCount
             }
 
         })
@@ -42,7 +43,10 @@ export const getMetrics = (training, startedAt, completedAt) => {
 
     return {
         duration: Number(duration.toFixed(2)),
-        totalWeight: Number(totalWeight.toFixed(2)),
+        totalWeight: {
+            value:Number(totalWeight.toFixed(2)),
+            unit
+        },
         totalWeightPerHour: Number(totalWeightPerHour.toFixed(2)),
     }
 }

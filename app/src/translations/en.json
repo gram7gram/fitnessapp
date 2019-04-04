@@ -16,15 +16,15 @@
     "legend_duration": "Duration",
     "legend_weight": "Ton per hour",
     "add_workout": "Add workout",
-    "human_weight": "Your weight, kg",
+    "human_weight": "Your weight",
     "started_at": "Started at",
     "completed_at": "Completed at",
-    "weight": "Weight, kg",
+    "weight": "Weight",
     "repeatCount": "Repeats",
     "remove": "Remove training",
     "diff_more": "more",
     "comment": "Note",
-    "comment_placeholder": "Achieved something? Note it...",
+    "comment_placeholder": "Achieved something?",
     "na": "n/a"
   },
   "exercise": {
@@ -59,9 +59,9 @@
     "search": "Search...",
     "confirm": "Confirm",
     "cancel": "Cancel",
-    "date": "Enter date...",
-    "number": "Enter value...",
-    "text": "Enter value..."
+    "date": "...",
+    "number": "...",
+    "text": "..."
   },
   "muscle_groups": {
     "abs": "Abs",
@@ -75,10 +75,13 @@
   },
   "settings": {
     "title": "Settings",
+    "default_repeat_count": "Default number of repeats in exercise",
     "version": "Version",
     "unit": "Weight unit"
   },
   "unit": {
+    "kg": "kg",
+    "lb": "lb",
     "pounds": "Pound",
     "pounds_short": "LB",
     "kilograms": "Kilogram",

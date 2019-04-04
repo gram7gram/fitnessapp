@@ -23,7 +23,7 @@ function* updateMetrics({payload = {}}) {
     const startedAt = payload.startedAt || training.startedAt
     const completedAt = payload.completedAt || training.completedAt
 
-    const metrics = getMetrics(training, startedAt, completedAt)
+    const metrics = getMetrics(training, startedAt, completedAt, training.humanWeight.unit)
 
     if (training.totalWeightPerHour !== metrics.totalWeightPerHour
         || training.totalWeight !== metrics.totalWeight

@@ -18,6 +18,23 @@ const unit = (prev = Units.KILOGRAM, action) => {
     }
 }
 
+const defaultRepeatCount = (prev = 15, action) => {
+    switch (action.type) {
+        case Actions.RESET:
+            return 15
+        case Actions.CHANGED:
+
+            if (action.payload.defaultRepeatCount !== undefined) {
+                return action.payload.defaultRepeatCount
+            }
+
+            return prev
+        default:
+            return prev
+    }
+}
+
 export default combineReducers({
     unit,
+    defaultRepeatCount,
 });

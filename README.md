@@ -15,10 +15,10 @@ Training {
     createdAt: datetime
     startedAt: datetime
     completedAt: datetime
-    humanWeight: float
+    humanWeight: Weight
     duration: float
-    totalWeight: float
-    totalWeightPerHour: float
+    totalWeight: Weight
+    totalWeightPerHour: Weight
     workouts: Array<Workout>
 }
 ```
@@ -39,7 +39,7 @@ Workout {
     createdAt: datetime
     training: Training
     exercise: Exercise
-    totalWeight: float
+    totalWeight: Weight
     repeats: Array<Repeat>
 }
 ```
@@ -49,7 +49,7 @@ Repeat {
     id: string
     createdAt: datetime
     workout: Workout
-    weight: float
+    weight: Weight
     repeatCount: float
     isHumanWeight: boolean
 }
@@ -59,5 +59,12 @@ Repeat {
 Translation {
     locale: string
     name: string
+}
+```
+
+```
+Weight {
+    value: float
+    unit: string
 }
 ```

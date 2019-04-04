@@ -19,6 +19,7 @@ import ErrorBoundary from "../../../components/ErrorBoundary";
 import {navigateToExercise, navigateToLanding, navigateToWorkout} from "../../../router";
 import SaveTraining from "../actions/SaveTraining";
 import {Column as Col, Row} from "react-native-responsive-grid";
+import {convertWeight, getUnitTranslation} from "../../../Units";
 
 type Props = {
     componentId: string,
@@ -107,10 +108,17 @@ class Training extends Component<Props> {
         this.change(key, e)
     }
 
-    changeFloat = key => e => {
+    changeHumanWeight = e => {
+
+        const {settings} = this.props
+
         let value = parseFloat(e)
         if (isNaN(value) || value < 0) value = 0
-        this.change(key, Number(value))
+
+        this.change('humanWeight', {
+            value: Number(value),
+            unit: settings.unit
+        })
     }
 
     openWorkout = (workout) => () => {
@@ -149,7 +157,7 @@ class Training extends Component<Props> {
 
     renderWorkout = ({item}) => {
 
-        const {locale} = this.props
+        const {locale, settings} = this.props
 
         const exerciseTranslation = item.exercise
             ? findTranslation(item.exercise.translations, locale)
@@ -179,7 +187,7 @@ class Training extends Component<Props> {
                     <View column paddingR-5>
                         <View row left>
                             <Text textSmallSecondary numberOfLines={1}>
-                                {i18n.t('training.weight')}
+                                {i18n.t('training.weight')}, {i18n.t('unit.' + settings.unit)}
                             </Text>
                         </View>
 
@@ -195,8 +203,8 @@ class Training extends Component<Props> {
 
                             <View row right>
                                 <Text textSmallSecondary numberOfLines={1}>
-                                    {!isHumanWeight && workout.weight > 0
-                                        ? workout.weight.toFixed(1)
+                                    {!isHumanWeight && workout.weight.value > 0
+                                        ? convertWeight(workout.weight, settings.unit).toFixed(1)
                                         : '-'}
                                 </Text>
                             </View>
@@ -233,6 +241,7 @@ class Training extends Component<Props> {
 
     render() {
 
+        const {settings} = this.props
         const {model} = this.props.Training
 
         const workouts = objectValues(model.workouts).sort((a, b) => {
@@ -253,6 +262,23 @@ class Training extends Component<Props> {
                 </View>
 
                 <Row>
+                    <Col size={33}>
+
+                        <View marginR-5 marginB-10>
+
+                            <Text paragraph>{i18n.t('training.human_weight')}, {i18n.t('unit.' + settings.unit)}</Text>
+
+                            <TextField
+                                style={styles.weightInput}
+                                keyboardType="numeric"
+                                enableErrors={false}
+                                floatingPlaceholder={false}
+                                placeholder={i18n.t('placeholders.number')}
+                                onChangeText={this.changeHumanWeight}
+                                value={(model.humanWeight.value > 0 ? model.humanWeight.value : '') + ''}/>
+                        </View>
+
+                    </Col>
 
                     <Col size={33}>
 
@@ -286,23 +312,6 @@ class Training extends Component<Props> {
                                 onDateChange={this.changeString('completedAt')}/>
                         </View>
                     </Col>
-                    <Col size={33}>
-
-                        <View marginB-10>
-
-                            <Text paragraph>{i18n.t('training.human_weight')}</Text>
-
-                            <TextField
-                                style={styles.weightInput}
-                                keyboardType="numeric"
-                                enableErrors={false}
-                                floatingPlaceholder={false}
-                                placeholder={i18n.t('placeholders.number')}
-                                onChangeText={this.changeFloat('humanWeight')}
-                                value={(model.humanWeight > 0 ? model.humanWeight : '') + ''}/>
-                        </View>
-
-                    </Col>
                 </Row>
 
                 <Row>
@@ -311,11 +320,13 @@ class Training extends Component<Props> {
 
                         <View marginB-10>
 
+                            <Text paragraph>{i18n.t('training.comment_placeholder')}</Text>
+
                             <TextField
                                 style={styles.noteInput}
                                 enableErrors={false}
                                 floatingPlaceholder={false}
-                                placeholder={i18n.t('training.comment_placeholder')}
+                                placeholder={i18n.t('placeholders.text')}
                                 onChangeText={this.changeString('comment')}
                                 value={model.comment || ''}/>
                         </View>
@@ -330,7 +341,7 @@ class Training extends Component<Props> {
                         <Button
                             marginB-10
                             label={i18n.t('training.add_workout')}
-                            disabled={!(model.id && model.startedAt && model.humanWeight > 0)}
+                            disabled={!(model.id && model.startedAt && model.humanWeight.value > 0)}
                             onPress={this.addWorkout}/>
 
                         <FlatList

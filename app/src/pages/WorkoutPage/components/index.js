@@ -14,6 +14,7 @@ import {Navigation} from "react-native-navigation";
 import {closeModals} from "../../../router";
 import {TextField} from "../../TrainingPage/components";
 import {Column as Col, Row} from "react-native-responsive-grid";
+import {convertWeight} from "../../../Units";
 
 const weightsArr = []
 const repeatsArr = []
@@ -109,7 +110,9 @@ class Workout extends Component<Props> {
     }
 
     addRepeat = () => {
-        const {workout} = this.props
+        const {workout, settings} = this.props
+
+        const unit = settings.unit
 
         let weight = 0
         const isHumanWeight = this.isHumanWeight()
@@ -118,7 +121,7 @@ class Workout extends Component<Props> {
             const humanWeight = this.getHumanWeight()
             const scale = this.getExerciseScale()
 
-            weight = humanWeight * scale
+            weight = convertWeight(humanWeight, unit) * scale
         }
 
         this.props.dispatch({
@@ -128,8 +131,11 @@ class Workout extends Component<Props> {
                 createdAt: new Date().getTime(),
                 workout,
                 isHumanWeight,
-                weight,
-                repeatCount: 15,
+                weight: {
+                    value: weight,
+                    unit
+                },
+                repeatCount: settings.defaultRepeatCount,
             }
         })
     }
@@ -184,10 +190,17 @@ class Workout extends Component<Props> {
         })
     }
 
-    changeFloat = key => e => {
+    changeWeight = e => {
+
+        const {settings} = this.props
+
         let value = parseFloat(e)
         if (isNaN(value) || value < 0) value = 0
-        this.change(key, Number(value))
+
+        this.change('weight', {
+            value: Number(value),
+            unit: settings.unit
+        })
     }
 
     changeInt = key => e => {
@@ -228,11 +241,12 @@ class Workout extends Component<Props> {
     getHumanWeight = () => {
         const {model} = this.props.Training
 
-        return model.humanWeight || 0
+        return model.humanWeight
     }
 
     renderRepeat = ({item}) => {
 
+        const {settings} = this.props
         const {currentRepeat} = this.props.Workout
 
         const isHumanWeight = this.isHumanWeight()
@@ -261,7 +275,7 @@ class Workout extends Component<Props> {
                         cdark={isCurrent}
                         cmuted={!isCurrent}>
 
-                        <Text red10> {(item.weight || 0).toFixed(1)}</Text>
+                        <Text red10> {(convertWeight(item.weight, settings.unit) || 0).toFixed(1)}</Text>
                         {i18n.t('workout.weight_short')}
                         &nbsp;
                         <Text red10>{(item.repeatCount || 0).toFixed(0)}</Text>
@@ -290,6 +304,8 @@ class Workout extends Component<Props> {
     }
 
     render() {
+
+        const {settings} = this.props
 
         const repeats = objectValues(this.getRepeats()).sort((a, b) => {
             if (a.createdAt < b.createdAt) return 1
@@ -335,8 +351,8 @@ class Workout extends Component<Props> {
                         <WheelPicker
                             style={styles.picker}
                             labelStyle={Typography.textPrimary}
-                            selectedValue={repeatModel ? repeatModel.weight : weightsArr[0].value}
-                            onValueChange={debounce(this.changeFloat('weight'), 200)}>
+                            selectedValue={repeatModel ? convertWeight(repeatModel.weight, settings.unit) : weightsArr[0].value}
+                            onValueChange={debounce(this.changeWeight, 200)}>
                             {weightsArr.map((item, key) =>
                                 <WheelPicker.Item key={key} value={item.value} label={item.label}/>
                             )}

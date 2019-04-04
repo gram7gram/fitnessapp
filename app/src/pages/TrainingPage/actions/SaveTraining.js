@@ -19,13 +19,13 @@ const parseBeforeSubmit = model => {
 
             const repeats = objectValues(workout.repeats)
                 .filter(repeat =>
-                    repeat.weight > 0
+                    repeat.weight.value > 0
                     && repeat.repeatCount > 0
                 )
                 .map(repeat => {
 
                     if (repeat.isHumanWeight) {
-                        repeat.weight = data.humanWeight
+                        repeat.weight = {...data.humanWeight}
                     }
 
                     return repeat
@@ -44,7 +44,7 @@ const parseBeforeSubmit = model => {
 
     data.workouts = keyBy(workouts, 'id')
 
-    const metrics = getMetrics(data, data.startedAt, data.completedAt)
+    const metrics = getMetrics(data, data.startedAt, data.completedAt, data.humanWeight.unit)
 
     return {
         ...data,

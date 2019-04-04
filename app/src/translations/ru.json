@@ -16,15 +16,15 @@
     "legend_duration": "Длительность",
     "legend_weight": "Тон в час",
     "add_workout": "Начать упражнение",
-    "human_weight": "Ваш вес, кг",
+    "human_weight": "Ваш вес",
     "started_at": "Начато",
     "completed_at": "Закончено",
-    "weight": "Вес, кг",
+    "weight": "Вес",
     "repeatCount": "Повторы",
     "remove": "Удалить тренировку",
     "diff_more": "еще",
     "comment": "Заметка",
-    "comment_placeholder": "Достигли чего-то? Запишите...",
+    "comment_placeholder": "Достигли чего-то?",
     "na": "н/д"
   },
   "exercise": {
@@ -60,9 +60,9 @@
     "search": "Найти...",
     "confirm": "Подтвердить",
     "cancel": "Отмена",
-    "date": "Введите дату...",
-    "number": "Введите значение...",
-    "text": "Введите значение..."
+    "date": "...",
+    "number": "...",
+    "text": "..."
   },
   "muscle_groups": {
     "abs": "Пресс",
@@ -76,10 +76,13 @@
   },
   "settings": {
     "title": "Настройки",
+    "default_repeat_count": "Количество повторений по-умолчаниию в упражнении",
     "version": "Версия",
     "unit": "Единица измерения веса"
   },
   "unit": {
+    "kg": "кг",
+    "lb": "фунт",
     "pounds": "Фунт",
     "pounds_short": "LB",
     "kilograms": "Килограм",
