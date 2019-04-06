@@ -87,7 +87,7 @@ const parseLines = lines => {
                 currentTraining.duration = completedAt.diff(startedAt, 'hours')
             } else if (duration) {
                 currentTraining.duration = duration
-                currentTraining.completedAt = moment(startedAt).subtract(duration, 'hours').format('YYYY-MM-DD HH:mm')
+                currentTraining.completedAt = moment(startedAt).add(duration, 'hours').format('YYYY-MM-DD HH:mm')
             }
 
             currentTraining.humanWeight = {
@@ -168,10 +168,20 @@ const parseLines = lines => {
     })
 
     const trainingsExtended = objectValues(trainings).map(training => {
+
+        const metrics = getMetrics(training, unit)
+
+        if (metrics.totalWeightPerHour < 1) {
+
+            console.log(JSON.stringify(training));
+
+            throw new Error("Invalid training")
+        }
+
         return {
             ...training,
             muscleGroups: Object.keys(training.muscleGroups),
-            ...getMetrics(training, unit)
+            ...metrics
         }
     })
 

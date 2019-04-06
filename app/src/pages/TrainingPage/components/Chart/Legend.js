@@ -1,4 +1,4 @@
-import React, {PureComponent} from "react";
+import React, {Component} from "react";
 import {Text, View} from "react-native-ui-lib";
 import {connect} from "react-redux";
 import selectors from "./selectors";
@@ -6,7 +6,7 @@ import i18n from "../../../../i18n";
 import intersectionBy from "lodash/intersectionBy";
 import {Column as Col, Row} from "react-native-responsive-grid";
 
-class Legend extends PureComponent {
+class Legend extends Component {
 
     render() {
 
@@ -42,6 +42,10 @@ class Legend extends PureComponent {
             diff = before > 0 ? 100 * (current - before) / before : 100
         }
 
+        const speed = (training && training.totalWeightPerHour > 0 ? training.totalWeightPerHour : 0).toFixed(2)
+        const duration = (training && training.duration > 0 ? training.duration : 0).toFixed(1)
+        const displayDiff = Math.abs(diff).toFixed(2)
+
         return <Row>
 
             <Col size={100} lgSize={60} lgOffset={20}>
@@ -59,8 +63,7 @@ class Legend extends PureComponent {
                     <Col size={33}>
 
                         <Text header4Primary numberOfLines={1} center>
-                            {(training && training.duration > 0
-                                ? training.duration : 0).toFixed(1)}h
+                            {duration}{i18n.t('training.legend_duration_suffix')}
                         </Text>
 
                         <Text
@@ -71,10 +74,17 @@ class Legend extends PureComponent {
 
                     <Col size={33}>
 
-                        <Text header4Primary numberOfLines={1} center>
-                            {(training && training.totalWeightPerHour > 0
-                                ? training.totalWeightPerHour : 0).toFixed(2)}
-                        </Text>
+                        {diff > 0
+                            ? <Text header4Success center numberOfLines={1}>{speed}</Text>
+                            : null}
+
+                        {diff === 0
+                            ? <Text header4Warning center numberOfLines={1}>{speed}</Text>
+                            : null}
+
+                        {diff < 0
+                            ? <Text header4Danger center numberOfLines={1}>{speed}</Text>
+                            : null}
 
                         <Text
                             textSmallSecondary
@@ -86,21 +96,15 @@ class Legend extends PureComponent {
                     <Col size={33}>
 
                         {diff > 0
-                            ? <Text header4Success center numberOfLines={1}>
-                                +{Math.abs(diff).toFixed(2)}%
-                            </Text>
+                            ? <Text header4Success center numberOfLines={1}>+{displayDiff}%</Text>
                             : null}
 
                         {diff === 0
-                            ? <Text header4Warning center numberOfLines={1}>
-                                {i18n.t('training.na')}
-                            </Text>
+                            ? <Text header4Warning center numberOfLines={1}>{i18n.t('training.na')}</Text>
                             : null}
 
                         {diff < 0
-                            ? <Text header4Danger center numberOfLines={1}>
-                                -{Math.abs(diff).toFixed(2)}%
-                            </Text>
+                            ? <Text header4Danger center numberOfLines={1}>-{displayDiff}%</Text>
                             : null}
 
                         <Text

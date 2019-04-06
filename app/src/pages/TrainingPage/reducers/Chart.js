@@ -17,6 +17,7 @@ const chartData = (prev = [], action) => {
                 id: training.id,
                 startedAt: training.startedAt,
                 muscleGroups: training.muscleGroups,
+                unit: training.unit,
                 totalWeightPerHour: training.totalWeightPerHour || 0,
             }))
 

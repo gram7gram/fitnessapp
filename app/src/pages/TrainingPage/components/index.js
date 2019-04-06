@@ -19,7 +19,7 @@ import ErrorBoundary from "../../../components/ErrorBoundary";
 import {navigateToExercise, navigateToLanding, navigateToWorkout} from "../../../router";
 import SaveTraining from "../actions/SaveTraining";
 import {Column as Col, Row} from "react-native-responsive-grid";
-import {convertWeight, getUnitTranslation} from "../../../Units";
+import {convertWeight} from "../../../Units";
 
 type Props = {
     componentId: string,
@@ -62,9 +62,10 @@ class Training extends Component<Props> {
     }
 
     componentDidAppear() {
-        const {model} = this.props.Training
+        const {training} = this.props
+        const {model, isLoaded} = this.props.Training
 
-        if (model.id) {
+        if (isLoaded && model.id === training) {
             this.props.dispatch({
                 type: UPDATE_WORKOUT_METRICS_REQUEST
             })

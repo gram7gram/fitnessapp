@@ -115,9 +115,16 @@ class Landing extends Component<Props> {
             marginB-10>
 
             <View padding-10 flex>
-                <Text paragraph numberOfLines={1}>
-                    {moment(item.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')}
-                </Text>
+                <View row>
+                    <View left flex>
+                        <Text paragraph numberOfLines={1}>
+                            {moment(item.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')}
+                        </Text>
+                    </View>
+                    <View right flex>
+                        <Text paragraph numberOfLines={1}>{item.totalWeightPerHour.toFixed(2)}</Text>
+                    </View>
+                </View>
 
                 {item.muscleGroups
                     ? <View left flex>

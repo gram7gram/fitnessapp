@@ -33,6 +33,7 @@ const prepareDemo = () => {
             id: training.id,
             startedAt: training.startedAt,
             totalWeightPerHour: training.totalWeightPerHour,
+            unit: training.totalWeight.unit,
             muscleGroups: training.muscleGroups,
         }
 

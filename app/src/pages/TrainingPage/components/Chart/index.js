@@ -30,12 +30,12 @@ class Chart extends PureComponent<Props> {
         }, 500)
     }
 
-    getConvertedToSingleUnitWeightPerHour = item => {
-        switch (item.unit) {
+    getConvertedToSingleUnitWeightPerHour = chart => {
+        switch (chart.unit) {
             case Units.POUNDS:
-                return poundsToKilogram(item.totalWeightPerHour)
+                return poundsToKilogram(chart.totalWeightPerHour)
             default:
-                return item.totalWeightPerHour
+                return chart.totalWeightPerHour
         }
     }
 
@@ -77,7 +77,7 @@ class Chart extends PureComponent<Props> {
         const data = {
             labels: items.map(item => moment(item.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM')),
             datasets: [{
-                data: items.map(item => item.totalWeightPerHour),
+                data: items.map(this.getConvertedToSingleUnitWeightPerHour),
                 originalData: items,
                 currentTraining: training.id
             }]

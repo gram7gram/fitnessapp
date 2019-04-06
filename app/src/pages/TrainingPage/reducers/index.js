@@ -17,8 +17,23 @@ const isLoading = (prev = false, action) => {
     }
 }
 
+const isLoaded = (prev = false, action) => {
+    switch (action.type) {
+        case Actions.RESET:
+        case Actions.FETCH_TRAINING_BEFORE:
+        case Actions.FETCH_TRAINING_FAILURE:
+            return false
+        case Actions.FETCH_TRAINING_SUCCESS:
+            return true
+        default:
+            return prev
+
+    }
+}
+
 export default combineReducers({
     Chart,
     model,
-    isLoading
+    isLoading,
+    isLoaded,
 });

@@ -26,7 +26,8 @@ function* updateMetrics({payload = {}}) {
     const metrics = getMetrics(training, startedAt, completedAt, training.humanWeight.unit)
 
     if (training.totalWeightPerHour !== metrics.totalWeightPerHour
-        || training.totalWeight !== metrics.totalWeight
+        || training.totalWeight.value !== metrics.totalWeight.value
+        || training.totalWeight.unit !== metrics.totalWeight.unit
         || training.duration !== metrics.duration) {
 
         yield put({

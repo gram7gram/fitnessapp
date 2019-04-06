@@ -70,7 +70,7 @@ class Workout extends Component<Props> {
             }
         });
 
-        const repeats = objectValues(this.getRepeats())
+        const repeats = this.getSortedRepeats()
 
         if (repeats.length === 0) {
 
@@ -78,7 +78,7 @@ class Workout extends Component<Props> {
 
         } else if (!currentRepeat) {
 
-            const last = repeats[repeats.length - 1]
+            const last = repeats[0]
 
             this.props.dispatch({
                 type: SET_CURRENT_REPEAT,
@@ -242,6 +242,14 @@ class Workout extends Component<Props> {
         const {model} = this.props.Training
 
         return model.humanWeight
+    }
+
+    getSortedRepeats = () => {
+        return objectValues(this.getRepeats()).sort((a, b) => {
+            if (a.createdAt < b.createdAt) return 1
+            if (a.createdAt > b.createdAt) return -1
+            return 0
+        })
     }
 
     renderRepeat = ({item}) => {

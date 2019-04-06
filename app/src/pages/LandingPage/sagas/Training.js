@@ -35,6 +35,7 @@ function* updateRegistry({payload}) {
         startedAt: payload.startedAt,
         totalWeightPerHour: payload.totalWeightPerHour,
         muscleGroups: payload.muscleGroups,
+        unit: payload.totalWeight.unit,
     }
 
     yield put(SaveTrainings(trainings))
