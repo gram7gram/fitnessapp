@@ -2,6 +2,9 @@ import {all, delay, put, select, takeEvery, takeLatest, throttle} from 'redux-sa
 import * as TrainingActions from '../../TrainingPage/actions'
 import {getMetrics} from "../../../utils";
 import SaveTraining from "../actions/SaveTraining";
+import {Navigation} from "react-native-navigation";
+import moment from "moment";
+import i18n from "../../../i18n";
 
 function* debounceUpdateIfDateChanged({payload}) {
     if (payload.startedAt !== undefined || payload.completedAt !== undefined) {
@@ -44,6 +47,21 @@ function* updateMetrics({payload = {}}) {
     }
 }
 
+function* updateNavigation({componentId, payload}) {
+
+    if (componentId && payload.startedAt && payload.muscleGroups) {
+
+        Navigation.mergeOptions(componentId, {
+            topBar: {
+                title: {
+                    text: moment(payload.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM')
+                        + ' - ' + payload.muscleGroups.map(group => i18n.t('muscle_groups.' + group)).join(', ')
+                }
+            }
+        })
+    }
+}
+
 
 export default function* sagas() {
     yield all([
@@ -57,5 +75,7 @@ export default function* sagas() {
         ], debounceUpdate),
 
         takeLatest(TrainingActions.UPDATE_WORKOUT_METRICS_REQUEST, updateMetrics),
+
+        takeLatest(TrainingActions.FETCH_TRAINING_SUCCESS, updateNavigation),
     ])
 }

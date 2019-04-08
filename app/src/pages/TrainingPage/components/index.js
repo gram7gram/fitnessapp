@@ -5,9 +5,9 @@ import selectors from './selectors';
 import moment from 'moment';
 import i18n from '../../../i18n';
 import DatePicker from '../../../components/Datepicker';
-import {ScrollView, FlatList, StyleSheet} from 'react-native';
+import {FlatList, ScrollView, StyleSheet} from 'react-native';
 import {Button, Card, Colors, Text, TextField, Typography, View} from 'react-native-ui-lib';
-import {findTranslation, objectValues} from "../../../utils";
+import {findTranslation, objectValues, sortByTimestamp} from "../../../utils";
 import {withLocalization} from "../../../context/LocaleProvider";
 import FetchTraining from "../actions/FetchTraining";
 import uuid from "uuid";
@@ -35,7 +35,7 @@ class Training extends Component<Props> {
     }
 
     componentDidMount() {
-        const {training, componentId} = this.props
+        const {training, componentId, settings} = this.props
 
         if (training) {
 
@@ -49,9 +49,9 @@ class Training extends Component<Props> {
                     createdAt: new Date().getTime(),
                     startedAt: moment().format('YYYY-MM-DD HH:mm'),
                     completedAt: null,
-                    humanWeight: 0,
+                    humanWeight: {value: 0, unit: settings.unit},
                     duration: 0,
-                    totalWeight: 0,
+                    totalWeight: {value: 0, unit: settings.unit},
                     totalWeightPerHour: 0,
                     muscleGroups: [],
                     workouts: {},
@@ -109,6 +109,12 @@ class Training extends Component<Props> {
         this.change(key, e)
     }
 
+    changeDate = key => e => {
+        const date = moment().format('YYYY') + '.' + e
+
+        this.change(key, moment(date, 'YYYY.DD.MM HH:mm').format('YYYY-MM-DD HH:mm'))
+    }
+
     changeHumanWeight = e => {
 
         const {settings} = this.props
@@ -144,8 +150,7 @@ class Training extends Component<Props> {
             id: uuid(),
             createdAt: new Date().getTime(),
             training: model.id,
-            repeats: {},
-            totalWeight: 0
+            repeats: {}
         }
 
         this.props.dispatch({
@@ -164,11 +169,9 @@ class Training extends Component<Props> {
             ? findTranslation(item.exercise.translations, locale)
             : null
 
-        const repeats = objectValues(item.repeats).sort((a, b) => {
-            if (a.createdAt < b.createdAt) return 1
-            if (a.createdAt > b.createdAt) return -1
-            return 0
-        })
+        const repeats = objectValues(item.repeats)
+
+        sortByTimestamp(repeats, 'createdAt', 'DESC')
 
         const isHumanWeight = item.exercise && item.exercise.isHumanWeight
 
@@ -245,11 +248,9 @@ class Training extends Component<Props> {
         const {settings} = this.props
         const {model} = this.props.Training
 
-        const workouts = objectValues(model.workouts).sort((a, b) => {
-            if (a.createdAt < b.createdAt) return 1
-            if (a.createdAt > b.createdAt) return -1
-            return 0
-        })
+        const workouts = objectValues(model.workouts)
+
+        sortByTimestamp(workouts, 'createdAt', 'DESC')
 
         return <ScrollView keyboardShouldPersistTaps="always">
             <View flex padding-10>
@@ -292,8 +293,10 @@ class Training extends Component<Props> {
                                 date={model.startedAt
                                     ? moment(model.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')
                                     : ''}
-                                maxDate={model.completedAt || undefined}
-                                onDateChange={this.changeString('startedAt')}/>
+                                maxDate={model.completedAt
+                                    ? moment(model.completedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')
+                                    : undefined}
+                                onDateChange={this.changeDate('startedAt')}/>
                         </View>
 
                     </Col>
@@ -309,8 +312,10 @@ class Training extends Component<Props> {
                                 date={model.completedAt
                                     ? moment(model.completedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')
                                     : ''}
-                                minDate={model.startedAt || undefined}
-                                onDateChange={this.changeString('completedAt')}/>
+                                minDate={model.startedAt
+                                    ? moment(model.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM HH:mm')
+                                    : undefined}
+                                onDateChange={this.changeDate('completedAt')}/>
                         </View>
                     </Col>
                 </Row>

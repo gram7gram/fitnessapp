@@ -5,22 +5,52 @@ import selectors from "./selectors";
 import i18n from "../../../../i18n";
 import intersectionBy from "lodash/intersectionBy";
 import {Column as Col, Row} from "react-native-responsive-grid";
+import {convertWeight} from "../../../../Units";
 
 class Legend extends Component {
 
-    render() {
 
+    extractChartData = (chartData, muscleGroups) => {
+
+        const itemsWithGroups = chartData.filter(data =>
+            data.muscleGroups !== undefined && data.muscleGroups.length > 0
+        )
+
+        if (itemsWithGroups.length === 0) return null
+
+        //Find exact match of muscle groups for trainings
+        let items = itemsWithGroups.filter(data =>
+            intersectionBy(data.muscleGroups, muscleGroups).length === muscleGroups.length
+        )
+
+        if (items.length < 2) {
+
+            //Find partial match of muscle groups for trainings
+            items = itemsWithGroups.filter(data =>
+                intersectionBy(data.muscleGroups, muscleGroups).length > 0
+            )
+
+            if (items.length < 2) return null
+        }
+
+        return items.reverse().slice(0, 100).reverse() //last 100 records
+    }
+
+    getConvertedToSingleUnitWeightPerHour = chart => {
+        const {unit} = this.props.settings
+
+        return convertWeight({value: chart.totalWeightPerHour, unit: chart.unit}, unit)
+    }
+
+    render() {
         const {chartData, muscleGroups, training} = this.props
 
+        const items = this.extractChartData(chartData, muscleGroups)
+
+        const duration = training && training.duration > 0 ? training.duration : 0
         let currentChartData = null
         let prevChartData = null
-        let diff = 0
-
-        let items = chartData.filter(data =>
-            data.muscleGroups !== undefined
-            && data.muscleGroups.length > 0
-            && intersectionBy(data.muscleGroups, muscleGroups).length > 0
-        )
+        let diff = 0, displaySpeed = 0
 
         for (let i = 0; i < items.length; i++) {
             const data = items[i]
@@ -40,11 +70,14 @@ class Legend extends Component {
             const current = currentChartData.totalWeightPerHour
 
             diff = before > 0 ? 100 * (current - before) / before : 100
+
+            displaySpeed = this.getConvertedToSingleUnitWeightPerHour(currentChartData)
         }
 
-        const speed = (training && training.totalWeightPerHour > 0 ? training.totalWeightPerHour : 0).toFixed(2)
-        const duration = (training && training.duration > 0 ? training.duration : 0).toFixed(1)
-        const displayDiff = Math.abs(diff).toFixed(2)
+        let displayDuration = duration > 100 ? '+100' : duration.toFixed(1)
+        let displayDiff = Math.abs(diff)
+        displayDiff = displayDiff.toFixed(2)
+        displaySpeed = displaySpeed > 1000 ? '+1000' : displaySpeed.toFixed(2)
 
         return <Row>
 
@@ -63,7 +96,7 @@ class Legend extends Component {
                     <Col size={33}>
 
                         <Text header4Primary numberOfLines={1} center>
-                            {duration}{i18n.t('training.legend_duration_suffix')}
+                            {displayDuration}{i18n.t('training.legend_duration_suffix')}
                         </Text>
 
                         <Text
@@ -75,15 +108,15 @@ class Legend extends Component {
                     <Col size={33}>
 
                         {diff > 0
-                            ? <Text header4Success center numberOfLines={1}>{speed}</Text>
+                            ? <Text header4Success center numberOfLines={1}>{displaySpeed}</Text>
                             : null}
 
                         {diff === 0
-                            ? <Text header4Warning center numberOfLines={1}>{speed}</Text>
+                            ? <Text header4Warning center numberOfLines={1}>{displaySpeed}</Text>
                             : null}
 
                         {diff < 0
-                            ? <Text header4Danger center numberOfLines={1}>{speed}</Text>
+                            ? <Text header4Danger center numberOfLines={1}>{displaySpeed}</Text>
                             : null}
 
                         <Text

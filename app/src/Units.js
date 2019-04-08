@@ -29,6 +29,8 @@ export const convertWeight = (weight, unit) => {
         }
     }
 
+    console.log(weight, unit);
+
     throw new Error('Unable to convert weight')
 }
 

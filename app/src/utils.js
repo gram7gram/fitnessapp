@@ -35,19 +35,19 @@ export const getMetrics = (training, startedAt, completedAt, unit) => {
         const date2 = moment(completedAt, 'YYYY-MM-DD HH:mm')
 
         duration = date2.diff(date1, 'minutes') / 60
-    }
 
-    if (duration > 0) {
-        totalWeightPerHour = totalWeight / duration / 1000
+        if (duration > 0) {
+            totalWeightPerHour = totalWeight / duration / 1000
+        }
     }
 
     return {
-        duration: Number(duration.toFixed(2)),
+        duration: Number(Math.max(0, duration).toFixed(2)),
         totalWeight: {
-            value:Number(totalWeight.toFixed(2)),
+            value: Number(Math.max(0, totalWeight).toFixed(2)),
             unit
         },
-        totalWeightPerHour: Number(totalWeightPerHour.toFixed(2)),
+        totalWeightPerHour: Number(Math.max(0, totalWeightPerHour).toFixed(2)),
     }
 }
 
@@ -56,6 +56,32 @@ export const sortByDate = (items, key, direction) => {
     items.sort((a, b) => {
         const date1 = moment(a[key], 'YYYY-MM-DD HH:mm')
         const date2 = moment(b[key], 'YYYY-MM-DD HH:mm')
+
+        switch (direction) {
+            case 'ASC':
+
+                if (date1.isBefore(date2)) return -1
+                if (date2.isBefore(date1)) return 1
+
+                break
+            case 'DESC':
+
+                if (date1.isBefore(date2)) return 1
+                if (date2.isBefore(date1)) return -1
+
+                break
+        }
+
+
+        return 0
+    })
+}
+
+export const sortByTimestamp = (items, key, direction) => {
+
+    items.sort((a, b) => {
+        const date1 = moment(a[key], 'X')
+        const date2 = moment(b[key], 'X')
 
         switch (direction) {
             case 'ASC':

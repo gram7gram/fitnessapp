@@ -7,8 +7,7 @@ import {Dimensions, ScrollView} from 'react-native'
 import {Colors, Text, Typography, View} from 'react-native-ui-lib'
 import MyChart from "./MyChart";
 import FadeInView from "../../../../components/FadeIn";
-import * as Units from "../../../../Units";
-import {poundsToKilogram} from "../../../../Units";
+import {convertWeight} from "../../../../Units";
 
 const chartConfig = {
     backgroundGradientFrom: Colors.rgba(Colors.themebackground, 1),
@@ -31,12 +30,9 @@ class Chart extends PureComponent<Props> {
     }
 
     getConvertedToSingleUnitWeightPerHour = chart => {
-        switch (chart.unit) {
-            case Units.POUNDS:
-                return poundsToKilogram(chart.totalWeightPerHour)
-            default:
-                return chart.totalWeightPerHour
-        }
+        const {unit} = this.props.settings
+
+        return convertWeight({value: chart.totalWeightPerHour, unit: chart.unit}, unit)
     }
 
     extractChartData = (chartData, muscleGroups) => {

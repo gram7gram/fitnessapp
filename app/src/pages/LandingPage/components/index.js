@@ -3,19 +3,18 @@ import {connect} from 'react-redux';
 import moment from 'moment';
 import selectors from './selectors';
 import i18n from '../../../i18n';
-import {Button, Card, Colors, Text, View, Image} from 'react-native-ui-lib';
+import {Button, Card, Colors, Image, Text, View} from 'react-native-ui-lib';
 import ResponsiveImage from "react-native-scalable-image";
 import {Column as Col, Row} from "react-native-responsive-grid";
 import AsyncStorage from "@react-native-community/async-storage";
-import {FlatList, ScrollView, StyleSheet, Dimensions} from "react-native";
+import {Dimensions, FlatList, ScrollView, StyleSheet} from "react-native";
 import FetchTrainings from "../actions/FetchTrainings";
 import Logo from "../../../../assets/images/logo.png";
 import {Navigation} from "react-native-navigation";
 import {objectValues, sortByDate} from "../../../utils";
-import {rm} from "../../../storage/fs";
 import FadeInView from "../../../components/FadeIn";
 import {ADD_DISPLAYED_MONTH, TOGGLE_RATE_DIALOG} from "../actions";
-import {navigateToTraining, navigateToSettings} from "../../../router";
+import {navigateToSettings, navigateToTraining} from "../../../router";
 import Rate from "./Rate";
 
 type Props = {};
@@ -61,22 +60,6 @@ class Landing extends Component<Props> {
         } else {
             await AsyncStorage.setItem('Landing.openedCount', (openedCount + 1) + '')
         }
-    }
-
-    rm = () => {
-
-        const {trainings} = this.props.Landing
-
-        rm('/trainingRegistry.json').catch(() => {
-        })
-
-        objectValues(trainings).forEach(item => {
-            if (item && item.id)
-                rm('/trainings/' + item.id + ".json").catch(() => {
-                })
-        })
-
-        AsyncStorage.removeItem('hasDemo').catch(() => {})
     }
 
     openTraining = training => () => {
@@ -205,10 +188,16 @@ class Landing extends Component<Props> {
                                         onPress={this.addMonth}
                                         label={i18n.t('landing.show_more')}/> : null}
 
-                                <Button link marginB-10
-                                        color={Colors.red10}
-                                        label={i18n.t('landing.remove_all')}
-                                        onPress={this.rm}/>
+                                {items.length > 0 && !hasMore
+                                    ? <Card
+                                        style={styles.cardNoMore}
+                                        marginB-10>
+                                        <View padding-10>
+                                            <Text paragraphDark numberOfLines={1} center>
+                                                {i18n.t('landing.no_more_items')}
+                                            </Text>
+                                        </View>
+                                    </Card> : null}
                             </Col>
                         </Row>
 
@@ -232,6 +221,9 @@ const styles = StyleSheet.create({
     },
     card: {
         backgroundColor: Colors.themeheader
+    },
+    cardNoMore: {
+        backgroundColor: Colors.cmuted
     },
     image: {
         ...StyleSheet.absoluteFillObject,

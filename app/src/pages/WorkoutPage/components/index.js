@@ -6,7 +6,7 @@ import {Button, Card, Colors, ListItem, Text, View, WheelPicker, Typography} fro
 import {FlatList, ScrollView, StyleSheet} from "react-native";
 import {ADD_REPEAT, REMOVE_REPEAT, REPEAT_CHANGED, UPDATE_WORKOUT_METRICS_REQUEST} from "../../TrainingPage/actions";
 import {RESET, SET_CURRENT_REPEAT} from "../actions";
-import {findTranslation, objectValues} from "../../../utils";
+import {findTranslation, objectValues, sortByTimestamp} from "../../../utils";
 import uuid from "uuid";
 import debounce from "lodash/debounce";
 import {withLocalization} from "../../../context/LocaleProvider";
@@ -49,26 +49,7 @@ class Workout extends Component<Props> {
 
     componentDidAppear() {
 
-        const {locale} = this.props
         const {currentRepeat} = this.props.Workout
-
-        const workout = this.getWorkout()
-
-        let title = i18n.t('workout.title')
-        if (workout && workout.exercise) {
-            const translation = findTranslation(workout.exercise.translations, locale)
-            if (translation) {
-                title = translation.name
-            }
-        }
-
-        Navigation.mergeOptions(this.props.componentId, {
-            topBar: {
-                title: {
-                    text: title
-                }
-            }
-        });
 
         const repeats = this.getSortedRepeats()
 
@@ -209,6 +190,34 @@ class Workout extends Component<Props> {
         this.change(key, Number(value))
     }
 
+    updateNavigation = () => {
+
+        const {locale} = this.props
+
+        const workout = this.getWorkout()
+        const repeats = this.getSortedRepeats()
+
+        let title = i18n.t('workout.title')
+        if (workout && workout.exercise) {
+            const translation = findTranslation(workout.exercise.translations, locale)
+            if (translation) {
+                title = translation.name
+            }
+        }
+
+        if (repeats.length > 0) {
+            title = 'x' + (repeats.length) + ' - ' + title
+        }
+
+        Navigation.mergeOptions(this.props.componentId, {
+            topBar: {
+                title: {
+                    text: title
+                }
+            }
+        })
+    }
+
     getCurrentRepeatModel = () => {
         const {currentRepeat} = this.props.Workout
 
@@ -245,11 +254,11 @@ class Workout extends Component<Props> {
     }
 
     getSortedRepeats = () => {
-        return objectValues(this.getRepeats()).sort((a, b) => {
-            if (a.createdAt < b.createdAt) return 1
-            if (a.createdAt > b.createdAt) return -1
-            return 0
-        })
+        const repeats = objectValues(this.getRepeats())
+
+        sortByTimestamp(repeats, 'createdAt', 'DESC')
+
+        return repeats
     }
 
     renderRepeat = ({item}) => {
@@ -315,14 +324,12 @@ class Workout extends Component<Props> {
 
         const {settings} = this.props
 
-        const repeats = objectValues(this.getRepeats()).sort((a, b) => {
-            if (a.createdAt < b.createdAt) return 1
-            if (a.createdAt > b.createdAt) return -1
-            return 0
-        })
+        const repeats = this.getSortedRepeats()
 
         const isHumanWeight = this.isHumanWeight()
         const repeatModel = this.getCurrentRepeatModel()
+
+        this.updateNavigation()
 
         return <View flex>
             <View flex row padding-10 style={styles.scrollContainer}>
