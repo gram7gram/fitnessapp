@@ -304,7 +304,7 @@ class Workout extends Component<Props> {
                         <Button
                             link
                             label={i18n.t('workout.duplicate')}
-                            color={Colors.blue10}
+                            color={Colors.cprimary}
                             onPress={this.copyRepeat(item.id)}/>
                     </View>
 
@@ -312,7 +312,7 @@ class Workout extends Component<Props> {
                         <Button
                             link
                             label={i18n.t('placeholders.remove')}
-                            color={Colors.red10}
+                            color={Colors.cdanger}
                             onPress={this.removeRepeat(item.id)}/>
                     </View>
                 </View>

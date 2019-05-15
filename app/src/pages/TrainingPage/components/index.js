@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {ADD_WORKOUT, CHANGED, FETCH_TRAINING_SUCCESS, REMOVE_WORKOUT, UPDATE_WORKOUT_METRICS_REQUEST} from '../actions';
+import * as Actions from '../actions';
 import selectors from './selectors';
 import moment from 'moment';
 import i18n from '../../../i18n';
@@ -20,6 +20,8 @@ import {navigateToExercise, navigateToLanding, navigateToWorkout} from "../../..
 import SaveTraining from "../actions/SaveTraining";
 import {Column as Col, Row} from "react-native-responsive-grid";
 import {convertWeight} from "../../../Units";
+import Alert from "../../../components/Alert";
+import WorkoutItem from "./WorkoutItem";
 
 type Props = {
     componentId: string,
@@ -27,6 +29,10 @@ type Props = {
 };
 
 class Training extends Component<Props> {
+
+    state = {
+        isRemoving: false
+    }
 
     constructor(props) {
         super(props)
@@ -43,7 +49,7 @@ class Training extends Component<Props> {
 
         } else {
             this.props.dispatch({
-                type: FETCH_TRAINING_SUCCESS,
+                type: Actions.FETCH_TRAINING_SUCCESS,
                 payload: {
                     id: uuid(),
                     createdAt: new Date().getTime(),
@@ -67,7 +73,7 @@ class Training extends Component<Props> {
 
         if (isLoaded && model.id === training) {
             this.props.dispatch({
-                type: UPDATE_WORKOUT_METRICS_REQUEST
+                type: Actions.UPDATE_WORKOUT_METRICS_REQUEST
             })
         }
     }
@@ -90,6 +96,8 @@ class Training extends Component<Props> {
 
     remove = () => {
 
+        this.toggleRemoveAlert()
+
         const {componentId} = this.props
         const {model} = this.props.Training
 
@@ -98,7 +106,7 @@ class Training extends Component<Props> {
 
     change = (key, value) => {
         this.props.dispatch({
-            type: CHANGED,
+            type: Actions.CHANGED,
             payload: {
                 [key]: value
             }
@@ -128,17 +136,9 @@ class Training extends Component<Props> {
         })
     }
 
-    openWorkout = (workout) => () => {
-        const {model} = this.props.Training
-
-        navigateToWorkout(model.id, workout)
-    }
-
-    removeWorkout = payload => () => {
-
-        this.props.dispatch({
-            type: REMOVE_WORKOUT,
-            payload
+    toggleRemoveAlert = () => {
+        this.setState({
+            isRemoving: !this.state.isRemoving
         })
     }
 
@@ -154,7 +154,7 @@ class Training extends Component<Props> {
         }
 
         this.props.dispatch({
-            type: ADD_WORKOUT,
+            type: Actions.ADD_WORKOUT,
             payload: newWorkout
         })
 
@@ -162,85 +162,7 @@ class Training extends Component<Props> {
     }
 
     renderWorkout = ({item}) => {
-
-        const {locale, settings} = this.props
-
-        const exerciseTranslation = item.exercise
-            ? findTranslation(item.exercise.translations, locale)
-            : null
-
-        const repeats = objectValues(item.repeats)
-
-        sortByTimestamp(repeats, 'createdAt', 'DESC')
-
-        const isHumanWeight = item.exercise && item.exercise.isHumanWeight
-
-        return <Card
-            marginB-10
-            onPress={this.openWorkout(item.id)}
-            style={styles.card}>
-
-            <View padding-10>
-
-                <Text paragraph marginB-10>
-                    {exerciseTranslation ? exerciseTranslation.name : "..."}
-                </Text>
-
-                <View row marginB-10>
-
-                    <View column paddingR-5>
-                        <View row left>
-                            <Text textSmallSecondary numberOfLines={1}>
-                                {i18n.t('training.weight')}, {i18n.t('unit.' + settings.unit)}
-                            </Text>
-                        </View>
-
-                        <View row left>
-                            <Text textSmallSecondary numberOfLines={1}>
-                                {i18n.t('training.repeatCount')}
-                            </Text>
-                        </View>
-                    </View>
-
-                    {repeats.map((workout, key) =>
-                        <View key={key} column paddingH-5>
-
-                            <View row right>
-                                <Text textSmallSecondary numberOfLines={1}>
-                                    {!isHumanWeight && workout.weight.value > 0
-                                        ? convertWeight(workout.weight, settings.unit).toFixed(1)
-                                        : '-'}
-                                </Text>
-                            </View>
-
-                            <View row right>
-                                <Text textSmallSecondary numberOfLines={1}>
-                                    x{workout.repeatCount > 0 ? workout.repeatCount : '-'}
-                                </Text>
-                            </View>
-                        </View>
-                    )}
-                </View>
-
-                <View row>
-                    {item.exercise && item.exercise.muscleGroup
-                        ? <View left flex>
-                            <Text helpText>{i18n.t('muscle_groups.' + item.exercise.muscleGroup)}</Text>
-                        </View>
-                        : null}
-
-                    <View right flex>
-                        <Button
-                            link
-                            label={i18n.t('placeholders.remove')}
-                            color={Colors.red10}
-                            onPress={this.removeWorkout(item)}/>
-                    </View>
-                </View>
-
-
-            </View>
-        </Card>
+        return <WorkoutItem workout={item}/>
     }
 
     render() {
@@ -361,11 +283,20 @@ class Training extends Component<Props> {
                             marginT-25
                             label={i18n.t('training.remove')}
                             color={Colors.red10}
-                            onPress={this.remove}/>
+                            onPress={this.toggleRemoveAlert}/>
                     </Col>
                 </Row>
 
             </View>
+
+          {this.state.isRemoving
+              ? <Alert
+                  title={i18n.t('training.remove_alert_title')}
+                  body={i18n.t('training.remove_alert_body')}
+                  onConfirm={this.remove}
+                  onDismiss={this.toggleRemoveAlert}/>
+              : null}
+
         </ScrollView>
     }
 
