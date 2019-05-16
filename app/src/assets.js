@@ -1,4 +1,1 @@
-
-
-export const imageMap = {
-}
+export const imageMap = {}

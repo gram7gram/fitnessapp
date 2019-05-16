@@ -8,12 +8,12 @@ export const filePutContents = (path, content) => RNFS.writeFile(root + path, co
 
 export const fileGetContents = async (path) => {
 
-    const exists = await RNFS.exists(root + path)
-    if (!exists) {
-        return null
-    }
+  const exists = await RNFS.exists(root + path)
+  if (!exists) {
+    return null
+  }
 
-    return RNFS.readFile(root + path, 'utf8')
+  return RNFS.readFile(root + path, 'utf8')
 }
 
 export const rm = (path) => RNFS.unlink(root + path);

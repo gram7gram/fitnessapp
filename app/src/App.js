@@ -8,53 +8,53 @@ import moment from "moment";
 import {filePutContents} from "./storage/fs";
 
 Navigation.events()
-    .registerAppLaunchedListener(createRouter);
+  .registerAppLaunchedListener(createRouter);
 
 const prepareDemo = () => {
 
-    const demo = require('../data/demo.json')
+  const demo = require('../data/demo.json')
 
-    const registry = {}
+  const registry = {}
 
-    objectValues(demo).forEach(training => {
+  objectValues(demo).forEach(training => {
 
-        filePutContents('/trainings/' + training.id + '.json', JSON.stringify(training))
-            .catch(e => {
-                console.log(e);
-            })
+    filePutContents('/trainings/' + training.id + '.json', JSON.stringify(training))
+      .catch(e => {
+        console.log(e);
+      })
 
-        const month = moment(training.startedAt, 'YYYY-MM-DD HH:mm').format('YYYY-MM')
+    const month = moment(training.startedAt, 'YYYY-MM-DD HH:mm').format('YYYY-MM')
 
-        if (registry[month] === undefined) {
-            registry[month] = {}
-        }
+    if (registry[month] === undefined) {
+      registry[month] = {}
+    }
 
-        registry[month][training.id] = {
-            id: training.id,
-            startedAt: training.startedAt,
-            totalWeightPerHour: training.totalWeightPerHour,
-            unit: training.totalWeight.unit,
-            muscleGroups: training.muscleGroups,
-        }
+    registry[month][training.id] = {
+      id: training.id,
+      startedAt: training.startedAt,
+      totalWeightPerHour: training.totalWeightPerHour,
+      unit: training.totalWeight.unit,
+      muscleGroups: training.muscleGroups,
+    }
 
+  })
+
+  filePutContents('/trainingRegistry.json', JSON.stringify(registry))
+    .catch(e => {
+      console.log(e);
     })
-
-    filePutContents('/trainingRegistry.json', JSON.stringify(registry))
-        .catch(e => {
-            console.log(e);
-        })
 }
 
 AsyncStorage.getItem('hasDemo').then(value => {
 
-    const hasDemo = false;//parseInt(value) === 1
+  const hasDemo = false;//parseInt(value) === 1
 
-    if (!hasDemo) {
+  if (!hasDemo) {
 
-        prepareDemo()
+    prepareDemo()
 
-        AsyncStorage.removeItem('Landing.openedCount')
-        AsyncStorage.removeItem('Landing.isRateAlreadyOpened')
-        AsyncStorage.setItem('hasDemo', '1')
-    }
+    AsyncStorage.removeItem('Landing.openedCount')
+    AsyncStorage.removeItem('Landing.isRateAlreadyOpened')
+    AsyncStorage.setItem('hasDemo', '1')
+  }
 })

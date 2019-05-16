@@ -1,6 +1,7 @@
 const prefix = 'Training'
 
 export const RESET = prefix + '/RESET'
+export const SET_CURRENT_CHART = prefix + '/SET_CURRENT_CHART'
 
 export const CHANGED = prefix + '/CHANGED'
 export const REPEAT_CHANGED = prefix + '/REPEAT_CHANGED'

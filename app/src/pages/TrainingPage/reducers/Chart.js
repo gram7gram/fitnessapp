@@ -1,35 +1,50 @@
 import {combineReducers} from 'redux';
 import * as Actions from '../../LandingPage/actions'
-import {objectValues, sortByDate} from "../../../utils";
+import * as TrainingActions from '../../TrainingPage/actions'
+import {createChartData} from "../utils/chart";
 
 const chartData = (prev = [], action) => {
-    switch (action.type) {
-        case Actions.SAVE_TRAININGS_SUCCESS:
-        case Actions.FETCH_TRAININGS_SUCCESS:
+  switch (action.type) {
+    case Actions.SAVE_TRAININGS_SUCCESS:
+    case Actions.FETCH_TRAININGS_SUCCESS:
 
-            let flatten = []
+      return createChartData(action.payload)
 
-            objectValues(action.payload).map(trainingPerMonth => {
-                flatten = flatten.concat(objectValues(trainingPerMonth))
-            })
+    default:
+      return prev
+  }
+}
 
-            const items = flatten.map(training => ({
-                id: training.id,
-                startedAt: training.startedAt,
-                muscleGroups: training.muscleGroups,
-                unit: training.unit,
-                totalWeightPerHour: training.totalWeightPerHour || 0,
-            }))
+const currentChartConfig = (prev = null, action) => {
+  switch (action.type) {
+    case TrainingActions.RESET:
+      return null
 
-            sortByDate(items, 'startedAt', 'ASC')
+    case TrainingActions.SET_CURRENT_CHART:
 
-            return items
+      return action.payload.config
 
-        default:
-            return prev
-    }
+    default:
+      return prev
+  }
+}
+
+const currentChartData = (prev = null, action) => {
+  switch (action.type) {
+    case TrainingActions.RESET:
+      return null
+
+    case TrainingActions.SET_CURRENT_CHART:
+
+      return action.payload.data
+
+    default:
+      return prev
+  }
 }
 
 export default combineReducers({
-    chartData
+  chartData,
+  currentChartData,
+  currentChartConfig
 });

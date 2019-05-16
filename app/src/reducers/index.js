@@ -8,10 +8,10 @@ import ExerciseEdit from '../pages/ExerciseEditPage/reducers'
 import Settings from '../pages/SettingsPage/reducers'
 
 export default combineReducers({
-    Landing,
-    Workout,
-    Training,
-    Exercise,
-    ExerciseEdit,
-    Settings,
+  Landing,
+  Workout,
+  Training,
+  Exercise,
+  ExerciseEdit,
+  Settings,
 });

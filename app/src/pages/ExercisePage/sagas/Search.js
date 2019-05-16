@@ -5,24 +5,24 @@ import {objectValues} from "../../../utils";
 
 function* search({payload}) {
 
-    yield delay(400)
+  yield delay(400)
 
-    const items = yield select(store => store.Exercise.items)
+  const items = yield select(store => store.Exercise.items)
 
-    const search = payload.search ? payload.search.toLowerCase() : ''
+  const search = payload.search ? payload.search.toLowerCase() : ''
 
-    const filtered = items.filter((item) =>
-        !!objectValues(item.translations).find(({name}) => name.toLowerCase().indexOf(search) !== -1)
-    )
+  const filtered = items.filter((item) =>
+    !!objectValues(item.translations).find(({name}) => name.toLowerCase().indexOf(search) !== -1)
+  )
 
-    yield put({
-        type: SEARCH_SUCCESS,
-        payload: filtered
-    })
+  yield put({
+    type: SEARCH_SUCCESS,
+    payload: filtered
+  })
 }
 
 export default function* sagas() {
-    yield all([
-        takeLatest(SEARCH_CHANGED, search),
-    ])
+  yield all([
+    takeLatest(SEARCH_CHANGED, search),
+  ])
 }

@@ -1,154 +1,126 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import {Text, View} from "react-native-ui-lib";
 import {connect} from "react-redux";
-import selectors from "./selectors";
 import i18n from "../../../../i18n";
-import intersectionBy from "lodash/intersectionBy";
 import {Column as Col, Row} from "react-native-responsive-grid";
-import {convertWeight} from "../../../../Units";
+import {createStructuredSelector} from "reselect";
 
-class Legend extends Component {
+class Legend extends PureComponent {
 
+  render() {
+    const {currentChartData, training} = this.props
 
-    extractChartData = (chartData, muscleGroups) => {
+    if (!currentChartData) return null
 
-        const itemsWithGroups = chartData.filter(data =>
-            data.muscleGroups !== undefined && data.muscleGroups.length > 0
-        )
+    const duration = training && training.duration > 0 ? training.duration : 0
+    let currentTrainingData = null
+    let prevChartData = null
+    let diff = 0, displaySpeed = 0
 
-        if (itemsWithGroups.length === 0) return null
+    for (let i = 0; i < currentChartData.length; i++) {
+      const data = currentChartData[i]
 
-        //Find exact match of muscle groups for trainings
-        let items = itemsWithGroups.filter(data =>
-            intersectionBy(data.muscleGroups, muscleGroups).length === muscleGroups.length
-        )
+      if (data.id === training.id) {
 
-        if (items.length < 2) {
+        currentTrainingData = data
+        prevChartData = currentChartData[i - 1] || null
 
-            //Find partial match of muscle groups for trainings
-            items = itemsWithGroups.filter(data =>
-                intersectionBy(data.muscleGroups, muscleGroups).length > 0
-            )
-
-            if (items.length < 2) return null
-        }
-
-        return items.reverse().slice(0, 100).reverse() //last 100 records
+        break;
+      }
     }
 
-    getConvertedToSingleUnitWeightPerHour = chart => {
-        const {unit} = this.props.settings
+    if (currentTrainingData && prevChartData) {
 
-        return convertWeight({value: chart.totalWeightPerHour, unit: chart.unit}, unit)
+      const before = prevChartData.totalWeightPerHour
+      const current = currentTrainingData.totalWeightPerHour
+
+      diff = before > 0 ? 100 * (current - before) / before : 100
+
+      displaySpeed = current
     }
 
-    render() {
-        const {chartData, muscleGroups, training} = this.props
+    let displayDuration = duration > 100 ? '+100' : duration.toFixed(1)
 
-        const items = this.extractChartData(chartData, muscleGroups)
+    let displayDiff = Math.abs(diff)
+    displayDiff = displayDiff.toFixed(2)
 
-        const duration = training && training.duration > 0 ? training.duration : 0
-        let currentChartData = null
-        let prevChartData = null
-        let diff = 0, displaySpeed = 0
+    displaySpeed = displaySpeed > 1000 ? '+1000' : displaySpeed.toFixed(2)
 
-        for (let i = 0; i < items.length; i++) {
-            const data = items[i]
+    return <Row>
 
-            if (data.id === training.id) {
+      <Col size={100} lgSize={60} lgOffset={20}>
+        <Row>
 
-                currentChartData = data
-                prevChartData = items[i - 1] || null
+          <Col size={100}>
 
-                break;
-            }
-        }
+            <Text
+              paragraph
+              numberOfLines={1}
+              marginB-10
+              center>{i18n.t('training.chart_title')}</Text>
+          </Col>
 
-        if (currentChartData && prevChartData) {
+          <Col size={33}>
 
-            const before = prevChartData.totalWeightPerHour
-            const current = currentChartData.totalWeightPerHour
+            <Text header4Primary numberOfLines={1} center>
+              {displayDuration}{i18n.t('training.legend_duration_suffix')}
+            </Text>
 
-            diff = before > 0 ? 100 * (current - before) / before : 100
+            <Text
+              textSmallSecondary
+              numberOfLines={1}
+              center>{i18n.t('training.legend_duration')}</Text>
+          </Col>
 
-            displaySpeed = this.getConvertedToSingleUnitWeightPerHour(currentChartData)
-        }
+          <Col size={33}>
 
-        let displayDuration = duration > 100 ? '+100' : duration.toFixed(1)
-        let displayDiff = Math.abs(diff)
-        displayDiff = displayDiff.toFixed(2)
-        displaySpeed = displaySpeed > 1000 ? '+1000' : displaySpeed.toFixed(2)
+            {diff > 0
+              ? <Text header4Success center numberOfLines={1}>{displaySpeed}</Text>
+              : null}
 
-        return <Row>
+            {diff === 0
+              ? <Text header4Warning center numberOfLines={1}>{displaySpeed}</Text>
+              : null}
 
-            <Col size={100} lgSize={60} lgOffset={20}>
-                <Row>
+            {diff < 0
+              ? <Text header4Danger center numberOfLines={1}>{displaySpeed}</Text>
+              : null}
 
-                    <Col size={100}>
+            <Text
+              textSmallSecondary
+              numberOfLines={1}
+              center>{i18n.t('training.legend_weight')}</Text>
 
-                        <Text
-                            paragraph
-                            numberOfLines={1}
-                            marginB-10
-                            center>{i18n.t('training.chart_title')}</Text>
-                    </Col>
+          </Col>
 
-                    <Col size={33}>
+          <Col size={33}>
 
-                        <Text header4Primary numberOfLines={1} center>
-                            {displayDuration}{i18n.t('training.legend_duration_suffix')}
-                        </Text>
+            {diff > 0
+              ? <Text header4Success center numberOfLines={1}>+{displayDiff}%</Text>
+              : null}
 
-                        <Text
-                            textSmallSecondary
-                            numberOfLines={1}
-                            center>{i18n.t('training.legend_duration')}</Text>
-                    </Col>
+            {diff === 0
+              ? <Text header4Warning center numberOfLines={1}>{i18n.t('training.na')}</Text>
+              : null}
 
-                    <Col size={33}>
+            {diff < 0
+              ? <Text header4Danger center numberOfLines={1}>-{displayDiff}%</Text>
+              : null}
 
-                        {diff > 0
-                            ? <Text header4Success center numberOfLines={1}>{displaySpeed}</Text>
-                            : null}
-
-                        {diff === 0
-                            ? <Text header4Warning center numberOfLines={1}>{displaySpeed}</Text>
-                            : null}
-
-                        {diff < 0
-                            ? <Text header4Danger center numberOfLines={1}>{displaySpeed}</Text>
-                            : null}
-
-                        <Text
-                            textSmallSecondary
-                            numberOfLines={1}
-                            center>{i18n.t('training.legend_weight')}</Text>
-
-                    </Col>
-
-                    <Col size={33}>
-
-                        {diff > 0
-                            ? <Text header4Success center numberOfLines={1}>+{displayDiff}%</Text>
-                            : null}
-
-                        {diff === 0
-                            ? <Text header4Warning center numberOfLines={1}>{i18n.t('training.na')}</Text>
-                            : null}
-
-                        {diff < 0
-                            ? <Text header4Danger center numberOfLines={1}>-{displayDiff}%</Text>
-                            : null}
-
-                        <Text
-                            textSmallSecondary
-                            numberOfLines={1}
-                            center>{i18n.t('training.legend_progress')}</Text>
-                    </Col>
-                </Row>
-            </Col>
+            <Text
+              textSmallSecondary
+              numberOfLines={1}
+              center>{i18n.t('training.legend_progress')}</Text>
+          </Col>
         </Row>
-    }
+      </Col>
+    </Row>
+  }
 }
+
+const selectors = createStructuredSelector({
+  training: store => store.Training.model,
+  currentChartData: store => store.Training.Chart.currentChartData,
+})
 
 export default connect(selectors)(Legend)

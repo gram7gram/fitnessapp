@@ -51,6 +51,13 @@
     "uuid": "^3.3.2"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "roots": [
+      "<rootDir>"
+    ],
+    "modulePaths": [
+      "<rootDir>/node_modules",
+      "<rootDir>/app"
+    ]
   }
 }

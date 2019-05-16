@@ -3,11 +3,13 @@ const path = require('path')
 const uuid = require('uuid')
 const moment = require('moment')
 const keyBy = require('lodash/keyBy')
+const getMetrics = require('app/src/utils/metrics').getMetrics
 
 const file = process.argv.slice(2)[0]
 
 const objectValues = (obj) => obj ? Object.keys(obj).map(i => obj[i]) : []
 
+/*
 const getMetrics = (training, unit) => {
 
     let totalWeight = 0, totalWeightPerHour = 0;
@@ -36,6 +38,7 @@ const getMetrics = (training, unit) => {
         totalWeightPerHour: Number(totalWeightPerHour.toFixed(2)),
     }
 }
+*/
 
 const csvToArray = file => {
 
@@ -169,7 +172,7 @@ const parseLines = lines => {
 
     const trainingsExtended = objectValues(trainings).map(training => {
 
-        const metrics = getMetrics(training, unit)
+        const metrics = getMetrics(training, training.startedAt, training.completedAt, unit)
 
         if (metrics.totalWeightPerHour < 1) {
 

@@ -5,33 +5,33 @@ const SCALE = 2.205
 
 export const convertWeight = (weight, unit) => {
 
-    if (weight.unit === POUNDS) {
+  if (weight.unit === POUNDS) {
 
-        if (unit === POUNDS) {
+    if (unit === POUNDS) {
 
-            return weight.value
+      return weight.value
 
-        } else if (unit === KILOGRAM) {
+    } else if (unit === KILOGRAM) {
 
-            return poundsToKilogram(weight.value)
+      return poundsToKilogram(weight.value)
 
-        }
-
-    } else if (weight.unit === KILOGRAM) {
-
-        if (unit === POUNDS) {
-
-            return kilogramToPounds(weight.value)
-
-        } else if (unit === KILOGRAM) {
-
-            return weight.value
-        }
     }
 
-    console.log(weight, unit);
+  } else if (weight.unit === KILOGRAM) {
 
-    throw new Error('Unable to convert weight')
+    if (unit === POUNDS) {
+
+      return kilogramToPounds(weight.value)
+
+    } else if (unit === KILOGRAM) {
+
+      return weight.value
+    }
+  }
+
+  console.log(weight, unit);
+
+  throw new Error('Unable to convert weight')
 }
 
 export const poundsToKilogram = value => value / SCALE

@@ -1,102 +1,58 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
-import moment from 'moment';
-import intersectionBy from 'lodash/intersectionBy';
-import selectors from './selectors';
 import {Dimensions, ScrollView} from 'react-native'
 import {Colors, Text, Typography, View} from 'react-native-ui-lib'
 import MyChart from "./MyChart";
 import FadeInView from "../../../../components/FadeIn";
-import {convertWeight} from "../../../../Units";
+import {createStructuredSelector} from 'reselect'
 
 const chartConfig = {
-    backgroundGradientFrom: Colors.rgba(Colors.themebackground, 1),
-    backgroundGradientTo: Colors.rgba(Colors.themebackground, 1),
-    color: (opacity = 1) => Colors.rgba(Colors.cprimary, opacity),
-    selectedColor: (opacity = 1) => Colors.rgba(Colors.cdanger, opacity),
-    decimalPlaces: 2,
-    strokeWidth: 1,
+  backgroundGradientFrom: Colors.rgba(Colors.themebackground, 1),
+  backgroundGradientTo: Colors.rgba(Colors.themebackground, 1),
+  color: (opacity = 1) => Colors.rgba(Colors.cprimary, opacity),
+  selectedColor: (opacity = 1) => Colors.rgba(Colors.cdanger, opacity),
+  decimalPlaces: 2,
+  strokeWidth: 1,
 }
 
 type Props = {}
 
 class Chart extends PureComponent<Props> {
 
-    componentDidMount() {
-        setTimeout(() => {
-            if (this.scroll)
-                this.scroll.scrollToEnd({animated: true})
-        }, 500)
-    }
+  componentDidMount() {
+    setTimeout(() => {
+      if (this.scroll)
+        this.scroll.scrollToEnd({animated: true})
+    }, 500)
+  }
 
-    getConvertedToSingleUnitWeightPerHour = chart => {
-        const {unit} = this.props.settings
+  render() {
+    const {currentChartConfig} = this.props
 
-        return convertWeight({value: chart.totalWeightPerHour, unit: chart.unit}, unit)
-    }
+    if (!currentChartConfig) return null
 
-    extractChartData = (chartData, muscleGroups) => {
+    const screenWidth = Dimensions.get('window').width - 20
 
-        const itemsWithGroups = chartData.filter(data =>
-            data.muscleGroups !== undefined && data.muscleGroups.length > 0
-        )
+    return <FadeInView duration={300}>
+      <ScrollView
+        ref={ref => this.scroll = ref}
+        horizontal>
 
-        if (itemsWithGroups.length === 0) return null
+        <MyChart
+          bezier
+          withDots
+          data={currentChartConfig}
+          width={Math.max(50 * currentChartConfig.labels.length, screenWidth)}
+          height={200}
+          chartConfig={chartConfig}/>
 
-        //Find exact match of muscle groups for trainings
-        let items = itemsWithGroups.filter(data =>
-            intersectionBy(data.muscleGroups, muscleGroups).length === muscleGroups.length
-        )
-
-        if (items.length < 2) {
-
-            //Find partial match of muscle groups for trainings
-            items = itemsWithGroups.filter(data =>
-                intersectionBy(data.muscleGroups, muscleGroups).length > 0
-            )
-
-            if (items.length < 2) return null
-        }
-
-        return items.reverse().slice(0, 100).reverse() //last 100 records
-    }
-
-    render() {
-        const {chartData, muscleGroups, training} = this.props
-
-        if (muscleGroups.length === 0) return null
-
-        const items = this.extractChartData(chartData, muscleGroups)
-
-        if (!items) return null
-
-        const data = {
-            labels: items.map(item => moment(item.startedAt, 'YYYY-MM-DD HH:mm').format('DD.MM')),
-            datasets: [{
-                data: items.map(this.getConvertedToSingleUnitWeightPerHour),
-                originalData: items,
-                currentTraining: training.id
-            }]
-        }
-
-        const screenWidth = Dimensions.get('window').width - 20
-
-        return <FadeInView duration={300}>
-            <ScrollView
-                ref={ref => this.scroll = ref}
-                horizontal>
-
-                <MyChart
-                    bezier
-                    withDots
-                    data={data}
-                    width={Math.max(50 * items.length, screenWidth)}
-                    height={200}
-                    chartConfig={chartConfig}/>
-
-            </ScrollView>
-        </FadeInView>
-    }
+      </ScrollView>
+    </FadeInView>
+  }
 }
+
+const selectors = createStructuredSelector({
+  currentChartConfig: store => store.Training.Chart.currentChartConfig,
+})
 
 export default connect(selectors)(Chart)

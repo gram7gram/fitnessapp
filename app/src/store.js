@@ -12,7 +12,7 @@ const sagaMiddleware = createSagaMiddleware()
 const middleware = [thunk, sagaMiddleware]
 
 if (process.env.NODE_ENV === 'development') {
-    middleware.push(require('redux-logger').default)
+  middleware.push(require('redux-logger').default)
 }
 
 let store
@@ -32,7 +32,7 @@ let store
 //
 //     console.log('initial state error', e.message);
 
-    store = createStore(reducers, {}, applyMiddleware(...middleware));
+store = createStore(reducers, {}, applyMiddleware(...middleware));
 // }
 
 sagaMiddleware.run(sagas)
