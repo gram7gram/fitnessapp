@@ -1,4 +1,3 @@
-import 'react-native';
 import intersectionBy from 'lodash/intersectionBy';
 
 it('intersectionBy should be true if both arrays contain same value', () => {

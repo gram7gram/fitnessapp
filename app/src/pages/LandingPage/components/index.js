@@ -133,7 +133,7 @@ class Landing extends Component<Props> {
       }
     })
 
-    const items = objectValues(displayedItems)
+    const items = Object.values(displayedItems)
 
     sortByDate(items, 'startedAt', 'DESC')
 

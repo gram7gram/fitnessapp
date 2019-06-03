@@ -12,7 +12,7 @@ function* search({payload}) {
   const search = payload.search ? payload.search.toLowerCase() : ''
 
   const filtered = items.filter((item) =>
-    !!objectValues(item.translations).find(({name}) => name.toLowerCase().indexOf(search) !== -1)
+    !!Object.values(item.translations).find(({name}) => name.toLowerCase().indexOf(search) !== -1)
   )
 
   yield put({

@@ -16,7 +16,7 @@ export default model => async (dispatch) => {
 
   content[model.id] = model
 
-  const items = keyBy(objectValues(content).filter(item => item.id && item.personal), 'id')
+  const items = keyBy(Object.values(content).filter(item => item.id && item.personal), 'id')
 
   filePutContents('/my-exercises.json', JSON.stringify(items))
     .then(() => {

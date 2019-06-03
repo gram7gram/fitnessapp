@@ -1,24 +1,22 @@
 import keyBy from 'lodash/keyBy'
 import {filePutContents} from '../../../storage/fs'
 import {SAVE_TRAINING_FAILURE, SAVE_TRAINING_SUCCESS} from "../actions";
-import objectValues from "../../../utils/objectValues";
 import {getMetrics} from "../../../utils/metrics";
 
 const parseBeforeSubmit = model => {
   const data = {...model}
 
-  const muscleGroups = []
-
-  const workouts = objectValues(data.workouts)
+  const workouts = Object.values(data.workouts)
     .filter(workout =>
-      objectValues(workout.repeats).length > 0
+      Object.values(workout.repeats).length > 0
       && workout.exercise
       && workout.exercise.id
+      && workout.exercise.muscleGroup
       && workout.exercise.translations
     )
     .map(workout => {
 
-      const repeats = objectValues(workout.repeats)
+      const repeats = Object.values(workout.repeats)
         .filter(repeat =>
           repeat.weight.value > 0
           && repeat.repeatCount > 0
@@ -34,14 +32,12 @@ const parseBeforeSubmit = model => {
 
       workout.repeats = keyBy(repeats, 'id')
 
-      if (workout.exercise.muscleGroup) {
-        muscleGroups.push(workout.exercise.muscleGroup)
-      }
-
       return workout
     })
 
-  data.muscleGroups = [...new Set(muscleGroups)]
+  data.muscleGroups = [
+    ...new Set(workouts.map(workout => workout.exercise.muscleGroup))
+  ]
 
   data.workouts = keyBy(workouts, 'id')
 

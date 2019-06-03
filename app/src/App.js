@@ -16,7 +16,7 @@ const prepareDemo = () => {
 
   const registry = {}
 
-  objectValues(demo).forEach(training => {
+  Object.values(demo).forEach(training => {
 
     filePutContents('/trainings/' + training.id + '.json', JSON.stringify(training))
       .catch(e => {

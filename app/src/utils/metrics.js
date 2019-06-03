@@ -1,6 +1,5 @@
 import {convertWeight} from "../Units";
 import moment from "moment";
-import objectValues from "../utils/objectValues";
 
 export const getMetrics = (training, startedAt, completedAt, unit) => {
 
@@ -8,7 +7,7 @@ export const getMetrics = (training, startedAt, completedAt, unit) => {
 
   const groupedWeight = {}
 
-  const workouts = objectValues(training.workouts)
+  const workouts = Object.values(training.workouts)
 
   workouts.forEach(workout => {
 
@@ -28,7 +27,7 @@ export const getMetrics = (training, startedAt, completedAt, unit) => {
       groupedWeight[muscleGroup].exerciseCount += 1
     }
 
-    objectValues(workout.repeats).forEach(repeat => {
+    Object.values(workout.repeats).forEach(repeat => {
 
       let value
       if (!repeat.isHumanWeight) {
@@ -53,7 +52,7 @@ export const getMetrics = (training, startedAt, completedAt, unit) => {
     if (duration > 0) {
       totalWeightPerHour = totalWeight / duration / 1000
 
-      objectValues(groupedWeight).forEach(group => {
+      Object.values(groupedWeight).forEach(group => {
 
         const currentGroupPercent = group.exerciseCount / workouts.length
 
@@ -70,6 +69,6 @@ export const getMetrics = (training, startedAt, completedAt, unit) => {
       unit
     },
     totalWeightPerHour: Number(Math.max(0, totalWeightPerHour).toFixed(2)),
-    groupedWeight
+    totalWeightPerHourPerGroup: groupedWeight
   }
 }

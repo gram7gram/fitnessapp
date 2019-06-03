@@ -199,7 +199,7 @@ class Workout extends Component<Props> {
     return model.humanWeight
   }
   getSortedRepeats = () => {
-    const repeats = objectValues(this.getRepeats())
+    const repeats = Object.values(this.getRepeats())
 
     sortByTimestamp(repeats, 'createdAt', 'DESC')
 

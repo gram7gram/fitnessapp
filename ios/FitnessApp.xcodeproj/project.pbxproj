@@ -61,6 +61,8 @@
 		579BA30FE97D403EA55DDB9F /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7003A6E1E64E87AE332C75 /* libRNSVG.a */; };
 		005C359ECBA24574A20A72B6 /* libRNSVG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FE5D01830D498CBD771E80 /* libRNSVG-tvOS.a */; };
 		E539B390872C47158807C0E5 /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E41CAFF9434B7EBB9D58BC /* libRNCAsyncStorage.a */; };
+		8849091402C541AAAA9C5EB0 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DD34CF9E15425ABCE184D3 /* libReactNativeNavigation.a */; };
+		4B7E41B485D44FA0ACC04026 /* ReactNativeNavigationTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = EFB02AD7F71644B3B9BBEB38 /* ReactNativeNavigationTests.xctest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -395,6 +397,9 @@
 		D0FE5D01830D498CBD771E80 /* libRNSVG-tvOS.a */ = {isa = PBXFileReference; name = "libRNSVG-tvOS.a"; path = "libRNSVG-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		BE3BD2CD01F646449632DA29 /* RNCAsyncStorage.xcodeproj */ = {isa = PBXFileReference; name = "RNCAsyncStorage.xcodeproj"; path = "../node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		93E41CAFF9434B7EBB9D58BC /* libRNCAsyncStorage.a */ = {isa = PBXFileReference; name = "libRNCAsyncStorage.a"; path = "libRNCAsyncStorage.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		B6B63B75D155435996534357 /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; name = "ReactNativeNavigation.xcodeproj"; path = "../node_modules/react-native-navigation/lib/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		64DD34CF9E15425ABCE184D3 /* libReactNativeNavigation.a */ = {isa = PBXFileReference; name = "libReactNativeNavigation.a"; path = "libReactNativeNavigation.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		EFB02AD7F71644B3B9BBEB38 /* ReactNativeNavigationTests.xctest */ = {isa = PBXFileReference; name = "ReactNativeNavigationTests.xctest"; path = "ReactNativeNavigationTests.xctest"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.cfbundle; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -428,6 +433,8 @@
 				3514EE76B27F4EEB9F1D20E8 /* libreactnativeuilib.a in Frameworks */,
 				579BA30FE97D403EA55DDB9F /* libRNSVG.a in Frameworks */,
 				E539B390872C47158807C0E5 /* libRNCAsyncStorage.a in Frameworks */,
+				8849091402C541AAAA9C5EB0 /* libReactNativeNavigation.a in Frameworks */,
+				4B7E41B485D44FA0ACC04026 /* ReactNativeNavigationTests.xctest in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +631,7 @@
 				C4AD89DC21A1482CA9CAE737 /* reactnativeuilib.xcodeproj */,
 				6E994E6E082448EB862EBFAD /* RNSVG.xcodeproj */,
 				BE3BD2CD01F646449632DA29 /* RNCAsyncStorage.xcodeproj */,
+				B6B63B75D155435996534357 /* ReactNativeNavigation.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1297,6 +1305,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1305,6 +1315,7 @@
 					"$(SRCROOT)/../node_modules/react-native-ui-lib/lib/ios/reactnativeuilib/**",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 			};
 			name = Debug;
@@ -1333,6 +1344,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1341,6 +1354,7 @@
 					"$(SRCROOT)/../node_modules/react-native-ui-lib/lib/ios/reactnativeuilib/**",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 			};
 			name = Release;
@@ -1368,6 +1382,7 @@
 					"$(SRCROOT)/../node_modules/react-native-ui-lib/lib/ios/reactnativeuilib/**",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 			};
 			name = Debug;
@@ -1394,6 +1409,7 @@
 					"$(SRCROOT)/../node_modules/react-native-ui-lib/lib/ios/reactnativeuilib/**",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 			};
 			name = Release;
@@ -1430,6 +1446,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1438,6 +1456,7 @@
 					"$(SRCROOT)/../node_modules/react-native-ui-lib/lib/ios/reactnativeuilib/**",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 			};
 			name = Debug;
@@ -1474,6 +1493,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1482,6 +1503,7 @@
 					"$(SRCROOT)/../node_modules/react-native-ui-lib/lib/ios/reactnativeuilib/**",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 			};
 			name = Release;
@@ -1517,6 +1539,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1525,6 +1549,7 @@
 					"$(SRCROOT)/../node_modules/react-native-ui-lib/lib/ios/reactnativeuilib/**",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 			};
 			name = Debug;
@@ -1560,6 +1585,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1568,6 +1595,7 @@
 					"$(SRCROOT)/../node_modules/react-native-ui-lib/lib/ios/reactnativeuilib/**",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 			};
 			name = Release;

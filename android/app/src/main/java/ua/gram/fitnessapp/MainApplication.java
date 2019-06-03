@@ -37,7 +37,7 @@ public class MainApplication extends NavigationApplication {
 
     @Override
     public boolean isDebug() {
-        return BuildConfig.DEBUG;
+        return false;
     }
 
     protected List<ReactPackage> getPackages() {

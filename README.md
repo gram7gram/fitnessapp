@@ -15,6 +15,7 @@ Training {
     createdAt: datetime
     startedAt: datetime
     completedAt: datetime
+    unit: string
     humanWeight: Weight
     duration: float
     totalWeight: Weight
@@ -27,6 +28,8 @@ Training {
 Exercise {
     id: string
     isHumanWeight: ?boolean
+    muscleGroup: String
+    scale: Number
     image: ?string
     translations: Array<Translation>
     variants: ?Array<Exercise>
@@ -37,7 +40,6 @@ Exercise {
 Workout {
     id: string
     createdAt: datetime
-    training: Training
     exercise: Exercise
     totalWeight: Weight
     repeats: Array<Repeat>
@@ -48,7 +50,6 @@ Workout {
 Repeat {
     id: string
     createdAt: datetime
-    workout: Workout
     weight: Weight
     repeatCount: float
     isHumanWeight: boolean

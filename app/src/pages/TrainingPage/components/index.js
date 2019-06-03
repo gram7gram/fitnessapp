@@ -160,7 +160,7 @@ class Training extends Component<Props> {
     const {settings} = this.props
     const {model} = this.props.Training
 
-    const workouts = objectValues(model.workouts)
+    const workouts = Object.values(model.workouts)
 
     sortByTimestamp(workouts, 'createdAt', 'DESC')
 

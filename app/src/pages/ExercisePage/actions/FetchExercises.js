@@ -18,7 +18,7 @@ export default () => async (dispatch) => {
       myItems = {}
     }
 
-    const myExercises = objectValues(myItems)
+    const myExercises = Object.values(myItems)
 
     let payload = []
 

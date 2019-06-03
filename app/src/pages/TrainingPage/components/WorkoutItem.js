@@ -52,7 +52,7 @@ class WorkoutItem extends Component {
       ? findTranslation(workout.exercise.translations, locale)
       : null
 
-    const repeats = objectValues(workout.repeats)
+    const repeats = Object.values(workout.repeats)
 
     sortByTimestamp(repeats, 'createdAt', 'DESC')
 

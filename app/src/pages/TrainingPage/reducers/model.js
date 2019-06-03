@@ -251,7 +251,7 @@ const workouts = (prev = {}, action) => {
       id = action.payload.id
       workoutId = action.payload.workout
 
-      items = objectValues(prev).map(workout => {
+      items = Object.values(prev).map(workout => {
 
         if (workout.id === workoutId) {
           if (!workout.repeats) workout.repeats = {}
@@ -272,7 +272,7 @@ const workouts = (prev = {}, action) => {
       id = action.payload.id
       workoutId = action.payload.workout
 
-      items = objectValues(prev).map(workout => {
+      items = Object.values(prev).map(workout => {
 
         if (workout.id === workoutId) {
           if (!workout.repeats) workout.repeats = {}
@@ -290,7 +290,7 @@ const workouts = (prev = {}, action) => {
       id = action.payload.id
       workoutId = action.payload.workout
 
-      items = objectValues(prev).map(workout => {
+      items = Object.values(prev).map(workout => {
 
         if (workout.id === workoutId) {
           if (!workout.repeats) workout.repeats = {}
