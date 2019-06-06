@@ -3,7 +3,6 @@ import "./theme";
 import AsyncStorage from '@react-native-community/async-storage';
 import {Navigation} from 'react-native-navigation';
 import {createRouter} from './router';
-import {objectValues} from "./utils";
 import moment from "moment";
 import {filePutContents} from "./storage/fs";
 
@@ -11,6 +10,8 @@ Navigation.events()
   .registerAppLaunchedListener(createRouter);
 
 const prepareDemo = () => {
+
+  console.log('prepareDemo');
 
   const demo = require('../data/demo.json')
 
@@ -33,6 +34,7 @@ const prepareDemo = () => {
       id: training.id,
       startedAt: training.startedAt,
       totalWeightPerHour: training.totalWeightPerHour,
+      totalWeightPerHourPerGroup: training.totalWeightPerHourPerGroup || {},
       unit: training.totalWeight.unit,
       muscleGroups: training.muscleGroups,
     }

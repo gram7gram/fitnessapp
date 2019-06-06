@@ -16,7 +16,7 @@ apply from: "../../node_modules/react-native/react.gradle"
  * Upload all the APKs to the Play Store and people will download
  * the correct one based on the CPU architecture of their device.
  */
-def enableSeparateBuildPerCPUArchitecture = false
+def enableSeparateBuildPerCPUArchitecture = true
 
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
@@ -34,9 +34,6 @@ android {
         missingDimensionStrategy "RNN.reactNativeVersion", "reactNative57", "reactNative57_5"
         versionCode APP_VERSION_CODE as Integer
         versionName APP_VERSION_NAME
-        ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a", "x86"
-        }
     }
     signingConfigs {
         release {
@@ -55,10 +52,13 @@ android {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
             universalApk false  // If true, also generate a universal APK
-            include "armeabi-v7a", "arm64-v8a", "x86"
+            include "x86", "armeabi-v7a", "arm64-v8a"
         }
     }
     buildTypes {
+        debug {
+
+        }
         release {
 
             signingConfig signingConfigs.release
@@ -72,7 +72,7 @@ android {
         variant.outputs.each { output ->
             // For each separate APK per architecture, set a unique version code as described here:
             // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
-            def versionCodes = ["armeabi-v7a":1, "arm64-v8a":2, "x86":3]
+            def versionCodes = ["x86": 1, "armeabi-v7a": 2, "arm64-v8a": 3]
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
@@ -92,6 +92,7 @@ configurations.all {
 }
 
 dependencies {
+    implementation project(':react-native-iap')
     implementation project(':@react-native-community_async-storage')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-svg')

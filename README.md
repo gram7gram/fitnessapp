@@ -69,3 +69,7 @@ Weight {
     unit: string
 }
 ```
+
+### Installation
+
+`sudo apt install openjdk-8-jdk-headless` for `jarsigner` for release builds

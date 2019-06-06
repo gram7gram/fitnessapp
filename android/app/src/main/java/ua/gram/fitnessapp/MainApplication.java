@@ -22,6 +22,8 @@ import com.wix.reactnativeuilib.highlighterview.HighlighterViewPackage;
 import com.wix.reactnativeuilib.textinput.TextInputDelKeyHandlerPackage;
 import com.wix.reactnativeuilib.wheelpicker.WheelPickerPackage;
 
+import com.dooboolab.RNIap.RNIapPackage;
+
 public class MainApplication extends NavigationApplication {
 
     @Override
@@ -44,6 +46,7 @@ public class MainApplication extends NavigationApplication {
         // Add additional packages you require here
         // No need to add RnnPackage and MainReactPackage
         return Arrays.<ReactPackage>asList(
+            new RNIapPackage(),
             new AsyncStoragePackage(),
             new HighlighterViewPackage(),
             new TextInputDelKeyHandlerPackage(),

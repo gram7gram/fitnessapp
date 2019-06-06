@@ -1,5 +1,3 @@
-// @flow
-
 import React from 'react';
 import {Navigation} from 'react-native-navigation';
 import {Provider} from 'react-redux';
@@ -13,19 +11,21 @@ import ThemeProvider from '../context/ThemeProvider';
 import * as Pages from './Pages';
 import {defaultLocale, defaultTheme} from "../../../app.json";
 import i18n from "../i18n";
-import {Text} from "../pages/LandingPage/components/Rate";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 function withStore(Component) {
 
   return function inject(props) {
 
-    return <Provider store={store}>
-      <LocaleProvider locale={defaultLocale}>
-        <ThemeProvider theme={defaultTheme}>
-          <Component{...props}/>
-        </ThemeProvider>
-      </LocaleProvider>
-    </Provider>
+    return <ErrorBoundary>
+      <Provider store={store}>
+        <LocaleProvider locale={defaultLocale}>
+          <ThemeProvider theme={defaultTheme}>
+            <Component{...props}/>
+          </ThemeProvider>
+        </LocaleProvider>
+      </Provider>
+    </ErrorBoundary>
   };
 }
 

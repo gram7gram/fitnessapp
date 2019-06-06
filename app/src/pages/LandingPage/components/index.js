@@ -11,15 +11,42 @@ import {Dimensions, FlatList, ScrollView, StyleSheet} from "react-native";
 import FetchTrainings from "../actions/FetchTrainings";
 import Logo from "../../../../assets/images/logo.png";
 import {Navigation} from "react-native-navigation";
-import {objectValues, sortByDate} from "../../../utils";
+import {sortByDate} from "../../../utils";
 import FadeInView from "../../../components/FadeIn";
 import {ADD_DISPLAYED_MONTH, TOGGLE_RATE_DIALOG} from "../actions";
 import {navigateToSettings, navigateToTraining} from "../../../router";
+import * as MonthlyPass from "../../../iap/MonthlyPass";
 import Rate from "./Rate";
 
-type Props = {};
+class Landing extends Component {
 
-class Landing extends Component<Props> {
+  constructor(props) {
+    super(props)
+
+    Navigation.events().bindComponent(this);
+  }
+
+  componentDidMount() {
+    this.fetchPass()
+  }
+
+  componentWillUnmount() {
+    MonthlyPass.disconnect()
+  }
+
+  componentDidAppear() {
+    this.props.dispatch(FetchTrainings())
+
+    this.openRate().catch(e => {
+      console.log(e);
+    })
+  }
+
+  fetchPass = async () => {
+    const pass = await MonthlyPass.fetch()
+
+    console.log('MonthlyPass', pass);
+  }
 
   openRate = async () => {
     const isRateVisible = this.props.Landing.Rate.isVisible
@@ -47,12 +74,15 @@ class Landing extends Component<Props> {
       await AsyncStorage.setItem('Landing.openedCount', (openedCount + 1) + '')
     }
   }
+
   openTraining = training => () => {
     navigateToTraining(this.props.componentId, training)
   }
+
   addTraining = () => {
     navigateToTraining(this.props.componentId, null)
   }
+
   getPrevMonth = () => {
     const {months} = this.props.Landing
 
@@ -61,15 +91,18 @@ class Landing extends Component<Props> {
 
     return moment(lastMonth, 'YYYY-MM-01').subtract(1, 'month').format('YYYY-MM')
   }
+
   addMonth = () => {
     this.props.dispatch({
       type: ADD_DISPLAYED_MONTH,
       payload: this.getPrevMonth()
     })
   }
+
   openSettings = () => {
     navigateToSettings(this.props.componentId)
   }
+
   renderTraining = ({item}) => {
 
     return <Card
@@ -98,20 +131,6 @@ class Landing extends Component<Props> {
           : null}
       </View>
     </Card>
-  }
-
-  constructor(props) {
-    super(props)
-
-    Navigation.events().bindComponent(this);
-  }
-
-  componentDidAppear() {
-    this.props.dispatch(FetchTrainings())
-
-    this.openRate().catch(e => {
-      console.log(e);
-    })
   }
 
   render() {

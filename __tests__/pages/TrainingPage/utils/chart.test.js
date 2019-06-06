@@ -2,7 +2,7 @@ import keyBy from 'lodash/keyBy';
 import {createChartData, extractChartData} from '../../../../app/src/pages/TrainingPage/utils/chart'
 import createTraining from "../../../TrainingProvider";
 
-xit('createChartData should return valid array', () => {
+it('createChartData should return valid array', () => {
 
   const trainings = {
     "01-2019": keyBy([
@@ -29,14 +29,14 @@ xit('createChartData should return valid array', () => {
   })
 })
 
-xit('extractChartData should return `null` if there is no chart data', () => {
+it('extractChartData should return `null` if there is no chart data', () => {
 
   const data = extractChartData([], ['abs'])
 
   expect(data).toEqual(null)
 })
 
-xit('extractChartData should return `null` if there is no chart data with provided muscle groups', () => {
+it('extractChartData should return `null` if there is no chart data with provided muscle groups', () => {
 
   const data = extractChartData([
     createTraining(),
