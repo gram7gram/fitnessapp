@@ -14,8 +14,6 @@ import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 
-import com.oblador.vectoricons.VectorIconsPackage;
-
 import com.rnfs.RNFSPackage;
 
 import com.wix.reactnativeuilib.highlighterview.HighlighterViewPackage;
@@ -39,7 +37,7 @@ public class MainApplication extends NavigationApplication {
 
     @Override
     public boolean isDebug() {
-        return false;
+        return BuildConfig.DEBUG;
     }
 
     protected List<ReactPackage> getPackages() {
@@ -52,8 +50,7 @@ public class MainApplication extends NavigationApplication {
             new TextInputDelKeyHandlerPackage(),
             new WheelPickerPackage(),
             new RNFSPackage(),
-            new SvgPackage(),
-            new VectorIconsPackage()
+            new SvgPackage()
         );
     }
 
