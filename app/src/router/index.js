@@ -1,7 +1,7 @@
 import React from 'react';
 import {Navigation} from 'react-native-navigation';
 import {Provider} from 'react-redux';
-import {Colors, Typography} from 'react-native-ui-lib';
+import {Colors} from 'react-native-ui-lib';
 
 import store from '../store';
 
@@ -48,6 +48,9 @@ export function createRouter() {
 
   Navigation.registerComponent(Pages.SETTINGS, () =>
     withStore(require('../pages/SettingsPage/components').default));
+
+  Navigation.registerComponent(Pages.MONTHLY_PASS, () =>
+    withStore(require('../pages/MonthlyPassPage/components').default));
 
   Navigation.setDefaultOptions({
     topBar: {
@@ -114,6 +117,30 @@ export const navigateToSettings = (referer) => {
           drawBehind: false,
           title: {
             text: i18n.t('settings.title')
+          }
+        }
+      }
+    }
+  }).catch((e) => {
+    console.log(e);
+  });
+}
+
+export const navigateToMonthlyPass = (referer) => {
+
+  console.log('navigateToMonthlyPass');
+
+  closeModals()
+
+  Navigation.push(referer, {
+    component: {
+      name: Pages.MONTHLY_PASS,
+      options: {
+        topBar: {
+          visible: true,
+          drawBehind: false,
+          title: {
+            text: i18n.t('monthly_pass.title')
           }
         }
       }

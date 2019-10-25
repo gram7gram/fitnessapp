@@ -12,7 +12,7 @@
     "android:run:release": "node node_modules/react-native/local-cli/cli.js run-android --variant=release",
     "android:release": "npm run android:prod-bundle && cd android && ./gradlew clean bundleRelease -x bundleReleaseJsAndAssets --stacktrace",
     "log": "adb logcat *:S ReactNative:V ReactNativeJS:V",
-    "emulator": "emulator -read-only -no-boot-anim -avd 10.1_WXGA_Tablet_API_28",
+    "emulator": "emulator -read-only -no-boot-anim -avd Nexus_5_API_28",
     "emulator:menu": "adb shell input keyevent 82",
     "android:prod-bundle": "node node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file index.js --assets-dest android/app/src/main/res --bundle-output android/app/src/main/assets/index.android.bundle",
     "test": "jest"

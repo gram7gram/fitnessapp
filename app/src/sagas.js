@@ -6,6 +6,7 @@ import Training from './pages/TrainingPage/sagas'
 import Exercise from './pages/ExercisePage/sagas'
 import ExerciseEdit from './pages/ExerciseEditPage/sagas'
 import Settings from './pages/SettingsPage/sagas'
+import IAP from './iap/sagas'
 
 export default function* sagas() {
   yield all([
@@ -15,5 +16,6 @@ export default function* sagas() {
     fork(Exercise),
     fork(ExerciseEdit),
     fork(Settings),
+    fork(IAP),
   ])
 }

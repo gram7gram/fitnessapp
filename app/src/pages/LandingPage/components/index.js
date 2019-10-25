@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import moment from 'moment';
 import selectors from './selectors';
 import i18n from '../../../i18n';
-import {Button, Card, Colors, Image, Text, View} from 'react-native-ui-lib';
+import {Button, Card, Colors, Text, View} from 'react-native-ui-lib';
 import ResponsiveImage from "react-native-scalable-image";
 import {Column as Col, Row} from "react-native-responsive-grid";
 import AsyncStorage from "@react-native-community/async-storage";
@@ -15,7 +15,7 @@ import {sortByDate} from "../../../utils";
 import FadeInView from "../../../components/FadeIn";
 import {ADD_DISPLAYED_MONTH, TOGGLE_RATE_DIALOG} from "../actions";
 import {navigateToSettings, navigateToTraining} from "../../../router";
-import * as MonthlyPass from "../../../iap/MonthlyPass";
+import * as IAPActions from "../../../iap/actions";
 import Rate from "./Rate";
 
 class Landing extends Component {
@@ -27,11 +27,16 @@ class Landing extends Component {
   }
 
   componentDidMount() {
-    this.fetchPass()
+    this.props.dispatch({
+      type: IAPActions.FETCH_PASS_REQUEST,
+      componentId: this.props.componentId
+    })
   }
 
   componentWillUnmount() {
-    MonthlyPass.disconnect()
+    this.props.dispatch({
+      type: IAPActions.RESET
+    })
   }
 
   componentDidAppear() {
@@ -40,12 +45,6 @@ class Landing extends Component {
     this.openRate().catch(e => {
       console.log(e);
     })
-  }
-
-  fetchPass = async () => {
-    const pass = await MonthlyPass.fetch()
-
-    console.log('MonthlyPass', pass);
   }
 
   openRate = async () => {

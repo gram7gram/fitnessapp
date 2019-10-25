@@ -1,0 +1,2 @@
+const prefix = 'MonthlyPass'
+

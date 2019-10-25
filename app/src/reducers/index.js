@@ -6,6 +6,8 @@ import Training from '../pages/TrainingPage/reducers'
 import Exercise from '../pages/ExercisePage/reducers'
 import ExerciseEdit from '../pages/ExerciseEditPage/reducers'
 import Settings from '../pages/SettingsPage/reducers'
+import MonthlyPass from '../pages/MonthlyPassPage/reducers'
+import IAP from '../iap/reducers'
 
 export default combineReducers({
   Landing,
@@ -14,4 +16,6 @@ export default combineReducers({
   Exercise,
   ExerciseEdit,
   Settings,
+  MonthlyPass,
+  IAP,
 });
